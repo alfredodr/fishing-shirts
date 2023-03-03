@@ -28,7 +28,8 @@ module.exports = {
         paleBlack:"#001d35",
         lightBlack:"rgba(0,0,0,0.07)",
         light:"rgba(255,255,255,0)",
-        lightWhite:"#E1D9D1"
+        lightWhite:"#E1D9D1",
+        lightGray:"#f4f4f4"
       }
     },
   },
