@@ -6,7 +6,8 @@ import { FaInstagramSquare } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="bg-white">
-        <div className="flex items-center justify-center min-h-screen container mx-auto m-10">
+        <hr className="m-1"/>
+        <div className="flex items-center justify-center container mx-auto">
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 my-10 mx-5">
             {/* Affiliate Disclosure */}
@@ -124,7 +125,6 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-               
             </div>
             {/* Latest Articles and Connect with us*/}
             <div>
@@ -139,7 +139,12 @@ const Footer = () => {
                 </div>
             </div>
         </div>
-    </div>
+      </div>
+      <hr className="m-1"/>
+      <div className="container flex flex-col justify-between items-center mx-auto h-16 md:flex-row lg:flex-row">
+        <span className="my-5">Copyright © 2023 Fishing Shirts Now | Credits</span>    
+        <span className="my-5">Powered by Fishing Shirts Now  </span>    
+      </div>
     </footer>
   )
 }
