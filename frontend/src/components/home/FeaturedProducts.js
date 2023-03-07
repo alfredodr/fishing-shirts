@@ -1,19 +1,7 @@
-import React, {useState, useEffect} from "react"
-import Product from "../common/Product";
-import axios from "axios";
+import React from "react"
+import Product from "../product/Product";
 
-const FeaturedProducts = () => {
-  const [products, setProducts]=useState([]);
-
-  useEffect(()=>{
-    const fetchProducts=async()=>{
-      const {data}=await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products`);
-      
-      setProducts(data);
-    }
-
-    fetchProducts();
-  },[]);
+const FeaturedProducts = ({products}) => {
 
   return (
     <>

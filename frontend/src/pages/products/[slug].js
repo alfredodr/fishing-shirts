@@ -1,12 +1,14 @@
 import React from "react"
-import products from "../../products"
 import axios from "axios"
+import ProductDetail from "@/components/product/ProductDetail"
 
 const product = ({product}) => {
   return (
-    <div>{product.name}</div>
+    <ProductDetail product={product}/>
   )
 }
+
+// {`${process.env.NEXT_PUBLIC_BACKEND_URL}/${product.image}`}
 
 export default product
 
@@ -14,7 +16,7 @@ export async function getStaticPaths() {
   const {data}=await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products`);
   
   const paths=data.map(product=>{
-    return{ params: { productId: product._id } }
+    return{ params: { slug: product.slug } }
     })
 
     return {
@@ -26,7 +28,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const { params } = context;
   const {data}=await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products`);
-  const product = data.find((product) => product._id === params.productId);
+  const product = data.find((product) => product.slug === params.slug);
 
   return {
     props: {

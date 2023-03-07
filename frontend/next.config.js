@@ -5,13 +5,3 @@ const nextConfig = {
 
 module.exports = nextConfig
 
-module.exports = {
-  async rewrites() {
-      return [
-          {
-              source: '/api/products/:slug*',
-              destination: 'http://localhost:5000/api/products/:slug*'
-          },
-      ]
-  },
-}
