@@ -1,5 +1,6 @@
 import React from "react"
 import Link from "next/link"
+import Variants from "./Variants"
 
 const ProductDetail = ({product}) => {
   return (
@@ -8,40 +9,18 @@ const ProductDetail = ({product}) => {
         <div className="md:w-1/2 lg:w-1/2">
             <div className="overflow-hidden">
                 <img
-                    src={product.image}
+                    src={product.images[0].src}
                     alt={product.name}
                     className="w-full"
                 />
-                <div className="container flex flex-row gap-5 flex-1 my-10">
-                    {/* Variant 1*/}
-                    <div className="overflow-hidden ">
-                        <img 
-                          src="/ocean-1950583_1280.jpg"
-                          alt="Fisherman holding fishing rod"
-                        />
+                {/* Variants*/}
+                {product.images.length > 1 && 
+                    <div className="container flex flex-row gap-5 flex-1 my-10">
+                    {product.images.map((image, index)=>(         
+                        <Variants key={index} image={image}/>
+                    ))}     
                     </div>
-                    {/* Variant 2*/}
-                    <div className="overflow-hidden ">
-                        <img 
-                          src="/ocean-1950583_1280.jpg"
-                          alt="Fisherman holding fishing rod"
-                        />
-                    </div>
-                    {/* Variant 3*/}
-                    <div className="overflow-hidden ">
-                        <img 
-                          src="/ocean-1950583_1280.jpg"
-                          alt="Fisherman holding fishing rod"
-                        />
-                    </div>
-                    {/* Variant 4*/}
-                    <div className="overflow-hidden ">
-                        <img 
-                          src="/ocean-1950583_1280.jpg"
-                          alt="Fisherman holding fishing rod"
-                        />
-                    </div>
-                </div>
+                }
             </div>     
         </div>
         <div className="w-1/2 md:ml-20 lg:md-20">
@@ -53,7 +32,11 @@ const ProductDetail = ({product}) => {
         </div>
     </div>
     <div className="container mx-auto ">
-        <span className="mt-2 text-slate-500 text-base">Categories: {product.category}</span>
+        <ul className="mt-2 text-slate-500 text-base" >Categories: 
+            {product.categories.map((category,index)=>
+            <li key={index}>{category.name}</li>
+            )}
+        </ul>
         <hr className="m-1"/>                  
         <p className="text-lg font-medium mt-8 hover:underline hover:underline-offset-1">
             Description

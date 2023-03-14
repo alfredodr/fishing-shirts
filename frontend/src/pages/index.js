@@ -10,7 +10,7 @@ export default function Home({data}) {
         <Banner/>
         <FeaturedProducts products={data}/>
         <LatestArticles/>
-        <Features/>
+        <Features/> 
     </>
   ) 
 }

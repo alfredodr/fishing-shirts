@@ -8,7 +8,7 @@ const Product = ({product}) => {
         <Link href={`/products/${product.slug}`} passHref>
             <div className="overflow-hidden">
                 <img 
-                  src={product.image}
+                  src={product.images[0].src}
                   alt={product.name}
                 />
             </div>

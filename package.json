@@ -1,13 +1,15 @@
 {
   "name": "fishingshirts",
   "version": "1.0.0",
-  "description": "Fishing Shirts App",
+  "description": "Fishing Shirts Now Website",
   "main": "server.js",
-  "type": "module",
   "scripts": {
-    "start": "nodemon server.js",
-    "data:import": "node seeder",
-    "data:destroy": "node seeder -d"
+    "start": "nodemon backend/server",
+    "server": "npm run start --prefix backend",
+    "client": "npm run dev --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import":"npm run data:import  --prefix backend",
+    "data:destroy":"npm run data:destroy  --prefix backend"
   },
   "repository": {
     "type": "git",
@@ -20,12 +22,6 @@
   },
   "homepage": "https://github.com/alfredodr/fishing-shirts#readme",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "colors": "^1.4.0",
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "mongoose": "^7.0.1",
-    "nodemon": "^2.0.21"
+    "concurrently": "^7.6.0"
   }
 }
