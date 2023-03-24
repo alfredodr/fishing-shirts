@@ -8,8 +8,6 @@ const product = ({product}) => {
   )
 }
 
-// {`${process.env.NEXT_PUBLIC_BACKEND_URL}/${product.image}`}
-
 export default product
 
 export async function getStaticPaths() {
@@ -34,5 +32,6 @@ export async function getStaticProps(context) {
     props: {
       product,
     },
+    revalidate:10
   };
 }

@@ -14,6 +14,24 @@ const reviewSchema=mongoose.Schema({
     timestamps:true
 });
 
+// const categorySchema=mongoose.Schema({
+//         name:{type:String, required:true},
+//         slug:{type:String, required:true},
+//         image:{
+//             src:{type:String, required:true},
+//             alt:{type:String, required:true}
+//         },
+//         products:[
+//             {
+//                 type:mongoose.Schema.Types.ObjectId,
+//                 requred:true,
+//                 ref:"Product"
+//             }
+//         ]
+// },{
+//     timestamps:true
+// });
+
 const productSchema=mongoose.Schema({
     user:{
         type:mongoose.Schema.Types.ObjectId,
@@ -42,13 +60,11 @@ const productSchema=mongoose.Schema({
         type:String,
         required:true,
     },
-    categories:[
-        {
-            name:{type:String, required:true},
-            slug:{type:String, required:true},
-
-        }
-    ],
+    category:{
+            type:String,
+            required:true,
+            ref:"Category"
+    },
     price:{
         type:Number,
         required:true,
@@ -73,6 +89,47 @@ const productSchema=mongoose.Schema({
 },{
     timestamps:true
 });
+
+productSchema.post("save", async (doc, next)=> {
+    try {
+      const category = await mongoose.model("Category").findOne({ name: doc.category });
+      if (!category) {
+        await mongoose.model("Category").create({ name: doc.category, count: 1 });
+      } else {
+        await mongoose.model("Category").updateOne({ name: doc.category }, { $inc: { count: 1 } });
+      }
+      next();
+    } catch (error) {
+      console.error('Error updating category count:', error);
+      next(error);
+    }
+  });
+
+productSchema.post("insertMany", async (docs, next)=> {
+    try {
+      const categoryCounts = {};
+      
+      docs.forEach((doc) => {
+        const categoryName = doc.category; //loop through each document to determine its category 
+        categoryCounts[categoryName] = (categoryCounts[categoryName] || 0) + 1;//count the number of products in each category
+      });
+  
+      //loops through the categoryCounts in each Category and updates the corresponding category
+      for (const categoryName in categoryCounts) {
+        const category = await mongoose.model("Category").findOne({ name: categoryName });
+        if (!category) {
+          await mongoose.model("Category").create({ name: categoryName, count: categoryCounts[categoryName] });
+        } else {
+          await mongoose.model("Category").updateOne({ name: categoryName }, { $inc: { count: categoryCounts[categoryName] } });
+        }
+      }
+      next()
+    } catch (error) {
+      console.error("Error updating category counts:", error);
+      next(error)
+    }
+  });
+  
 
 const Product=mongoose.model("Product", productSchema)
 

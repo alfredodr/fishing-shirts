@@ -10,7 +10,7 @@ export default function Home({data}) {
         <Banner/>
         <FeaturedProducts products={data}/>
         <LatestArticles/>
-        <Features/> 
+        <Features/>
     </>
   ) 
 }
@@ -19,7 +19,8 @@ export async function getStaticProps(){
   const {data}=await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products`);
     
   return {
-    props:{data}
+    props:{data},
+    revalidate:10
   }
 }
 

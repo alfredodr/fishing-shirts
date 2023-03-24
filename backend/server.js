@@ -4,6 +4,7 @@ import colors from "colors";
 import connectDB from "./config/db.js";
 import cors from "cors";
 import productRoutes from "./routes/productRoutes.js";
+import categoryRoutes from "./routes/categoryRoutes.js";
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 
 dotenv.config()
@@ -17,6 +18,8 @@ app.use(cors({
 }))
 
 app.use("/api/products", productRoutes)
+
+app.use("/api/categories", categoryRoutes)
 
 app.use(notFound)
 

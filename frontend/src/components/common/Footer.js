@@ -6,13 +6,13 @@ import { FaInstagramSquare } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="bg-white">
-        <hr className="m-1"/>
+        <hr />
         <div className="flex items-center justify-center container mx-auto">
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 my-10 mx-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 my-10 ">
             {/* Affiliate Disclosure */}
             <div>
-                <div className="p-5 flex flex-col">
+                <div className="flex flex-col">
                     <h2 className="text-2xl font-medium my-3">Amazon Affiliate</h2>
                     <p className="text-slate-500 text-lg my-5">Fishing Shirts Now is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com</p>
                     <p>
@@ -22,7 +22,7 @@ const Footer = () => {
             </div>
             {/* Quick Links*/}
             <div>
-                <div className="p-5 flex flex-col">
+                <div className="flex flex-col">
                     <h2 className="text-2xl font-medium my-3">Quick Links</h2>
                     <a href="#" className="text-lg mt-3">Terms & Conditions</a>
                     <a href="#" className="text-lg mt-3">Accessibility</a>

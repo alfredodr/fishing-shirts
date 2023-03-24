@@ -45,7 +45,7 @@ const Header = () => {
               {/* Menu Items */}
               <div className="hidden space-x-7 items-center md:flex">
                 <Link href="/" className={`${router.pathname === "/" ? "text-lightWhite" : "text-black"}`}>Home</Link>
-                <Link href="#" className={`${router.pathname === "/" ? "text-lightWhite" : "text-black"}`}>Store</Link>
+                <Link href="/store" className={`${router.pathname === "/" ? "text-lightWhite" : "text-black"}`}>Store</Link>
                 <Link href="#" className={`${router.pathname === "/" ? "text-lightWhite" : "text-black"}`}>Blog</Link>
                 {/* Button */}
                 <form className="flex items-center">   
@@ -74,7 +74,7 @@ const Header = () => {
            <div className={`${isActive === true ? null : "hidden"} md:hidden w-full bg-lightGray"`} >
               <div id="menu" className="flex flex-col font-bold bg-lightGray divide-y divide-slate-300">
                 <div className="py-4"><Link href="/" className="mx-10">Home</Link></div>
-                <div className="py-4"><Link href="#" className="mx-10">Store</Link></div>
+                <div className="py-4"><Link href="/store" className="mx-10">Store</Link></div>
                 <div className="py-4"><Link href="#" className="mx-10">Blog</Link></div>  
                 <div className="py-4">
                   <form className="flex items-center mx-10">   

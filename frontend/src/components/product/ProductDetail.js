@@ -4,9 +4,9 @@ import Variants from "./Variants"
 
 const ProductDetail = ({product}) => {
   return (
-    <section > 
-        <div className="relative flex md:flex-row sm:flex-col container mx-auto my-24 ">
-        <div className="md:w-1/2 lg:w-1/2">
+    <section className="bg-lightGray py-28"> 
+        <div className="relative flex md:flex-row sm:flex-col container mx-auto">
+        <div className="md:w-1/2">
             <div className="overflow-hidden">
                 <img
                     src={product.images[0].src}
@@ -23,19 +23,19 @@ const ProductDetail = ({product}) => {
                 }
             </div>     
         </div>
-        <div className="w-1/2 md:ml-20 lg:md-20">
+        <div className="md:ml-20 lg:md-20">
             <nav>
                 <Link href="/">Home</Link>
             </nav>
             <h1>{product.name}</h1>
-            <p>{product.price}</p>
+            <p className="text-2xl">
+                Amazon.com Price: ${product.price} (as of {new Date().toLocaleDateString() + ""}
+            ) </p>
         </div>
     </div>
     <div className="container mx-auto ">
-        <ul className="mt-2 text-slate-500 text-base" >Categories: 
-            {product.categories.map((category,index)=>
-            <li key={index}>{category.name}</li>
-            )}
+        <ul className="mt-2 text-slate-500 text-base" >Category: 
+            <li>{product.category.name}</li>
         </ul>
         <hr className="m-1"/>                  
         <p className="text-lg font-medium mt-8 hover:underline hover:underline-offset-1">

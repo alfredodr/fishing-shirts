@@ -2,7 +2,6 @@ import React from "react"
 import Product from "../product/Product";
 
 const FeaturedProducts = ({products}) => {
-
   return (
     <>
     {/* Features Section */}
@@ -13,7 +12,7 @@ const FeaturedProducts = ({products}) => {
             {/* Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 my-5 mx-5">
                  {/* Product */}
-                    {products.map((product, index)=>(         
+                    {products?.map((product, index)=>(         
                         <Product key={index} product={product}/>
                     ))}                
             </div>
