@@ -5,11 +5,11 @@ import { FaInstagramSquare } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-white">
+    <footer className="bg-white sm:mx-5">
         <hr />
         <div className="flex items-center justify-center container mx-auto">
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 my-10 ">
+        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-2 my-10 ">
             {/* Affiliate Disclosure */}
             <div>
                 <div className="flex flex-col">

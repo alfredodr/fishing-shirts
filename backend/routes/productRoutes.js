@@ -2,15 +2,22 @@ import express from "express";
 import Product from "../models/productModel.js";
 import asyncHandler from "express-async-handler";
 
+
 const router=express.Router()
 
 // @desc Fetch all products
 // @route  GET /api/products
 // @access Public
 router.get("/", asyncHandler(async(req,res)=>{
-    const products=await Product.find({})
-    res.json(products)
-  }))
+  const products=await Product.find({})
+  if(products){
+      res.json(products)
+    }else{
+      res.status(404)
+      throw new Error("Product not found")
+    }
+
+}))
   
 // @desc Fetch single product
 // @route  GET /api/products/:id
@@ -25,6 +32,21 @@ router.get("/:id", asyncHandler(async(req,res)=>{
       throw new Error("Product not found")
     }
 }))
-  
+
 
 export default router;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

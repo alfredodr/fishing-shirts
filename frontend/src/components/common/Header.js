@@ -35,12 +35,14 @@ const Header = () => {
             {/* Flex container */}
               {/* Logo */}
               <Link href="/" className={`${router.pathname === "/" && "w-40"}`}>
-                <Image 
-                  src={router.pathname === "/" ? "/FSN-Transparent-Logo-250x250-1.png.webp" : "/fsn-black-logo.webp"}
-                  alt="fishing shirts now logo"
-                  width={209}
-                  height={5}
-                />
+                <div className="relative w-auto h-auto overflow-hidden">
+                  <Image 
+                    src={router.pathname === "/" ? "/FSN-Transparent-Logo-250x250-1.png.webp" : "/fsn-black-logo.webp"}
+                    alt="fishing shirts now logo"
+                    width={209}
+                    height={5}
+                  />
+                </div>
               </Link>
               {/* Menu Items */}
               <div className="hidden space-x-7 items-center md:flex">

@@ -10,3 +10,14 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
 }
+
+/* Range Slider */
+input[type=range]::-webkit-slider-thumb{
+  pointer-events: auto;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  @apply bg-black
+}

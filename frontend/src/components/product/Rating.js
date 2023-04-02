@@ -6,7 +6,7 @@ import { IconContext } from "react-icons";
 
 const Rating = ({value, text}) => {
   return (
-    <IconContext.Provider value={{  color: "FDCC0D", size: "20px"  }}>
+    <IconContext.Provider value={{   style: { color: "FDCC0D", fontSize: "20px" }  }}>
         <div className="flex flex-row">
             <span>
                 {value>=1 ? <BsStarFill/> : value >=0.5 ? <BsStarHalf/> : <BsStar/>}

@@ -6,8 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "nodemon server.js",
-    "data:import": "node seeder",
-    "data:destroy": "node seeder -d"
+    "data:import": "node ./utils/getAsins.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +19,7 @@
   },
   "homepage": "https://github.com/alfredodr/fishing-shirts#readme",
   "dependencies": {
+    "amazon-paapi": "^1.0.7",
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
     "cors": "^2.8.5",
@@ -27,6 +27,7 @@
     "express": "^4.18.2",
     "express-async-handler": "^1.2.0",
     "mongoose": "^7.0.1",
-    "nodemon": "^2.0.21"
+    "node-cron": "^3.0.2",
+    "nodemon": "^2.0.22"
   }
 }

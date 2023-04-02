@@ -16,7 +16,7 @@ const ProductDetail = ({product}) => {
                 {/* Variants*/}
                 {product.images.length > 1 && 
                     <div className="container flex flex-row gap-5 flex-1 my-10">
-                    {product.images.map((image, index)=>(         
+                    {product.images.slice(1).map((image, index)=>(         
                         <Variants key={index} image={image}/>
                     ))}     
                     </div>
@@ -28,15 +28,17 @@ const ProductDetail = ({product}) => {
                 <Link href="/">Home</Link>
             </nav>
             <h1>{product.name}</h1>
-            <p className="text-2xl">
-                Amazon.com Price: ${product.price} (as of {new Date().toLocaleDateString() + ""}
-            ) </p>
+            {product.price===1 ? <p className="mt-2 font-bold text-red-700">Currently unavailable</p> : 
+                <p className="text-2xl">
+                    Amazon.com Price: ${product.price} (as of {new Date().toLocaleDateString() + ""}
+                ) </p>
+            }
         </div>
     </div>
     <div className="container mx-auto ">
-        <ul className="mt-2 text-slate-500 text-base" >Category: 
-            <li>{product.category.name}</li>
-        </ul>
+        <p className="mt-2 text-slate-500 text-base">
+          Categories: {product.categories.map((category) => category.name).join(", ")}
+        </p>
         <hr className="m-1"/>                  
         <p className="text-lg font-medium mt-8 hover:underline hover:underline-offset-1">
             Description

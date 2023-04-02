@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import Image from "next/image"
 import { FaTshirt } from "react-icons/fa";
 import Link from "next/link";
@@ -30,11 +30,13 @@ const Banner = () => {
                 <p className="hidden max-w-sm mb-4 text-center text-white md:text-left md:block">
                     We help you find the best fishing shirts at affordable prices that are carefully selected for you. All sizes, colors, and textures in stock right now. We stand by the quality of our products.
                 </p>
-                {/* Button */}
-                <button className="w-48 p-3 px-6 pt-2 bg-white text-lg text-black font-bold hover:text-white hover:bg-transparent hover:border-white-700 border-2 flex items-center md:text-left" type="button">
-                    <FaTshirt className="mr-3"/>
-                    Learn More
-                </button>
+                <Link href="/store" passHref>
+                    {/* Button */}
+                    <button className="w-48 p-3 px-6 pt-2 bg-white text-lg text-black font-bold hover:text-white hover:bg-transparent hover:border-white-700 border-2 flex items-center md:text-left" type="button">
+                        <FaTshirt className="mr-3"/>
+                        Learn More
+                    </button>   
+                </Link>
             </div>
         </div>
     </section>

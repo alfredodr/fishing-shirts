@@ -28,6 +28,7 @@ module.exports = {
         white:"#FFFFFF",
         paleBlack:"#001d35",
         lightBlack:"rgba(0,0,0,0.07)",
+        customBlack:"#4e4e4e",
         light:"rgba(255,255,255,0)",
         lightWhite:"#E1D9D1",
         lightGray:"#f4f4f4",
