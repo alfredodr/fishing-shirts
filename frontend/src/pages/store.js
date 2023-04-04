@@ -3,8 +3,9 @@ import axios from "axios"
 import Categories from "@/components/product/Categories"
 import StoreProducts from "@/components/product/StoreProducts"
 import FilterByPrice from "@/components/product/FilterByPrice"
+import Paginate from "@/components/common/Paginate"
 
-const store = ({products, categories}) => {
+const store = ({products, page, pages, keyword, categories}) => {
     const initialMin=0;
     const initialMax=100;
     const [minPrice, setMinPrice]=useState(initialMin);
@@ -38,9 +39,10 @@ const store = ({products, categories}) => {
                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-10 mt-32">
                     {/* Product */}
                     { products.filter( product => { return product.price >= minPrice && product.price <= maxPrice }).map( (product,index) => {
-                      return <StoreProducts key={index} product={product}/>
+                      return <StoreProducts key={index} product={product} keyword={keyword ? keyword : ""}/>
                     })}               
                 </div>
+                <Paginate page={page} pages={pages} keyword={keyword ? keyword : ""}/>
             </div>
         </section>
       )
@@ -48,13 +50,16 @@ const store = ({products, categories}) => {
 
 export default store
 
-export async function getStaticProps(){
-  const {data:products}=await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products`);
+export async function getServerSideProps(context){
+  const { query } = context;
+  const keyword = query.s || "";
+  const pageNumber=query.pageNumber || 1;
+  const {data:allProducts}=await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products?keyword=${keyword}&pageNumber=${pageNumber}`);
   const {data:categories}=await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/categories`);
-    
+  const{products, page, pages}=allProducts;
+
   return {
-    props:{products,categories},
-    revalidate:10
+    props:{products, page, pages, keyword, categories}
   }
 }
 

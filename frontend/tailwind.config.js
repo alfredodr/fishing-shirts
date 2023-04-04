@@ -32,6 +32,7 @@ module.exports = {
         light:"rgba(255,255,255,0)",
         lightWhite:"#E1D9D1",
         lightGray:"#f4f4f4",
+        paleGray:"F9F9F9",
         lightBlue:"#3197d6"
       }
     },

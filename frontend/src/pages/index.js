@@ -6,12 +6,12 @@ import axios from "axios";
 
 export default function Home({data}) {
   return (
-    <>
+      <>
         <Banner/>
-        <FeaturedProducts products={data}/>
+        <FeaturedProducts products={data.products}/>
         <LatestArticles/>
         <Features/>
-    </>
+      </>
   ) 
 }
 
@@ -23,7 +23,6 @@ export async function getStaticProps(){
     revalidate:10
   }
 }
-
 
 
 

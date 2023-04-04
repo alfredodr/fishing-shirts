@@ -13,7 +13,7 @@ export default product
 export async function getStaticPaths() {
   const {data}=await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products`);
   
-  const paths=data.map(product=>{
+  const paths=data.products.map(product=>{
     return{ params: { slug: product.slug } }
     })
 
@@ -26,7 +26,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const { params } = context;
   const {data}=await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products`);
-  const product = data.find((product) => product.slug === params.slug);
+  const product = data.products.find((product) => product.slug === params.slug);
 
   return {
     props: {

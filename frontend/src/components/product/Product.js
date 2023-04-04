@@ -7,13 +7,13 @@ const Product = ({product}) => {
   return (
     <div className="p-2 flex flex-col">
         <Link href={`/products/${product.slug}`} passHref>
-            <div className="relative w-32 h-32 overflow-hidden">
+            <div className="relative w-full h-80">
                 <Image 
                   src={product.images[0].src}
                   alt={product.name}
                   fill
-                  sizes="(max-width: 768px) 128px,
-                  (max-width: 1200px) 128px,
+                  sizes="(max-width: 768px) 160px,
+                  (max-width: 1200px) 160px,
                   33vw"
                   priority 
                   className="object-center max-w-full max-h-full"  
