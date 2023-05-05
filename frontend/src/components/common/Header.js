@@ -36,7 +36,7 @@ const Header = () => {
             {/* Flex container */}
               {/* Logo */}
               <Link href="/" className={`${router.pathname === "/" && "w-40"}`}>
-                <div className="relative w-auto h-auto overflow-hidden">
+                <div className="relative w-52 h-full overflow-hidden">
                   <Image 
                     src={router.pathname === "/" ? "/FSN-Transparent-Logo-250x250-1.png.webp" : "/fsn-black-logo.webp"}
                     alt="fishing shirts now logo"
