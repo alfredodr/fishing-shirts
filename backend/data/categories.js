@@ -171,6 +171,14 @@ const categories = [
       src: "https://fsn-site.s3.amazonaws.com/categories/fishing-shirts-funny.webp",
       alt: "Fishing Shirts Funny",
     },
+    products: [
+      { _id: "B07CNWT88T" },
+      { _id: "B017RSLLK0" },
+      { _id: "B00U7ZF1RA" },
+      { _id: "B01DCJXJPS" },
+      { _id: "B07RPPHPQ4" },
+      { _id: "B01N15FFSY" },
+    ],
   },
   {
     _id: "fishing-shirts-hanes",

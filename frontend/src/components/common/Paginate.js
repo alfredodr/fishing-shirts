@@ -10,7 +10,7 @@ const Paginate = ({
 }) => {
   return (
     pages > 1 && (
-      <div className="flex bg-white rounded-lg my-10">
+      <div className="flex bg-lightGray rounded-lg my-10">
         {[...Array(pages).keys()].map((x, index) => (
           <Link
             key={index}

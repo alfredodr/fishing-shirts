@@ -1,3 +1,53 @@
-.post h1{
-    @apply my-5
+.post {
+  @apply bg-white p-10 w-11/12;
+}
+
+.post h1 {
+  @apply my-5;
+}
+
+.post p:first-of-type {
+  @apply mb-6;
+}
+
+.post a[href] {
+  @apply hover:text-blogNavHoverBlue;
+}
+
+.post h2 {
+  @apply text-blogH2Black text-5xl my-10 font-bold;
+}
+
+.post h3 {
+  @apply text-3xl font-bold my-3;
+}
+
+.post h4 {
+  @apply my-5 font-bold text-xl leading-5;
+}
+
+.post hr {
+  @apply my-4;
+}
+
+.sidebar {
+  @apply md:ml-10;
+}
+
+.sponsor,
+.recentPosts {
+  @apply bg-white p-6;
+}
+
+.sponsor > h2,
+.recentPosts > h2 {
+  @apply font-normal mb-4;
+}
+
+.recentPosts a[href] {
+  @apply hover:text-blogNavHoverBlue;
+}
+
+.sponsor {
+  @apply mb-10;
 }

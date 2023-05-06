@@ -7,7 +7,7 @@ const Product = ({ product }) => {
   return (
     <div className="p-2 flex flex-col">
       <Link href={`/products/${product.slug}`} passHref>
-        <div className="relative w-full h-60">
+        <div className="relative w-full h-60 transform transition duration-500 hover:scale-110">
           <Image
             src={product.images[0].src}
             alt={product.name}

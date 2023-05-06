@@ -17,12 +17,16 @@ module.exports = {
       xl: "1440px",
     },
     extend: {
+      fontFamily: {
+        sans: ["Lato", "sans-serif"],
+      },
       colors: {
         primaryLightBlue: "#6EC1E4",
         secondaryPaleBlack: "#54595F",
         textLightGray: "#7A7A7A",
         accentLightGreeen: "#61CE70",
         customDarkBlue: "#4054B2",
+        blogNavHoverBlue: "#0084d6",
         customDarkGreen: "#23A455",
         black: "#000000",
         white: "#FFFFFF",
@@ -30,6 +34,7 @@ module.exports = {
         lightBlack: "rgba(0,0,0,0.07)",
         customBlack: "#4e4e4e",
         breadCrumbBlack: "#777",
+        blogH2Black: "#333333",
         light: "rgba(255,255,255,0)",
         lightWhite: "#E1D9D1",
         lightGray: "#f4f4f4",

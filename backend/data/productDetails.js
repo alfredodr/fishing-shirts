@@ -170,6 +170,71 @@ const productDetails = [
       { _id: "fishing-shirts-hoodie" },
     ],
   },
+  {
+    asin: "B07CNWT88T",
+    slug: "crazy-dog-funny-fishing-tee",
+    categories: [
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-funny" },
+    ],
+  },
+  {
+    asin: "B017RSLLK0",
+    slug: "ann-arbor-funny-fishing-tee",
+    categories: [{ _id: "fishing-shirts-funny" }],
+  },
+  {
+    asin: "B00U7ZF1RA",
+    slug: "gbond-apparel-the-rodfather-funny-parody-t-shirt",
+    categories: [
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-funny" },
+    ],
+  },
+  {
+    asin: "B01DCJXJPS",
+    slug: "worlds-okayest-fisherman-fishing-dad-graphic-novelty-sarcastic-funny-t-shirt",
+    categories: [{ _id: "fishing-shirts-funny" }],
+  },
+  {
+    asin: "B07RPPHPQ4",
+    slug: "my-fishing-retirement-plan-funny-fish-pole-humor-fisherman-men-joke-t-shirt",
+    categories: [{ _id: "fishing-shirts-funny" }],
+  },
+  {
+    asin: "B01N15FFSY",
+    slug: "mens-keepin-it-reel-tshirt-funny-cool-fishing-bass-outdoors-sporting-tee",
+    categories: [
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-funny" },
+    ],
+  },
+  {
+    asin: "B0031RFXBA",
+    slug: "columbia-mens-bahama-ii-short-sleeve-shirt-2",
+    categories: [
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-columbia" },
+    ],
+  },
+  {
+    asin: "B016J2CWJE",
+    slug: "hanes-mens-cool-dri-performance-long-sleeve-t-shirt482l-deep-royal-white-xl",
+    categories: [{ _id: "fishing-shirts-hanes" }],
+  },
+  {
+    asin: "B01ERQUDMM",
+    slug: "hook-tackle-mens-anglers-delight-short-sleeve-embroidered-uv-sun-protection-fishing-shirt",
+    categories: [{ _id: "fishing-shirts-embroidery" }],
+  },
+  {
+    asin: "B07NKM8YCM",
+    slug: "bamboo-cay-mens-chest-bird-of-paradise-tropical-style-embroidered-hawaiian-button-down-shir",
+    categories: [
+      { _id: "fishing-shirts-embroidery" },
+      { _id: "fishing-shirts-for-him" },
+    ],
+  },
 ];
 
 export default productDetails;
