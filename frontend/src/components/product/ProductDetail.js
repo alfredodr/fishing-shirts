@@ -45,24 +45,26 @@ const ProductDetail = ({ product }) => {
               .join(" / ")}
             / {product?.name}
           </nav>
-          <h1>{product.name}</h1>
+          <h1 className="mb-2">{product.name}</h1>
           {product.price === 1 ? (
             <p className="mt-2 font-bold text-red-700">Currently unavailable</p>
           ) : (
-            <em className="text-2xl">
-              Amazon.com Price: ${product.price} (as of{" "}
-              {new Date(product.updatedAt).toLocaleDateString() + ""}){" "}
-            </em>
+            <>
+              <em className="text-2xl">
+                Amazon.com Price: ${product.price} (as of{" "}
+                {new Date(product.updatedAt).toLocaleDateString() + ""}){" "}
+              </em>
+              <Link href={`${product.externalUrl}`} rel="nofollow" passHref>
+                {/* Button */}
+                <button
+                  className="w-48 mt-2 px-3 py-2 bg-lightBlue text-white font-bold border-2 flex items-center md:text-left"
+                  type="button"
+                >
+                  Buy Now On Amazon
+                </button>
+              </Link>
+            </>
           )}
-          <Link href={`${product.externalUrl}`} rel="nofollow" passHref>
-            {/* Button */}
-            <button
-              className="w-48 px-3 py-2 bg-lightBlue text-white font-bold border-2 flex items-center md:text-left"
-              type="button"
-            >
-              Buy Now On Amazon
-            </button>
-          </Link>
         </div>
       </div>
       <div className="container mx-auto">

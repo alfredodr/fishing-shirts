@@ -41,6 +41,8 @@ module.exports = {
         paleGray: "F9F9F9",
         lightBlue: "#3197d6",
         yellow: "FDCC0D",
+        whoWeAreBackgroundGray: "#EDEDEF",
+        followUsLightGray: "#DCDDDF",
       },
     },
   },

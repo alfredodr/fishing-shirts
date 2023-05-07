@@ -1,6 +1,7 @@
 import React from "react";
 import { AiFillFacebook } from "react-icons/ai";
 import { FaInstagramSquare } from "react-icons/fa";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -8,7 +9,7 @@ const Footer = () => {
       <hr />
       <div className="flex items-center justify-center container mx-auto">
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-2 my-10 ">
+        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-5 my-10 ">
           {/* Affiliate Disclosure */}
           <div>
             <div className="flex flex-col">
@@ -33,21 +34,32 @@ const Footer = () => {
           <div>
             <div className="flex flex-col">
               <h2 className="text-2xl font-medium my-3">Quick Links</h2>
-              <a href="#" className="text-lg mt-3">
+              <Link
+                href="/privacy-cookie-policy/"
+                passHref
+                className="text-lg mt-3"
+              >
+                Privacy & Cookie Policy
+              </Link>
+              <Link href="/terms-conditions/" passHref className="text-lg mt-3">
                 Terms & Conditions
-              </a>
-              <a href="#" className="text-lg mt-3">
+              </Link>
+              <Link href="/accessibility/" passHref className="text-lg mt-3">
                 Accessibility
-              </a>
-              <a href="#" className="text-lg mt-3">
+              </Link>
+              <Link href="/about/" passHref className="text-lg mt-3">
                 About
-              </a>
-              <a href="#" className="text-lg mt-3">
+              </Link>
+              <Link href="/contact-us/" passHref className="text-lg mt-3">
                 Contact Us
-              </a>
-              <a href="#" className="text-lg mt-3">
+              </Link>
+              <Link
+                href="/fishingshirtsnow-com-sitemap/"
+                passHref
+                className="text-lg mt-3"
+              >
                 Sitemap
-              </a>
+              </Link>
             </div>
           </div>
           {/* Latest Articles*/}

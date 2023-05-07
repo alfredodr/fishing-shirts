@@ -12,7 +12,7 @@ const Banner = () => {
     >
       <div className="fixed top-0 left-0 bottom-0 right-0 -z-50 overflow-hidden">
         <Image
-          src="/ocean-1950583_1280.jpg"
+          src="https://fsn-site.s3.amazonaws.com/home/ocean-1950583_1280.jpg"
           alt="Fisherman holding fishing rod"
           fill
           priority

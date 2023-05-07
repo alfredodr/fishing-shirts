@@ -38,18 +38,32 @@ const Header = () => {
 
       <header
         className={`${
-          router.pathname === "/" ? "bg-lightBlack" : "bg-white"
+          router.pathname === "/" ||
+          router.pathname === "/about" ||
+          router.pathname === "/contact-us"
+            ? "bg-lightBlack"
+            : "bg-white"
         } absolute top-0 w-full z-10`}
       >
         {/* Navbar */}
         <nav className="container mx-auto flex items-center justify-between">
           {/* Flex container */}
           {/* Logo */}
-          <Link href="/" className={`${router.pathname === "/" && "w-40"}`}>
+          <Link
+            href="/"
+            className={`${
+              (router.pathname === "/" ||
+                router.pathname === "/about" ||
+                router.pathname === "/contact-us") &&
+              "w-40"
+            }`}
+          >
             <div className="relative w-52 h-full overflow-hidden">
               <Image
                 src={
-                  router.pathname === "/"
+                  router.pathname === "/" ||
+                  router.pathname === "/about" ||
+                  router.pathname === "/contact-us"
                     ? "/FSN-Transparent-Logo-250x250-1.png.webp"
                     : "/fsn-black-logo.webp"
                 }
@@ -64,7 +78,11 @@ const Header = () => {
             <Link
               href="/"
               className={`${
-                router.pathname === "/" ? "text-lightWhite" : "text-black"
+                router.pathname === "/" ||
+                router.pathname === "/about" ||
+                router.pathname === "/contact-us"
+                  ? "text-lightWhite"
+                  : "text-black"
               }`}
             >
               Home
@@ -72,7 +90,11 @@ const Header = () => {
             <Link
               href="/store"
               className={`${
-                router.pathname === "/" ? "text-lightWhite" : "text-black"
+                router.pathname === "/" ||
+                router.pathname === "/about" ||
+                router.pathname === "/contact-us"
+                  ? "text-lightWhite"
+                  : "text-black"
               }`}
             >
               Store
@@ -80,7 +102,11 @@ const Header = () => {
             <Link
               href="/blog"
               className={`${
-                router.pathname === "/" ? "text-lightWhite" : "text-black"
+                router.pathname === "/" ||
+                router.pathname === "/about" ||
+                router.pathname === "/contact-us"
+                  ? "text-lightWhite"
+                  : "text-black"
               }`}
             >
               Blog
