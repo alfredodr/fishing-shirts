@@ -11,31 +11,12 @@ const Header = () => {
   const [isActive, setActive] = useState("false");
   const router = useRouter();
 
-  const mobileMenu = () => {
+  const toggleMobileMenu = () => {
     setActive(!isActive);
   };
 
   return (
     <>
-      <Head>
-        <title>Create Next App</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="canonical" href="https://fishingshirtsnow.com/" />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="Fishing Shirts Now - UV Protection - High Quality - Affordable Prices"
-        />
-        <meta
-          property="og:description"
-          content="Fishing shirts at affordable prices, carefully selected for you. All sizes and textures in stock right now. We stand by the quality of our products."
-        />
-        <meta property="og:url" content="https://fishingshirtsnow.com/" />
-        <meta property="og:site_name" content="Fishing Shirts Now" />
-      </Head>
-
       <header
         className={`${
           router.pathname === "/" ||
@@ -118,7 +99,7 @@ const Header = () => {
           <button
             id="menu-btn"
             className="flex items-center justify-center cursor-pointer hamburger relative w-8 h-8 md:hidden focus:outline-none bg-lightBlue rounded"
-            onClick={mobileMenu}
+            onClick={toggleMobileMenu}
           >
             {isActive === true ? <RxCross1 /> : <RxHamburgerMenu />}
           </button>
@@ -134,22 +115,22 @@ const Header = () => {
             className="flex flex-col font-bold bg-lightGray divide-y divide-slate-300"
           >
             <div className="py-4">
-              <Link href="/" className="mx-10">
+              <Link href="/" className="mx-10" onClick={toggleMobileMenu}>
                 Home
               </Link>
             </div>
             <div className="py-4">
-              <Link href="/store" className="mx-10">
+              <Link href="/store" className="mx-10" onClick={toggleMobileMenu}>
                 Store
               </Link>
             </div>
             <div className="py-4">
-              <Link href="#" className="mx-10">
+              <Link href="/blog" className="mx-10" onClick={toggleMobileMenu}>
                 Blog
               </Link>
             </div>
             <div className="py-4">
-              <SearchBox />
+              <SearchBox toggleMobileMenu={toggleMobileMenu} />
             </div>
           </div>
         </div>

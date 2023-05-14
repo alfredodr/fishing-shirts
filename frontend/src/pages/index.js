@@ -6,10 +6,56 @@ import axios from "axios";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import Head from "next/head";
 
 export default function Home({ products, posts }) {
   return (
     <>
+      <Head>
+        <title>
+          Fishing Shirts Now - UV Protection - High Quality - Affordable Prices
+        </title>
+        <meta
+          name="description"
+          content="Fishing shirts at affordable prices, carefully selected for you. All sizes and textures in stock right now. We stand by the quality of our products."
+        />
+        <link rel="canonical" href="https://fishingshirtsnow.com/" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://fishingshirtsnow.com/" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Fishing Shirts Now - UV Protection - High Quality - Affordable Prices"
+        />
+        <meta
+          property="og:description"
+          content="Fishing shirts at affordable prices, carefully selected for you. All sizes and textures in stock right now. We stand by the quality of our products."
+          class="yoast-seo-meta-tag"
+        />
+        <meta property="og:url" content="https://fishingshirtsnow.com/" />
+        <meta property="og:site_name" content="Fishing Shirts Now" />
+
+        <meta
+          property="article:publisher"
+          content="https://www.facebook.com/fishingshirtsnow"
+        />
+        <meta
+          property="article:modified_time"
+          content="2021-01-16T04:25:05+00:00"
+        />
+        <meta
+          property="og:image"
+          content="https://fsn-site.s3.amazonaws.com/home/ocean-1950583_1280.jpg"
+        />
+        <meta property="og:image:width" content="1280" />
+        <meta property="og:image:height" content="853" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:label1" content="Est. reading time" />
+        <meta name="twitter:data1" content="22 minutes" />
+      </Head>
       <Banner />
       <FeaturedProducts products={products} />
       <LatestArticles posts={posts} />

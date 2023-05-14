@@ -5,46 +5,43 @@ import connectDB from "./config/db.js";
 import cors from "cors";
 import productRoutes from "./routes/productRoutes.js";
 import categoryRoutes from "./routes/categoryRoutes.js";
+import contactRoutes from "./routes/contactRoutes.js";
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
+import mail from "@sendgrid/mail";
 
-dotenv.config()
+dotenv.config();
 
-connectDB()
+connectDB();
 
-const app=express();
+const app = express();
 
-app.use(cors({
-    origin:process.env.FRONTEND_URL
-}))
+mail.setApiKey(process.env.SENDGRID_API_KEY);
 
-app.use("/api/products", productRoutes)
+app.use(express.json());
 
-app.use("/api/categories", categoryRoutes)
+app.use(
+  cors({
+    origin: process.env.FRONTEND_URL,
+  })
+);
 
-app.use(notFound)
+app.use("/api/products", productRoutes);
 
-app.use(errorHandler)
+app.use("/api/categories", categoryRoutes);
 
-app.get("/", (req,res)=>{
-    res.send("API is running")
+app.use("/api/mail", contactRoutes);
+
+app.use(notFound);
+
+app.use(errorHandler);
+
+app.get("/", (req, res) => {
+  res.send("API is running");
 });
 
-const PORT=process.env.PORT;
+const PORT = process.env.PORT;
 
-app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+app.listen(
+  PORT,
+  console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)
+);
