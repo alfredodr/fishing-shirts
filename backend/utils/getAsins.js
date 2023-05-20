@@ -47,7 +47,7 @@ const getAsins = () => {
     if (index >= productDetails.length) {
       clearInterval(intervalId);
 
-      if (result.length === productDetails.length) {
+      if (result?.length === productDetails.length) {
         // //save clean data in json and make the JSON file more easy to read
         try {
           const importData = async (products) => {
@@ -114,12 +114,10 @@ const onAsinChange = (currentAsins) => {
     Resources: [
       "ItemInfo.Title",
       "Images.Primary.Large",
-      "Images.Variants.Medium",
+      "Images.Variants.Large",
       "Offers.Listings.Price",
       "Offers.Listings.Availability.Type",
       "Offers.Listings.MerchantInfo",
-      "CustomerReviews.StarRating",
-      "BrowseNodeInfo.BrowseNodes.SalesRank",
       "ItemInfo.Features",
       "ItemInfo.ProductInfo",
       "ItemInfo.ByLineInfo",
@@ -163,16 +161,12 @@ const cleanData = () => {
     const imageVariants =
       item?.Images?.Variants?.map((variant) => {
         return {
-          src: variant?.Medium?.URL || "",
+          src: variant?.Large?.URL || "",
           alt: title || "",
         };
       }) || [];
     const featureDisplayValues = item?.ItemInfo?.Features?.DisplayValues || "";
-    const priceAmount = item?.Offers?.Listings[0]?.Price?.Amount || 1; //item.Offers.Listings[0].Price.Amount;
-    const productRating =
-      item?.Offers?.Listings[0]?.MerchantInfo?.FeedbackRating || 0;
-    const productReviewCount =
-      item?.Offers?.Listings[0]?.MerchantInfo?.FeedbackCount || 0;
+    const priceAmount = item?.Offers?.Listings[0]?.Price?.Amount || 1;
     const productBrand = item?.ItemInfo?.ByLineInfo?.Brand?.DisplayValue || "";
     const getSlug = (asin) => {
       const product = productDetails?.find((product) => product?.asin === asin);
@@ -199,8 +193,6 @@ const cleanData = () => {
       brand: productBrand,
       price: priceAmount,
       countInStock: 10,
-      rating: productRating,
-      numReviews: productReviewCount,
     };
   });
 

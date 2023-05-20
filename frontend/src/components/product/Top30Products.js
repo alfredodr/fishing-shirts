@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Product from "../product/Product";
+import Product from "./Product";
 
-const TopRatedProducts = () => {
+const Top30Products = () => {
   const [products, setProducts] = useState();
 
   useEffect(() => {
@@ -37,4 +37,4 @@ const TopRatedProducts = () => {
   );
 };
 
-export default TopRatedProducts;
+export default Top30Products;

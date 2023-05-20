@@ -5,57 +5,60 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import styles from "../styles/posts.module.css";
-import Head from "next/head";
+import { NextSeo, WebPageJsonLd } from "next-seo";
 
 const sitemap = ({ products, posts }) => {
   return (
     <>
-      <Head>
-        <title>
-          FishingShirtsNow.com Sitemap - Content Drilldown Map Of Our Website
-        </title>
-        <meta
-          name="description"
-          content="To enjoy fishing you should wear the appropriate outfit. This is what our website is all about. Check us out here:FishingShirtsNow.com Sitemap."
-        />
-        <link
-          rel="canonical"
-          href={`${process.env.NEXT_PUBLIC_BACKEND_URL}/fishingshirtsnow-com-sitemap/`}
-        />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:type" content="article" />
-        <meta
-          property="og:title"
-          content="FishingShirtsNow.com Sitemap - Content Drilldown Map Of Our Website"
-        />
-        <meta
-          property="og:description"
-          content="To enjoy fishing you should wear the appropriate outfit. This is what our website is all about. Check us out here:FishingShirtsNow.com Sitemap."
-        />
-        <meta
-          property="og:url"
-          content={`${process.env.NEXT_PUBLIC_BACKEND_URL}/fishingshirtsnow-com-sitemap/`}
-        />
-        <meta property="og:site_name" content="Fishing Shirts Now" />
-        <meta
-          property="article:publisher"
-          content="https://www.facebook.com/fishingshirtsnow"
-        />
-        <meta
-          property="article:modified_time"
-          content="2021-04-16T16:13:51+00:00"
-        />
-        <meta
-          property="og:image"
-          content="https://fsn-site.s3.amazonaws.com/home/ocean-1950583_1280.jpg"
-        />
-        <meta property="og:image:width" content="1280" />
-        <meta property="og:image:height" content="853" />
-        <meta property="og:image:type" content="image/jpeg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:label1" content="Est. reading time" />
-        <meta name="twitter:data1" content="38 minutes" />
-      </Head>
+      <NextSeo
+        title=" FishingShirtsNow.com Sitemap - Content Drilldown Map Of Our Website"
+        titleTemplate="%s | Fishing Shirts Now"
+        description="To enjoy fishing you should wear the appropriate outfit. This is what our website is all about. Check us out here:FishingShirtsNow.com Sitemap."
+        canonical={`${process.env.NEXT_PUBLIC_BACKEND_URL}/fishingshirtsnow-com-sitemap/`}
+        additionalMetaTags={[
+          {
+            property: "article:publisher",
+            content: "https://www.facebook.com/fishingshirtsnow",
+          },
+          {
+            property: "article:modified_time",
+            content: "2021-04-16T16:13:51+00:00",
+          },
+        ]}
+        additionalLinkTags={[
+          {
+            rel: "icon",
+            href: "/favicon.ico",
+          },
+        ]}
+        openGraph={{
+          type: "article",
+          title:
+            "FishingShirtsNow.com Sitemap - Content Drilldown Map Of Our Website",
+          description:
+            "To enjoy fishing you should wear the appropriate outfit. This is what our website is all about. Check us out here:FishingShirtsNow.com Sitemap.",
+          url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/fishingshirtsnow-com-sitemap/`,
+          images: [
+            {
+              url: "https://fsn-site.s3.amazonaws.com/home/ocean-1950583_1280.jpg",
+              width: 1280,
+              height: 853,
+              alt: "fisherman with fishing rod looking at the sea",
+              type: "image/jpeg",
+            },
+          ],
+        }}
+        twitter={{
+          title: "Fishing Shirts Now",
+          description: "Fishing Shirts Now Home Page",
+        }}
+      />
+      <WebPageJsonLd
+        name="FishingShirtsNow.com Sitemap - Content Drilldown Map Of Our Website"
+        description="To enjoy fishing you should wear the appropriate outfit. This is what our website is all about. Check us out here:FishingShirtsNow.com Sitemap."
+        id={`${process.env.NEXT_PUBLIC_BACKEND_URL}/fishingshirtsnow-com-sitemap/#corporation`}
+        publisher="https://fishingshirtsnow.com/#organization"
+      />
       <section
         className={`flex flex-col md:flex-row lg:flex-row justify-center container mx-auto my-24 relative`}
       >

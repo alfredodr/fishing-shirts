@@ -49,18 +49,18 @@ const getProductById = asyncHandler(async (req, res) => {
   }
 });
 
-// @desc Get top rated products
+// @desc Get top products
 // @route GET /api/products/top
 // @access Public
-const getTopProducts = asyncHandler(async (req, res) => {
-  const products = await Product.find().sort({ rating: -1 }).limit(30); //sort in ascending order
+const getTop30Products = asyncHandler(async (req, res) => {
+  const products = await Product.find().limit(30); //sort in ascending order
 
   if (products) {
     res.json(products);
   } else {
     res.status(404);
-    throw new Error("Top rated products not found");
+    throw new Error("Top 30 products not found");
   }
 });
 
-export { getProducts, getProductById, getTopProducts };
+export { getProducts, getProductById, getTop30Products };

@@ -1,11 +1,10 @@
 import React from "react";
-import Rating from "./Rating";
 import Link from "next/link";
 import Image from "next/image";
 
 const StoreProducts = ({ product }) => {
   return (
-    <div className="p-2 flex flex-col">
+    <div className={`p-2 flex flex-col ${product.price === 1 && "hidden"}`}>
       <Link href={`/products/${product.slug}`} passHref>
         <div className="relative w-full h-60 transform transition duration-500 hover:scale-110 overflow-hidden">
           <Image
@@ -29,7 +28,10 @@ const StoreProducts = ({ product }) => {
       </Link>
       <span className="mt-2 text-slate-500 text-sm">{product.category}</span>
       <span className="mt-2 text-sm">
-        <Rating value={product.rating} text={`${product.numReviews} reviews`} />
+        {product.categories[0]._id
+          .split("-")
+          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+          .join(" ")}
       </span>
       {product.price === 1 ? (
         <p className="mt-2 font-bold text-red-700">Currently unavailable</p>

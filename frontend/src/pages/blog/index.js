@@ -5,36 +5,53 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import styles from "../../styles/posts.module.css";
-import Head from "next/head";
+import { NextSeo, WebPageJsonLd } from "next-seo";
 
 const index = ({ posts }) => {
   return (
     <>
-      <Head>
-        <title>Blog - Fishing Shirts Now Blogs</title>
-        <meta
-          name="description"
-          content="Stay up to date with the latest trends, recommendations and product reviews in our Fishing Shirts Now Blog,"
-        />
-        <link rel="canonical" href="https://fishingshirtsnow.com/blog/" />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content="Blog - Fishing Shirts Now" />
-        <meta
-          property="og:description"
-          content="Stay up to date with the latest trends, recommendations and product reviews in our Fishing Shirts Now Blog,"
-        />
-        <meta property="og:url" content="https://fishingshirtsnow.com/blog/" />
-        <meta property="og:site_name" content="Fishing Shirts Now" />
-        <meta
-          property="og:image"
-          content="https://fsn-site.s3.amazonaws.com/home/ocean-1950583_1280.jpg"
-        />
-        <meta property="og:image:width" content="1280" />
-        <meta property="og:image:height" content="853" />
-        <meta property="og:image:type" content="image/jpeg" />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
+      <NextSeo
+        title="Blog"
+        titleTemplate="%s | Fishing Shirts Now"
+        description="Stay up to date with the latest trends, recommendations and product reviews in our Fishing Shirts Now Blog."
+        canonical="https://fishingshirtsnow.com/blog/"
+        additionalMetaTags={[
+          {
+            property: "article:publisher",
+            content: "https://www.facebook.com/fishingshirtsnow",
+          },
+          {
+            property: "article:modified_time",
+            content: "2021-01-16T04:25:05+00:00",
+          },
+        ]}
+        openGraph={{
+          type: "article",
+          title: "Blog - Fishing Shirts Now",
+          description:
+            "Stay up to date with the latest trends, recommendations and product reviews in our Fishing Shirts Now Blog.",
+          url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/blog/`,
+          images: [
+            {
+              url: "https://fsn-site.s3.amazonaws.com/home/ocean-1950583_1280.jpg",
+              width: 1280,
+              height: 853,
+              alt: "fisherman with fishing rod looking at the sea",
+              type: "image/jpeg",
+            },
+          ],
+        }}
+        twitter={{
+          title: "Blog - Fishing Shirts Now",
+          description: "Fishing Shirts Now Blog Articles",
+        }}
+      />
+      <WebPageJsonLd
+        name="Blog - Fishing Shirts Now"
+        description="Stay up to date with the latest trends, recommendations and product reviews in our Fishing Shirts Now Blog."
+        id={`${process.env.NEXT_PUBLIC_BACKEND_URL}/blog/#corporation`}
+        publisher="https://fishingshirtsnow.com/#organization"
+      />
       <section className="flex items-center justify-center container mx-auto my-24 relative">
         <div className={`${styles.post}`}>
           {posts.map((post, index) => (

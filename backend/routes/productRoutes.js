@@ -2,14 +2,14 @@ import express from "express";
 import {
   getProducts,
   getProductById,
-  getTopProducts,
+  getTop30Products,
 } from "../controllers/productController.js";
 
 const router = express.Router();
 
 router.route("/").get(getProducts);
 
-router.route("/top").get(getTopProducts);
+router.route("/top").get(getTop30Products);
 
 router.route("/:id").get(getProductById);
 

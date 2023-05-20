@@ -4,7 +4,7 @@ import Categories from "@/components/product/Categories";
 import StoreProducts from "@/components/product/StoreProducts";
 import FilterByPrice from "@/components/product/FilterByPrice";
 import Paginate from "@/components/common/Paginate";
-import Head from "next/head";
+import { NextSeo, WebPageJsonLd } from "next-seo";
 
 const store = ({ products, page, pages, keyword, categories }) => {
   const initialMin = 0;
@@ -14,47 +14,56 @@ const store = ({ products, page, pages, keyword, categories }) => {
 
   return (
     <>
-      <Head>
-        <title>
-          Fishing Shirts Store - Popular Brands - Sun Protection - Lightweight
-        </title>
-        <meta
-          name="description"
-          content="Check our fishing shirts store with the best for all members of the family. Short sleeve and long sleeve high perfoming choices carefully selected for you."
-        />
-        <link rel="canonical" href="https://fishingshirtsnow.com/store/" />
-        <link rel="next" href="https://fishingshirtsnow.com/store/page/2/" />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:type" content="article" />
-        <meta
-          property="og:title"
-          content="Fishing Shirts Store - Popular Brands - Sun Protection - Lightweight"
-        />
-        <meta
-          property="og:description"
-          content="Check our fishing shirts store with the best for all members of the family. Short sleeve and long sleeve high perfoming choices carefully selected for you."
-        />
-        <meta property="og:url" content="https://fishingshirtsnow.com/store/" />
-        <meta property="og:site_name" content="Fishing Shirts Now" />
-        <meta
-          property="article:publisher"
-          content="https://www.facebook.com/fishingshirtsnow"
-        />
-        <meta
-          property="article:modified_time"
-          content="2021-05-11T22:07:14+00:00"
-        />
-        <meta
-          property="og:image"
-          content="https://fsn-site.s3.amazonaws.com/home/ocean-1950583_1280.jpg"
-        />
-        <meta property="og:image:width" content="1280" />
-        <meta property="og:image:height" content="853" />
-        <meta property="og:image:type" content="image/jpeg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:label1" content="Est. reading time" />
-        <meta name="twitter:data1" content="1 minute" />
-      </Head>
+      <NextSeo
+        title="Fishing Shirts Store - Popular Brands - Sun Protection - Lightweight"
+        titleTemplate="%s | Fishing Shirts Now"
+        description="Check our fishing shirts store with the best for all members of the family. Short sleeve and long sleeve high perfoming choices carefully selected for you."
+        canonical={`${process.env.NEXT_PUBLIC_BACKEND_URL}/store/`}
+        next={`${process.env.NEXT_PUBLIC_BACKEND_URL}/store?pageNumber=2`}
+        additionalMetaTags={[
+          {
+            property: "article:publisher",
+            content: "https://www.facebook.com/fishingshirtsnow",
+          },
+          {
+            property: "article:modified_time",
+            content: "2021-05-11T22:07:14+00:00",
+          },
+        ]}
+        additionalLinkTags={[
+          {
+            rel: "icon",
+            href: "/favicon.ico",
+          },
+        ]}
+        openGraph={{
+          type: "article",
+          title:
+            "Fishing Shirts Store - Popular Brands - Sun Protection - Lightweight",
+          description:
+            "Check our fishing shirts store with the best for all members of the family. Short sleeve and long sleeve high perfoming choices carefully selected for you.",
+          url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/store/`,
+          images: [
+            {
+              url: "https://fsn-site.s3.amazonaws.com/home/ocean-1950583_1280.jpg",
+              width: 1280,
+              height: 853,
+              alt: "fisherman with fishing rod looking at the sea",
+              type: "image/jpeg",
+            },
+          ],
+        }}
+        twitter={{
+          title: "Fishing Shirts Now",
+          description: "Fishing Shirts Now Store Page",
+        }}
+      />
+      <WebPageJsonLd
+        name="Fishing Shirts Store - Popular Brands - Sun Protection - Lightweight"
+        description="Check our fishing shirts store with the best for all members of the family. Short sleeve and long sleeve high perfoming choices carefully selected for you."
+        id={`${process.env.NEXT_PUBLIC_BACKEND_URL}/store/#corporation`}
+        publisher="https://fishingshirtsnow.com/#organization"
+      />
       <section
         id="features"
         className="flex flex-col-reverse md:flex-row lg:flex-row justify-center container mx-auto my-24 relative"

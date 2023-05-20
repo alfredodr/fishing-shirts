@@ -1,4 +1,3 @@
-import Head from "next/head";
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -39,7 +38,7 @@ const Header = () => {
               "w-40"
             }`}
           >
-            <div className="relative w-52 h-full overflow-hidden">
+            <div className="relative w-48 h-full overflow-hidden">
               <Image
                 src={
                   router.pathname === "/" ||

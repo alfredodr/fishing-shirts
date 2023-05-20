@@ -1,54 +1,58 @@
 import React from "react";
 import styles from "../styles/posts.module.css";
-import Head from "next/head";
+import { NextSeo, WebPageJsonLd } from "next-seo";
 
 const termsAndConditions = () => {
   return (
     <>
-      <Head>
-        <title>Terms &amp; Conditions - Fishing Shirts Now</title>
-        <meta
-          name="description"
-          content="Learn more about Fishing Shirts Now Terms and Conditions."
-        />
-        <link
-          rel="canonical"
-          href="https://fishingshirtsnow.com/terms-conditions/"
-        />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:type" content="article" />
-        <meta
-          property="og:title"
-          content="Terms &amp; Conditions - Fishing Shirts Now"
-        />
-        <meta
-          property="og:description"
-          content="Learn more about Fishing Shirts Now Terms and Conditions."
-        />
-        <meta
-          property="og:url"
-          content="https://fishingshirtsnow.com/terms-conditions/"
-        />
-        <meta property="og:site_name" content="Fishing Shirts Now" />
-        <meta
-          property="article:publisher"
-          content="https://www.facebook.com/fishingshirtsnow"
-        />
-        <meta
-          property="article:modified_time"
-          content="2021-03-04T02:37:50+00:00"
-        />
-        <meta
-          property="og:image"
-          content="https://fsn-site.s3.amazonaws.com/home/ocean-1950583_1280.jpg"
-        />
-        <meta property="og:image:width" content="1280" />
-        <meta property="og:image:height" content="853" />
-        <meta property="og:image:type" content="image/jpeg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:label1" content="Est. reading time" />
-        <meta name="twitter:data1" content="8 minutes" />
-      </Head>
+      <NextSeo
+        title="Terms &amp; Conditions"
+        titleTemplate="%s | Fishing Shirts Now"
+        description="Learn more about Fishing Shirts Now Terms and Conditions."
+        canonical="https://fishingshirtsnow.com/terms-conditions/"
+        additionalMetaTags={[
+          {
+            property: "article:publisher",
+            content: "https://www.facebook.com/fishingshirtsnow",
+          },
+          {
+            property: "article:modified_time",
+            content: "2021-03-04T02:37:50+00:00",
+          },
+        ]}
+        additionalLinkTags={[
+          {
+            rel: "icon",
+            href: "/favicon.ico",
+          },
+        ]}
+        openGraph={{
+          type: "article",
+          title: "Terms &amp; Conditions - Fishing Shirts Now",
+          url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/terms-conditions/`,
+          description:
+            "Learn more about Fishing Shirts Now Terms and Conditions.",
+          images: [
+            {
+              url: "https://fsn-site.s3.amazonaws.com/home/ocean-1950583_1280.jpg",
+              width: 1280,
+              height: 853,
+              alt: "fisherman with fishing rod looking at the sea",
+              type: "image/jpeg",
+            },
+          ],
+        }}
+        twitter={{
+          title: "Fishing Shirts Now",
+          description: "Fishing Shirts Now Home Page",
+        }}
+      />
+      <WebPageJsonLd
+        name="Terms &amp; Conditions - Fishing Shirts Now"
+        description="Learn more about Fishing Shirts Now Terms and Conditions."
+        id={`${process.env.NEXT_PUBLIC_BACKEND_URL}/terms-conditions/#corporation`}
+        publisher="https://fishingshirtsnow.com/#organization"
+      />
       <section className={`container mx-auto my-24`}>
         <div className={`${styles.post}`}>
           <h2>Welcome to Fishingshirtsnow.com</h2>

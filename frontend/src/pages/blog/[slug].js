@@ -5,62 +5,73 @@ import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import Image from "next/image";
-import TopRatedProducts from "@/components/product/TopRatedProducts";
+import Top30Products from "@/components/product/Top30Products";
 import ProductsByCategory from "@/components/product/ProductsByCategory";
 import GetProduct from "@/components/product/GetProduct";
 import styles from "../../styles/posts.module.css";
 import Link from "next/link";
-import Head from "next/head";
+import { NextSeo, ArticleJsonLd } from "next-seo";
 
 //Components used in my blog
-const components = { TopRatedProducts, ProductsByCategory, GetProduct };
+const components = { Top30Products, ProductsByCategory, GetProduct };
 
 const blog = ({
-  frontmatter: { title, cover_image, excerpt },
+  frontmatter: { title, cover_image, excerpt, published_time, modified_time },
   mdxSource,
   slug,
 }) => {
   return (
     <>
-      <Head>
-        <title>{`${title} - Fishing Shirts Now`}</title>
-        <meta name="description" content={excerpt} />
-        <link
-          rel="canonical"
-          href={`${process.env.NEXT_PUBLIC_BACKEND_URL}/blog/fishing-shirts-men/`}
-        />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content={`${title} - Fishing Shirts Now`} />
-        <meta property="og:description" content={excerpt} />
-        <meta
-          property="og:url"
-          content={`${process.env.NEXT_PUBLIC_BACKEND_URL}/${slug}`}
-        />
-        <meta property="og:site_name" content="Fishing Shirts Now" />
-        <meta
-          property="article:publisher"
-          content="https://www.facebook.com/fishingshirtsnow"
-        />
-        <meta
-          property="article:published_time"
-          content="2021-05-12T02:22:03+00:00"
-        />
-        <meta
-          property="article:modified_time"
-          content="2021-05-12T02:25:00+00:00"
-        />
-        <meta property="og:image" content={cover_image} />
-        <meta property="og:image:width" content="1000" />
-        <meta property="og:image:height" content="500" />
-        <meta property="og:image:type" content="image/jpeg" />
-        <meta name="author" content="Alfredo Dominguez" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:label1" content="Written by" />
-        <meta name="twitter:data1" content="Alfredo Dominguez" />
-        <meta name="twitter:label2" content="Est. reading time" />
-        <meta name="twitter:data2" content="5 minutes" />
-      </Head>
+      <NextSeo
+        title={`${title}`}
+        titleTemplate="%s | Fishing Shirts Now"
+        description={excerpt}
+        canonical={`${process.env.NEXT_PUBLIC_BACKEND_URL}/blog/${slug}/`}
+        additionalLinkTags={[
+          {
+            rel: "icon",
+            href: "/favicon.ico",
+          },
+          {
+            property: "author",
+            content: "Alfredo Dominguez",
+          },
+        ]}
+        openGraph={{
+          type: "article",
+          article: {
+            publishedTime: published_time,
+            modifiedTime: modified_time,
+            authors: ["Alfredo Dominguez"],
+          },
+          title: `${title} - Fishing Shirts Now`,
+          description: excerpt,
+          url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/${slug}`,
+          images: [
+            {
+              url: cover_image,
+              width: 1000,
+              height: 500,
+              alt: "fisherman with fishing rod looking at the sea",
+              type: "image/jpeg",
+            },
+          ],
+        }}
+        twitter={{
+          title: `${title} - Fishing Shirts Now`,
+          description: "Fishing Shirts Now Home Page",
+        }}
+      />
+      <ArticleJsonLd
+        type="Article"
+        url={`${process.env.NEXT_PUBLIC_BACKEND_URL}/${slug}`}
+        title={`${title} - Fishing Shirts Now`}
+        images={[cover_image]}
+        datePublished={published_time}
+        dateModified={modified_time}
+        authorName="Alfredo Dominguez"
+        description={excerpt}
+      />
       <section
         className={`flex flex-col md:flex-row lg:flex-row justify-center container mx-auto my-24 relative`}
       >

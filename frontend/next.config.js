@@ -106,8 +106,25 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/product/mossy-oak-mens-all-outdoor-flex-short/",
+        destination: "/store/",
+        permanent: true,
+      },
+      {
         source: "/sitemap/",
         destination: "/fishingshirtsnow-com-sitemap/",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/baleaf-mens-sleeveless-shirts-muscle-performance-workout-gym-running-tech-tank-top/",
+        destination: "/store/",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/arctic-cool-womens-v-neck-instant-cooling-moisture-wicking-performance-upf-50-short-sleeve-workout-shirt/",
+        destination: "/product-category/fishing-shirts-for-her/",
         permanent: true,
       },
     ];

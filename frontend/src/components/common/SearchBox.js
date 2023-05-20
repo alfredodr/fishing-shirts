@@ -13,7 +13,7 @@ const SearchBox = ({ toggleMobileMenu }) => {
       baleafsh;
       router.push("/");
     }
-    toggleMobileMenu();
+    toggleMobileMenu;
   };
   return (
     <form onSubmit={submitHandler} className="flex items-center mx-10">
@@ -30,7 +30,7 @@ const SearchBox = ({ toggleMobileMenu }) => {
           placeholder="Search ..."
           tabIndex="-1"
           autoComplete="off"
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-dark focus:border-dark block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-lightWhite dark:focus:ring-dark dark:focus:border-dark"
+          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full pl-5 p-2.5 focus:outline-none dark:bg-gray-700 dark:placeholder-gray-400 dark:text-lightWhite "
           required
         />
       </div>

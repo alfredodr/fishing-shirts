@@ -37,26 +37,42 @@ const Footer = () => {
               <Link
                 href="/privacy-cookie-policy/"
                 passHref
-                className="text-lg mt-3"
+                className="text-lg mt-3 hover:text-blogNavHoverBlue"
               >
                 Privacy & Cookie Policy
               </Link>
-              <Link href="/terms-conditions/" passHref className="text-lg mt-3">
+              <Link
+                href="/terms-conditions/"
+                passHref
+                className="text-lg mt-3 hover:text-blogNavHoverBlue"
+              >
                 Terms & Conditions
               </Link>
-              <Link href="/accessibility/" passHref className="text-lg mt-3">
+              <Link
+                href="/accessibility/"
+                passHref
+                className="text-lg mt-3 hover:text-blogNavHoverBlue"
+              >
                 Accessibility
               </Link>
-              <Link href="/about/" passHref className="text-lg mt-3">
+              <Link
+                href="/about/"
+                passHref
+                className="text-lg mt-3 hover:text-blogNavHoverBlue"
+              >
                 About
               </Link>
-              <Link href="/contact-us/" passHref className="text-lg mt-3">
+              <Link
+                href="/contact-us/"
+                passHref
+                className="text-lg mt-3 hover:text-blogNavHoverBlue"
+              >
                 Contact Us
               </Link>
               <Link
                 href="/fishingshirtsnow-com-sitemap/"
                 passHref
-                className="text-lg mt-3"
+                className="text-lg mt-3 hover:text-blogNavHoverBlue"
               >
                 Sitemap
               </Link>
