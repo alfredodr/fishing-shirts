@@ -62,12 +62,13 @@ const privacy = () => {
           <p>
             We are committed to protecting Your privacy. This Privacy Policy
             describes how We collect, use, store, share and protect the
-            information collected through https://fishingshirtsnow.com (the “
-            <strong>Website</strong>”).
+            information collected through https://fishingshirtsnow.com (the
+            &ldquo;
+            <strong>Website</strong> &rdquo;).
             <br />
-            In this Privacy Policy, "We", "Us", and "Our" refer to
-            fishingshirtsnow.com. For more information about Us, see “Our
-            Details” at the end of this Policy.
+            In this Privacy Policy, &ldquo;We &rdquo;, &ldquo;Us &rdquo;, and
+            &ldquo;Our&rdquo; refer to fishingshirtsnow.com. For more
+            information about Us, see “Our Details” at the end of this Policy.
           </p>
           <p>
             This Privacy Policy is incorporated into and subject to Our{" "}
@@ -80,9 +81,9 @@ const privacy = () => {
             Policy apply only to information gathered online through the
             Website. This Privacy Policy applies where We are acting as a data
             controller with respect to the Personal Data of visitors, users,
-            clients and customers (“You,” or “Your”); in other words, where We
-            determine the purposes and means of the processing of that Personal
-            Data.
+            clients and customers (&ldquo;You,&rdquo; or &ldquo;Your&rdquo;); in
+            other words, where We determine the purposes and means of the
+            processing of that Personal Data.
           </p>
           <p>
             PLEASE READ THIS PRIVACY POLICY CAREFULLY because it affects Your
@@ -267,14 +268,14 @@ const privacy = () => {
           </p>
           <h2 id="personaldata">2 Personal Data</h2>
           <p>
-            "<strong>Personal Data</strong>" means any information relating to
-            an identified or identifiable natural person; an identifiable
-            natural person is one who can be identified, directly or indirectly,
-            in particular by reference to an identifier such as a name, an
-            identification number, location data, an online identifier or to one
-            or more factors specific to the physical, physiological, genetic,
-            mental, economic, cultural or social identity of that natural
-            person.
+            &ldquo;<strong>Personal Data</strong>&rdquo; means any information
+            relating to an identified or identifiable natural person; an
+            identifiable natural person is one who can be identified, directly
+            or indirectly, in particular by reference to an identifier such as a
+            name, an identification number, location data, an online identifier
+            or to one or more factors specific to the physical, physiological,
+            genetic, mental, economic, cultural or social identity of that
+            natural person.
           </p>
           <p>
             As a general matter, You can browse the Website without submitting
@@ -658,11 +659,12 @@ const privacy = () => {
             time the browser requests a page from the server.
           </p>
           <p>
-            Cookies may be either "persistent" cookies or "session" cookies: a
-            persistent cookie will be stored by a web browser and will remain
-            valid until its set expiry date, unless deleted by the user before
-            the expiry date; a session cookie, on the other hand, will expire at
-            the end of the user session, when the web browser is closed.
+            Cookies may be either &ldquo;persistent&rdquo; cookies or
+            &ldquo;session&rdquo; cookies: a persistent cookie will be stored by
+            a web browser and will remain valid until its set expiry date,
+            unless deleted by the user before the expiry date; a session cookie,
+            on the other hand, will expire at the end of the user session, when
+            the web browser is closed.
           </p>
           <p>
             Cookies do not typically contain any information that personally
@@ -848,15 +850,15 @@ const privacy = () => {
           <h2 id="interestbasedad">19 Interest Based Advertising</h2>
           <p>
             To help ensure that You receive ads that are relevant to Your
-            interests on the Website, Our advertisers’ services, and elsewhere
-            on the Internet, We and third parties (including service providers,
-            advertisers, and advertising companies) may collect information
-            about Your online activities over time and across different sites,
-            apps, and devices. We and third parties may use that information to
-            help understand audience segments. Advertisers may use the segments
-            to determine the audience groups to which they wish to deliver
-            particular ads. Through this process, We do not use information that
-            directly identifies You.
+            interests on the Website, Our advertisers&rsquo; services, and
+            elsewhere on the Internet, We and third parties (including service
+            providers, advertisers, and advertising companies) may collect
+            information about Your online activities over time and across
+            different sites, apps, and devices. We and third parties may use
+            that information to help understand audience segments. Advertisers
+            may use the segments to determine the audience groups to which they
+            wish to deliver particular ads. Through this process, We do not use
+            information that directly identifies You.
           </p>
           <p>
             <strong>Opt Out</strong>. You can opt out of receiving
