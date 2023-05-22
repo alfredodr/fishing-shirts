@@ -44,7 +44,7 @@ const Header = () => {
                   router.pathname === "/" ||
                   router.pathname === "/about" ||
                   router.pathname === "/contact-us"
-                    ? "/FSN-Transparent-Logo-250x250-1.png.webp"
+                    ? "/FSN-Transparent-Logo-250x250-1.webp"
                     : "/fsn-black-logo.webp"
                 }
                 alt="fishing shirts now logo"

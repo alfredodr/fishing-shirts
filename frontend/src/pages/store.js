@@ -6,7 +6,7 @@ import FilterByPrice from "@/components/product/FilterByPrice";
 import Paginate from "@/components/common/Paginate";
 import { NextSeo, WebPageJsonLd } from "next-seo";
 
-const store = ({ products, page, pages, keyword, categories }) => {
+const Store = ({ products, page, pages, keyword, categories }) => {
   const initialMin = 0;
   const initialMax = 100;
   const [minPrice, setMinPrice] = useState(initialMin);
@@ -144,7 +144,7 @@ const store = ({ products, page, pages, keyword, categories }) => {
   );
 };
 
-export default store;
+export default Store;
 
 export async function getServerSideProps(context) {
   const { query } = context;

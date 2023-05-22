@@ -16,16 +16,16 @@ const WhoWeAre = () => {
                 best fishing shirts that suit your needs. Whether you want one
                 for your next fishing trip, as a gift for that friend that loves
                 fishing or any other outdoor activity, its a smart choice to
-                have one. Now, a little bit about me: I've had a passion for
-                outdoor activities like fishing, for as long as I can remember.
-                I used to go fly fishing as a kid in a river close to my
-                grandpa's farm by myself. The experience was incredible. I
-                picked up the bait and the fishing line and sat down by the
+                have one. Now, a little bit about me: I&apos;ve had a passion
+                for outdoor activities like fishing, for as long as I can
+                remember. I used to go fly fishing as a kid in a river close to
+                my grandpa&apos;s farm by myself. The experience was incredible.
+                I picked up the bait and the fishing line and sat down by the
                 river for hours. I came home after with a smile on my face and
                 whatever I could catch in my hands. Those times will stay with
                 me forever. Then as an adult, my passion for fishing continues.
                 Whether it is fishing on a boat or sitting next to a fishing
-                spot I'm always ready to go. I get so excited when its that
+                spot I&apos;m always ready to go. I get so excited when its that
                 time.
               </p>
               <p className="mb-6">

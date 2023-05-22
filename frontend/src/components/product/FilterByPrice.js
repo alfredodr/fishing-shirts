@@ -42,7 +42,7 @@ const FilterByPrice = ({
   useEffect(() => {
     progressRef.current.style.left = (minPrice / max) * step + "%";
     progressRef.current.style.right = step - (maxPrice / max) * step + "%";
-  }, [minPrice, maxPrice]);
+  }, [minPrice, maxPrice, max, step]);
   return (
     <>
       {/* Filter */}

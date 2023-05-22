@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+
 const Paginate = ({ pages, page, keyword = "", slug = "" }) => {
   const [startPage, setStartPage] = useState(1);
   const [endPage, setEndPage] = useState(10);
@@ -37,25 +38,30 @@ const Paginate = ({ pages, page, keyword = "", slug = "" }) => {
     }
   };
 
+  const showPreviousButton = startPage > 1;
+  const showNextButton = endPage < pages;
+
   return (
     <>
       {pages > 1 && (
         <nav className="flex flex-wrap items-center bg-lightGray rounded-lg my-10">
           {/* Previous button */}
-          <button
-            onClick={handlePrevious}
-            disabled={startPage <= itemsPerPage}
-            className="h-12 border-2 border-lightGray bg-white 
+          {showPreviousButton && (
+            <button
+              onClick={handlePrevious}
+              // disabled={startPage <= itemsPerPage}
+              className="h-12 border-2 border-lightGray bg-white 
                px-4 rounded-l-lg hover:bg-black hover:text-white"
-          >
-            <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-              <path
-                d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                clipRule="evenodd"
-                fillRule="evenodd"
-              ></path>
-            </svg>
-          </button>
+            >
+              <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                  clipRule="evenodd"
+                  fillRule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          )}
           {/* Pages */}
           {[...Array(pages).keys()]
             .slice(startPage - 1, endPage)
@@ -75,20 +81,22 @@ const Paginate = ({ pages, page, keyword = "", slug = "" }) => {
               </Link>
             ))}
           {/* Next button */}
-          <button
-            onClick={handleNext}
-            disabled={endPage >= pages}
-            className="h-12 border-2 border-lightGray bg-white 
+          {showNextButton && (
+            <button
+              onClick={handleNext}
+              // disabled={endPage >= pages}
+              className="h-12 border-2 border-lightGray bg-white 
             px-4 hover:bg-black hover:text-white"
-          >
-            <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-              <path
-                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                clipRule="evenodd"
-                fillRule="evenodd"
-              ></path>
-            </svg>
-          </button>
+            >
+              <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                  clipRule="evenodd"
+                  fillRule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          )}
         </nav>
       )}
     </>

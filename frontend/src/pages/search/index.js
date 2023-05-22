@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import Product from "@/components/product/Product";
 import Paginate from "@/components/common/Paginate";
 
-export default function search({ products, page, pages, keyword }) {
+const Search = ({ products, page, pages, keyword }) => {
   const router = useRouter();
   return (
     <section className="container mx-auto my-24 h-3/4 bg-gray-50">
@@ -38,7 +38,9 @@ export default function search({ products, page, pages, keyword }) {
       <Paginate page={page} pages={pages} keyword={keyword ? keyword : ""} />
     </section>
   );
-}
+};
+
+export default Search;
 
 export async function getServerSideProps(context) {
   const { query } = context;

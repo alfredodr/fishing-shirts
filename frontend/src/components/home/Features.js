@@ -71,7 +71,7 @@ const Features = () => {
               </svg>
               <h4 className="text-2xl font-medium mt-3">BEST OFFERS</h4>
               <p className="text-lg mt-3">
-                Affordable prices that you won't believe.
+                Affordable prices that you won&apos;t believe.
               </p>
             </div>
           </div>

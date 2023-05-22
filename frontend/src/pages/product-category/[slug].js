@@ -4,7 +4,7 @@ import StoreProducts from "@/components/product/StoreProducts";
 import FilterByPrice from "@/components/product/FilterByPrice";
 import Paginate from "@/components/common/Paginate";
 
-const product = ({ products, page, pages, keyword, categoryName, slug }) => {
+const Product = ({ products, page, pages, keyword, categoryName, slug }) => {
   const initialMin = 0;
   const initialMax = 100;
   const [minPrice, setMinPrice] = useState(initialMin);
@@ -71,7 +71,7 @@ const product = ({ products, page, pages, keyword, categoryName, slug }) => {
   );
 };
 
-export default product;
+export default Product;
 
 export async function getServerSideProps(context) {
   const { query } = context;

@@ -325,8 +325,8 @@ const privacy = () => {
             social media platforms.
           </p>
           <p>
-            Please do NOT supply any other person's Personal Data to Us, unless
-            We prompt You to do so.
+            Please do NOT supply any other person&apos;s Personal Data to Us,
+            unless We prompt You to do so.
           </p>
           <p>
             <a href="#tableofcontents">Back to table of contents</a>
@@ -374,9 +374,9 @@ const privacy = () => {
             Each such third party will act as a data controller in relation to
             the Enquiry Data that We supply to it; and upon contacting You, each
             such third party will supply to You a copy of its own privacy
-            policy, which will govern that third party's use of Your Personal
-            Data. The suppliers and providers with whom We may share Your
-            information include:
+            policy, which will govern that third party&apos;s use of Your
+            Personal Data. The suppliers and providers with whom We may share
+            Your information include:
           </p>
           <ul>
             <li>Social networking sites</li>
@@ -603,7 +603,7 @@ const privacy = () => {
           </p>
           <p>
             We do not share Your Personal Data with third parties for those
-            parties' direct marketing use. For more information about Our
+            parties&apos; direct marketing use. For more information about Our
             privacy and data collection policies, You may wish to review Our
             Privacy Policy.
           </p>
@@ -767,7 +767,7 @@ const privacy = () => {
             analyze the use of Our Website. Google Analytics gathers information
             about Website use by means of cookies. The information gathered
             relating to Our Website is used to create reports about the use of
-            Our Website. Google's privacy policy is available at:{" "}
+            Our Website. Google&apos;s privacy policy is available at:{" "}
             <a href="https://www.google.com/policies/privacy/">
               https://www.google.com/policies/privacy/
             </a>
@@ -802,7 +802,7 @@ const privacy = () => {
                   <a
                     href="https://tools.google.com/dlpage/gaoptout"
                     target="_blank"
-                    rel="noopener"
+                    rel="noreferrer noopener"
                   >
                     Opt Out
                   </a>
@@ -811,7 +811,7 @@ const privacy = () => {
                   <a
                     href="https://policies.google.com/privacy"
                     target="_blank"
-                    rel="noopener"
+                    rel="noreferrer noopener"
                   >
                     Privacy Policy
                   </a>

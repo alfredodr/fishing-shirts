@@ -95,7 +95,7 @@ const accessibility = () => {
           <p>
             In an ongoing effort to continually improve and remediate
             accessibility issues, we also regularly scan fishingshirtsnow.com
-            with UserWay's{" "}
+            with UserWay&apos;s{" "}
             <a
               title="Free Website Accessibility Scanner"
               href="https://UserWay.org/scanner"

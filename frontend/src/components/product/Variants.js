@@ -3,14 +3,16 @@ import Image from "next/image";
 
 const Variants = ({ image, setMainImage }) => {
   return (
-    <div className="w-[100px] h-[100px] overflow-hidden opacity-60 hover:opacity-100">
+    <div className="relative overflow-hidden opacity-60 hover:opacity-100 m-2">
       <Image
         src={image.src}
         alt={image.alt}
         priority
-        width={100}
-        height={100}
-        style={{ objectFit: "contain" }}
+        width={120}
+        height={120}
+        placeholder="blur"
+        blurDataURL={"/FSN-Transparent-Logo-250x250-1.webp"}
+        className="object-contain bg-white cursor-pointer w-auto h-auto"
         onClick={() => setMainImage(image.src)}
       />
     </div>

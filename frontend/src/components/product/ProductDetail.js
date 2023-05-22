@@ -64,39 +64,35 @@ const ProductDetail = ({ product }) => {
           },
         ]}
       />
-      <section className="bg-lightGray py-28">
+      <section className="bg-lightGray py-28 px-5">
         <div className="relative flex flex-col md:flex-row lg:flex-row container mx-auto">
-          <div className="min-w-fit">
-            <div className="relative w-full h-[600px] bg-white overflow-hidden">
+          <div className="md:w-1/2">
+            <div className="relative bg-white overflow-hidden">
               <Image
                 src={mainImage}
                 alt={product.name}
-                fill={true}
-                sizes="(max-width: 768px) 100vw,
-                    (max-width: 1200px) 50vw,
-                    33vw"
-                className="object-contain"
-                // style={{ objectFit: "contain" }}
+                width={600}
+                height={600}
+                className="object-contain w-auto h-auto cursor-pointer"
                 priority
               />
             </div>
             {/* Grid */}
             {/* Variants*/}
             {product.images.length > 1 && (
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 my-5">
+              <div className="container flex items-center justify-start flex-wrap my-5">
                 {product.images.map((image, index) => (
                   <Variants
                     key={index}
                     image={image}
                     setMainImage={setMainImage}
                     product={product}
-                    mainImage={mainImage}
                   />
                 ))}
               </div>
             )}
           </div>
-          <div className="md:ml-20 lg:md-20 mx-auto">
+          <div className="md:ml-20 lg:md-20 mx-auto md:w-1/2">
             <nav className="text-breadCrumbBlack">
               <Link href="/">Home</Link> /
               {product.categories

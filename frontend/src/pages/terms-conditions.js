@@ -58,39 +58,42 @@ const termsAndConditions = () => {
           <h2>Welcome to Fishingshirtsnow.com</h2>
           <p>
             These terms of service outline the rules and regulations for the use
-            of Fishingshirtsnow.com"s Website.
+            of Fishingshirtsnow.com&apos;s Website.
           </p>
 
           <p>
             By accessing this website we assume you accept these terms of
-            service in full. Do not continue to use Fishingshirtsnow.com"s
+            service in full. Do not continue to use Fishingshirtsnow.com&apos;s
             website if you do not accept all of the terms of service stated on
             this page.
           </p>
           <p>
             The following terminology applies to these Terms of Service, Privacy
-            Statement and Disclaimer Notice and any or all Agreements: "Client",
-            "You" and "Your" refers to you, the person accessing this website
-            and accepting the Company"s terms of service. "The Company",
-            "Ourselves", "We", "Our" and "Us", refers to our Company. "Party",
-            "Parties", or "Us", refers to both the Client and ourselves, or
-            either the Client or ourselves. All terms refer to the offer,
-            acceptance and consideration of payment necessary to undertake the
-            process of our assistance to the Client in the most appropriate
-            manner, whether by formal meetings of a fixed duration, or any other
-            means, for the express purpose of meeting the Client"s needs in
-            respect of provision of the Company"s stated services/products, in
-            accordance with and subject to, prevailing law of . Any use of the
-            above terminology or other words in the singular, plural,
-            capitalisation and/or he/she or they, are taken as interchangeable
-            and therefore as referring to same.
+            Statement and Disclaimer Notice and any or all Agreements:
+            &ldquo;Client&rdquo;, &ldquo;You&rdquo; and &ldquo;Your&rdquo;
+            refers to you, the person accessing this website and accepting the
+            Company&apos;s terms of service. &ldquo;The Company&rdquo;,
+            &ldquo;Ourselves&rdquo;, &ldquo;We&rdquo;, &ldquo;Our&rdquo; and
+            &ldquo;Us&rdquo;, refers to our Company. &ldquo;Party&rdquo;,
+            &ldquo;Parties&rdquo;, or &ldquo;Us&rdquo;, refers to both the
+            Client and ourselves, or either the Client or ourselves. All terms
+            refer to the offer, acceptance and consideration of payment
+            necessary to undertake the process of our assistance to the Client
+            in the most appropriate manner, whether by formal meetings of a
+            fixed duration, or any other means, for the express purpose of
+            meeting the Client&apos;s needs in respect of provision of the
+            Company&apos;s stated services/products, in accordance with and
+            subject to, prevailing law of . Any use of the above terminology or
+            other words in the singular, plural, capitalisation and/or he/she or
+            they, are taken as interchangeable and therefore as referring to
+            same.
           </p>
 
           <h2>Cookies</h2>
           <p>
-            We employ the use of cookies. By using Fishingshirtsnow.com"s
+            We employ the use of cookies. By using Fishingshirtsnow.com&apos;s
             website you consent to the use of cookies in accordance with
-            Fishingshirtsnow.com"s privacy policy.
+            Fishingshirtsnow.com&apos;s privacy policy.
           </p>
           <p>
             Most of the modern day interactive web sites use cookies to enable
@@ -102,8 +105,8 @@ const termsAndConditions = () => {
 
           <h2>License</h2>
           <p>
-            Unless otherwise stated, Fishingshirtsnow.com and/or it"s licensors
-            own the intellectual property rights for all material on
+            Unless otherwise stated, Fishingshirtsnow.com and/or it&apos;s
+            licensors own the intellectual property rights for all material on
             Fishingshirtsnow.com. All intellectual property rights are reserved.
             You may view and/or print pages from fishingshirtsnow.com for your
             own personal use subject to restrictions set in these terms of
@@ -130,16 +133,17 @@ const termsAndConditions = () => {
             <li>
               Certain parts of this website offer the opportunity for users to
               post and exchange opinions, information, material and data
-              ("Comments") in areas of the website. Fishingshirtsnow.com does
-              not screen, edit, publish or review Comments prior to their
-              appearance on the website and Comments do not reflect the views or
-              opinions of Fishingshirtsnow.com, its agents or affiliates.
-              Comments reflect the view and opinion of the person who posts such
-              view or opinion. To the extent permitted by applicable laws
-              Fishingshirtsnow.com shall not be responsible or liable for the
-              Comments or for any loss cost, liability, damages or expenses
-              caused and or suffered as a result of any use of and/or posting of
-              and/or appearance of the Comments on this website.
+              (&ldquo;Comments&rdquo;) in areas of the website.
+              Fishingshirtsnow.com does not screen, edit, publish or review
+              Comments prior to their appearance on the website and Comments do
+              not reflect the views or opinions of Fishingshirtsnow.com, its
+              agents or affiliates. Comments reflect the view and opinion of the
+              person who posts such view or opinion. To the extent permitted by
+              applicable laws Fishingshirtsnow.com shall not be responsible or
+              liable for the Comments or for any loss cost, liability, damages
+              or expenses caused and or suffered as a result of any use of
+              and/or posting of and/or appearance of the Comments on this
+              website.
             </li>
             <li>
               Fishingshirtsnow.com reserves the right to monitor all Comments
@@ -206,8 +210,8 @@ const termsAndConditions = () => {
               to other Web site information so long as the link: (a) is not in
               any way misleading; (b) does not falsely imply sponsorship,
               endorsement or approval of the linking party and its products or
-              services; and (c) fits within the context of the linking party"s
-              site.
+              services; and (c) fits within the context of the linking
+              party&apos;s site.
             </li>
             <li>
               We may consider and approve in our sole discretion other link
@@ -252,7 +256,7 @@ const termsAndConditions = () => {
             other Web site information so long as the link: (a) is not in any
             way misleading; (b) does not falsely imply sponsorship, endorsement
             or approval of the linking party and it products or services; and
-            (c) fits within the context of the linking party"s site.
+            (c) fits within the context of the linking party&apos;s site.
           </p>
 
           <p>
@@ -285,11 +289,11 @@ const termsAndConditions = () => {
             <li>
               By use of any other description of our Web site or material being
               linked to that makes sense within the context and format of
-              content on the linking party"s site.
+              content on the linking party&apos;s site.
             </li>
           </ol>
           <p>
-            No use of Fishingshirtsnow.com"s logo or other artwork will be
+            No use of Fishingshirtsnow.com&apos;s logo or other artwork will be
             allowed for linking absent a trademark license agreement.
           </p>
           <h2>Iframes</h2>
