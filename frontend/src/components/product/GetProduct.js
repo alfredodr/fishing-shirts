@@ -25,7 +25,7 @@ const GetProduct = ({ productSlug }) => {
       {product && (
         <section className="mx-5">
           <div>
-            <Link href={`/products/${product?.slug}`} passHref>
+            <Link href={`/product/${product?.slug}`} passHref>
               <div className="relative w-full h-60">
                 <Image
                   src={product?.images[0].src}

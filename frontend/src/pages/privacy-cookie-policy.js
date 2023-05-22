@@ -31,7 +31,7 @@ const privacy = () => {
           title: "Privacy &amp; Cookie Policy - Fishing Shirts Now",
           description:
             "Privacy Policy Effective Date: 26-12-2020 We are committed to protecting Your privacy. This Privacy Policy describes how We collect, use, store, share and protect the information collected through https://fishingshirtsnow.com (the “Website”). In this Privacy Policy, &#8220;We&#8221;, &#8220;Us&#8221;, and &#8220;Our&#8221; refer to fishingshirtsnow.com. For more information about Us, see “Our Details” at the end of this &hellip; Privacy &#038; Cookie Policy Read More &raquo;",
-          url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/privacy-cookie-policy/`,
+          url: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/privacy-cookie-policy/`,
           images: [
             {
               url: "https://fsn-site.s3.amazonaws.com/home/ocean-1950583_1280.jpg",
@@ -50,7 +50,7 @@ const privacy = () => {
       <WebPageJsonLd
         name="Privacy &amp; Cookie Policy - Fishing Shirts Now"
         description="Privacy Policy Effective Date: 26-12-2020 We are committed to protecting Your privacy. This Privacy Policy describes how We collect, use, store, share and protect the information collected through https://fishingshirtsnow.com (the “Website”). In this Privacy Policy, &#8220;We&#8221;, &#8220;Us&#8221;, and &#8220;Our&#8221; refer to fishingshirtsnow.com. For more information about Us, see “Our Details” at the end of this &hellip; Privacy &#038; Cookie Policy Read More &raquo;"
-        id={`${process.env.NEXT_PUBLIC_BACKEND_URL}/privacy-cookie-policy/#corporation`}
+        id={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/privacy-cookie-policy/#corporation`}
         publisher="https://fishingshirtsnow.com/#organization"
       />
       <section className={`container mx-auto my-24`}>

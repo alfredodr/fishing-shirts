@@ -26,7 +26,7 @@ const blog = ({
         title={`${title}`}
         titleTemplate="%s | Fishing Shirts Now"
         description={excerpt}
-        canonical={`${process.env.NEXT_PUBLIC_BACKEND_URL}/blog/${slug}/`}
+        canonical={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/blog/${slug}/`}
         additionalLinkTags={[
           {
             rel: "icon",
@@ -46,7 +46,7 @@ const blog = ({
           },
           title: `${title} - Fishing Shirts Now`,
           description: excerpt,
-          url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/${slug}`,
+          url: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/${slug}`,
           images: [
             {
               url: cover_image,
@@ -64,7 +64,7 @@ const blog = ({
       />
       <ArticleJsonLd
         type="Article"
-        url={`${process.env.NEXT_PUBLIC_BACKEND_URL}/${slug}`}
+        url={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/${slug}`}
         title={`${title} - Fishing Shirts Now`}
         images={[cover_image]}
         datePublished={published_time}

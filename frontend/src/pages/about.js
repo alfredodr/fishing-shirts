@@ -11,7 +11,7 @@ const about = () => {
         title="About"
         titleTemplate="%s | Fishing Shirts Now"
         description="Whos is Fishing Shirts Now and how do we operate? Find the answer to this and many other question about us is here."
-        canonical="https://fishingshirtsnow.com/about/"
+        canonical={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/about/`}
         additionalMetaTags={[
           {
             property: "article:publisher",
@@ -33,7 +33,7 @@ const about = () => {
           title: "About - Fishing Shirts Now",
           description:
             "Who is Fishing Shirts Now and how do we operate? Find the answer to this and many other question about us is here.",
-          url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/about`,
+          url: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/about`,
           images: [
             {
               url: "https://fsn-site.s3.amazonaws.com/about/fisherman-591699_1280.jpg",
@@ -51,7 +51,7 @@ const about = () => {
       <WebPageJsonLd
         name="About - Fishing Shirts Now"
         description="Who is Fishing Shirts Now and how do we operate? Find the answer to this and many other question about us is here."
-        id={`${process.env.NEXT_PUBLIC_BACKEND_URL}/about/#corporation`}
+        id={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/about/#corporation`}
         publisher="https://fishingshirtsnow.com/#organization"
       />
       <QuickLinksBanner

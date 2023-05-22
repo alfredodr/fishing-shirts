@@ -41,7 +41,7 @@ const job = new CronJob(
   "America/New_York"
 );
 
-//get all 10 by 10 ASINs every 5 seconds, get the amazon data for each pair 10 products, clean data, then clean the data and save it to the products file
+//get all 10 by 10 ASINs every 5 seconds, get the amazon data for each pair of 10 products, clean the data and save it to the products file
 const getAsins = () => {
   for (let i = 0; i < 10; i++) {
     if (index >= productDetails.length) {
@@ -52,7 +52,6 @@ const getAsins = () => {
         try {
           const importData = async (products) => {
             try {
-              await Product.deleteMany();
               await User.deleteMany();
               await Category.deleteMany();
 
@@ -69,6 +68,26 @@ const getAsins = () => {
               });
 
               await Category.insertMany(allCategories);
+
+              // Create an instance of the model
+              const instance = new Product();
+
+              // Set values for the instance
+              instance.data = allProducts;
+
+              // Validate each element of the array
+              for (const data of instance.data) {
+                const subInstance = new Product(data);
+
+                const validationError = subInstance.validateSync();
+
+                if (validationError) {
+                  console.error("Validation error:", validationError.errors);
+                  process.exit();
+                }
+              }
+
+              await Product.deleteMany();
 
               await Product.insertMany(allProducts);
 
@@ -154,20 +173,20 @@ const cleanData = () => {
 
   //check for missing data and save in a specific format
   result = items?.map((item) => {
-    const asin = item?.ASIN || "";
-    const detailPageUrl = item?.DetailPageURL || "";
-    const primaryImageUrl = item?.Images?.Primary?.Large?.URL || "";
-    const title = item?.ItemInfo?.Title?.DisplayValue || "";
+    const asin = item?.ASIN;
+    const detailPageUrl = item?.DetailPageURL;
+    const primaryImageUrl = item?.Images?.Primary?.Large?.URL;
+    const title = item?.ItemInfo?.Title?.DisplayValue;
     const imageVariants =
       item?.Images?.Variants?.map((variant) => {
         return {
-          src: variant?.Large?.URL || "",
-          alt: title || "",
+          src: variant?.Large?.URL,
+          alt: title,
         };
       }) || [];
-    const featureDisplayValues = item?.ItemInfo?.Features?.DisplayValues || "";
+    const featureDisplayValues = item?.ItemInfo?.Features?.DisplayValues;
     const priceAmount = item?.Offers?.Listings[0]?.Price?.Amount || 1;
-    const productBrand = item?.ItemInfo?.ByLineInfo?.Brand?.DisplayValue || "";
+    const productBrand = item?.ItemInfo?.ByLineInfo?.Brand?.DisplayValue;
     const getSlug = (asin) => {
       const product = productDetails?.find((product) => product?.asin === asin);
       return product ? product?.slug : "404";
@@ -192,7 +211,6 @@ const cleanData = () => {
       description: featureDisplayValues,
       brand: productBrand,
       price: priceAmount,
-      countInStock: 10,
     };
   });
 

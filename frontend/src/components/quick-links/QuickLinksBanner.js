@@ -15,7 +15,6 @@ const QuickLinksBanner = ({ title, urlSrc, altText }) => {
         />
       </div>
       {/* Flex Container */}
-      {/* container flex flex-col-reverse items-center px-6 mx-auto md:flex-row */}
       <div className="container flex items-center justify-center mx-auto">
         <h1 className="sm:text-5xl md:text-8xl lg:text-8xl font-bold text-center leading-normal text-white">
           {title}

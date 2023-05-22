@@ -13,7 +13,7 @@ const ProductDetail = ({ product }) => {
         title={`${product.name} - UV Protection - High Quality - Affordable Prices`}
         titleTemplate="%s | Fishing Shirts Now"
         description={product.description.slice(0, 2)}
-        canonical={`${process.env.NEXT_PUBLIC_BACKEND_URL}/${product.slug}`}
+        canonical={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/product/${product.slug}`}
         additionalLinkTags={[
           {
             rel: "icon",
@@ -28,7 +28,7 @@ const ProductDetail = ({ product }) => {
           },
           title: `${product.name} - Sun Protective - Fishing Shirts Now`,
           description: product.description.slice(0, 2),
-          url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/${product.slug}`,
+          url: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/${product.slug}`,
           images: [
             {
               url: mainImage,
@@ -51,11 +51,11 @@ const ProductDetail = ({ product }) => {
         brand={product.brand}
         offers={[
           {
-            id: `${process.env.NEXT_PUBLIC_BACKEND_URL}/product/${product.slug}/#product`,
+            id: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/product/${product.slug}/#product`,
             price: `${product.price}`,
             priceCurrency: "USD",
             availability: "https://schema.org/InStock",
-            url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/product/${product.slug}`,
+            url: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/product/${product.slug}`,
             seller: {
               type: "Organization",
               name: "Fishing Shirts Now",

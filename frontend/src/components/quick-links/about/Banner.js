@@ -15,7 +15,6 @@ const Banner = () => {
         />
       </div>
       {/* Flex Container */}
-      {/* container flex flex-col-reverse items-center px-6 mx-auto md:flex-row */}
       <div className="container flex items-center justify-center mx-auto">
         <h1 className="text-8xl font-bold text-center leading-normal text-white">
           About Us

@@ -6,7 +6,7 @@ import axios from "axios";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { NextSeo, WebPageJsonLd, LogoJsonLd } from "next-seo";
+import { NextSeo, WebPageJsonLd } from "next-seo";
 
 export default function Home({ products, posts }) {
   return (
@@ -37,7 +37,7 @@ export default function Home({ products, posts }) {
           title:
             "Fishing Shirts Now - UV Protection - High Quality - Affordable Prices",
           description: "Fishing Shirts Now Home Page",
-          url: `${process.env.NEXT_PUBLIC_BACKEND_URL}`,
+          url: `${process.env.NEXT_PUBLIC_FRONTEND_URL}`,
           images: [
             {
               url: "https://fsn-site.s3.amazonaws.com/home/ocean-1950583_1280.jpg",
@@ -56,7 +56,7 @@ export default function Home({ products, posts }) {
       <WebPageJsonLd
         name="Fishing Shirts Now"
         description="Get the best fishing shirts for your next trip"
-        id={`${process.env.NEXT_PUBLIC_BACKEND_URL}/about/#corporation`}
+        id={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/about/#corporation`}
         publisher="https://fishingshirtsnow.com/#organization"
       />
       <Banner />

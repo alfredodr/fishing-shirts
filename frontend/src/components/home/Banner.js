@@ -25,10 +25,10 @@ const Banner = () => {
         <div className="container flex items-center mx-auto">
           {/* Left Item */}
           <div className="flex flex-col items-center md:items-start lg:items-start">
-            <h1 className="max-w-lg mb-4 text-5xl font-black text-center leading-tight text-white md:text-left">
+            <h1 className="mb-4 sm:text-5xl text-4xl font-black text-center leading-tight text-white md:text-left xl:max-w-lg mt-14 xl:mt-0">
               Fishing Shirts Deals You Do Not Want To Miss Today!
             </h1>
-            <p className="hidden max-w-sm mb-4 text-xl text-center text-white md:text-left md:block">
+            <p className="hidden mb-4 text-xl text-center text-white md:text-left md:block xl:max-w-lg">
               We help you find the best fishing shirts at affordable prices that
               are carefully selected for you. All sizes, colors, and textures in
               stock right now. We stand by the quality of our products.

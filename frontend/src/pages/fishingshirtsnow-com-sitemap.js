@@ -14,7 +14,7 @@ const sitemap = ({ products, posts }) => {
         title=" FishingShirtsNow.com Sitemap - Content Drilldown Map Of Our Website"
         titleTemplate="%s | Fishing Shirts Now"
         description="To enjoy fishing you should wear the appropriate outfit. This is what our website is all about. Check us out here:FishingShirtsNow.com Sitemap."
-        canonical={`${process.env.NEXT_PUBLIC_BACKEND_URL}/fishingshirtsnow-com-sitemap/`}
+        canonical={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/fishingshirtsnow-com-sitemap/`}
         additionalMetaTags={[
           {
             property: "article:publisher",
@@ -37,7 +37,7 @@ const sitemap = ({ products, posts }) => {
             "FishingShirtsNow.com Sitemap - Content Drilldown Map Of Our Website",
           description:
             "To enjoy fishing you should wear the appropriate outfit. This is what our website is all about. Check us out here:FishingShirtsNow.com Sitemap.",
-          url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/fishingshirtsnow-com-sitemap/`,
+          url: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/fishingshirtsnow-com-sitemap/`,
           images: [
             {
               url: "https://fsn-site.s3.amazonaws.com/home/ocean-1950583_1280.jpg",
@@ -56,7 +56,7 @@ const sitemap = ({ products, posts }) => {
       <WebPageJsonLd
         name="FishingShirtsNow.com Sitemap - Content Drilldown Map Of Our Website"
         description="To enjoy fishing you should wear the appropriate outfit. This is what our website is all about. Check us out here:FishingShirtsNow.com Sitemap."
-        id={`${process.env.NEXT_PUBLIC_BACKEND_URL}/fishingshirtsnow-com-sitemap/#corporation`}
+        id={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/fishingshirtsnow-com-sitemap/#corporation`}
         publisher="https://fishingshirtsnow.com/#organization"
       />
       <section

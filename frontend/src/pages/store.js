@@ -18,8 +18,8 @@ const store = ({ products, page, pages, keyword, categories }) => {
         title="Fishing Shirts Store - Popular Brands - Sun Protection - Lightweight"
         titleTemplate="%s | Fishing Shirts Now"
         description="Check our fishing shirts store with the best for all members of the family. Short sleeve and long sleeve high perfoming choices carefully selected for you."
-        canonical={`${process.env.NEXT_PUBLIC_BACKEND_URL}/store/`}
-        next={`${process.env.NEXT_PUBLIC_BACKEND_URL}/store?pageNumber=2`}
+        canonical={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/store/`}
+        next={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/store?pageNumber=2`}
         additionalMetaTags={[
           {
             property: "article:publisher",
@@ -42,7 +42,7 @@ const store = ({ products, page, pages, keyword, categories }) => {
             "Fishing Shirts Store - Popular Brands - Sun Protection - Lightweight",
           description:
             "Check our fishing shirts store with the best for all members of the family. Short sleeve and long sleeve high perfoming choices carefully selected for you.",
-          url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/store/`,
+          url: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/store/`,
           images: [
             {
               url: "https://fsn-site.s3.amazonaws.com/home/ocean-1950583_1280.jpg",
@@ -61,7 +61,7 @@ const store = ({ products, page, pages, keyword, categories }) => {
       <WebPageJsonLd
         name="Fishing Shirts Store - Popular Brands - Sun Protection - Lightweight"
         description="Check our fishing shirts store with the best for all members of the family. Short sleeve and long sleeve high perfoming choices carefully selected for you."
-        id={`${process.env.NEXT_PUBLIC_BACKEND_URL}/store/#corporation`}
+        id={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/store/#corporation`}
         publisher="https://fishingshirtsnow.com/#organization"
       />
       <section

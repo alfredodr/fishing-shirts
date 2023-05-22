@@ -8,7 +8,7 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     ?.map(({ slug, updatedAt, images }) => {
       return `
       <url>
-           <loc>${`${process.env.NEXT_PUBLIC_BACKEND_URL}/${slug}`}</loc>
+           <loc>${`${process.env.NEXT_PUBLIC_FRONTEND_URL}/${slug}`}</loc>
            <lastmod>${`${updatedAt}`}</lastmod>
            ${
              images &&

@@ -10,7 +10,7 @@ const contactUs = () => {
         title="Contact Us"
         titleTemplate="%s | Fishing Shirts Now"
         description="Best way to contact us. Quickly enter your information and any feedback or concern and will get back to you shortly."
-        canonical={`${process.env.NEXT_PUBLIC_BACKEND_URL}/contact-us/`}
+        canonical={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/contact-us/`}
         additionalMetaTags={[
           {
             property: "article:publisher",
@@ -32,7 +32,7 @@ const contactUs = () => {
           title: "Contact Us - Fishing Shirts Now",
           description:
             "Best way to contact us. Quickly enter your information and any feedback or concern and will get back to you shortly.",
-          url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/contact-us/`,
+          url: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/contact-us/`,
           images: [
             {
               url: "https://fsn-site.s3.amazonaws.com/contact-us/bottle-message.jpg",
@@ -51,7 +51,7 @@ const contactUs = () => {
       <WebPageJsonLd
         name="Contact Us - Fishing Shirts Now"
         description="Best way to contact us. Quickly enter your information and any feedback or concern and will get back to you shortly."
-        id={`${process.env.NEXT_PUBLIC_BACKEND_URL}/contact-us/#corporation`}
+        id={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/contact-us/#corporation`}
         publisher="https://fishingshirtsnow.com/#organization"
       />
       <QuickLinksBanner

@@ -29,7 +29,7 @@ const termsAndConditions = () => {
         openGraph={{
           type: "article",
           title: "Terms &amp; Conditions - Fishing Shirts Now",
-          url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/terms-conditions/`,
+          url: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/terms-conditions/`,
           description:
             "Learn more about Fishing Shirts Now Terms and Conditions.",
           images: [
@@ -50,7 +50,7 @@ const termsAndConditions = () => {
       <WebPageJsonLd
         name="Terms &amp; Conditions - Fishing Shirts Now"
         description="Learn more about Fishing Shirts Now Terms and Conditions."
-        id={`${process.env.NEXT_PUBLIC_BACKEND_URL}/terms-conditions/#corporation`}
+        id={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/terms-conditions/#corporation`}
         publisher="https://fishingshirtsnow.com/#organization"
       />
       <section className={`container mx-auto my-24`}>

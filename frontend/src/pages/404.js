@@ -1,6 +1,5 @@
 import React from "react";
-import { NextSeo } from "next-seo";
-import { NextSeo, WebPageJsonLd, LogoJsonLd } from "next-seo";
+import { NextSeo, WebPageJsonLd } from "next-seo";
 
 const notFound = () => {
   return (
@@ -11,7 +10,7 @@ const notFound = () => {
         noindex={true}
         openGraph={{
           type: "website",
-          url: `${process.env.NEXT_PUBLIC_BACKEND_URL}`,
+          url: `${process.env.NEXT_PUBLIC_FRONTEND_URL}`,
           title: "Page not found - Fishing Shirts Now",
           site_name: "Fishing Shirts Now",
         }}
@@ -19,7 +18,7 @@ const notFound = () => {
       <WebPageJsonLd
         name="Fishing Shirts Now"
         description="Get the best fishing shirts for your next trip"
-        id={`${process.env.NEXT_PUBLIC_BACKEND_URL}/about/#corporation`}
+        id={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/about/#corporation`}
         publisher="https://fishingshirtsnow.com/#organization"
       />
       <section className="flex items-center justify-center container mx-auto my-24 relative">

@@ -9,7 +9,7 @@ const App = ({ Component, pageProps }) => {
       <DefaultSeo
         openGraph={{
           type: "website",
-          url: `${process.env.NEXT_PUBLIC_BACKEND_URL}`,
+          url: `${process.env.NEXT_PUBLIC_FRONTEND_URL}`,
           locale: "en_US",
           site_name: "Fishing Shirts Now",
         }}
