@@ -66,9 +66,9 @@ const Store = ({ products, page, pages, keyword, categories }) => {
       />
       <section
         id="features"
-        className="flex flex-col-reverse md:flex-row lg:flex-row justify-center container mx-auto my-24 relative"
+        className="flex flex-col-reverse md:flex-row lg:flex-row justify-center container mx-auto my-24 relative px-4"
       >
-        <div className="md:w-1/5 mx-5 md:border md:border-r-1 md:border-l-transparent md:border-t-transparent md:border-b-transparent md:border-opacity-25 md:border-textLightGray md:pr-16 md:mr-16">
+        <div className="md:w-1/5 md:border md:border-r-1 md:border-l-transparent md:border-t-transparent md:border-b-transparent md:border-opacity-25 md:border-textLightGray md:pr-16 md:mr-16">
           <FilterByPrice
             min={0}
             max={100}
@@ -92,7 +92,7 @@ const Store = ({ products, page, pages, keyword, categories }) => {
             ></iframe>
           </div>
         </div>
-        <div className="w-4/5">
+        <div>
           <p>
             Welcome to our fishing shirts store where you will find a huge
             variety of elegant high performance options. Take a look around and

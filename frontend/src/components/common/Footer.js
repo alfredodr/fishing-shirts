@@ -32,8 +32,8 @@ const Footer = () => {
           </div>
           {/* Quick Links*/}
           <div>
-            <div className="flex flex-col">
-              <h2 className="text-2xl font-medium my-3">Quick Links</h2>
+            <h2 className="text-2xl font-medium my-3">Quick Links</h2>
+            <nav aria-label="Quick Links" className="flex flex-col">
               <Link
                 href="/privacy-cookie-policy/"
                 passHref
@@ -76,17 +76,42 @@ const Footer = () => {
               >
                 Sitemap
               </Link>
-            </div>
+            </nav>
           </div>
           {/* Latest Articles*/}
           <div>
-            <h2 className="text-2xl font-medium my-3">
-              Fishing Shirts For Men
-            </h2>
-            <p className="text-slate-500 text-lg my-5">
-              Fishing Shirts For Men Funny Fishing Shirts To Keep You Happy And
-              Positive Best Fishing Shirts Carefully Reviewed Just For You
-            </p>
+            <h2 className="text-2xl font-medium my-3">Latest Articles</h2>
+            <nav aria-label="Latest Articles" className="flex flex-col">
+              <ul>
+                <li>
+                  <Link
+                    href="/blog/fishing-shirts-men/"
+                    passHref
+                    className="text-lg mt-3 hover:text-blogNavHoverBlue"
+                  >
+                    Fishing Shirts For Men
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/blog/funny-fishing-shirts-that-put-a-smile-on-your-face/"
+                    passHref
+                    className="text-lg mt-3 hover:text-blogNavHoverBlue"
+                  >
+                    Funny Fishing Shirts To Keep You Happy And Positive
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/blog/learn-all-about-fishing-shirts-to-pick-the-right-one-for-you/"
+                    passHref
+                    className="text-lg mt-3 hover:text-blogNavHoverBlue"
+                  >
+                    Best Fishing Shirts Carefully Reviewed Just For You
+                  </Link>
+                </li>
+              </ul>
+            </nav>
           </div>
           {/* Connect with us */}
           <div>

@@ -55,7 +55,7 @@ const termsAndConditions = () => {
       />
       <section className={`container mx-auto my-24`}>
         <div className={`${styles.post}`}>
-          <h2>Welcome to Fishingshirtsnow.com</h2>
+          <h1>Welcome to Fishingshirtsnow.com</h1>
           <p>
             These terms of service outline the rules and regulations for the use
             of Fishingshirtsnow.com&apos;s Website.
