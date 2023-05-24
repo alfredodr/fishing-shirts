@@ -7,16 +7,16 @@ import Paginate from "@/components/common/Paginate";
 import { NextSeo, WebPageJsonLd } from "next-seo";
 import { useRouter } from "next/router";
 
-const Store = ({ products, page, pages, keyword, categories }) => {
+const Store = ({ categories }) => {
   const initialMin = 0;
   const initialMax = 100;
   const [minPrice, setMinPrice] = useState(initialMin);
   const [maxPrice, setMaxPrice] = useState(initialMax);
 
-  const [listOfProducts, setListOfProducts] = useState(products);
-  const [currentPage, setCurrentPage] = useState(page);
+  const [data, setData] = useState();
   const route = useRouter();
   const { query } = route;
+  const keyword = query?.s || "";
   const pageNumber = query?.pageNumber || 1;
 
   useEffect(() => {
@@ -26,16 +26,13 @@ const Store = ({ products, page, pages, keyword, categories }) => {
           `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products?keyword=${keyword}&pageNumber=${pageNumber}`
         );
 
-        const { products, page } = allProducts;
-
-        setListOfProducts(products);
-        setCurrentPage(page);
+        setData(allProducts);
       } catch (error) {
         console.error(error);
       }
     }
     fetchData();
-  }, [products, keyword, pageNumber]);
+  }, [keyword, pageNumber]);
 
   return (
     <>
@@ -145,7 +142,7 @@ const Store = ({ products, page, pages, keyword, categories }) => {
             {/* Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8 mt-32">
               {/* Product */}
-              {listOfProducts
+              {data?.products
                 .filter((product) => {
                   return product.price >= minPrice && product.price <= maxPrice;
                 })
@@ -161,8 +158,8 @@ const Store = ({ products, page, pages, keyword, categories }) => {
             </div>
           </div>
           <Paginate
-            page={currentPage}
-            pages={pages}
+            page={data?.page}
+            pages={data?.pages}
             keyword={keyword ? keyword : ""}
           />
         </div>
@@ -173,19 +170,12 @@ const Store = ({ products, page, pages, keyword, categories }) => {
 
 export default Store;
 
-export async function getStaticProps(context) {
-  const { query } = context;
-  const keyword = query?.s || "";
-  const pageNumber = query?.pageNumber || 1;
-  const { data: allProducts } = await axios.get(
-    `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products?keyword=${keyword}&pageNumber=${pageNumber}`
-  );
+export async function getStaticProps() {
   const { data: categories } = await axios.get(
     `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/categories`
   );
-  const { products, page, pages } = allProducts;
 
   return {
-    props: { products, page, pages, keyword, categories },
+    props: { categories },
   };
 }

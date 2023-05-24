@@ -6,17 +6,19 @@ import StoreProducts from "@/components/product/StoreProducts";
 import FilterByPrice from "@/components/product/FilterByPrice";
 import Paginate from "@/components/common/Paginate";
 
-const Product = ({ products, page, pages, keyword, categoryName, slug }) => {
+//{ products, page, pages, keyword, categoryName, slug }
+
+const Product = ({ categoryName, slug }) => {
   const initialMin = 0;
   const initialMax = 100;
   const [minPrice, setMinPrice] = useState(initialMin);
   const [maxPrice, setMaxPrice] = useState(initialMax);
 
-  const [listOfProducts, setListOfProducts] = useState(products);
-  const [currentPage, setCurrentPage] = useState(page);
   const route = useRouter();
   const { query } = route;
+  const keyword = query?.s || "";
   const pageNumber = query?.pageNumber || 1;
+  const [data, setData] = useState();
 
   useEffect(() => {
     async function fetchData() {
@@ -24,11 +26,7 @@ const Product = ({ products, page, pages, keyword, categoryName, slug }) => {
         const { data } = await axios.get(
           `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/categories/products/${slug}?pageNumber=${pageNumber}`
         );
-
-        const { products, page } = data;
-
-        setListOfProducts(products);
-        setCurrentPage(page);
+        setData(data);
       } catch (error) {
         console.error(error);
       }
@@ -112,8 +110,8 @@ const Product = ({ products, page, pages, keyword, categoryName, slug }) => {
             {/* Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8">
               {/* Product */}
-              {listOfProducts
-                .filter((product) => {
+              {data?.products
+                ?.filter((product) => {
                   return product.price >= minPrice && product.price <= maxPrice;
                 })
                 .map((product, index) => {
@@ -128,8 +126,8 @@ const Product = ({ products, page, pages, keyword, categoryName, slug }) => {
             </div>
           </div>
           <Paginate
-            page={currentPage}
-            pages={pages}
+            page={data?.page}
+            pages={data?.pages}
             slug={slug}
             keyword={keyword ? keyword : ""}
           />
@@ -159,19 +157,12 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const { params } = context;
   const slug = params?.slug;
-  const pageNumber = params?.pageNumber || 1;
-  const { data } = await axios.get(
-    `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/categories/products/${slug}?pageNumber=${pageNumber}`
-  );
-
   const categoryName = slug
     .split("-")
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
 
-  const { products, page, pages } = data;
-
   return {
-    props: { products, page, pages, categoryName, slug },
+    props: { categoryName, slug },
   };
 }

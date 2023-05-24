@@ -10,7 +10,7 @@ const StoreProducts = ({ product }) => {
           <Image
             src={product.images[0].src}
             alt={product.name}
-            fill={true}
+            fill
             sizes="(max-width: 768px) 100vw,
                     (max-width: 1200px) 50vw,
                     33vw"

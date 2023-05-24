@@ -444,7 +444,7 @@ const categories = [
     ],
   },
   {
-    _id: "fishing-shirts-for-cold",
+    _id: "fishing-shirts-for-cold-weather",
     name: "Fishing Shirts For Cold Weather",
     slug: "fishing-shirts-for-cold-weather",
     image: {
