@@ -97,6 +97,7 @@ const Header = () => {
           {/* Hamburger Icon */}
           <button
             id="menu-btn"
+            aria-label="menu button"
             className="flex items-center justify-center cursor-pointer hamburger relative w-8 h-8 md:hidden focus:outline-none bg-lightBlue rounded"
             onClick={toggleMobileMenu}
           >

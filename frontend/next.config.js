@@ -3231,6 +3231,192 @@ const nextConfig = {
         destination: "/store",
         permanent: true,
       },
+      {
+        source:
+          "/product/performance-fishing-hoodie-with-face-mask-hooded-sunblock-shirt-sun-shield-long-sleeve-upf50-dry-fit-quick-dry",
+        destination: "/product-category/fishing-shirts-koofin",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/habit-mens-ts1156-long-sleeve-river-guide-fishing-shirt",
+        destination: "/product-category/fishing-shirts-habit",
+        permanent: true,
+      },
+      {
+        source: "/product/habit-long-sleeve-mens-river-guide-fishing-shirt",
+        destination: "/product-category/fishing-shirts-habit",
+        permanent: true,
+      },
+      {
+        source: "/product/upf-50-uv-hoodie-t-shirt",
+        destination: "/store",
+        permanent: true,
+      },
+      {
+        source: "/product/under-armour-womens-coldgear",
+        destination: "/store",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/womens-performance-long-sleeve-fishing-shirt-upf50-rash-guard-v-neck-athletic-workout-tops-moisture-wicking",
+        destination: "/product-category/fishing-shirts-koofin",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/hanes-mens-cool-dri-performance-long-sleeve-t-shirt482l-deep-royal-white-xl",
+        destination: "/product-category/fishing-shirts-hanes",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/hook-tackle-mens-anglers-delight-short-sleeve-embroidered-uv-sun-protection-fishing-shirt",
+        destination: "/store",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/irish-american-flag-fishing-rod-st-patricks-day-t-shirt",
+        destination: "/product-category/fishing-shirts-american-flag",
+        permanent: true,
+      },
+      {
+        source: "/product/aftco-samurai-performance-long-sleeve-shirt-mint-xl",
+        destination: "/store",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/sand-salt-surf-sun-polynesian-hammerhead-tribal-mens-upf-50-uv-sun-protection-performance-long-sleeve-t-shirt",
+        destination: "/store",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/salty-scales-largemouth-bass-long-sleeve-fishing-shirt-for-men-dri-fit-performance-clothing",
+        destination: "/store",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/priessei-mens-long-sleeve-upf-50-uv-sun-protection-hoodie-for-fishing-running-hiking",
+        destination: "/store",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/koofin-gear-womens-long-sleeve-hooded-sunshirt-upf-50-sun-protection-performance-fishing-hoodie-athletic-workout-tops-moisture-wicking",
+        destination: "/product-category/fishing-shirts-koofin",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/cqr-mens-performance-fishing-gear-upf-50-short-sleeve-breathable-pfg-rip-stop-shirt",
+        destination: "/store",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/pretchic-mens-upf-50-uv-sun-protection-performance-long-sleeve-outdoor-t-shirt",
+        destination: "/product-category/fishing-shirts-pretchic",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/g-h-bass-co-mens-explorer-long-sleeve-crewneck-t-shirt",
+        destination: "/store",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/huk-mens-cw-cold-weather-water-resistant-icon-x-hoodie",
+        destination: "/product-category/fishing-shirts-huk",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/huk-mens-kryptek-icon-x-long-sleeve-long-sleeve-performance-fishing-shirt-with-30-upf-sun-protection-reflective-coating",
+        destination: "/product-category/fishing-shirts-huk",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/izod-mens-surfcaster-short-sleeve-button-down-solid-fishing-shirt",
+        destination: "/store",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/simms-solarflex-upf-50-shirt-long-sleeve-sun-protection-fishing-hoodie-lightweight-breathable-moisture-wicking-anti-odor",
+        destination: "/product-category/fishing-shirts-simms",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/piscifun-performance-upf-long-sleeve-fishing-t-shirt-sun-protection-clothing-fishing-jersey-m-l-xl-2xl-3xl",
+        destination: "/product-category/fishing-shirts-performance",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/ogeenier-mens-upf-50-sun-protection-hoodie-shirt-with-mask-long-sleeve-uv-fishing-workout-hiking-thumbholes-shirt",
+        destination: "/store",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/g-h-bass-co-mens-explorer-short-sleeve-button-down-fishing-shirt-solid-flap-pocket",
+        destination: "/store",
+        permanent: true,
+      },
+      {
+        source: "/product/habit-womens-long-sleeve-fishing-guide-shirt",
+        destination: "/product-category/fishing-shirts-habit",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/habit-mens-belcoast-long-sleeve-river-guide-fishing-shirt",
+        destination: "/store",
+        permanent: true,
+      },
+      {
+        source: "/product/habit-men39s-belcoast-river-guide-s-s-shirt-black",
+        destination: "/store",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/royal-avalon-womens-upf-50-sun-protection-long-sleeve-outdoor-performance-bamboo-cotton-hoodie-with-thumbhole",
+        destination: "/store",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/baleaf-womens-long-sleeve-half-zip-sun-protection-rashguard-side-adjustable-swim-shirt",
+        destination: "/store",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/baleaf-womens-upf-50-sun-protection-hoodies-long-sleeve-yoga-athletic-workout-running-shirt",
+        destination: "/product-category/fishing-shirts-baleaf",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/quiksilver-mens-angler-hooded-ls-long-sleeve-rashguard-surf-shirt",
+        destination: "/store",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/wrangler-authentics-mens-long-sleeve-classic-woven-shirt",
+        destination: "/store",
+        permanent: true,
+      },
     ];
   },
 };

@@ -73,7 +73,7 @@ const ProductDetail = ({ product }) => {
                 alt={product.name}
                 width={600}
                 height={600}
-                className="object-contain w-auto h-auto cursor-pointer"
+                className="object-contain w-auto h-auto cursor-pointer mx-auto"
                 priority
               />
             </div>

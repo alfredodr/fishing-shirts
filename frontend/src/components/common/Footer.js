@@ -117,20 +117,20 @@ const Footer = () => {
           <div>
             <h2 className="text-2xl font-medium my-3">Connect with us</h2>
             <div className="flex flex-row gap-4 text-slate-500">
-              <a
+              <Link
                 href="https://www.facebook.com/fishingshirtsnow"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <AiFillFacebook className="text-3xl hover:cursor-pointer" />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://www.instagram.com/live_fishing_shirts/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaInstagramSquare className="text-3xl hover:cursor-pointer" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

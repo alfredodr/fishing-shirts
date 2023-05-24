@@ -127,10 +127,6 @@ const blog = ({
   );
 };
 
-{
-  /* <MDXRemote {...MDXRemote} components={components}/> */
-}
-
 export default blog;
 
 export async function getStaticPaths() {

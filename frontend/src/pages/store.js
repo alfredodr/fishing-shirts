@@ -1,16 +1,41 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Categories from "@/components/product/Categories";
 import StoreProducts from "@/components/product/StoreProducts";
 import FilterByPrice from "@/components/product/FilterByPrice";
 import Paginate from "@/components/common/Paginate";
 import { NextSeo, WebPageJsonLd } from "next-seo";
+import { useRouter } from "next/router";
 
 const Store = ({ products, page, pages, keyword, categories }) => {
   const initialMin = 0;
   const initialMax = 100;
   const [minPrice, setMinPrice] = useState(initialMin);
   const [maxPrice, setMaxPrice] = useState(initialMax);
+
+  const [listOfProducts, setListOfProducts] = useState(products);
+  const [currentPage, setCurrentPage] = useState(page);
+  const route = useRouter();
+  const { query } = route;
+  const pageNumber = query?.pageNumber || 1;
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const { data: allProducts } = await axios.get(
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products?keyword=${keyword}&pageNumber=${pageNumber}`
+        );
+
+        const { products, page } = allProducts;
+
+        setListOfProducts(products);
+        setCurrentPage(page);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    fetchData();
+  }, [products, keyword, pageNumber]);
 
   return (
     <>
@@ -19,7 +44,9 @@ const Store = ({ products, page, pages, keyword, categories }) => {
         titleTemplate="%s | Fishing Shirts Now"
         description="Check our fishing shirts store with the best for all members of the family. Short sleeve and long sleeve high perfoming choices carefully selected for you."
         canonical={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/store/`}
-        next={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/store?pageNumber=2`}
+        next={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/store?pageNumber=${
+          pageNumber + 1
+        }`}
         additionalMetaTags={[
           {
             property: "article:publisher",
@@ -68,7 +95,7 @@ const Store = ({ products, page, pages, keyword, categories }) => {
         id="features"
         className="flex flex-col-reverse md:flex-row lg:flex-row justify-center container mx-auto my-24 relative px-4"
       >
-        <div className="md:w-1/5 md:border md:border-r-1 md:border-l-transparent md:border-t-transparent md:border-b-transparent md:border-opacity-25 md:border-textLightGray md:pr-16 md:mr-16">
+        <div className="md:border md:border-r-1 md:border-l-transparent md:border-t-transparent md:border-b-transparent md:border-opacity-25 md:border-textLightGray md:pr-14 md:mr-14">
           <FilterByPrice
             min={0}
             max={100}
@@ -81,7 +108,7 @@ const Store = ({ products, page, pages, keyword, categories }) => {
             setMinPrice={setMinPrice}
             setMaxPrice={setMaxPrice}
           />
-          <div className="mt-5">
+          <div className="container mx-auto">
             <h2>SPONSOR:</h2>
             <iframe
               src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=14&l=ez&f=ifr&linkID=10630a4648facad5e2cb15e825f69694&t=fishing-shirts-now00-20&tracking_id=fishing-shirts-now00-20"
@@ -118,7 +145,7 @@ const Store = ({ products, page, pages, keyword, categories }) => {
             {/* Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8 mt-32">
               {/* Product */}
-              {products
+              {listOfProducts
                 .filter((product) => {
                   return product.price >= minPrice && product.price <= maxPrice;
                 })
@@ -134,7 +161,7 @@ const Store = ({ products, page, pages, keyword, categories }) => {
             </div>
           </div>
           <Paginate
-            page={page}
+            page={currentPage}
             pages={pages}
             keyword={keyword ? keyword : ""}
           />
@@ -146,10 +173,10 @@ const Store = ({ products, page, pages, keyword, categories }) => {
 
 export default Store;
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
   const { query } = context;
-  const keyword = query.s || "";
-  const pageNumber = query.pageNumber || 1;
+  const keyword = query?.s || "";
+  const pageNumber = query?.pageNumber || 1;
   const { data: allProducts } = await axios.get(
     `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products?keyword=${keyword}&pageNumber=${pageNumber}`
   );
