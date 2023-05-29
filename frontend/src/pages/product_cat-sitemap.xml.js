@@ -8,10 +8,10 @@ function generateSiteMap(categories) {
         ?.map(({ slug, updatedAt, image }) => {
           return `
           <url>
-               <loc>${`${process.env.NEXT_PUBLIC_FRONTEND_URL}/${slug}`}</loc>
-               <lastmod>${`${updatedAt}`}</lastmod>
+               <loc>https://fishingshirtsnow.com/${slug}</loc>
+               <lastmod>${updatedAt}</lastmod>
                <image:image>
-                   <image:loc>${`${image.src}`}</image:loc>
+                   <image:loc>${image.src}</image:loc>
                  </image:image>
            </url>
       `;

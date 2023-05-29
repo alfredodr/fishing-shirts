@@ -23,7 +23,7 @@ const Header = () => {
           router.pathname === "/contact-us"
             ? "bg-lightBlack"
             : "bg-white"
-        } absolute top-0 w-full z-10`}
+        } absolute top-0 w-full z-10 px-5`}
       >
         {/* Navbar */}
         <nav className="container mx-auto flex items-center justify-between">

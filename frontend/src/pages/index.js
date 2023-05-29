@@ -26,18 +26,12 @@ export default function Home({ products, posts }) {
             content: "2021-01-16T04:25:05+00:00",
           },
         ]}
-        additionalLinkTags={[
-          {
-            rel: "icon",
-            href: "/favicon.ico",
-          },
-        ]}
         openGraph={{
           type: "website",
           title:
             "Fishing Shirts Now - UV Protection - High Quality - Affordable Prices",
           description: "Fishing Shirts Now Home Page",
-          url: `${process.env.NEXT_PUBLIC_FRONTEND_URL}`,
+          url: "https://fishingshirtsnow.com/",
           images: [
             {
               url: "https://fsn-site.s3.amazonaws.com/home/ocean-1950583_1280.jpg",
@@ -56,7 +50,7 @@ export default function Home({ products, posts }) {
       <WebPageJsonLd
         name="Fishing Shirts Now"
         description="Get the best fishing shirts for your next trip"
-        id={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/about/#corporation`}
+        id="https://fishingshirtsnow.com/about/#corporation"
         publisher="https://fishingshirtsnow.com/#organization"
       />
       <Banner />

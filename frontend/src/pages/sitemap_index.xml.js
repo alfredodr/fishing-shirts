@@ -1,27 +1,23 @@
-function generateSiteMap(posts) {
+function generateSiteMap() {
   return `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-      <loc>${process.env.NEXT_PUBLIC_FRONTEND_URL}/post-sitemap.xml</loc>
+      <loc>https://fishingshirtsnow.com/post-sitemap.xml</loc>
       <lastmod>2022-12-19T22:32:35+00:00</lastmod>
   </sitemap>
   <sitemap>
-      <loc>${process.env.NEXT_PUBLIC_FRONTEND_URL}/page-sitemap.xml</loc>
+      <loc>https://fishingshirtsnow.com/page-sitemap.xml</loc>
       <lastmod>2021-06-16T02:29:31+00:00</lastmod>
   </sitemap>
   <sitemap>
-      <loc>${process.env.NEXT_PUBLIC_FRONTEND_URL}/product-sitemap.xml</loc>
+      <loc>https://fishingshirtsnow.com/product-sitemap.xml</loc>
       <lastmod>2023-04-11T02:12:33+00:00</lastmod>
   </sitemap>
   <sitemap>
-      <loc>${process.env.NEXT_PUBLIC_FRONTEND_URL}/category-sitemap.xml</loc>
-      <lastmod>2022-12-19T22:32:35+00:00</lastmod>
-  </sitemap>
-  <sitemap>
-      <loc>${process.env.NEXT_PUBLIC_FRONTEND_URL}/product_cat-sitemap.xml</loc>
+      <loc>https://fishingshirtsnow.com/product_cat-sitemap.xml</loc>
       <lastmod>2023-04-11T02:12:33+00:00</lastmod>
   </sitemap>
   <sitemap>
-      <loc>${process.env.NEXT_PUBLIC_FRONTEND_URL}/product_tag-sitemap.xml</loc>
+      <loc>https://fishingshirtsnow.com/product_tag-sitemap.xml</loc>
       <lastmod>2023-04-11T02:03:55+00:00</lastmod>
   </sitemap>
 </sitemapindex>

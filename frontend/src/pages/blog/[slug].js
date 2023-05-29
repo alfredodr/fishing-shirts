@@ -26,12 +26,8 @@ const blog = ({
         title={`${title}`}
         titleTemplate="%s | Fishing Shirts Now"
         description={excerpt}
-        canonical={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/blog/${slug}/`}
+        canonical={`https://fishingshirtsnow.com/blog/${slug}`}
         additionalLinkTags={[
-          {
-            rel: "icon",
-            href: "/favicon.ico",
-          },
           {
             property: "author",
             content: "Alfredo Dominguez",
@@ -46,7 +42,7 @@ const blog = ({
           },
           title: `${title} - Fishing Shirts Now`,
           description: excerpt,
-          url: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/${slug}`,
+          url: `https://fishingshirtsnow.com/blog/${slug}`,
           images: [
             {
               url: cover_image,
@@ -64,7 +60,7 @@ const blog = ({
       />
       <ArticleJsonLd
         type="Article"
-        url={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/${slug}`}
+        url={`https://fishingshirtsnow.com/blog/${slug}`}
         title={`${title} - Fishing Shirts Now`}
         images={[cover_image]}
         datePublished={published_time}

@@ -20,12 +20,6 @@ const accessibility = () => {
             content: "2021-04-20T14:47:29+00:00",
           },
         ]}
-        additionalLinkTags={[
-          {
-            rel: "icon",
-            href: "/favicon.ico",
-          },
-        ]}
         openGraph={{
           type: "article",
           title: "Accessibility - Fishing Shirts Now",
@@ -49,7 +43,7 @@ const accessibility = () => {
       <WebPageJsonLd
         name="Accessibility - Fishing Shirts Now"
         description="Fishing Shirts Now Accessibility Disclosure Document. Find all the information about how we operate and make the site accessible to our users"
-        id={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/accessibility/#corporation`}
+        id="https://fishingshirtsnow.com/accessibility/#corporation"
         publisher="https://fishingshirtsnow.com/#organization"
       />
       <section className={`container mx-auto my-24`}>

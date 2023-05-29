@@ -8,15 +8,15 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     ?.map(({ slug, updatedAt, images }) => {
       return `
       <url>
-           <loc>${`${process.env.NEXT_PUBLIC_FRONTEND_URL}/${slug}`}</loc>
-           <lastmod>${`${updatedAt}`}</lastmod>
+           <loc>https://fishingshirtsnow.com/${slug}</loc>
+           <lastmod>${updatedAt}</lastmod>
            ${
              images &&
              images
                .map(({ src }) => {
                  return `
              <image:image>
-               <image:loc>${`${src}`}</image:loc>
+               <image:loc>${src}</image:loc>
              </image:image>
          `;
                })
@@ -37,7 +37,9 @@ function SiteMap() {
 export async function getServerSideProps({ res }) {
   const {
     data: { products },
-  } = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products`);
+  } = await axios.get(
+    `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products?pageSize=1000`
+  );
 
   // We generate the XML sitemap with the posts data
   const sitemap = generateSiteMap(products);

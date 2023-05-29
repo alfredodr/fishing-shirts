@@ -14,7 +14,7 @@ const index = ({ posts }) => {
         title="Blog"
         titleTemplate="%s | Fishing Shirts Now"
         description="Stay up to date with the latest trends, recommendations and product reviews in our Fishing Shirts Now Blog."
-        canonical={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/blog/`}
+        canonical="https://fishingshirtsnow.com/blog/"
         additionalMetaTags={[
           {
             property: "article:publisher",
@@ -30,7 +30,7 @@ const index = ({ posts }) => {
           title: "Blog - Fishing Shirts Now",
           description:
             "Stay up to date with the latest trends, recommendations and product reviews in our Fishing Shirts Now Blog.",
-          url: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/blog/`,
+          url: "https://fishingshirtsnow.com/blog/",
           images: [
             {
               url: "https://fsn-site.s3.amazonaws.com/home/ocean-1950583_1280.jpg",
@@ -49,7 +49,7 @@ const index = ({ posts }) => {
       <WebPageJsonLd
         name="Blog - Fishing Shirts Now"
         description="Stay up to date with the latest trends, recommendations and product reviews in our Fishing Shirts Now Blog."
-        id={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/blog/#corporation`}
+        id="https://fishingshirtsnow.com/blog/#corporation"
         publisher="https://fishingshirtsnow.com/#organization"
       />
       <section className="flex items-center justify-center container mx-auto my-24 relative">

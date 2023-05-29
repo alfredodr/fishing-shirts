@@ -10,7 +10,7 @@ const notFound = () => {
         noindex={true}
         openGraph={{
           type: "website",
-          url: `${process.env.NEXT_PUBLIC_FRONTEND_URL}`,
+          url: "https://fishingshirtsnow.com/404",
           title: "Page not found - Fishing Shirts Now",
           site_name: "Fishing Shirts Now",
         }}
@@ -18,7 +18,7 @@ const notFound = () => {
       <WebPageJsonLd
         name="Fishing Shirts Now"
         description="Get the best fishing shirts for your next trip"
-        id={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/about/#corporation`}
+        id="https://fishingshirtsnow.com/404/#corporation"
         publisher="https://fishingshirtsnow.com/#organization"
       />
       <section className="flex items-center justify-center container mx-auto my-24 relative">

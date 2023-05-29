@@ -9,61 +9,72 @@ const ProductDetail = ({ product }) => {
 
   return (
     <>
-      <NextSeo
-        title={`${product.name} - UV Protection - High Quality - Affordable Prices`}
-        titleTemplate="%s | Fishing Shirts Now"
-        description={product.description.slice(0, 2)}
-        canonical={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/product/${product.slug}`}
-        additionalLinkTags={[
-          {
-            rel: "icon",
-            href: "/favicon.ico",
-          },
-        ]}
-        openGraph={{
-          type: "article",
-          article: {
-            publishedTime: `${product.createdAt}`,
-            modifiedTime: `${product.updatedAt}`,
-          },
-          title: `${product.name} - Sun Protective - Fishing Shirts Now`,
-          description: product.description.slice(0, 2),
-          url: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/${product.slug}`,
-          images: [
-            {
-              url: mainImage,
-              width: 500,
-              height: 500,
-              alt: `${product.name}`,
-              type: "image/jpeg",
-            },
-          ],
-        }}
-        twitter={{
-          title: "Fishing Shirts Now",
-          description: "Fishing Shirts Now Home Page",
-        }}
-      />
-      <ProductJsonLd
-        productName={product.name}
-        images={[mainImage]}
-        description={product.description}
-        brand={product.brand}
-        offers={[
-          {
-            id: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/product/${product.slug}/#product`,
-            price: `${product.price}`,
-            priceCurrency: "USD",
-            availability: "https://schema.org/InStock",
-            url: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/product/${product.slug}`,
-            seller: {
-              type: "Organization",
-              name: "Fishing Shirts Now",
-              url: "https://fishingshirtsnow.com/",
-            },
-          },
-        ]}
-      />
+      {product.price === 1 ? (
+        <NextSeo
+          noindex={true}
+          title={`${product.name} - UV Protection - High Quality - Affordable Prices`}
+          titleTemplate="%s | Fishing Shirts Now"
+          description={product.description.slice(0, 2)}
+        />
+      ) : (
+        <>
+          <NextSeo
+            title={`${product.name} - UV Protection - High Quality - Affordable Prices`}
+            titleTemplate="%s | Fishing Shirts Now"
+            description={product.description.slice(0, 2)}
+            canonical={`https://fishingshirtsnow.com/product/${product.slug}`}
+            additionalLinkTags={[
+              {
+                rel: "icon",
+                href: "/favicon.ico",
+              },
+            ]}
+            openGraph={{
+              type: "article",
+              article: {
+                publishedTime: `${product.createdAt}`,
+                modifiedTime: `${product.updatedAt}`,
+              },
+              title: `${product.name} - Sun Protective - Fishing Shirts Now`,
+              description: product.description.slice(0, 2),
+              url: `https://fishingshirtsnow.com/${product.slug}`,
+              images: [
+                {
+                  url: mainImage,
+                  width: 500,
+                  height: 500,
+                  alt: `${product.name}`,
+                  type: "image/jpeg",
+                },
+              ],
+            }}
+            twitter={{
+              title: "Fishing Shirts Now",
+              description: "Fishing Shirts Now Home Page",
+            }}
+          />
+          <ProductJsonLd
+            productName={product.name}
+            images={[mainImage]}
+            description={product.description}
+            brand={product.brand}
+            offers={[
+              {
+                id: `https://fishingshirtsnow.com/product/${product.slug}/#product`,
+                price: `${product.price}`,
+                priceCurrency: "USD",
+                availability: "https://schema.org/InStock",
+                url: `https://fishingshirtsnow.com/product/${product.slug}`,
+                seller: {
+                  type: "Organization",
+                  name: "Fishing Shirts Now",
+                  url: "https://fishingshirtsnow.com/",
+                },
+              },
+            ]}
+          />
+        </>
+      )}
       <section className="bg-lightGray py-28 px-5">
         <div className="relative flex flex-col md:flex-row lg:flex-row container mx-auto">
           <div className="md:w-1/2">

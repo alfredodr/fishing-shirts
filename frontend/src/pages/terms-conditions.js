@@ -20,16 +20,10 @@ const termsAndConditions = () => {
             content: "2021-03-04T02:37:50+00:00",
           },
         ]}
-        additionalLinkTags={[
-          {
-            rel: "icon",
-            href: "/favicon.ico",
-          },
-        ]}
         openGraph={{
           type: "article",
           title: "Terms &amp; Conditions - Fishing Shirts Now",
-          url: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/terms-conditions/`,
+          url: "https://fishingshirtsnow.com/terms-conditions/",
           description:
             "Learn more about Fishing Shirts Now Terms and Conditions.",
           images: [
@@ -50,7 +44,7 @@ const termsAndConditions = () => {
       <WebPageJsonLd
         name="Terms &amp; Conditions - Fishing Shirts Now"
         description="Learn more about Fishing Shirts Now Terms and Conditions."
-        id={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/terms-conditions/#corporation`}
+        id="https://fishingshirtsnow.com/terms-conditions/#corporation"
         publisher="https://fishingshirtsnow.com/#organization"
       />
       <section className={`container mx-auto my-24`}>

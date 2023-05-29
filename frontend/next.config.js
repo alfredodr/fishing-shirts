@@ -272,12 +272,6 @@ const nextConfig = {
       },
       {
         source:
-          "/product/mens-upf-50-long-sleeve-sun-protection-shirts-outdoor-lightweight-quick-dry-uv-shirt",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
           "/product/jason-mathias-strike-zone-bass-ls-high-performance-shirt",
         destination: "/store",
         permanent: true,
@@ -473,7 +467,8 @@ const nextConfig = {
       {
         source:
           "/product/gamefish-usa-upf-50-microfiber-moisture-wicking-long-sleeve-performance-bass-fishing-shirt-2",
-        destination: "/store",
+        destination:
+          "/product/crazy-dog-t-shirts-mens-i-like-fishing-and-maybe-3-people-tshirt-funny-outdoorsman-fathers-day-tee",
         permanent: true,
       },
       {
@@ -705,12 +700,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source:
-          "/product/columbia-mens-pfg-tamiami-ii-short-sleeve-fishing-shirt",
-        destination: "/store",
-        permanent: true,
-      },
-      {
         source: "/product/columbia-womens-tidal-tee-ii-long-sleeve",
         destination: "/store",
         permanent: true,
@@ -738,7 +727,7 @@ const nextConfig = {
       },
       {
         source: "/product/columbia-mens-bahama-ii-short-sleeve-shirt-2",
-        destination: "/store",
+        destination: "/product/columbia-mens-bahama-ii-short-sleeve-shirt",
         permanent: true,
       },
       {
@@ -749,11 +738,6 @@ const nextConfig = {
       {
         source:
           "/product/columbia-mens-silver-ridge-lite-plaid-long-sleeve-shirt-uv-sun-protection-moisture-wicking-fabric",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source: "/product/columbia-womens-pfg-tamiami-ii-long-sleeve-shirt",
         destination: "/store",
         permanent: true,
       },
@@ -860,11 +844,6 @@ const nextConfig = {
       {
         source:
           "/product/columbia-mens-pfg-bonehead-long-sleeve-shirt-cotton-relaxed-fit",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source: "/product/columbia-mens-bahama-ii-l-s-shirt",
         destination: "/store",
         permanent: true,
       },
@@ -1470,19 +1449,7 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source:
-          "/product/willit-womens-upf-50-sun-protection-hoodie-shirt-long-sleeve-spf-uv-top-lightweight-quick-dry",
-        destination: "/store",
-        permanent: true,
-      },
-      {
         source: "/product/carhartt-mens-midweight-hooded-zip-front-sweatshirt",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
-          "/product/vapor-apparel-mens-upf-50-uv-sun-protection-long-sleeve-performance-t-shirt-for-sports-and-outdoor-lifestyle",
         destination: "/store",
         permanent: true,
       },
@@ -1493,35 +1460,13 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source:
-          "/product/its-ok-if-you-dont-like-fishing-gift-idea-funny-quotes-t-shirt",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source: "/product/erazor-bits-wicked-crab-long-sleeve-t-shirt-wf110ls",
-        destination: "/store",
-        permanent: true,
-      },
-      {
         source: "/product/here-fishy-fishy-fishy-t-shirt-fisherman-shirt",
         destination: "/store",
         permanent: true,
       },
       {
         source:
-          "/product/id-rather-be-fishing-funny-novelty-humor-anti-social-fisher-fisherman-fish-tee-mens-tshirt",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
           "/product/comical-shirt-ladies-shut-up-fish-funny-country-song-t-shirt-fishing-racerback",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source: "/product/bigfoot-fishing-shirt-funny-sasquatch-and-fish",
         destination: "/store",
         permanent: true,
       },
@@ -1639,12 +1584,6 @@ const nextConfig = {
       {
         source:
           "/product/funny-fishing-shirt-here-fishy-fishy-fathers-day-gift",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
-          "/product/crazy-dog-t-shirts-womens-fishing-saved-me-from-becoming-a-pornstar-tshirt-funny-outdoor-tee",
         destination: "/store",
         permanent: true,
       },
@@ -2192,16 +2131,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/product/columbia-mens-bahama-ii-short-sleeve-shirt",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source: "/product/columbia-mens-low-drag-offshore-short-sleeve-shirt",
-        destination: "/store",
-        permanent: true,
-      },
-      {
         source: "/product/columbia-womens-times-two-novelty-knit-long-sleeve",
         destination: "/store",
         permanent: true,
@@ -2352,24 +2281,7 @@ const nextConfig = {
       },
       {
         source:
-          "/product/hook-tackle-mens-liberty-long-sleeve-vented-uv-sun-protection-performance-fishing-shirt",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
           "/product/yizzam-luckyrod-american-flag-mens-long-sleeve-upf-50-performance-fishing-shirt",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source: "/product/grunt-style-rifle-flag-mens-t-shirt",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
-          "/product/hook-tackle-mens-american-sailfish-long-sleeve-uv-sun-protection-performance-fishing-shirt",
         destination: "/store",
         permanent: true,
       },
@@ -2382,23 +2294,6 @@ const nextConfig = {
       {
         source:
           "/product/haase-unlimited-fishing-pole-american-flag-fisherman-usa-mens-tank-top",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
-          "/product/o2tee-mens-american-flag-soft-slim-long-sleeve-compression-gym-trainning-casual-top",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
-          "/product/haase-unlimited-fishing-pole-american-flag-fisherman-usa-mens-t-shirt",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source: "/product/threadrock-mens-fishing-american-flag-t-shirt",
         destination: "/store",
         permanent: true,
       },
@@ -2677,19 +2572,7 @@ const nextConfig = {
       },
       {
         source:
-          "/product/crazy-dog-t-shirts-youth-eat-sleep-fish-t-shirt-funny-fishing-tee-for-kids",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
           "/product/sand-salt-surf-sun-colorful-rather-be-fishing-youth-upf-50-uv-sun-protection-performance-long-sleeve-t-shirt",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
-          "/product/oneill-youth-basic-skins-upf-50-long-sleeve-sun-shirt",
         destination: "/store",
         permanent: true,
       },
@@ -2712,11 +2595,6 @@ const nextConfig = {
       {
         source:
           "/product/salty-crew-kids-boys-bruce-long-sleeve-tee-little-kids-big-kids",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source: "/product/columbia-bahama-short-sleeve-shirt",
         destination: "/store",
         permanent: true,
       },
@@ -2759,12 +2637,6 @@ const nextConfig = {
       },
       {
         source:
-          "/product/little-donkey-andy-womens-upf-50-uv-protection-shirt-long-sleeve-fishing-shirt-breathable-and-fast-dry",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
           "/product/tsla-womens-upf-50-full-half-zip-front-long-sleeve-top-rashguard-swimsuit",
         destination: "/store",
         permanent: true,
@@ -2772,12 +2644,6 @@ const nextConfig = {
       {
         source:
           "/product/hanes-sport-womens-cool-dri-performance-long-sleeve-v-neck-tee",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
-          "/product/southern-attitude-salty-anchor-navy-blue-preppy-short-sleeve-shirt",
         destination: "/store",
         permanent: true,
       },
@@ -2841,18 +2707,6 @@ const nextConfig = {
       {
         source:
           "/product/baleaf-womens-hiking-long-sleeve-fishing-shirt-upf-50-for-safari-camping-travelling-quick-dry",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
-          "/product/southern-attitude-pineapple-anchor-coral-womens-long-sleeve-t-shirt",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
-          "/product/oneill-womens-basic-skins-upf-50-long-sleeve-rash-guard",
         destination: "/store",
         permanent: true,
       },
@@ -2980,11 +2834,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/product/columbia-pfg-americana-saltwater-fish-flag-t-shirt",
-        destination: "/store",
-        permanent: true,
-      },
-      {
         source:
           "/product/columbia-mens-pfg-bahama-ii-short-sleeve-shirt-sail-large",
         destination: "/store",
@@ -3019,19 +2868,7 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source:
-          "/product/bassdash-fishing-t-shirts-for-men-uv-sun-protection-upf-50-long-sleeve-tee-t-shirt",
-        destination: "/store",
-        permanent: true,
-      },
-      {
         source: "/product/columbia-mens-pfg-bahama-ii-long-sleeve-shirt",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
-          "/product/naviskin-mens-upf-50-sun-protection-outdoor-long-sleeve-shirt-lightweight-quick-dry-cooling-fishing-shirts",
         destination: "/store",
         permanent: true,
       },
@@ -3042,18 +2879,7 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/product/columbia-mens-pfg-tamiami-ii-long-sleeve-shirt",
-        destination: "/store",
-        permanent: true,
-      },
-      {
         source: "/product/columbia-mens-pfg-terminal-tackle-long-sleeve-tee",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
-          "/product/naviskin-mens-sun-protection-upf-50-uv-outdoor-long-sleeve-t-shirt",
         destination: "/store",
         permanent: true,
       },
@@ -3109,73 +2935,7 @@ const nextConfig = {
       },
       {
         source:
-          "/product/crazy-dog-t-shirts-mens-i-like-fishing-and-maybe-3-people-tshirt-funny-outdoorsman-fathers-day-tee",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
-          "/product/mens-im-so-good-with-my-rod-i-make-fish-come-tshirt-funny-sarcastic-fishing-tee",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
-          "/product/crazy-bros-tees-id-rather-be-fishing-funny-sarcastic-fish-gift-for-dad-fisherman-mens-t-shirt",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
-          "/product/crazy-dog-t-shirts-mens-beer-fishy-fishy-tshirt-funny-fishing-drinking-tee",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
           "/product/mens-fishing-saved-me-from-being-a-pornstar-now-im-just-a-hooker-tshirt",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
-          "/product/mens-mines-so-big-i-have-to-use-two-hands-tshirt-funny-fishing-tee",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
-          "/product/mens-grandpa-is-my-name-fishing-is-my-game-tshirt-funny-fathers-day-tee",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
-          "/product/crazy-dog-t-shirts-mens-procrastifishing-tshirt-funny-outdoor-fishing-procrastination-tee",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
-          "/product/crazy-dog-t-shirts-mens-part-time-hooker-tshirt-funny-outdoor-fishing-tee-for-guys",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
-          "/product/a-day-without-fishing-probably-wont-kill-me-gift-idea-to-dad-funny-t-shirt",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
-          "/product/aw-fashions-hooker-on-the-weekend-funny-fisherman-gifts-fathers-day-mens-fishing-t-shirt",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
-          "/product/mens-dont-be-a-dumb-bass-tshirt-funny-fishing-tee-for-guys",
         destination: "/store",
         permanent: true,
       },
@@ -3192,13 +2952,15 @@ const nextConfig = {
       },
       {
         source: "/product/crazy-dog-t-shirts-mens-my-retirement-plan-fishing",
-        destination: "/store",
+        destination:
+          "/product/my-fishing-retirement-plan-funny-fish-pole-humor-fisherman-men-joke-t-shirt",
         permanent: true,
       },
       {
         source:
           "/product/crazy-dog-t-shirts-mens-my-retirement-plan-fishing-tshirt-funny-old-age-tee",
-        destination: "/store",
+        destination:
+          "/product/my-fishing-retirement-plan-funny-fish-pole-humor-fisherman-men-joke-t-shirt",
         permanent: true,
       },
       {
@@ -3250,11 +3012,6 @@ const nextConfig = {
       },
       {
         source: "/product/upf-50-uv-hoodie-t-shirt",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source: "/product/under-armour-womens-coldgear",
         destination: "/store",
         permanent: true,
       },
@@ -3414,6 +3171,11 @@ const nextConfig = {
       {
         source:
           "/product/wrangler-authentics-mens-long-sleeve-classic-woven-shirt",
+        destination: "/store",
+        permanent: true,
+      },
+      {
+        source: "/product/",
         destination: "/store",
         permanent: true,
       },

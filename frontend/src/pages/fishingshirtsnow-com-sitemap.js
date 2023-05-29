@@ -14,7 +14,7 @@ const sitemap = ({ products, posts }) => {
         title=" FishingShirtsNow.com Sitemap - Content Drilldown Map Of Our Website"
         titleTemplate="%s | Fishing Shirts Now"
         description="To enjoy fishing you should wear the appropriate outfit. This is what our website is all about. Check us out here:FishingShirtsNow.com Sitemap."
-        canonical={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/fishingshirtsnow-com-sitemap/`}
+        canonical="https://fishingshirtsnow.com/fishingshirtsnow-com-sitemap/"
         additionalMetaTags={[
           {
             property: "article:publisher",
@@ -25,19 +25,13 @@ const sitemap = ({ products, posts }) => {
             content: "2021-04-16T16:13:51+00:00",
           },
         ]}
-        additionalLinkTags={[
-          {
-            rel: "icon",
-            href: "/favicon.ico",
-          },
-        ]}
         openGraph={{
           type: "article",
           title:
             "FishingShirtsNow.com Sitemap - Content Drilldown Map Of Our Website",
           description:
             "To enjoy fishing you should wear the appropriate outfit. This is what our website is all about. Check us out here:FishingShirtsNow.com Sitemap.",
-          url: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/fishingshirtsnow-com-sitemap/`,
+          url: "https://fishingshirtsnow.com/fishingshirtsnow-com-sitemap/",
           images: [
             {
               url: "https://fsn-site.s3.amazonaws.com/home/ocean-1950583_1280.jpg",
@@ -56,7 +50,7 @@ const sitemap = ({ products, posts }) => {
       <WebPageJsonLd
         name="FishingShirtsNow.com Sitemap - Content Drilldown Map Of Our Website"
         description="To enjoy fishing you should wear the appropriate outfit. This is what our website is all about. Check us out here:FishingShirtsNow.com Sitemap."
-        id={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/fishingshirtsnow-com-sitemap/#corporation`}
+        id="https://fishingshirtsnow.com/fishingshirtsnow-com-sitemap/#corporation"
         publisher="https://fishingshirtsnow.com/#organization"
       />
       <section
@@ -188,7 +182,9 @@ export default sitemap;
 export async function getStaticProps() {
   const {
     data: { products },
-  } = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products`);
+  } = await axios.get(
+    `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products?pageSize=1000`
+  );
 
   // Get files from the posts dir
   const files = fs.readdirSync(path.join("src", "posts"));

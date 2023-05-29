@@ -37,7 +37,11 @@ const SearchBox = ({ toggleMobileMenu }) => {
       <button
         type="submit"
         className={`"inline-flex items-center py-2.5 px-3 ml-2 text-sm font-medium ${
-          router.pathname === "/" ? "text-lightWhite" : "text-black"
+          router.pathname === "/" ||
+          router.pathname === "/about" ||
+          router.pathname === "/contact-us"
+            ? "text-lightWhite"
+            : "text-black"
         } rounded-lg ${
           router.pathname === "/" && "hover:text-white"
         }  focus:ring-4 focus:outline-none focus:ring-white dark:bg-white dark:hover:dark:focus:ring-white"`}
