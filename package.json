@@ -8,7 +8,10 @@
     "server": "npm run start --prefix backend",
     "client": "npm run dev --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "data:import": "npm run data:import  --prefix backend"
+    "data:import": "npm run data:import  --prefix backend",
+    "checkDuplicates": "npm run checkDuplicates  --prefix backend",
+    "validateData": "npm run validateData  --prefix backend",
+    "checkRedirects": "npm run checkRedirects  --prefix backend"
   },
   "repository": {
     "type": "git",

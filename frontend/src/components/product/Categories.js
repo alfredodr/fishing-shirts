@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Categories = ({ category }) => {
   return (
-    <section className="flex flex-col">
+    <section className={`flex flex-col ${category.count === 0 && "hidden"}`}>
       <Link href={`product-category/${category?.slug}`} passHref>
         <div className="relative w-full h-60">
           <Image
