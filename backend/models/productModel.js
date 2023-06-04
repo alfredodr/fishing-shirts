@@ -78,34 +78,35 @@ productSchema.post("save", async (doc, next) => {
   }
 });
 
-//update the product count per category after inserting many products
 productSchema.post("insertMany", async (docs, next) => {
   try {
-    const categoryCounts = [];
-    let categoryId = "";
+    const categoryCounts = {};
 
+    // Retrieve the current count of products per category
+    const categories = await mongoose.model("Category").find({});
+    categories.forEach((category) => {
+      categoryCounts[category._id] = category.count || 0;
+    });
+
+    // Update the count of available product per category
     docs.forEach((doc) => {
-      const categories = doc.categories; //loop through each category inside of each document
+      const categories = doc.categories;
       categories.forEach((category) => {
-        categoryId = category._id; //get the category id
-        categoryCounts[categoryId] = (categoryCounts[categoryId] || 0) + 1; //count the number of products in each category
+        const categoryId = category._id; // Get the category id
+        if (doc.price !== 1) {
+          // Check if the price is not 1
+          categoryCounts[categoryId] = (categoryCounts[categoryId] || 0) + 1; // Increment the count of products in each category
+        }
       });
     });
 
-    //loops through the categoryCounts in each Category and updates the corresponding category
+    // Update the counts in the corresponding categories
     for (const categoryId in categoryCounts) {
-      const category = await mongoose
+      await mongoose
         .model("Category")
-        .findOne({ _id: categoryId });
-      if (category) {
-        await mongoose
-          .model("Category")
-          .updateOne(
-            { _id: categoryId },
-            { count: categoryCounts[categoryId] }
-          );
-      }
+        .updateOne({ _id: categoryId }, { count: categoryCounts[categoryId] });
     }
+
     next();
   } catch (error) {
     console.error("Error updating category counts:", error);

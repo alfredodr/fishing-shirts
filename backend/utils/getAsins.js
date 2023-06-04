@@ -2,7 +2,6 @@ import * as dotenv from "dotenv";
 import connectDB from "../config/db.js";
 import mongoose from "mongoose";
 import colors from "colors";
-import { CronJob } from "cron";
 import amazonPaapi from "amazon-paapi";
 import productDetails from "../data/productDetails.js";
 import users from "../data/users.js";
@@ -15,11 +14,13 @@ dotenv.config();
 
 connectDB();
 
+let count = 0;
+let productData;
 let index = 0;
-const asinArray = [];
-let currentAsins = [];
+let asinArray = [];
+let allAsins = [];
+let missingIds = [];
 let amazonProductSpecificInfo = [];
-let asinCount = 0;
 let result = [];
 
 const commonParameters = {
@@ -30,44 +31,83 @@ const commonParameters = {
   Marketplace: "www.amazon.com",
 };
 
-// update products once a month on the 1st day at 12:00am
-const job = new CronJob(
-  "15 14 1 * *",
-  () => {
-    getAsins();
-  },
-  null,
-  true,
-  "America/New_York"
-);
+for (let i = 0; i < productDetails.length; i++) {
+  allAsins.push(productDetails[i].asin);
+}
+
+//check if products already exist in the database
+const findExistingProducts = async () => {
+  try {
+    //await Product.deleteMany();
+    count = await Product.countDocuments({});
+
+    if (count === 0) {
+      console.log("Product database is empty");
+      return count;
+    } else {
+      const existingDocuments = await Product.find(
+        { _id: { $in: allAsins } },
+        { _id: 1 }
+      );
+
+      const existingIds = existingDocuments.map((doc) => doc._id.toString());
+      missingIds = allAsins.filter((id) => !existingIds.includes(id));
+    }
+
+    return missingIds;
+  } catch (error) {
+    console.error(`Error finding missines asins due to: ${error}`.red.inverse);
+    process.exit(1);
+  }
+};
+
+await findExistingProducts();
 
 //get all 10 by 10 ASINs every 5 seconds, get the amazon data for each pair of 10 products, clean the data and save it to the products file
-const getAsins = () => {
-  for (let i = 0; i < 10; i++) {
-    if (index >= productDetails.length) {
-      clearInterval(intervalId);
+const getAsins = async () => {
+  asinArray = [];
 
-      if (result?.length === productDetails.length) {
-        // //save clean data in json and make the JSON file more easy to read
+  if (count === 0) {
+    productData = productDetails;
+  } else if (missingIds.length > 0) {
+    productData = missingIds;
+  } else if (missingIds.length <= 0) {
+    console.log("All product are in the database");
+    process.exit(1);
+  }
+
+  //add asins from existing products in pairs of 10 to an asinArray, every 5 seconds
+  for (let i = 0; i < 10; i++) {
+    if (index === productData.length) {
+      clearInterval(intervalId);
+      console.log(`${result?.length}===${productData.length}`);
+      if (result?.length === productData.length) {
+        //save clean data in json and make the JSON file more easy to read
         try {
           const importData = async (products) => {
             try {
-              await User.deleteMany();
-              await Category.deleteMany();
+              // await User.deleteMany();
+              // await Category.deleteMany();
 
-              const createdUser = await User.insertMany(users);
+              //use only when adding initial user data
+              // const createdUser = await User.insertMany(users);
+              // const adminUser = createdUser[0]._id;
 
-              const adminUser = createdUser[0]._id;
-
-              const allCategories = categories.map((category) => {
-                return { ...category, user: adminUser };
+              const findAdmin = await User.findOne({
+                email: "admin@example.com",
               });
+              const adminUser = findAdmin._id;
+
+              // //use only when adding initial category data
+              // const allCategories = categories.map((category) => {
+              //   return { ...category, user: adminUser };
+              // });
+
+              // await Category.insertMany(allCategories);
 
               const allProducts = products.map((product) => {
                 return { ...product, user: adminUser };
               });
-
-              await Category.insertMany(allCategories);
 
               // Create an instance of the model
               const instance = new Product();
@@ -87,8 +127,6 @@ const getAsins = () => {
                 }
               }
 
-              await Product.deleteMany();
-
               await Product.insertMany(allProducts);
 
               console.log("Data Imported!".green.inverse);
@@ -103,31 +141,30 @@ const getAsins = () => {
           console.log("Unable to add clean data to file due to:", error);
         }
       }
-
       break;
     }
-    asinArray.push(productDetails[index].asin);
+
+    if (missingIds <= 0) {
+      asinArray.push(productData[index].asin);
+    } else {
+      //add the missing Asins to the array
+      asinArray.push(productData[index]);
+    }
     index++;
   }
 
   if (asinArray.length > 0) {
-    processAsins();
+    //console.log(asinArray);
+    onAsinChange(asinArray);
   }
-};
-
-//get the data for each pair of 10 ASINs and add it to the file
-const processAsins = () => {
-  currentAsins.splice(0, currentAsins.length, ...asinArray.slice(0, 10));
-
-  onAsinChange(currentAsins);
 };
 
 const intervalId = setInterval(getAsins, 5000);
 
 //get each 10 products
-const onAsinChange = (currentAsins) => {
+const onAsinChange = (asinArray) => {
   let requestParameters = {
-    ItemIds: currentAsins,
+    ItemIds: asinArray,
     ItemIdType: "ASIN",
     Condition: "New",
     Resources: [
@@ -149,18 +186,16 @@ const onAsinChange = (currentAsins) => {
     .then((data) => {
       // add new products to the Items array
       amazonProductSpecificInfo.push(data);
-      cleanData();
+      cleanData(asinArray);
     })
     .catch((error) => {
       console.log(error);
     });
 };
 
-const cleanData = () => {
+const cleanData = (asinArray) => {
   // // Process the current 10 ASINs here...
-  console.log(`Processing ASINs: ${currentAsins}`);
-
-  asinCount += currentAsins.length;
+  console.log(`Processing ASINs: ${asinArray}`);
 
   //put all products in one Items array
   const flattenedAmazonProductSpecificInfo = amazonProductSpecificInfo.flatMap(
@@ -174,6 +209,7 @@ const cleanData = () => {
   //check for missing data and save in a specific format
   result = items?.map((item) => {
     const asin = item?.ASIN;
+    console.log("asin:", asin); //check if these products match the asinArray products
     const detailPageUrl = item?.DetailPageURL;
     const primaryImageUrl = item?.Images?.Primary?.Large?.URL;
     const title = item?.ItemInfo?.Title?.DisplayValue;
@@ -213,9 +249,8 @@ const cleanData = () => {
       price: priceAmount,
     };
   });
-
-  // remove the ASINs that have been processed from the array
-  asinArray.splice(0, currentAsins.length);
 };
+
+getAsins();
 
 export default getAsins;

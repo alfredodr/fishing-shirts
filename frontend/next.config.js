@@ -26,22 +26,22 @@ const nextConfig = {
     return [
       {
         source: "/wp/wp-content/plugins/rwwipru/ss/citii/ON/com/Login.html",
-        destination: "https://fishingshirtsnow.com/store/",
+        destination: "/store/",
         permanent: true,
       },
       {
         source: "/wp/wp-content/plugins/rwwipru/ss/2020citii.zip",
-        destination: "https://fishingshirtsnow.com/store/",
+        destination: "/store/",
         permanent: true,
       },
       {
         source: "/wp/wp-content/plugins/rwwipru/ss/citii/ON/com",
-        destination: "https://fishingshirtsnow.com/store/",
+        destination: "/store/",
         permanent: true,
       },
       {
         source: "/ads.txt",
-        destination: "https://fishingshirtsnow.com/store/",
+        destination: "/store/",
         permanent: true,
       },
       { source: "/my-account/", destination: "/", permanent: true },
@@ -75,8 +75,7 @@ const nextConfig = {
       },
       {
         source: "/download/S/a/l/SaltyCrew.PNG",
-        destination:
-          "https://fishingshirtsnow.com/?s=salty+crew&post_type=product",
+        destination: "/?s=salty+crew&post_type=product",
         permanent: true,
       },
       {
@@ -89,7 +88,7 @@ const nextConfig = {
       {
         source:
           "/product/classic-teaze-lord-is-my-light-religious-jesus-christian-t-shirt/",
-        destination: "https://fishingshirtsnow.com/store/",
+        destination: "/store/",
         permanent: true,
       },
       { source: "/home/", destination: "/", permanent: true },
@@ -97,12 +96,6 @@ const nextConfig = {
         source:
           "/product/mens-upf-50-uv-outdoor-sun-protection-hoodie-t-shirt-long-sleeve-performance-spf-rashguard-shirt-for-fishing-hiking-running/",
         destination: "/store/",
-        permanent: true,
-      },
-      {
-        source:
-          "/product/baleaf-womens-upf-50-sun-protection-t-shirt-long-short-sleeve-outdoor-performance/",
-        destination: "/product-category/fishing-shirts-for-her/",
         permanent: true,
       },
       {
@@ -240,16 +233,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/product/pelagic-aquatek-performance-fishing-shirt",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source: "/product/pelagic-game-fish-premium-t-shirt",
-        destination: "/store",
-        permanent: true,
-      },
-      {
         source:
           "/product/huk-mens-pursuit-vented-long-sleeve-shirt-long-sleeve-performance-fishing-shirt-with-30-upf-sun-protection",
         destination: "/store",
@@ -307,12 +290,6 @@ const nextConfig = {
       {
         source:
           "/product/simms-womens-solarflex-fishing-hoody-shirt-with-upf-50",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
-          "/product/long-sleeve-fishing-shirts-fishing-hoodie-for-men-and-women-fit-performance-clothing-upf-50quick-dry",
         destination: "/store",
         permanent: true,
       },
@@ -427,12 +404,6 @@ const nextConfig = {
       },
       {
         source:
-          "/product/koofin-gear-womens-long-sleeve-performance-fishing-hoodie",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
           "/product/i-just-want-to-drink-beer-and-jerk-my-rod-funny-fishing-gift-tank-top",
         destination: "/store",
         permanent: true,
@@ -449,11 +420,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/product/columbia-mens-terminal-tackle-pfg-sleeve-ls-shirt",
-        destination: "/store",
-        permanent: true,
-      },
-      {
         source:
           "/product/columbia-mens-pfg-terminal-deflector-printed-long-sleeve-fishing-shirt",
         destination: "/store",
@@ -462,13 +428,6 @@ const nextConfig = {
       {
         source: "/product/under-armour-mens-tide-chaser-long-sleeve",
         destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
-          "/product/gamefish-usa-upf-50-microfiber-moisture-wicking-long-sleeve-performance-bass-fishing-shirt-2",
-        destination:
-          "/product/crazy-dog-t-shirts-mens-i-like-fishing-and-maybe-3-people-tshirt-funny-outdoorsman-fathers-day-tee",
         permanent: true,
       },
       {
@@ -645,12 +604,6 @@ const nextConfig = {
       },
       {
         source: "/product/aftco-reaper-technical-fleece-hoodie",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
-          "/product/bassdash-upf-50-mens-uv-sun-protection-long-sleeve-performance-fishing-hoodie-hooded-shirts",
         destination: "/store",
         permanent: true,
       },
@@ -2572,12 +2525,6 @@ const nextConfig = {
       },
       {
         source:
-          "/product/sand-salt-surf-sun-colorful-rather-be-fishing-youth-upf-50-uv-sun-protection-performance-long-sleeve-t-shirt",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
           "/product/columbia-youth-boys-pfg-tamiami-short-sleeve-shirt-upf-protection-moisture-wicking",
         destination: "/store",
         permanent: true,
@@ -2929,11 +2876,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/product/ann-arbor-funny-fishing-tee",
-        destination: "/store",
-        permanent: true,
-      },
-      {
         source:
           "/product/mens-fishing-saved-me-from-being-a-pornstar-now-im-just-a-hooker-tshirt",
         destination: "/store",
@@ -2995,12 +2937,6 @@ const nextConfig = {
       },
       {
         source:
-          "/product/performance-fishing-hoodie-with-face-mask-hooded-sunblock-shirt-sun-shield-long-sleeve-upf50-dry-fit-quick-dry",
-        destination: "/product-category/fishing-shirts-koofin",
-        permanent: true,
-      },
-      {
-        source:
           "/product/habit-mens-ts1156-long-sleeve-river-guide-fishing-shirt",
         destination: "/product-category/fishing-shirts-habit",
         permanent: true,
@@ -3034,12 +2970,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source:
-          "/product/irish-american-flag-fishing-rod-st-patricks-day-t-shirt",
-        destination: "/product-category/fishing-shirts-american-flag",
-        permanent: true,
-      },
-      {
         source: "/product/aftco-samurai-performance-long-sleeve-shirt-mint-xl",
         destination: "/store",
         permanent: true,
@@ -3066,18 +2996,6 @@ const nextConfig = {
         source:
           "/product/koofin-gear-womens-long-sleeve-hooded-sunshirt-upf-50-sun-protection-performance-fishing-hoodie-athletic-workout-tops-moisture-wicking",
         destination: "/product-category/fishing-shirts-koofin",
-        permanent: true,
-      },
-      {
-        source:
-          "/product/cqr-mens-performance-fishing-gear-upf-50-short-sleeve-breathable-pfg-rip-stop-shirt",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
-          "/product/pretchic-mens-upf-50-uv-sun-protection-performance-long-sleeve-outdoor-t-shirt",
-        destination: "/product-category/fishing-shirts-pretchic",
         permanent: true,
       },
       {
@@ -3176,6 +3094,12 @@ const nextConfig = {
       },
       {
         source: "/product/",
+        destination: "/store",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/crazy-dog-t-shirts-mens-part-time-hooker-tshirt-funny-outdoor-fishing-tee-for-guys",
         destination: "/store",
         permanent: true,
       },
