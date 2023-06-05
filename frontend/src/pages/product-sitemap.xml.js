@@ -8,7 +8,7 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     ?.map(({ slug, updatedAt, images }) => {
       return `
       <url>
-           <loc>https://fishingshirtsnow.com/${slug}</loc>
+           <loc>https://fishingshirtsnow.com/product/${slug}</loc>
            <lastmod>${updatedAt}</lastmod>
            ${
              images &&

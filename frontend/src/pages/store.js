@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 
 const Store = ({ categories }) => {
   const initialMin = 0;
-  const initialMax = 100;
+  const initialMax = 200;
   const [minPrice, setMinPrice] = useState(initialMin);
   const [maxPrice, setMaxPrice] = useState(initialMax);
 
@@ -87,7 +87,7 @@ const Store = ({ categories }) => {
         <div className="md:border md:border-r-1 md:border-l-transparent md:border-t-transparent md:border-b-transparent md:border-opacity-25 md:border-textLightGray md:pr-14 md:mr-14">
           <FilterByPrice
             min={0}
-            max={100}
+            max={200}
             step={1}
             initialMin={initialMin}
             initialMax={initialMax}
@@ -169,5 +169,6 @@ export async function getStaticProps() {
 
   return {
     props: { categories },
+    revalidate: 10,
   };
 }

@@ -1,4 +1,4 @@
-const productDetails = [
+const products = [
   {
     asin: "B08B1N25FT",
     slug: "baleaf-mens-long-sleeve-upf-50-uv-sun-protection-shirt-spf-lightweight-quick-dry-hiking-fishing-shirt",
@@ -937,7 +937,7 @@ const productDetails = [
     ],
   },
   {
-    asin: "B072WFGF1H",
+    asin: "B0058YTLI0",
     slug: "columbia-womens-pfg-bahama-short-sleeve-shirt",
     categories: [
       { _id: "fishing-shirts-columbia" },
@@ -2101,13 +2101,118 @@ const productDetails = [
     ],
   },
   {
-    asin: "B07RQV8RCK",
+    asin: "B091L5ZH36",
     slug: "performance-fishing-hoodie-with-face-mask-hooded-sunblock-shirt-sun-shield-long-sleeve-upf50-dry-fit-quick-dry",
     categories: [
       { _id: "fishing-shirts-koofin" },
       { _id: "fishing-shirts-long-sleeve" },
     ],
   },
+  {
+    asin: "B087DXLPNX",
+    slug: "habit-mens-ts1156-long-sleeve-river-guide-fishing-shirt",
+    categories: [
+      { _id: "fishing-shirts-habit" },
+      { _id: "fishing-shirts-long-sleeve" },
+      { _id: "fishing-shirts-for-him" },
+    ],
+  },
+  {
+    asin: "B08WPLDGWB",
+    slug: "habit-long-sleeve-mens-river-guide-fishing-shirt",
+    categories: [
+      { _id: "fishing-shirts-habit" },
+      { _id: "fishing-shirts-long-sleeve" },
+      { _id: "fishing-shirts-for-him" },
+    ],
+  },
+  {
+    asin: "B00DNNR9XC",
+    slug: "columbia-mens-low-drag-offshore-short-sleeve-shirt-upf-40-protection-moisture-wicking-fabric",
+    categories: [
+      { _id: "fishing-shirts-columbia" },
+      { _id: "fishing-shirts-short-sleeve" },
+      { _id: "fishing-shirts-for-him" },
+    ],
+  },
+  {
+    asin: "B00QOALVP8",
+    slug: "columbia-womens-pfg-super-bahama-long-sleeve-shirt-breathable-uv-protection",
+    categories: [
+      { _id: "fishing-shirts-columbia" },
+      { _id: "fishing-shirts-for-her" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B00DCZGTM8",
+    slug: "columbia-boys-bonehead-short-sleeve-shirt",
+    categories: [
+      { _id: "fishing-shirts-columbia" },
+      { _id: "fishing-shirts-for-kids" },
+    ],
+  },
+  {
+    asin: "B076Q1V5JD",
+    slug: "huk-mens-kryptek-icon-x-long-sleeve-long-sleeve-performance-fishing-shirt-with-30-upf-sun-protection-reflective-coating",
+    categories: [
+      { _id: "fishing-shirts-huk" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B07KCFTFL6",
+    slug: "columbia-mens-thistletown-park-raglan-shirt-long-sleeve-sun-protection",
+    categories: [
+      { _id: "fishing-shirts-columbia" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B09FQGX3YD",
+    slug: "huk-mens-pursuit-camo-vented-long-sleeve-shirt",
+    categories: [
+      { _id: "fishing-shirts-huk" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B00KRYNQKU",
+    slug: "hanes-womens-sport-cool-dri-performance-polo",
+    categories: [
+      { _id: "fishing-shirts-hanes" },
+      { _id: "fishing-shirts-for-her" },
+    ],
+  },
+  {
+    asin: "B07R6Y9TDK",
+    slug: "mens-pfg-zero-rules-ls-shirt-carbon",
+    categories: [
+      { _id: "fishing-shirts-columbia" },
+      { _id: "fishing-shirts-short-sleeve" },
+      { _id: "fishing-shirts-for-him" },
+    ],
+  },
+  {
+    asin: "B0814R9RHM",
+    slug: "columbia-boys-terminal-tackle-long-sleeve-tee",
+    categories: [
+      { _id: "fishing-shirts-columbia" },
+      { _id: "fishing-shirts-for-kids" },
+    ],
+  },
+  {
+    asin: "B0058YSP00",
+    slug: "columbia-mens-low-drag-offshore-upf-40-vivid-blue-large",
+    categories: [
+      { _id: "fishing-shirts-columbia" },
+      { _id: "fishing-shirts-long-sleeve" },
+      { _id: "fishing-shirts-for-him" },
+    ],
+  },
 ];
 
-export default productDetails;
+export default products;

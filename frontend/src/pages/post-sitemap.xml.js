@@ -8,7 +8,7 @@ function generateSiteMap(posts) {
     ?.map(({ slug, frontmatter }) => {
       return `
 	  <url>
-		   <loc>https://fishingshirtsnow.com/${slug}</loc>
+		   <loc>https://fishingshirtsnow.com/blog/${slug}</loc>
 		   <lastmod>${frontmatter.modified_time}</lastmod>
 		   <image:image>
 			   <image:loc>${frontmatter.cover_image}</image:loc>

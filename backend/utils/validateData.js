@@ -1,7 +1,7 @@
-import productDetails from "../data/productDetails.js";
+import products from "../data/products.js";
 import categories from "../data/categories.js";
 
-console.log("Count of products:", productDetails.length);
+console.log("Count of products:", products.length);
 
 const validateData = (products, categories) => {
   for (const product of products) {
@@ -38,4 +38,4 @@ const validateData = (products, categories) => {
   }
 };
 
-validateData(productDetails, categories);
+validateData(products, categories);

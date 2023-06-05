@@ -6,11 +6,9 @@ import StoreProducts from "@/components/product/StoreProducts";
 import FilterByPrice from "@/components/product/FilterByPrice";
 import Paginate from "@/components/common/Paginate";
 
-//{ products, page, pages, keyword, categoryName, slug }
-
 const Product = ({ categoryName, slug }) => {
   const initialMin = 0;
-  const initialMax = 100;
+  const initialMax = 200;
   const [minPrice, setMinPrice] = useState(initialMin);
   const [maxPrice, setMaxPrice] = useState(initialMax);
 
@@ -44,12 +42,6 @@ const Product = ({ categoryName, slug }) => {
         next={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/store?pageNumber=${
           pageNumber + 1
         }`}
-        additionalLinkTags={[
-          {
-            rel: "icon",
-            href: "/favicon.ico",
-          },
-        ]}
         openGraph={{
           type: "article",
           title: `${categoryName} | Fishing Shirts Now`,
@@ -83,7 +75,7 @@ const Product = ({ categoryName, slug }) => {
         <div className="md:border md:border-r-1 md:border-l-transparent md:border-t-transparent md:border-b-transparent md:border-opacity-25 md:border-textLightGray md:pr-14 md:mr-14">
           <FilterByPrice
             min={0}
-            max={100}
+            max={200}
             step={1}
             initialMin={initialMin}
             initialMax={initialMax}
@@ -164,5 +156,6 @@ export async function getStaticProps(context) {
 
   return {
     props: { categoryName, slug },
+    revalidate: 10,
   };
 }

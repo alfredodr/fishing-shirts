@@ -1,4 +1,4 @@
-import productDetails from "../data/productDetails.js";
+import products from "../data/products.js";
 
 //check duplicate slugs in the productDetails
 const checkDuplicates = (data) => {
@@ -22,4 +22,4 @@ const checkDuplicates = (data) => {
   }
 };
 
-checkDuplicates(productDetails);
+checkDuplicates(products);

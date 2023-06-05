@@ -16,10 +16,6 @@ function generateSiteMap() {
       <loc>https://fishingshirtsnow.com/product_cat-sitemap.xml</loc>
       <lastmod>2023-04-11T02:12:33+00:00</lastmod>
   </sitemap>
-  <sitemap>
-      <loc>https://fishingshirtsnow.com/product_tag-sitemap.xml</loc>
-      <lastmod>2023-04-11T02:03:55+00:00</lastmod>
-  </sitemap>
 </sitemapindex>
  `;
 }

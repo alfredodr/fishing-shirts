@@ -23,9 +23,9 @@ const Footer = () => {
               <p>
                 Read our{" "}
                 <strong>
-                  <a href="#" className="text-lg mt-3">
+                  <Link href="/privacy-cookie-policy" className="text-lg mt-3">
                     Privacy & Cookie Policy
-                  </a>
+                  </Link>
                 </strong>
               </p>
             </div>
@@ -36,42 +36,36 @@ const Footer = () => {
             <nav aria-label="Quick Links" className="flex flex-col">
               <Link
                 href="/privacy-cookie-policy/"
-                passHref
                 className="text-lg mt-3 hover:text-blogNavHoverBlue"
               >
                 Privacy & Cookie Policy
               </Link>
               <Link
                 href="/terms-conditions/"
-                passHref
                 className="text-lg mt-3 hover:text-blogNavHoverBlue"
               >
                 Terms & Conditions
               </Link>
               <Link
                 href="/accessibility/"
-                passHref
                 className="text-lg mt-3 hover:text-blogNavHoverBlue"
               >
                 Accessibility
               </Link>
               <Link
                 href="/about/"
-                passHref
                 className="text-lg mt-3 hover:text-blogNavHoverBlue"
               >
                 About
               </Link>
               <Link
                 href="/contact-us/"
-                passHref
                 className="text-lg mt-3 hover:text-blogNavHoverBlue"
               >
                 Contact Us
               </Link>
               <Link
                 href="/fishingshirtsnow-com-sitemap/"
-                passHref
                 className="text-lg mt-3 hover:text-blogNavHoverBlue"
               >
                 Sitemap
@@ -86,7 +80,6 @@ const Footer = () => {
                 <li>
                   <Link
                     href="/blog/fishing-shirts-men/"
-                    passHref
                     className="text-lg mt-3 hover:text-blogNavHoverBlue"
                   >
                     Fishing Shirts For Men
@@ -95,7 +88,6 @@ const Footer = () => {
                 <li>
                   <Link
                     href="/blog/funny-fishing-shirts-that-put-a-smile-on-your-face/"
-                    passHref
                     className="text-lg mt-3 hover:text-blogNavHoverBlue"
                   >
                     Funny Fishing Shirts To Keep You Happy And Positive
@@ -104,7 +96,6 @@ const Footer = () => {
                 <li>
                   <Link
                     href="/blog/learn-all-about-fishing-shirts-to-pick-the-right-one-for-you/"
-                    passHref
                     className="text-lg mt-3 hover:text-blogNavHoverBlue"
                   >
                     Best Fishing Shirts Carefully Reviewed Just For You

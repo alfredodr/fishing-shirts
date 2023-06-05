@@ -6,10 +6,11 @@
   "type": "module",
   "scripts": {
     "start": "nodemon server.js",
-    "data:import": "node ./utils/getAsins.js",
+    "data:import": "node ./utils/importData.js",
     "checkDuplicates": "node ./utils/checkDuplicates.js",
     "validateData": "node ./utils/validateData.js",
-    "checkRedirects": "node ./utils/checkRedirects.js"
+    "checkRedirects": "node ./utils/checkRedirects.js",
+    "setCategoryCount": "node ./utils/setCategoryCount.js"
   },
   "repository": {
     "type": "git",

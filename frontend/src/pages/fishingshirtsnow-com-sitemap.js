@@ -6,6 +6,7 @@ import path from "path";
 import matter from "gray-matter";
 import styles from "../styles/posts.module.css";
 import { NextSeo, WebPageJsonLd } from "next-seo";
+import product from "./product/[slug]";
 
 const sitemap = ({ products, posts }) => {
   return (
@@ -141,15 +142,15 @@ const sitemap = ({ products, posts }) => {
           </ul>
           <h4 className="font-medium">Products</h4>
           <ul className="flex flex-col list-disc ml-5">
-            {products.map((products, index) => (
+            {products.map((product, index) => (
               <React.Fragment key={index}>
-                <li>
+                <li className={`${product.price === 1 && "hidden"}`}>
                   <Link
-                    href={`/products/${products.slug}/`}
+                    href={`/product/${product.slug}/`}
                     passHref
                     className="font-medium"
                   >
-                    {products.name}
+                    {product.name}
                   </Link>
                 </li>
               </React.Fragment>
