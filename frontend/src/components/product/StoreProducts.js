@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 const StoreProducts = ({ product }) => {
-  console.log("product price", product.price);
   return (
     <div className={`p-2 flex flex-col`}>
       <Link href={`/product/${product.slug}`} passHref>
