@@ -1,5 +1,5 @@
-import productDetails from "../data/productDetails.js";
-import redirects from "./redirects.js";
+import products from "../data/products.js";
+import redirects from "../data/redirects.js";
 
 //check if slug is present in the source
 const isSlugPresent = (slug, redirects) => {
@@ -11,14 +11,14 @@ const isSlugPresent = (slug, redirects) => {
   return false;
 };
 
-// Check if the slug in productDetails is present in the redirects. If it is, remove it, and update the redirects in the frontend
-for (let i = 0; i < productDetails.length; i++) {
-  const slug = productDetails[i].slug;
+// Check if the slug in products is present in the redirects. If it is, remove it, and update the redirects in the frontend
+for (let i = 0; i < products.length; i++) {
+  const slug = products[i].slug;
   const isPresent = isSlugPresent(slug, redirects);
 
   if (isPresent === true) {
     console.log(
-      `Slug "${slug}" from productDetails is present in the redirects: ${isPresent}`
+      `Slug "${slug}" from products is present in the redirects: ${isPresent}`
     );
   }
 }

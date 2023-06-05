@@ -11,7 +11,8 @@
     "data:import": "npm run data:import  --prefix backend",
     "checkDuplicates": "npm run checkDuplicates  --prefix backend",
     "validateData": "npm run validateData  --prefix backend",
-    "checkRedirects": "npm run checkRedirects  --prefix backend"
+    "checkRedirects": "npm run checkRedirects  --prefix backend",
+    "setCategoryCount": "npm run setCategoryCount  --prefix backend"
   },
   "repository": {
     "type": "git",

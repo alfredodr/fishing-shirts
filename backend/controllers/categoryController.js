@@ -33,30 +33,7 @@ const getProductByCategory = asyncHandler(async (req, res) => {
 
   const categoryId = req.params.id;
 
-  const countAggregate = await Category.aggregate([
-    {
-      $match: { _id: categoryId },
-    },
-    {
-      $lookup: {
-        from: "products",
-        localField: "products._id",
-        foreignField: "_id",
-        as: "productsByCategory",
-      },
-    },
-    {
-      $project: {
-        count: { $size: "$productsByCategory" },
-      },
-    },
-    {
-      $project: {
-        _id: 0,
-        count: 1,
-      },
-    },
-  ]);
+  const category = await Category.findById(categoryId);
 
   const products = await Category.aggregate([
     {
@@ -73,7 +50,13 @@ const getProductByCategory = asyncHandler(async (req, res) => {
     {
       $project: {
         _id: 0,
-        productsByCategory: 1,
+        productsByCategory: {
+          $filter: {
+            input: "$productsByCategory",
+            as: "product",
+            cond: { $ne: ["$$product.price", 1] },
+          },
+        },
         count: { $size: "$productsByCategory" },
       },
     },
@@ -93,11 +76,11 @@ const getProductByCategory = asyncHandler(async (req, res) => {
     },
   ]);
 
-  const count = countAggregate[0].count;
+  if (category && products) {
+    const count = category.count;
 
-  const pages = Math.ceil(count / pageSize);
+    const pages = Math.ceil(count / pageSize);
 
-  if (products) {
     res.json({ products, page, pages });
   } else {
     res

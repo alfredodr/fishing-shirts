@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Variants = ({ image, setMainImage }) => {
   return (
-    <div className="relative w-[120px] h-[120px] bg-white flex overflow-hidden opacity-60 hover:opacity-100 m-2">
+    <div className="relative w-[140px] h-[140px] bg-white flex overflow-hidden opacity-60 hover:opacity-100 m-2">
       <Image
         src={image.src}
         alt={image.alt}

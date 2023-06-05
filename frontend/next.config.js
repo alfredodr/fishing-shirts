@@ -199,11 +199,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/product/huk-mens-pursuit-camo-vented-long-sleeve-shirt",
-        destination: "/store",
-        permanent: true,
-      },
-      {
         source:
           "/product/coastal-classics-puerto-rico-nautical-chart-mens-upf-50-sun-protection-long-sleeve-t-shirt",
         destination: "/store",
@@ -705,11 +700,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/product/columbia-boys-bonehead-short-sleeve-shirt",
-        destination: "/store",
-        permanent: true,
-      },
-      {
         source: "/product/columbia-mens-skiff-cast-polo",
         destination: "/store",
         permanent: true,
@@ -763,12 +753,6 @@ const nextConfig = {
       {
         source:
           "/product/columbia-mens-pfg-super-bahama-short-sleeve-shirt-breathable-uv-protection",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
-          "/product/columbia-womens-pfg-super-bahama-long-sleeve-shirt-breathable-uv-protection",
         destination: "/store",
         permanent: true,
       },
@@ -2387,12 +2371,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source:
-          "/product/columbia-mens-low-drag-offshore-short-sleeve-shirt-upf-40-protection-moisture-wicking-fabric",
-        destination: "/store",
-        permanent: true,
-      },
-      {
         source: "/product/milwaukee-workskin-light-weight-performance-shirt",
         destination: "/store",
         permanent: true,
@@ -2411,12 +2389,6 @@ const nextConfig = {
       },
       {
         source: "/product/habit-mens-short-sleeve-river-guide-shirt",
-        destination: "/store",
-        permanent: true,
-      },
-      {
-        source:
-          "/product/columbia-mens-thistletown-park-raglan-shirt-long-sleeve-sun-protection",
         destination: "/store",
         permanent: true,
       },
@@ -2936,17 +2908,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source:
-          "/product/habit-mens-ts1156-long-sleeve-river-guide-fishing-shirt",
-        destination: "/product-category/fishing-shirts-habit",
-        permanent: true,
-      },
-      {
-        source: "/product/habit-long-sleeve-mens-river-guide-fishing-shirt",
-        destination: "/product-category/fishing-shirts-habit",
-        permanent: true,
-      },
-      {
         source: "/product/upf-50-uv-hoodie-t-shirt",
         destination: "/store",
         permanent: true,
@@ -3007,12 +2968,6 @@ const nextConfig = {
       {
         source:
           "/product/huk-mens-cw-cold-weather-water-resistant-icon-x-hoodie",
-        destination: "/product-category/fishing-shirts-huk",
-        permanent: true,
-      },
-      {
-        source:
-          "/product/huk-mens-kryptek-icon-x-long-sleeve-long-sleeve-performance-fishing-shirt-with-30-upf-sun-protection-reflective-coating",
         destination: "/product-category/fishing-shirts-huk",
         permanent: true,
       },
@@ -3100,6 +3055,53 @@ const nextConfig = {
       {
         source:
           "/product/crazy-dog-t-shirts-mens-part-time-hooker-tshirt-funny-outdoor-fishing-tee-for-guys",
+        destination: "/store",
+        permanent: true,
+      },
+      {
+        source: "/product-category/fishing-shirts-long-sleeve/page/2",
+        destination: "/store",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/mens-funny-fishing-shirts-novelty-gift-men-grandpa-dad-bobbers-t-shirt",
+        destination: "/store",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/kore-offshore-mens-long-sleeve-upf50-dri-all-day-sunblock-fishing-shirt-fisherman",
+        destination: "/store",
+        permanent: true,
+      },
+      {
+        source: "/category/articles/",
+        destination: "/blog",
+        permanent: true,
+      },
+      {
+        source: "/fishing-shirts/",
+        destination: "/store",
+        permanent: true,
+      },
+      {
+        source: "/product/pelagic-premium-uv-gyotaku-t-shirt",
+        destination: "/store",
+        permanent: true,
+      },
+      {
+        source: "/product/columbia-fishing-shirts-vs-bass-fishing-shirts",
+        destination: "/store",
+        permanent: true,
+      },
+      {
+        source: "/articles/funny-fishing-shirts-that-put-a-smile-on-your-face/",
+        destination: "/blog/funny-fishing-shirts-that-put-a-smile-on-your-face",
+        permanent: true,
+      },
+      {
+        source: "/category/fishing-shirts/",
         destination: "/store",
         permanent: true,
       },
