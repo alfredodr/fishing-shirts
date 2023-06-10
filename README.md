@@ -1,4 +1,4 @@
-# Portfolio
+# Fishing Shirts Website
 
 ![Fishing Shirts website preview](./frontend/public/cover.JPG)
 

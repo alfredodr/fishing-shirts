@@ -50,7 +50,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="bg-white">
+    <section className="bg-white px-5">
       <div className="flex items-center justify-center container mx-auto">
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 my-10 ">

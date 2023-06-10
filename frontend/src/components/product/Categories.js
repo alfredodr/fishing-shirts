@@ -14,10 +14,9 @@ const Categories = ({ category }) => {
             sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"
-            style={{ objectFit: "fill" }}
             priority
           />
-          <span className="absolute left-4 right-4 bottom-4 py-2 px-3 text-center z-50 text-lg bg-white bg-opacity-80 font-medium mt-8 ">
+          <span className="absolute left-4 right-4 bottom-4 py-2 px-3 text-center z-50 text-lg bg-white bg-opacity-80 font-medium mt-8">
             <p className="sm:text-sm">{category?.name.toUpperCase()}</p>
             <mark className="sm:text-xs bg-transparent opacity-50 block">
               {category?.count} PRODUCTS
