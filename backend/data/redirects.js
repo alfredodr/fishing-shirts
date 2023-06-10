@@ -31,15 +31,9 @@ const redirects = [
     permanent: true,
   },
   {
-    source:
-      "/product/performance-fishing-hoodie-with-face-mask-sunblock-shirt-hooded-long-sleeve-with-drawstrings-pocket/",
-    destination: "/product/koofin-fishing-hooded-shirt/",
-    permanent: true,
-  },
-  {
-    source:
-      "/product/gotta-love-a-good-pole-dance-funny-fishing-pole-humor-fisherman-unisex-t-shirt/",
-    destination: "/store",
+    source: "/product/ann-arbor-funny-fishing-tee",
+    destination:
+      "/product/gotta-love-a-good-pole-dance-funny-fishing-pole-humor-fisherman-unisex-t-shirt",
     permanent: true,
   },
   {
@@ -127,13 +121,7 @@ const redirects = [
   },
   {
     source:
-      "/product/bamboo-cay-mens-bamboos-on-the-loose-casual-embroidered-short-sleeve-woven-shirt",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source:
-      "/product/bamboo-cay-mens-short-sleeve-always-5-oclock-casual-embroidered-button-up-shirt",
+      "/product/simms-bass-logo-tech-tee-long-sleeve-fishing-shirt-sun-protection-angler-shirt-lightweight-breathable-moisture-wicking-anti-odor",
     destination: "/store",
     permanent: true,
   },
@@ -163,13 +151,7 @@ const redirects = [
   },
   {
     source:
-      "/product/bamboo-cay-shake-the-hook-hawaiian-mens-tropical-embroidered-casual-woven-shirt",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source:
-      "/product/bamboo-cay-mens-short-sleeve-flying-bamboos-casual-embroidered-woven-shirt",
+      "/product/bamboo-cay-mens-bamboos-on-the-loose-casual-embroidered-short-sleeve-woven-shirt",
     destination: "/store",
     permanent: true,
   },
@@ -258,11 +240,6 @@ const redirects = [
   },
   {
     source: "/product/simms-womens-solarflex-fishing-hoody-shirt-with-upf-50",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source: "/product/shimano-long-sleeve-hooded-tech-tee-fishing-gear",
     destination: "/store",
     permanent: true,
   },
@@ -379,7 +356,8 @@ const redirects = [
   {
     source:
       "/product/i-just-want-to-drink-beer-and-jerk-my-rod-funny-fishing-t-shirt",
-    destination: "/store",
+    destination:
+      "/product/i-just-want-to-drink-beer-and-jerk-my-rod-funny-fishing-tee-t-shirt",
     permanent: true,
   },
   {
@@ -3050,6 +3028,55 @@ const redirects = [
   {
     source: "/category/fishing-shirts/",
     destination: "/store",
+    permanent: true,
+  },
+  {
+    source:
+      "/product/sougayilang-professional-fishing-jersey-long-sleeve-for-men-women-upf-50-sun-protection-with-moisture-wicking",
+    destination: "/store",
+    permanent: true,
+  },
+  {
+    source:
+      "/product/sun-protection-upf-50-linafin-chiller-pullover-long-sleeve-mens-fishing-hoodie-shirt-with-face-gaiter-performance",
+    destination: "/store",
+    permanent: true,
+  },
+  {
+    source:
+      "/product/amazon-brand-peak-velocity-mens-vxe-long-sleeve-quick-dry-loose-fit-t-shirt",
+    destination: "/store",
+    permanent: true,
+  },
+  {
+    source:
+      "/product/baleaf-mens-rain-jacket-waterproof-with-hooded-lightweight-packable-bike-pullover-running-raincoat-poncho-windbreaker",
+    destination: "/store",
+    permanent: true,
+  },
+  {
+    source:
+      "/product/reel-life-mens-short-sleeve-woven-fishing-shirt-pacific-series-fishin-all-over-uv-protection-breathable",
+    destination: "/store",
+    permanent: true,
+  },
+  {
+    source:
+      "/product/aw-fashions-hooker-on-the-weekend-funny-fisherman-gifts-fathers-day-mens-fishing-t-shirt",
+    destination: "/store",
+    permanent: true,
+  },
+  {
+    source:
+      "/product/o2tee-mens-american-flag-soft-slim-long-sleeve-compression-gym-trainning-casual-top",
+    destination: "/store",
+    permanent: true,
+  },
+  {
+    source:
+      "/product/id-rather-be-fishing-funny-novelty-humor-anti-social-fisher-fisherman-fish-tee-mens-tshirt",
+    destination:
+      "/product/crazy-bros-tees-id-rather-be-fishing-funny-sarcastic-fish-gift-for-dad-fisherman-mens-t-shirt",
     permanent: true,
   },
 ];
