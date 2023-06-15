@@ -27,7 +27,8 @@ function SiteMap() {
 
 export async function getServerSideProps({ res }) {
   // Get files from the posts dir
-  const files = fs.readdirSync(path.join("src", "posts"));
+  const absolutePath = path.resolve("src", "posts");
+  const files = fs.readdirSync(absolutePath);
 
   // Get slug and frontmatter from posts
   const posts = files.map((file) => {

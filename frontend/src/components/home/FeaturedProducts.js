@@ -5,7 +5,7 @@ const FeaturedProducts = ({ products }) => {
   return (
     <>
       {/* Features Section */}
-      <section className="bg-white">
+      <section className="bg-white px-5">
         <h2 className="text-center font-bold text-4xl p-10">
           Featured Products
         </h2>

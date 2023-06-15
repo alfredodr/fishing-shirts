@@ -9,11 +9,11 @@ const termsAndConditions = () => {
         title="Terms &amp; Conditions"
         titleTemplate="%s | Fishing Shirts Now"
         description="Learn more about Fishing Shirts Now Terms and Conditions."
-        canonical="https://fishingshirtsnow.com/terms-conditions/"
+        canonical="https://fishingshirtsnow.com/terms-conditions"
         additionalMetaTags={[
           {
             property: "article:publisher",
-            content: "https://www.facebook.com/fishingshirtsnow",
+            content: "https://fishingshirtsnow.com/terms-conditions",
           },
           {
             property: "article:modified_time",
@@ -23,7 +23,7 @@ const termsAndConditions = () => {
         openGraph={{
           type: "article",
           title: "Terms &amp; Conditions - Fishing Shirts Now",
-          url: "https://fishingshirtsnow.com/terms-conditions/",
+          url: "https://fishingshirtsnow.com/terms-conditions",
           description:
             "Learn more about Fishing Shirts Now Terms and Conditions.",
           images: [
