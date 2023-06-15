@@ -40,12 +40,12 @@ const Store = ({ categories }) => {
         title="Fishing Shirts Store - Popular Brands - Sun Protection - Lightweight"
         titleTemplate="%s | Fishing Shirts Now"
         description="Check our fishing shirts store with the best for all members of the family. Short sleeve and long sleeve high perfoming choices carefully selected for you."
-        canonical="https://fishingshirtsnow.com/store/"
+        canonical="https://fishingshirtsnow.com/store"
         next={`https://fishingshirtsnow.com/store?pageNumber=${pageNumber + 1}`}
         additionalMetaTags={[
           {
             property: "article:publisher",
-            content: "https://www.facebook.com/fishingshirtsnow",
+            content: "https://fishingshirtsnow.com/store",
           },
           {
             property: "article:modified_time",
@@ -58,7 +58,7 @@ const Store = ({ categories }) => {
             "Fishing Shirts Store - Popular Brands - Sun Protection - Lightweight",
           description:
             "Check our fishing shirts store with the best for all members of the family. Short sleeve and long sleeve high perfoming choices carefully selected for you.",
-          url: "https://fishingshirtsnow.com/store/",
+          url: "https://fishingshirtsnow.com/store",
           images: [
             {
               url: "https://fsn-site.s3.amazonaws.com/home/ocean-1950583_1280.jpg",
@@ -105,6 +105,7 @@ const Store = ({ categories }) => {
               height="600"
               border="0"
               rel="nofollow"
+              title="sponsor"
             ></iframe>
           </div>
         </div>

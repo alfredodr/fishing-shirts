@@ -15,11 +15,11 @@ export default function Home({ products, posts }) {
         title="Fishing Shirts Now - UV Protection - High Quality - Affordable Prices"
         titleTemplate="%s | Fishing Shirts Now"
         description="Fishing shirts at affordable prices, carefully selected for you. All sizes and textures in stock right now. We stand by the quality of our products."
-        canonical="https://fishingshirtsnow.com/"
+        canonical="https://fishingshirtsnow.com"
         additionalMetaTags={[
           {
             property: "article:publisher",
-            content: "https://www.facebook.com/fishingshirtsnow",
+            content: "https://fishingshirtsnow.com",
           },
           {
             property: "article:modified_time",
@@ -31,7 +31,7 @@ export default function Home({ products, posts }) {
           title:
             "Fishing Shirts Now - UV Protection - High Quality - Affordable Prices",
           description: "Fishing Shirts Now Home Page",
-          url: "https://fishingshirtsnow.com/",
+          url: "https://fishingshirtsnow.com",
           images: [
             {
               url: "https://fsn-site.s3.amazonaws.com/home/ocean-1950583_1280.jpg",
@@ -50,7 +50,7 @@ export default function Home({ products, posts }) {
       <WebPageJsonLd
         name="Fishing Shirts Now"
         description="Get the best fishing shirts for your next trip"
-        id="https://fishingshirtsnow.com/about/#corporation"
+        id="https://fishingshirtsnow.com/#corporation"
         publisher="https://fishingshirtsnow.com/#organization"
       />
       <Banner />

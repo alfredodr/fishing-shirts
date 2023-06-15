@@ -13,7 +13,7 @@ const privacy = () => {
         additionalMetaTags={[
           {
             property: "article:publisher",
-            content: "https://www.facebook.com/fishingshirtsnow",
+            content: "https://fishingshirtsnow.com/privacy-cookie-policy",
           },
           {
             property: "article:modified_time",
@@ -25,7 +25,7 @@ const privacy = () => {
           title: "Privacy &amp; Cookie Policy - Fishing Shirts Now",
           description:
             "Privacy Policy Effective Date: 26-12-2020 We are committed to protecting Your privacy. This Privacy Policy describes how We collect, use, store, share and protect the information collected through https://fishingshirtsnow.com (the “Website”). In this Privacy Policy, &#8220;We&#8221;, &#8220;Us&#8221;, and &#8220;Our&#8221; refer to fishingshirtsnow.com. For more information about Us, see “Our Details” at the end of this &hellip; Privacy &#038; Cookie Policy Read More &raquo;",
-          url: "https://fishingshirtsnow.com/privacy-cookie-policy/",
+          url: "https://fishingshirtsnow.com/privacy-cookie-policy",
           images: [
             {
               url: "https://fsn-site.s3.amazonaws.com/home/ocean-1950583_1280.jpg",

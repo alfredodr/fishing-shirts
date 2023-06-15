@@ -37,7 +37,7 @@ const ProductDetail = ({ product }) => {
               },
               title: `${product.name} - Sun Protective - Fishing Shirts Now`,
               description: product.description.slice(0, 2),
-              url: `https://fishingshirtsnow.com/${product.slug}`,
+              url: `https://fishingshirtsnow.com/product/${product.slug}`,
               images: [
                 {
                   url: mainImage,
@@ -158,7 +158,11 @@ const ProductDetail = ({ product }) => {
             )}
           </div>
         </div>
-        <div className="container mx-auto">
+        <div
+          className={`container mx-auto ${
+            product.description[0] === "" && "hidden"
+          }`}
+        >
           <hr className="m-1" />
           <p className="text-lg font-medium mt-8 hover:underline hover:underline-offset-1">
             Description

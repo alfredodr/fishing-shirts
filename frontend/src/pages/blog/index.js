@@ -14,11 +14,11 @@ const index = ({ posts }) => {
         title="Blog"
         titleTemplate="%s | Fishing Shirts Now"
         description="Stay up to date with the latest trends, recommendations and product reviews in our Fishing Shirts Now Blog."
-        canonical="https://fishingshirtsnow.com/blog/"
+        canonical="https://fishingshirtsnow.com/blog"
         additionalMetaTags={[
           {
             property: "article:publisher",
-            content: "https://www.facebook.com/fishingshirtsnow",
+            content: "https://fishingshirtsnow.com/blog",
           },
           {
             property: "article:modified_time",
@@ -30,7 +30,7 @@ const index = ({ posts }) => {
           title: "Blog - Fishing Shirts Now",
           description:
             "Stay up to date with the latest trends, recommendations and product reviews in our Fishing Shirts Now Blog.",
-          url: "https://fishingshirtsnow.com/blog/",
+          url: "https://fishingshirtsnow.com/blog",
           images: [
             {
               url: "https://fsn-site.s3.amazonaws.com/home/ocean-1950583_1280.jpg",
@@ -57,7 +57,7 @@ const index = ({ posts }) => {
           {posts.map((post, index) => (
             <React.Fragment key={index}>
               <div>
-                <Link href={`/blog/${post.slug}/`} passHref>
+                <Link href={`/blog/${post.slug}`} passHref>
                   <div className="overflow-hidden">
                     <Image
                       className="img-fluid"
@@ -71,7 +71,7 @@ const index = ({ posts }) => {
                   </div>
                 </Link>
                 <div className="p-5 flex flex-col">
-                  <Link href={`/blog/${post.slug}/`} passHref>
+                  <Link href={`/blog/${post.slug}`} passHref>
                     <h4 className="text-2xl md:text-3xl font-medium mt-3">
                       {post.frontmatter.title}
                     </h4>
@@ -80,7 +80,7 @@ const index = ({ posts }) => {
                     {post.frontmatter.excerpt}
                   </p>
                   <Link
-                    href={`/blog/${post.slug}/`}
+                    href={`/blog/${post.slug}`}
                     className="text-lg mt-3"
                     passHref
                   >

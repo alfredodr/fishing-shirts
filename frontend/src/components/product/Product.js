@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Product = ({ product }) => {
   return (
-    <div className={`p-2 flex flex-col ${product.price === 1 && "hidden"}`}>
+    <div className={`p-2 flex flex-col`}>
       <Link href={`/product/${product.slug}`} passHref>
         <div className="relative w-full h-60 transform transition duration-500 hover:scale-110">
           <Image

@@ -60,6 +60,7 @@ const FilterByPrice = ({
           <input
             onChange={handleMin}
             type="range"
+            aria-label="minimum price"
             value={minPrice}
             min={min}
             step={step}
@@ -70,6 +71,7 @@ const FilterByPrice = ({
           <input
             onChange={handleMax}
             type="range"
+            aria-label="maximum price"
             value={maxPrice}
             min={min}
             step={step}

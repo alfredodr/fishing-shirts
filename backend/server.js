@@ -25,6 +25,10 @@ app.use(
   })
 );
 
+app.get("/", (req, res) => {
+  res.send("API is running");
+});
+
 app.use("/api/products", productRoutes);
 
 app.use("/api/categories", categoryRoutes);
@@ -34,10 +38,6 @@ app.use("/api/mail", contactRoutes);
 app.use(notFound);
 
 app.use(errorHandler);
-
-app.get("/", (req, res) => {
-  res.send("API is running");
-});
 
 const PORT = process.env.PORT;
 

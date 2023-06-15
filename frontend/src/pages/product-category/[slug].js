@@ -93,6 +93,7 @@ const Product = ({ categoryName, slug }) => {
               height="600"
               border="0"
               rel="nofollow"
+              title="sponsor"
             ></iframe>
           </div>
         </div>

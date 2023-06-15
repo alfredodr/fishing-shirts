@@ -15,11 +15,12 @@ const sitemap = ({ products, posts }) => {
         title=" FishingShirtsNow.com Sitemap - Content Drilldown Map Of Our Website"
         titleTemplate="%s | Fishing Shirts Now"
         description="To enjoy fishing you should wear the appropriate outfit. This is what our website is all about. Check us out here:FishingShirtsNow.com Sitemap."
-        canonical="https://fishingshirtsnow.com/fishingshirtsnow-com-sitemap/"
+        canonical="https://fishingshirtsnow.com/fishingshirtsnow-com-sitemap"
         additionalMetaTags={[
           {
             property: "article:publisher",
-            content: "https://www.facebook.com/fishingshirtsnow",
+            content:
+              "https://fishingshirtsnow.com/fishingshirtsnow-com-sitemap",
           },
           {
             property: "article:modified_time",
@@ -32,7 +33,7 @@ const sitemap = ({ products, posts }) => {
             "FishingShirtsNow.com Sitemap - Content Drilldown Map Of Our Website",
           description:
             "To enjoy fishing you should wear the appropriate outfit. This is what our website is all about. Check us out here:FishingShirtsNow.com Sitemap.",
-          url: "https://fishingshirtsnow.com/fishingshirtsnow-com-sitemap/",
+          url: "https://fishingshirtsnow.com/fishingshirtsnow-com-sitemap",
           images: [
             {
               url: "https://fsn-site.s3.amazonaws.com/home/ocean-1950583_1280.jpg",
@@ -80,7 +81,7 @@ const sitemap = ({ products, posts }) => {
             </li>
             <li>
               <Link
-                href={`/fishingshirtsnow-com-sitemap/`}
+                href={`/fishingshirtsnow-com-sitemap`}
                 passHref
                 className="font-medium"
               >
@@ -88,17 +89,13 @@ const sitemap = ({ products, posts }) => {
               </Link>
             </li>
             <li>
-              <Link
-                href={`/terms-conditions/`}
-                passHref
-                className="font-medium"
-              >
+              <Link href={`/terms-conditions`} passHref className="font-medium">
                 Terms & Conditions
               </Link>
             </li>
             <li>
               <Link
-                href={`/privacy-cookie-policy/`}
+                href={`/privacy-cookie-policy`}
                 passHref
                 className="font-medium"
               >
@@ -106,23 +103,23 @@ const sitemap = ({ products, posts }) => {
               </Link>
             </li>
             <li>
-              <Link href={`/blog/`} passHref className="font-medium">
+              <Link href={`/blog`} passHref className="font-medium">
                 Blog
               </Link>
             </li>
             <li>
-              <Link href={`/contact-us/`} passHref className="font-medium">
+              <Link href={`/contact-us`} passHref className="font-medium">
                 Contact Us
               </Link>
             </li>
             <li>
-              <Link href={`/about/`} passHref className="font-medium">
+              <Link href={`/about`} passHref className="font-medium">
                 About
               </Link>
             </li>
             <li>
               <Link
-                href={`/fishingshirtsnow-com-sitemap/`}
+                href={`/fishingshirtsnow-com-sitemap`}
                 passHref
                 className="font-medium"
               >
@@ -130,7 +127,7 @@ const sitemap = ({ products, posts }) => {
               </Link>
             </li>
             <li>
-              <Link href={`/store/`} passHref className="font-medium">
+              <Link href={`/store`} passHref className="font-medium">
                 Store
               </Link>
             </li>
@@ -146,7 +143,7 @@ const sitemap = ({ products, posts }) => {
               <React.Fragment key={index}>
                 <li className={`${product.price === 1 && "hidden"}`}>
                   <Link
-                    href={`/product/${product.slug}/`}
+                    href={`/product/${product.slug}`}
                     passHref
                     className="font-medium"
                   >
@@ -162,7 +159,7 @@ const sitemap = ({ products, posts }) => {
               <React.Fragment key={index}>
                 <li>
                   <Link
-                    href={`/blog/${post.slug}/`}
+                    href={`/blog/${post.slug}`}
                     passHref
                     className="font-medium"
                   >

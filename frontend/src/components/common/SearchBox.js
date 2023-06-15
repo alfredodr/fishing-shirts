@@ -10,7 +10,6 @@ const SearchBox = ({ toggleMobileMenu }) => {
     if (keyword.trim()) {
       router.push(`/search/?s=${keyword}`);
     } else {
-      baleafsh;
       router.push("/");
     }
     toggleMobileMenu;
@@ -23,9 +22,9 @@ const SearchBox = ({ toggleMobileMenu }) => {
       <div className=" relative w-full">
         <input
           type="text"
-          id="s"
+          id="search"
           value={keyword}
-          name="s"
+          name="search"
           onChange={(e) => setKeyword(e.target.value)}
           placeholder="Search ..."
           tabIndex="-1"
