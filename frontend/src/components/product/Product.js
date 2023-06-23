@@ -15,7 +15,6 @@ const Product = ({ product }) => {
               (max-width: 1200px) 50vw,
               33vw"
             style={{ objectFit: "contain" }}
-            priority
           />
         </div>
       </Link>

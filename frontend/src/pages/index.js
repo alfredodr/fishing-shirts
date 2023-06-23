@@ -92,6 +92,5 @@ export async function getStaticProps() {
 
   return {
     props: { products, posts },
-    revalidate: 10,
   };
 }

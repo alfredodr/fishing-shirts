@@ -3292,7 +3292,7 @@ const redirects = [
   },
   {
     source: "/product-category/fishing-shirts-long-sleeve/page/3/",
-    destination: "/product-category/fishing-shirts-long-sleeve?pageNumber=3",
+    destination: "/product-category/fishing-shirts-long-sleeve?page=3",
     permanent: true,
   },
   {
@@ -3445,7 +3445,7 @@ const redirects = [
   },
   {
     source: "/store/page/6/",
-    destination: "/store?pageNumber=6",
+    destination: "/store?page=6",
     permanent: true,
   },
   {
@@ -3731,7 +3731,7 @@ const redirects = [
   },
   {
     source: "/product-category/funny-fishing-shirts/page/2/",
-    destination: "/product-category/fishing-shirts-funny?pageNumber=2",
+    destination: "/product-category/fishing-shirts-funny?page=2",
     permanent: true,
   },
   {
@@ -3791,7 +3791,7 @@ const redirects = [
   },
   {
     source: "/store/page/18/",
-    destination: "/store?pageNumber=18",
+    destination: "/store?page=18",
     permanent: true,
   },
   {

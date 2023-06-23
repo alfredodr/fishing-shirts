@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import axios from "axios";
 import fs from "fs";
@@ -8,7 +8,19 @@ import styles from "../styles/posts.module.css";
 import { NextSeo, WebPageJsonLd } from "next-seo";
 import product from "./product/[slug]";
 
-const sitemap = ({ products, posts }) => {
+const Sitemap = ({ products, posts }) => {
+  const [data, setData] = useState(products);
+  const [pageNumber, setpageNumber] = useState(1);
+
+  const handleLoadMore = async () => {
+    setpageNumber(pageNumber + 1);
+    const { data: newData } = await axios.get(
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products?pageNumber=${pageNumber}`
+    );
+
+    setData((data) => [...data, ...newData?.products]);
+  };
+
   return (
     <>
       <NextSeo
@@ -139,7 +151,7 @@ const sitemap = ({ products, posts }) => {
           </ul>
           <h4 className="font-medium">Products</h4>
           <ul className="flex flex-col list-disc ml-5">
-            {products.map((product, index) => (
+            {data?.map((product, index) => (
               <React.Fragment key={index}>
                 <li className={`${product.price === 1 && "hidden"}`}>
                   <Link
@@ -153,6 +165,17 @@ const sitemap = ({ products, posts }) => {
               </React.Fragment>
             ))}
           </ul>
+          <button
+            onClick={handleLoadMore}
+            aria-label="load more products"
+            type="button"
+            className={`${
+              pageNumber === 30 && "hidden"
+            } h-12 border-2  bg-white 
+            px-4 rounded hover:bg-blogNavHoverBlue hover:text-white my-5 font-medium focus-visible:none`}
+          >
+            Load more
+          </button>
           <h4 className="font-medium">Posts</h4>
           <ul className="flex flex-col list-disc ml-5">
             {posts.map((post, index) => (
@@ -175,14 +198,12 @@ const sitemap = ({ products, posts }) => {
   );
 };
 
-export default sitemap;
+export default Sitemap;
 
 export async function getStaticProps() {
   const {
     data: { products },
-  } = await axios.get(
-    `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products?pageSize=1000`
-  );
+  } = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products`);
 
   // Get files from the posts dir
   const files = fs.readdirSync(path.join("src", "posts"));
@@ -208,6 +229,5 @@ export async function getStaticProps() {
 
   return {
     props: { products, posts },
-    revalidate: 10,
   };
 }

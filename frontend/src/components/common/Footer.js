@@ -14,7 +14,7 @@ const Footer = () => {
           <div>
             <div className="flex flex-col">
               <h2 className="text-2xl font-medium my-3">Amazon Affiliate</h2>
-              <p className="text-slate-500 text-lg my-5">
+              <p className="text-lg my-5">
                 Fishing Shirts Now is a participant in the Amazon Services LLC
                 Associates Program, an affiliate advertising program designed to
                 provide a means for sites to earn advertising fees by
@@ -114,7 +114,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 aria-label="fishing shirts now facebook page"
               >
-                <AiFillFacebook className="text-3xl hover:cursor-pointer" />
+                <AiFillFacebook className="text-3xl hover:cursor-pointer hover:text-black" />
               </Link>
               <Link
                 href="https://www.instagram.com/live_fishing_shirts/"
@@ -122,7 +122,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 aria-label="fishing shirts now instagram page"
               >
-                <FaInstagramSquare className="text-3xl hover:cursor-pointer" />
+                <FaInstagramSquare className="text-3xl hover:cursor-pointer hover:text-black" />
               </Link>
             </div>
           </div>

@@ -6,16 +6,13 @@ const StoreProducts = ({ product }) => {
   return (
     <div className={`p-2 flex flex-col`}>
       <Link href={`/product/${product.slug}`} passHref>
-        <div className="relative w-full h-60 transform transition duration-500 hover:scale-110 overflow-hidden">
+        <div className="relative w-full h-60">
           <Image
             src={product.images[0].src}
             alt={product.name}
             fill
-            sizes="(max-width: 768px) 100vw,
-                    (max-width: 1200px) 50vw,
-                    33vw"
-            style={{ objectFit: "contain" }}
-            priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-contain"
           />
         </div>
       </Link>

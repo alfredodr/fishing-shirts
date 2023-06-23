@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 
-const SearchBox = ({ toggleMobileMenu }) => {
+const SearchBox = ({ toggleMobileMenu, isActive, id }) => {
   const [keyword, setKeyword] = useState("");
   const router = useRouter();
 
@@ -12,7 +12,8 @@ const SearchBox = ({ toggleMobileMenu }) => {
     } else {
       router.push("/");
     }
-    toggleMobileMenu;
+    isActive && toggleMobileMenu();
+    setKeyword("");
   };
   return (
     <form onSubmit={submitHandler} className="flex items-center mx-10">
@@ -22,7 +23,7 @@ const SearchBox = ({ toggleMobileMenu }) => {
       <div className=" relative w-full">
         <input
           type="text"
-          id="search"
+          id={id}
           value={keyword}
           name="search"
           onChange={(e) => setKeyword(e.target.value)}
