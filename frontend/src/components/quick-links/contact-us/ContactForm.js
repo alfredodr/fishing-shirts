@@ -57,21 +57,21 @@ const ContactForm = () => {
           {/* Who We Are */}
           <div>
             <div className="flex flex-col">
-              <h2 className="sm:text-4xl md:text-7xl lg:text-7xl font-semibold mb-6">
+              <h2 className="sm:text-4xl md:text-7xl lg:text-7xl mb-6">
                 NEED US?
               </h2>
             </div>
           </div>
           {/* Image*/}
           <div className="relative overflow-hidden">
-            <h3 id="contact" className="font-bold">
+            <h3 id="contact">
               QUESTIONS, CONCERNS, COMMENTS? YOU TELL US. WE LISTEN.
             </h3>
             <form
               onSubmit={handleSubmit(submitForm)}
               className="flex flex-col "
             >
-              <label className="font-semibold mt-5">Your Name(Required)</label>
+              <label className=" mt-5">Your Name(Required)</label>
               <input
                 type="text"
                 name="fullName"
@@ -80,7 +80,7 @@ const ContactForm = () => {
               />
               <p className="text-errorRed"> {errors.fullName?.message} </p>
 
-              <label className="font-semibold mt-5">Your Email(Required)</label>
+              <label className=" mt-5">Your Email(Required)</label>
               <input
                 type="text"
                 name="email"
@@ -89,7 +89,7 @@ const ContactForm = () => {
               />
               <p className="text-errorRed"> {errors.email?.message} </p>
 
-              <label className="font-semibold mt-5">Subject(Required)</label>
+              <label className=" mt-5">Subject(Required)</label>
               <input
                 type="text"
                 name="subject"
@@ -98,9 +98,7 @@ const ContactForm = () => {
               />
               <p className="text-errorRed"> {errors.subject?.message} </p>
 
-              <label className="font-semibold mt-5">
-                Your Message(Required)
-              </label>
+              <label className="mt-5">Your Message(Required)</label>
               <textarea
                 id="message"
                 name="message"

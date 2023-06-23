@@ -6,7 +6,7 @@ const latestArticles = ({ posts }) => {
   return (
     <section className="bg-lightGray">
       <h2 className="text-center font-bold text-4xl pt-10">Latest Articles</h2>
-      <hr className="mt-10 bg-black w-1/12 border-2 border-solid mx-auto" />
+      <hr className="mt-10 w-24 border border-solid border-secondaryPaleBlack mx-auto" />
       <div className="flex items-center justify-center container mx-auto">
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-10 mx-5">

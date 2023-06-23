@@ -7,17 +7,17 @@ import Paginate from "@/components/common/Paginate";
 import { NextSeo, WebPageJsonLd } from "next-seo";
 import { useRouter } from "next/router";
 
-const Store = ({ categories }) => {
+const Store = ({ products, categories }) => {
   const initialMin = 0;
   const initialMax = 200;
   const [minPrice, setMinPrice] = useState(initialMin);
   const [maxPrice, setMaxPrice] = useState(initialMax);
 
-  const [data, setData] = useState();
+  const [data, setData] = useState(products);
   const route = useRouter();
   const { query } = route;
   const keyword = query?.s || "";
-  const pageNumber = query?.pageNumber || 1;
+  const pageNumber = query?.page || 1;
 
   useEffect(() => {
     async function fetchData() {
@@ -41,7 +41,7 @@ const Store = ({ categories }) => {
         titleTemplate="%s | Fishing Shirts Now"
         description="Check our fishing shirts store with the best for all members of the family. Short sleeve and long sleeve high perfoming choices carefully selected for you."
         canonical="https://fishingshirtsnow.com/store"
-        next={`https://fishingshirtsnow.com/store?pageNumber=${pageNumber + 1}`}
+        next={`https://fishingshirtsnow.com/store?page=${pageNumber + 1}`}
         additionalMetaTags={[
           {
             property: "article:publisher",
@@ -97,10 +97,10 @@ const Store = ({ categories }) => {
             setMinPrice={setMinPrice}
             setMaxPrice={setMaxPrice}
           />
-          <div className="container mx-auto">
+          <div className="container mx-auto mt-5">
             <h2>SPONSOR:</h2>
             <iframe
-              src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=14&l=ez&f=ifr&linkID=10630a4648facad5e2cb15e825f69694&t=fishing-shirts-now00-20&tracking_id=fishing-shirts-now00-20"
+              src="https://rcm-na.amazon-adsystem.com/e/cm?o=1&p=14&l=ez&f=ifr&linkID=10630a4648facad5e2cb15e825f69694&t=fishing-shirts-now00-20&tracking_id=fishing-shirts-now00-20"
               width="160"
               height="600"
               border="0"
@@ -131,24 +131,22 @@ const Store = ({ categories }) => {
               <Categories key={index} category={category} />
             ))}
           </div>
-          <div className="flex items-center justify-center container mx-auto">
-            {/* Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8 mt-32">
-              {/* Product */}
-              {data?.products
-                .filter((product) => {
-                  return product.price >= minPrice && product.price <= maxPrice;
-                })
-                .map((product, index) => {
-                  return (
-                    <StoreProducts
-                      key={index}
-                      product={product}
-                      keyword={keyword ? keyword : ""}
-                    />
-                  );
-                })}
-            </div>
+          {/* Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8 mt-32">
+            {/* Product */}
+            {data?.products
+              .filter((product) => {
+                return product.price >= minPrice && product.price <= maxPrice;
+              })
+              .map((product, index) => {
+                return (
+                  <StoreProducts
+                    key={index}
+                    product={product}
+                    keyword={keyword ? keyword : ""}
+                  />
+                );
+              })}
           </div>
           <Paginate
             page={data?.page}
@@ -168,8 +166,11 @@ export async function getStaticProps() {
     `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/categories`
   );
 
+  const { data: products } = await axios.get(
+    `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products`
+  );
+
   return {
-    props: { categories },
-    revalidate: 10,
+    props: { products, categories },
   };
 }

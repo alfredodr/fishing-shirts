@@ -15,7 +15,7 @@ const Features = () => {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="w-16 h-16 hover:cursor-pointer mx-auto"
+                className="w-16 h-16 mx-auto"
               >
                 <path
                   strokeLinecap="round"
@@ -38,7 +38,7 @@ const Features = () => {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="w-16 h-16 hover:cursor-pointer mx-auto"
+                className="w-16 h-16 mx-auto"
               >
                 <path
                   strokeLinecap="round"
@@ -61,7 +61,7 @@ const Features = () => {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="w-16 h-16 hover:cursor-pointer mx-auto"
+                className="w-16 h-16 mx-auto"
               >
                 <path
                   strokeLinecap="round"
@@ -84,7 +84,7 @@ const Features = () => {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="w-16 h-16 hover:cursor-pointer mx-auto"
+                className="w-16 h-16 mx-auto"
               >
                 <path
                   strokeLinecap="round"

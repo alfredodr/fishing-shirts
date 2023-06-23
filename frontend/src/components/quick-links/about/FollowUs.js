@@ -8,7 +8,7 @@ const FollowUs = () => {
   return (
     // Banner Section
     <section className="relative md:w-full h-[600px] flex items-center justify-center bg-paleBlack bg-opacity-20 ">
-      <div className="top-0 left-0 bottom-0 right-0 -z-50 overflow-hidden">
+      <div className="absolute top-0 left-0 bottom-0 right-0 -z-50 overflow-hidden">
         <Image
           src="https://fsn-site.s3.amazonaws.com/about/fisherman-river.jpg"
           alt="Fisherman in the river"

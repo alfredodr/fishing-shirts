@@ -15,10 +15,19 @@ const withMDX = require("@next/mdx")({
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [
-      "fsn-site.s3.amazonaws.com",
-      "images-na.ssl-images-amazon.com",
-      "m.media-amazon.com",
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "fsn-site.s3.amazonaws.com",
+      },
+      {
+        protocol: "https",
+        hostname: "images-na.ssl-images-amazon.com",
+      },
+      {
+        protocol: "https",
+        hostname: "m.media-amazon.com",
+      },
     ],
   },
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
@@ -3345,8 +3354,7 @@ const nextConfig = {
       },
       {
         source: "/product-category/fishing-shirts-long-sleeve/page/3/",
-        destination:
-          "/product-category/fishing-shirts-long-sleeve?pageNumber=3",
+        destination: "/product-category/fishing-shirts-long-sleeve?page=3",
         permanent: true,
       },
       {
@@ -3499,7 +3507,7 @@ const nextConfig = {
       },
       {
         source: "/store/page/6/",
-        destination: "/store?pageNumber=6",
+        destination: "/store?page=6",
         permanent: true,
       },
       {
@@ -3792,7 +3800,7 @@ const nextConfig = {
       },
       {
         source: "/product-category/funny-fishing-shirts/page/2/",
-        destination: "/product-category/fishing-shirts-funny?pageNumber=2",
+        destination: "/product-category/fishing-shirts-funny?page=2",
         permanent: true,
       },
       {
@@ -3852,7 +3860,7 @@ const nextConfig = {
       },
       {
         source: "/store/page/18/",
-        destination: "/store?pageNumber=18",
+        destination: "/store?page=18",
         permanent: true,
       },
       {

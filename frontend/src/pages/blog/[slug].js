@@ -77,7 +77,6 @@ const blog = ({
             alt={title}
             width={1000}
             height={500}
-            priority
             style={{ objectFit: "contain" }}
           />
           <MDXRemote {...mdxSource} components={components} />

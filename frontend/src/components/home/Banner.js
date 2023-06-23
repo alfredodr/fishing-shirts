@@ -31,7 +31,7 @@ const Banner = () => {
             <p className="hidden mb-4 text-xl text-center text-white md:text-left md:block xl:max-w-lg">
               We help you find the best fishing shirts at affordable prices that
               are carefully selected for you. All sizes, colors, and textures in
-              stock right now. We stand by the quality of our products.
+              stock right now. We stand by the quality of our eproducts.
             </p>
             <Link href="/store" passHref>
               {/* Button */}

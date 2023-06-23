@@ -23,7 +23,7 @@ const Header = () => {
           router.pathname === "/contact-us"
             ? "bg-lightBlack"
             : "bg-white"
-        } absolute top-0 w-full z-10`}
+        } absolute top-0 w-full h-24 z-10 flex items-center`}
       >
         {/* Navbar */}
         <nav className="container mx-auto flex items-center justify-between px-5">
@@ -38,20 +38,19 @@ const Header = () => {
               "w-40"
             }`}
           >
-            <div className="relative w-48 h-full overflow-hidden">
-              <Image
-                src={
-                  router.pathname === "/" ||
-                  router.pathname === "/about" ||
-                  router.pathname === "/contact-us"
-                    ? "/FSN-Transparent-Logo-250x250-1.webp"
-                    : "/fsn-black-logo.webp"
-                }
-                alt="fishing shirts now logo"
-                width={209}
-                height={5}
-              />
-            </div>
+            <Image
+              src={
+                router.pathname === "/" ||
+                router.pathname === "/about" ||
+                router.pathname === "/contact-us"
+                  ? "/FSN-Transparent-Logo-250x250-1.webp"
+                  : "/fsn-black-logo.webp"
+              }
+              alt="fishing shirts now logo"
+              width={209}
+              height={5}
+              className="w-auto h-auto"
+            />
           </Link>
           {/* Menu Items */}
           <div className="hidden space-x-7 items-center md:flex">
@@ -92,7 +91,7 @@ const Header = () => {
               Blog
             </Link>
             {/* Button */}
-            <SearchBox />
+            <SearchBox id="search desktop" />
           </div>
           {/* Hamburger Icon */}
           <button
@@ -130,7 +129,11 @@ const Header = () => {
               </Link>
             </div>
             <div className="py-4">
-              <SearchBox toggleMobileMenu={toggleMobileMenu} />
+              <SearchBox
+                toggleMobileMenu={toggleMobileMenu}
+                isActive={isActive}
+                id="search mobile"
+              />
             </div>
           </div>
         </div>

@@ -35,12 +35,12 @@ const WhoWeAre = () => {
             </div>
           </div>
           {/* Image*/}
-          <div className="relative min-h-[500px] bg-red-500 overflow-hidden">
+          <div className="relative min-h-[500px] overflow-hidden">
             <Image
               src="https://fsn-site.s3.amazonaws.com/about/computer-fishing-rod.png"
               alt="computer and fishing rod"
-              priority
               fill
+              sizes="(max-width: 768px) 100vw"
             />
           </div>
         </div>

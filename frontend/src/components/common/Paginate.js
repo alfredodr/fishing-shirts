@@ -49,9 +49,9 @@ const Paginate = ({ pages, page, keyword = "", slug = "" }) => {
           {showPreviousButton && (
             <button
               onClick={handlePrevious}
-              // disabled={startPage <= itemsPerPage}
+              aria-label="previous page"
               className="h-12 border-2 border-lightGray bg-white 
-               px-4 rounded-l-lg hover:bg-black hover:text-white"
+               px-4 rounded-l-lg hover:bg-blogNavHoverBlue hover:text-white"
             >
               <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20">
                 <path
@@ -70,12 +70,12 @@ const Paginate = ({ pages, page, keyword = "", slug = "" }) => {
                 key={index}
                 href={
                   keyword
-                    ? `${slug}/search?s=${keyword}&pageNumber=${x + 1}`
-                    : `${slug}?pageNumber=${x + 1}`
+                    ? `${slug}/search?s=${keyword}&page=${x + 1}`
+                    : `${slug}?page=${x + 1}`
                 }
                 className={`h-12 border-2 border-lightGray w-12 flex items-center justify-center  ${
-                  x + 1 === page ? "bg-black text-white" : "bg-white"
-                } hover:bg-black hover:text-white`}
+                  x + 1 === page ? "bg-blogNavHoverBlue text-white" : "bg-white"
+                } hover:bg-blogNavHoverBlue hover:text-white`}
               >
                 {x + 1}
               </Link>
@@ -84,9 +84,9 @@ const Paginate = ({ pages, page, keyword = "", slug = "" }) => {
           {showNextButton && (
             <button
               onClick={handleNext}
-              // disabled={endPage >= pages}
+              aria-label="next page"
               className="h-12 border-2 border-lightGray bg-white 
-            px-4 hover:bg-black hover:text-white"
+            px-4 hover:bg-blogNavHoverBlue hover:text-white"
             >
               <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20">
                 <path

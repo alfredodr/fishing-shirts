@@ -50,13 +50,7 @@ const getProductByCategory = asyncHandler(async (req, res) => {
     {
       $project: {
         _id: 0,
-        productsByCategory: {
-          $filter: {
-            input: "$productsByCategory",
-            as: "product",
-            cond: { $ne: ["$$product.price", 1] },
-          },
-        },
+        productsByCategory: 1,
         count: { $size: "$productsByCategory" },
       },
     },
@@ -67,6 +61,12 @@ const getProductByCategory = asyncHandler(async (req, res) => {
       $replaceRoot: {
         newRoot: "$productsByCategory",
       },
+    },
+    {
+      $match: { price: { $ne: 1 } },
+    },
+    {
+      $sort: { _id: 1 },
     },
     {
       $skip: pageSize * (page - 1),
