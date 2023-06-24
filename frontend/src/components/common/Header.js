@@ -26,7 +26,7 @@ const Header = () => {
         } absolute top-0 w-full h-24 z-10 flex items-center`}
       >
         {/* Navbar */}
-        <nav className="container mx-auto flex items-center justify-between px-5">
+        <nav className="container mx-auto flex items-center justify-between px-5 ">
           {/* Flex container */}
           {/* Logo */}
           <Link
@@ -107,11 +107,11 @@ const Header = () => {
         <div
           className={`${
             isActive === true ? null : "hidden"
-          } md:hidden w-full bg-lightGray"`}
+          } md:hidden bg-lightGray"`}
         >
           <div
             id="menu"
-            className="flex flex-col font-bold bg-lightGray divide-y divide-slate-300"
+            className="absolute left-0 right-0 top-24 flex flex-col font-bold bg-lightGray divide-y divide-slate-300"
           >
             <div className="py-4">
               <Link href="/" className="mx-10" onClick={toggleMobileMenu}>
