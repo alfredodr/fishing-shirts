@@ -26,7 +26,7 @@ const Header = () => {
         } absolute top-0 w-full h-24 z-10 flex items-center`}
       >
         {/* Navbar */}
-        <nav className="container mx-auto flex items-center justify-between px-5 ">
+        <nav className="container mx-auto flex items-center justify-between px-5">
           {/* Flex container */}
           {/* Logo */}
           <Link
@@ -43,13 +43,13 @@ const Header = () => {
                 router.pathname === "/" ||
                 router.pathname === "/about" ||
                 router.pathname === "/contact-us"
-                  ? "/FSN-Transparent-Logo-250x250-1.webp"
+                  ? "/fsn-transparent-logo-250x84.webp"
                   : "/fsn-black-logo.webp"
               }
               alt="fishing shirts now logo"
               width={209}
-              height={5}
-              className="w-auto h-auto"
+              height={100}
+              quality={100}
             />
           </Link>
           {/* Menu Items */}
