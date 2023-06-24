@@ -82,7 +82,7 @@ const Store = ({ products, categories }) => {
       />
       <section
         id="features"
-        className="flex flex-col-reverse md:flex-row lg:flex-row justify-center container mx-auto my-24 relative px-4"
+        className="flex flex-col-reverse md:flex-row lg:flex-row justify-center container mx-auto mt-32 relative px-4"
       >
         <div className="md:border md:border-r-1 md:border-l-transparent md:border-t-transparent md:border-b-transparent md:border-opacity-25 md:border-textLightGray md:pr-14 md:mr-14">
           <FilterByPrice
