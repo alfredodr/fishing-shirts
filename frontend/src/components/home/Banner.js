@@ -40,7 +40,7 @@ const Banner = () => {
                 type="button"
               >
                 <FaTshirt className="mr-3" />
-                Learn More
+                Shop Now
               </button>
             </Link>
           </div>
