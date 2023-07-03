@@ -8,6 +8,7 @@ const getProducts = asyncHandler(async (req, res) => {
   //pagination
   const pageSize = req.query.pageSize || 10;
   const page = Number(req.query.pageNumber) || 1;
+  const sortBy = req.query.sortBy || "name_asc";
 
   //search
   const keyword = req.query.keyword
@@ -19,11 +20,25 @@ const getProducts = asyncHandler(async (req, res) => {
       }
     : {};
 
+  //count
   const count = await Product.countDocuments({ ...keyword, price: { $ne: 1 } });
+
+  //sort
+  const sortOptions = {};
+  if (sortBy === "price_asc") {
+    sortOptions.price = 1;
+  } else if (sortBy === "price_desc") {
+    sortOptions.price = -1;
+  } else if (sortBy === "name_asc") {
+    sortOptions.name = 1;
+  } else if (sortBy === "name_desc") {
+    sortOptions.name = -1;
+  }
 
   const products = await Product.find({ ...keyword, price: { $ne: 1 } })
     .limit(pageSize)
-    .skip(pageSize * (page - 1));
+    .skip(pageSize * (page - 1))
+    .sort(sortOptions);
 
   const pages = Math.ceil(count / pageSize);
 
@@ -53,7 +68,7 @@ const getProductById = asyncHandler(async (req, res) => {
 // @route GET /api/products/top
 // @access Public
 const getTop30Products = asyncHandler(async (req, res) => {
-  const products = await Product.find().limit(30); //sort in ascending order
+  const products = await Product.find({ price: { $ne: 1 } }).limit(30); //sort in ascending order
 
   if (products) {
     res.json(products);

@@ -36,11 +36,11 @@ const SearchBox = ({ toggleMobileMenu, isActive, id }) => {
       </div>
       <button
         type="submit"
-        className={`"inline-flex items-center py-2.5 px-3 ml-2 text-sm font-medium ${
+        className={`"inline-flex items-center p-3 text-sm font-medium ${
           router.pathname === "/" ||
           router.pathname === "/about" ||
           router.pathname === "/contact-us"
-            ? "text-lightWhite"
+            ? "text-paleBlack sm:text-lightWhite"
             : "text-black"
         } rounded-lg ${
           router.pathname === "/" && "hover:text-white"
@@ -49,7 +49,7 @@ const SearchBox = ({ toggleMobileMenu, isActive, id }) => {
       >
         <svg
           aria-hidden="true"
-          className="w-5 h-5 mr-2 -ml-1"
+          className="w-5 h-5"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"

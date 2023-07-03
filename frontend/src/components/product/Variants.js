@@ -9,7 +9,7 @@ const Variants = ({ image, index, setMainImage }) => {
         alt={image.alt}
         fill
         sizes="(max-width: 160px) 100vw, (max-width: 160px) 50vw, 33vw"
-        className="object-contain bg-white cursor-pointer"
+        className="object-contain cursor-pointer"
         onClick={() => setMainImage(index)}
       />
     </div>

@@ -5,12 +5,14 @@ import { NextSeo, WebPageJsonLd } from "next-seo";
 import StoreProducts from "@/components/product/StoreProducts";
 import FilterByPrice from "@/components/product/FilterByPrice";
 import Paginate from "@/components/common/Paginate";
+import Breadcrumb from "@/components/common/Breadcrumb";
 
 const Product = ({ products, categoryName, slug }) => {
   const initialMin = 0;
   const initialMax = 200;
   const [minPrice, setMinPrice] = useState(initialMin);
   const [maxPrice, setMaxPrice] = useState(initialMax);
+  const [sortBy, setSortBy] = useState("");
 
   const route = useRouter();
   const { query } = route;
@@ -22,7 +24,7 @@ const Product = ({ products, categoryName, slug }) => {
     async function fetchData() {
       try {
         const { data } = await axios.get(
-          `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/categories/products/${slug}?pageNumber=${pageNumber}`
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/categories/products/${slug}?pageNumber=${pageNumber}&sortBy=${sortBy}`
         );
 
         setData(data);
@@ -32,7 +34,7 @@ const Product = ({ products, categoryName, slug }) => {
     }
 
     fetchData();
-  }, [pageNumber]);
+  }, [slug, pageNumber, sortBy]);
 
   return (
     <>
@@ -70,8 +72,11 @@ const Product = ({ products, categoryName, slug }) => {
         id={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/product-category/${slug}/#corporation`}
         publisher="https://fishingshirtsnow.com/#organization"
       />
-      <section className="flex flex-col-reverse md:flex-row lg:flex-row justify-center container mx-auto my-24 relative px-4">
-        <div className="mt-10 md:border md:border-r-1 md:border-l-transparent md:border-t-transparent md:border-b-transparent md:border-opacity-25 md:border-textLightGray md:pr-14 md:mr-14">
+      <section className="flex flex-col-reverse md:flex-row lg:flex-row justify-center container mx-auto relative px-5">
+        <div className="absolute top-5 md:left-14">
+          <Breadcrumb />
+        </div>
+        <div className="mt-16 md:border md:border-r-1 md:border-l-transparent md:border-t-transparent md:border-b-transparent md:border-opacity-25 md:border-textLightGray md:pr-14 md:mr-14">
           <FilterByPrice
             min={0}
             max={200}
@@ -96,8 +101,17 @@ const Product = ({ products, categoryName, slug }) => {
             ></iframe>
           </div>
         </div>
-        <div className="md:w-3/4">
-          <h1 className="text-5xl text-customBlack my-10">{categoryName}</h1>
+        <div className="md:w-3/4 mt-16">
+          <h1 className="text-5xl text-customBlack">{categoryName}</h1>
+          <div className="my-10">
+            <label className="font-medium opacity-75 mr-2">Sort by:</label>
+            <select onChange={(e) => setSortBy(e.target.value)}>
+              <option value="name_asc">A-Z</option>
+              <option value="name_desc">Z-A</option>
+              <option value="price_asc">Price: Low to High</option>
+              <option value="price_desc">Price: High to Low</option>
+            </select>
+          </div>
           {/* Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8">
             {/* Product */}

@@ -46,7 +46,7 @@ const accessibility = () => {
         id="https://fishingshirtsnow.com/accessibility/#corporation"
         publisher="https://fishingshirtsnow.com/#organization"
       />
-      <section className={`container mx-auto my-24`}>
+      <section className={`container mx-auto my-10`}>
         <div className={`${styles.post}`}>
           <h1>fishingshirtsnow.com Accessibility Statement</h1>
           <p>Updated: December 2019.</p>
@@ -114,7 +114,7 @@ const accessibility = () => {
           <p>
             If you wish to report an accessibility issue, have any questions or
             need assistance, please{" "}
-            <a href="/contact-us/" target="_blank" rel="noopener">
+            <a href="/contact-us" target="_blank" rel="noopener">
               contact fishingshirtsnow.com Customer Support here.
             </a>
           </p>

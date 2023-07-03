@@ -30,6 +30,19 @@ const getProductByCategory = asyncHandler(async (req, res) => {
   //pagination
   const pageSize = req.query.pageSize || 10;
   const page = Number(req.query.pageNumber) || 1;
+  const sortBy = req.query.sortBy || "name_asc";
+
+  //sort
+  const sortOptions = {};
+  if (sortBy === "price_asc") {
+    sortOptions.price = 1;
+  } else if (sortBy === "price_desc") {
+    sortOptions.price = -1;
+  } else if (sortBy === "name_asc") {
+    sortOptions.name = 1;
+  } else if (sortBy === "name_desc") {
+    sortOptions.name = -1;
+  }
 
   const categoryId = req.params.id;
 
@@ -66,7 +79,7 @@ const getProductByCategory = asyncHandler(async (req, res) => {
       $match: { price: { $ne: 1 } },
     },
     {
-      $sort: { _id: 1 },
+      $sort: sortOptions,
     },
     {
       $skip: pageSize * (page - 1),

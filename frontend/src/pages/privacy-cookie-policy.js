@@ -47,7 +47,7 @@ const privacy = () => {
         id="https://fishingshirtsnow.com/privacy-cookie-policy/#corporation"
         publisher="https://fishingshirtsnow.com/#organization"
       />
-      <section className={`container mx-auto my-24`}>
+      <section className={`container mx-auto my-10`}>
         <div className={`${styles.post}`}>
           <h1>Privacy Policy</h1>
           <p>

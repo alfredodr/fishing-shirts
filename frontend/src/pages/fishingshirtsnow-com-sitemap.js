@@ -68,7 +68,7 @@ const Sitemap = ({ products, posts }) => {
         publisher="https://fishingshirtsnow.com/#organization"
       />
       <section
-        className={`flex flex-col md:flex-row lg:flex-row justify-center container mx-auto my-24 relative`}
+        className={`flex flex-col md:flex-row lg:flex-row justify-center container mx-auto my-10 relative`}
       >
         <div className={`${styles.post}`}>
           <h1 className="flex justify-center font-medium">
@@ -172,7 +172,7 @@ const Sitemap = ({ products, posts }) => {
             className={`${
               pageNumber === 30 && "hidden"
             } h-12 border-2  bg-white 
-            px-4 rounded hover:bg-blogNavHoverBlue hover:text-white my-5 font-medium focus-visible:none`}
+            px-4 rounded hover:bg-lightBlue hover:text-white my-5 font-medium focus-visible:none`}
           >
             Load more
           </button>
