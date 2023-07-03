@@ -41,7 +41,7 @@ module.exports = {
         lightWhite: "#E1D9D1",
         lightGray: "#f4f4f4",
         paleGray: "F9F9F9",
-        lightBlue: "#3197d6",
+        lightBlue: "#185D8B",
         yellow: "FDCC0D",
         whoWeAreBackgroundGray: "#EDEDEF",
         followUsLightGray: "#DCDDDF",

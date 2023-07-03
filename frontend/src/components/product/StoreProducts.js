@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const StoreProducts = ({ product }) => {
   return (
-    <div className={`p-2 flex flex-col`}>
+    <div className="flex flex-col">
       <Link href={`/product/${product.slug}`} passHref>
         <div className="relative w-full h-60">
           <Image

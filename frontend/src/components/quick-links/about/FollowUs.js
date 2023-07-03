@@ -18,7 +18,7 @@ const FollowUs = () => {
         />
       </div>
       {/* Flex Container */}
-      <div className="md:w-3/12 h-full flex flex-col items-center justify-center space-y-11 mx-auto bg-followUsLightGray">
+      <div className="md:w-3/12 h-full flex flex-col items-center justify-center space-y-11 mx-auto bg-followUsLightGray px-5">
         <div className="w-28 border-t-4 border-t-lightBlue"></div>
         <h2 className="text-5xl font-bold text-center leading-normal text-black">
           Follow Us

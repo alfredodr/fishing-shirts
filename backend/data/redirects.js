@@ -79,18 +79,6 @@ const redirects = [
   },
   {
     source:
-      "/product/baleaf-mens-sleeveless-shirts-muscle-performance-workout-gym-running-tech-tank-top/",
-    destination: "/store/",
-    permanent: true,
-  },
-  {
-    source:
-      "/product/arctic-cool-womens-v-neck-instant-cooling-moisture-wicking-performance-upf-50-short-sleeve-workout-shirt/",
-    destination: "/product-category/fishing-shirts-for-her/",
-    permanent: true,
-  },
-  {
-    source:
       "/product/hook-tackle-mens-tarpon-run-short-sleeve-embroidered-uv-sun-protection-fishing-shirt",
     destination: "/store",
     permanent: true,
@@ -140,18 +128,6 @@ const redirects = [
   {
     source:
       "/product/la-leela-mens-big-and-tall-beach-short-sleeve-casual-hawaiian-shirt-a",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source:
-      "/product/bamboo-cay-mens-short-sleeve-toucan-lounge-embroidered-hawaiian-tropical-shirt",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source:
-      "/product/bamboo-cay-mens-bamboos-on-the-loose-casual-embroidered-short-sleeve-woven-shirt",
     destination: "/store",
     permanent: true,
   },
@@ -239,11 +215,6 @@ const redirects = [
     permanent: true,
   },
   {
-    source: "/product/simms-womens-solarflex-fishing-hoody-shirt-with-upf-50",
-    destination: "/store",
-    permanent: true,
-  },
-  {
     source:
       "/product/luckupper-mens-1-4-zip-pullover-athletic-long-sleeve-shirt-workout-top-with-magic-mask-quick-dry-fit",
     destination: "/store",
@@ -257,25 +228,7 @@ const redirects = [
   },
   {
     source:
-      "/product/tsla-1-or-2-pack-mens-thermal-long-sleeve-compression-shirts-athletic-base-layer-top-winter-gear-running-t-shirt",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source:
-      "/product/wanayou-womens-compression-shirt-dry-fit-long-sleeve-running-athletic-t-shirt-workout-tops",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source:
       "/product/refire-gear-mens-army-special-ops-military-tactical-jacket-softshell-fleece-hooded-outdoor-coat",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source:
-      "/product/mens-i-speak-3-languages-sarcasm-hunting-and-fishing-t-shirt-hunter-sarcastic",
     destination: "/store",
     permanent: true,
   },
@@ -304,24 +257,12 @@ const redirects = [
     permanent: true,
   },
   {
-    source:
-      "/product/ocean-sea-world-beach-shells-starfish-mens-hoodies-long-sleeve-zipper-hooded-jacket-sweatshirt-boys-soft",
-    destination: "/store",
-    permanent: true,
-  },
-  {
     source: "/product/habit-womens-kachemak-hooded-performance-layer",
     destination: "/store",
     permanent: true,
   },
   {
     source: "/product/habit-mens-short-sleeve-river-shirt",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source:
-      "/product/tapulco-mens-dry-fit-golf-polos-long-sleeve-2-tone-moisture-wicking-casual-polo-shirt",
     destination: "/store",
     permanent: true,
   },
@@ -367,23 +308,6 @@ const redirects = [
   },
   {
     source:
-      "/product/columbia-mens-pfg-terminal-deflector-printed-long-sleeve-fishing-shirt",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source: "/product/under-armour-mens-tide-chaser-long-sleeve",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source:
-      "/product/mens-long-sleeve-sun-protection-shirt-quick-dry-safari-outdoor-dri-fit-t-shirt-for-running-fishing-hiking",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source:
       "/product/jason-mathias-strike-zone-sailfish-ls-high-performance-shirt",
     destination:
       "/product/jason-mathias-strike-zone-mako-shark-ls-high-performance-shirt",
@@ -397,8 +321,9 @@ const redirects = [
   },
   {
     source:
+      "/product/gamefish-usa-upf-50-microfiber-moisture-wicking-long-sleeve-performance-bass-fishing-shirt-2",
+    destination:
       "/product/gamefish-usa-upf-50-microfiber-moisture-wicking-long-sleeve-performance-bass-fishing-shirt",
-    destination: "/store",
     permanent: true,
   },
   {
@@ -409,19 +334,7 @@ const redirects = [
   },
   {
     source:
-      "/product/sand-salt-surf-sun-mandala-turtle-womens-upf-50-uv-sun-protection-performance-long-sleeve-t-shirt",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source:
       "/product/hde-womens-long-sleeve-rash-guard-sun-protection-t-shirt-upf-50-beach-swim-shirt",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source:
-      "/product/huk-womens-schooled-pursuit-long-sleeve-performance-fishing-shirt-with-30-upf-sun-protection",
     destination: "/store",
     permanent: true,
   },
@@ -439,19 +352,7 @@ const redirects = [
   },
   {
     source:
-      "/product/bassdash-womens-upf-50-uv-sun-protection-t-shirt-long-sleeve-fishing-hiking-performance-shirts",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source:
       "/product/gamefish-usa-womens-upf-50-lightweight-microfiber-moisture-wicking-performance-fishing-shirt-snook",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source:
-      "/product/huk-womens-icon-x-hoodie-long-sleeve-performance-shirt-with-upf-30-sun-protection",
     destination: "/store",
     permanent: true,
   },
@@ -476,12 +377,6 @@ const redirects = [
   {
     source:
       "/product/joes-usa-ladies-long-sleeve-moisture-wicking-athletic-shirts-sizes-xs-4xl",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source:
-      "/product/arctic-cool-womens-v-neck-instant-cooling-moisture-wicking-performance-upf-50-short-sleeve-workout-shirt",
     destination: "/store",
     permanent: true,
   },
@@ -529,12 +424,6 @@ const redirects = [
   {
     source:
       "/product/womens-sun-protection-athletic-t-shirtlightweight-dry-fit-long-sleeve-performance-t-shirt-for-womens",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source:
-      "/product/qualidyne-womens-uv-upf-50-sun-protection-hoodie-zip-up-long-sleeve-hiking-jacket-outdoor-performance-shirt",
     destination: "/store",
     permanent: true,
   },
@@ -909,11 +798,6 @@ const redirects = [
     permanent: true,
   },
   {
-    source: "/product/mossy-oak-mens-all-outdoor-flex-short",
-    destination: "/store",
-    permanent: true,
-  },
-  {
     source: "/product/mossy-oak-triblend-fishing-logo-burnout-t-shirt-for-men",
     destination: "/store",
     permanent: true,
@@ -931,11 +815,6 @@ const redirects = [
   {
     source:
       "/product/mossy-oak-camo-infant-short-sleeve-tee-in-break-up-country",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source: "/product/mossy-oak-long-sleeve-logo-tee-with-3-graphic-prints",
     destination: "/store",
     permanent: true,
   },
@@ -974,12 +853,6 @@ const redirects = [
   {
     source:
       "/product/mossy-oak-camo-toddler-long-sleeve-tee-in-break-up-country",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source:
-      "/product/mossy-oak-long-sleeve-quarter-zip-camo-shirts-for-men-mens-hunting-shirts",
     destination: "/store",
     permanent: true,
   },
@@ -1050,7 +923,7 @@ const redirects = [
   {
     source:
       "/product/american-flag-fishing-poles-fisherman-reel-rod-and-hook-t-shirt",
-    destination: "/store",
+    destination: "/product/fishing-shirt-funny-american-flag-fishing-shirt",
     permanent: true,
   },
   {
@@ -1124,12 +997,6 @@ const redirects = [
   {
     source:
       "/product/baleaf-mens-long-sleeve-running-shirts-athletic-workout-t-shirts",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source:
-      "/product/baleaf-mens-quick-dry-short-sleeve-t-shirt-sun-protection-running-workout-shirts",
     destination: "/store",
     permanent: true,
   },
@@ -1514,12 +1381,6 @@ const redirects = [
   },
   {
     source:
-      "/product/naviskin-womens-upf-50-uv-sun-protection-hoodie-lightweight-outdoor-long-sleeve-shirt",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source:
       "/product/silik-mens-upf-50-sun-protection-hooded-long-sleeve-shirt-lightweight-sweatshirt-sportswear-athletic-pullover-hoodie",
     destination: "/store",
     permanent: true,
@@ -1610,12 +1471,6 @@ const redirects = [
     permanent: true,
   },
   {
-    source:
-      "/product/hanes-mens-size-tall-short-sleeve-beefy-t-shirt-pack-of-two",
-    destination: "/store",
-    permanent: true,
-  },
-  {
     source: "/product/hanes-sport-mens-heathered-performance-t-shirt",
     destination: "/store",
     permanent: true,
@@ -1629,11 +1484,6 @@ const redirects = [
   {
     source:
       "/product/hanes-mens-long-sleeve-cool-dri-t-shirt-upf-50-medium-2-pack-1-navy-1-white",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source: "/product/hanes-x-temp-long-sleeve-t-shirt-o5716",
     destination: "/store",
     permanent: true,
   },
@@ -1922,12 +1772,6 @@ const redirects = [
     permanent: true,
   },
   {
-    source:
-      "/product/hiskywin-womens-upf-50-sun-protection-tops-long-sleeve-half-zip-thumb-hole-outdoor-performance-workout-shirt",
-    destination: "/store",
-    permanent: true,
-  },
-  {
     source: "/product/columbia-mens-bonehead-short-sleeve-shirt",
     destination: "/store",
     permanent: true,
@@ -1966,11 +1810,6 @@ const redirects = [
   {
     source:
       "/product/columbia-mens-terminal-tackle-heather-long-sleeve-shirt-2",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source: "/product/columbia-womens-tamiami-ii-short-sleeve-shirt",
     destination: "/store",
     permanent: true,
   },
@@ -2065,12 +1904,6 @@ const redirects = [
   {
     source:
       "/product/hde-performance-fishing-shirts-for-men-long-sleeve-upf-50-sun-protection-quick-dry-outdoor-t-shirt",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source:
-      "/product/hooked-soul-american-flag-performance-fishing-shirt-apparel-upf-50-dri-fit-mens-x-large-long-sleeve-xl-american-flag",
     destination: "/store",
     permanent: true,
   },
@@ -2630,29 +2463,13 @@ const redirects = [
     permanent: true,
   },
   {
-    source: "/product/columbia-mens-thistletown-park-crew-shirt",
-    destination: "/store",
-    permanent: true,
-  },
-  {
     source: "/product/columbia-mens-tamiami-ii-short-sleeve-fishing-shirt",
     destination: "/store",
     permanent: true,
   },
   {
     source:
-      "/product/g-h-bass-co-mens-big-and-tall-explorer-short-sleeve-fishing-shirt-solid-button-pocket",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source:
       "/product/columbia-mens-pfg-bahama-ii-short-sleeve-shirt-cool-grey-x-large",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source: "/product/costa-del-mar-mens-s-s-beachside-tee",
     destination: "/store",
     permanent: true,
   },
@@ -2740,12 +2557,6 @@ const redirects = [
     permanent: true,
   },
   {
-    source:
-      "/product/naviskin-mens-upf-50-sun-protection-fishing-shirt-long-sleeve-quick-drying-lightweight-hiking-shirt-cooling",
-    destination: "/store",
-    permanent: true,
-  },
-  {
     source: "/product/columbia-mens-thistletown-park-long-sleeve-crew",
     destination: "/store",
     permanent: true,
@@ -2763,7 +2574,8 @@ const redirects = [
   {
     source:
       "/product/mens-fishing-saved-me-from-being-a-pornstar-now-im-just-a-hooker-tshirt",
-    destination: "/store",
+    destination:
+      "/product/crazy-dog-t-shirts-womens-fishing-saved-me-from-becoming-a-pornstar-tshirt-funny-outdoor-tee",
     permanent: true,
   },
   {
@@ -2827,12 +2639,6 @@ const redirects = [
   },
   {
     source:
-      "/product/womens-performance-long-sleeve-fishing-shirt-upf50-rash-guard-v-neck-athletic-workout-tops-moisture-wicking",
-    destination: "/product-category/fishing-shirts-koofin",
-    permanent: true,
-  },
-  {
-    source:
       "/product/hanes-mens-cool-dri-performance-long-sleeve-t-shirt482l-deep-royal-white-xl",
     destination: "/product-category/fishing-shirts-hanes",
     permanent: true,
@@ -2840,17 +2646,6 @@ const redirects = [
   {
     source:
       "/product/hook-tackle-mens-anglers-delight-short-sleeve-embroidered-uv-sun-protection-fishing-shirt",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source: "/product/aftco-samurai-performance-long-sleeve-shirt-mint-xl",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source:
-      "/product/sand-salt-surf-sun-polynesian-hammerhead-tribal-mens-upf-50-uv-sun-protection-performance-long-sleeve-t-shirt",
     destination: "/store",
     permanent: true,
   },
@@ -2868,28 +2663,6 @@ const redirects = [
   },
   {
     source:
-      "/product/koofin-gear-womens-long-sleeve-hooded-sunshirt-upf-50-sun-protection-performance-fishing-hoodie-athletic-workout-tops-moisture-wicking",
-    destination: "/product-category/fishing-shirts-koofin",
-    permanent: true,
-  },
-  {
-    source: "/product/g-h-bass-co-mens-explorer-long-sleeve-crewneck-t-shirt",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source: "/product/huk-mens-cw-cold-weather-water-resistant-icon-x-hoodie",
-    destination: "/product-category/fishing-shirts-huk",
-    permanent: true,
-  },
-  {
-    source:
-      "/product/izod-mens-surfcaster-short-sleeve-button-down-solid-fishing-shirt",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source:
       "/product/simms-solarflex-upf-50-shirt-long-sleeve-sun-protection-fishing-hoodie-lightweight-breathable-moisture-wicking-anti-odor",
     destination: "/product-category/fishing-shirts-simms",
     permanent: true,
@@ -2898,18 +2671,6 @@ const redirects = [
     source:
       "/product/piscifun-performance-upf-long-sleeve-fishing-t-shirt-sun-protection-clothing-fishing-jersey-m-l-xl-2xl-3xl",
     destination: "/product-category/fishing-shirts-performance",
-    permanent: true,
-  },
-  {
-    source:
-      "/product/ogeenier-mens-upf-50-sun-protection-hoodie-shirt-with-mask-long-sleeve-uv-fishing-workout-hiking-thumbholes-shirt",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source:
-      "/product/g-h-bass-co-mens-explorer-short-sleeve-button-down-fishing-shirt-solid-flap-pocket",
-    destination: "/store",
     permanent: true,
   },
   {
@@ -2925,7 +2686,7 @@ const redirects = [
   },
   {
     source: "/product/habit-men39s-belcoast-river-guide-s-s-shirt-black",
-    destination: "/store",
+    destination: "/product/habit-men39s-belcoast-river-guide-s-s-shirt",
     permanent: true,
   },
   {
@@ -2949,17 +2710,6 @@ const redirects = [
   {
     source:
       "/product/quiksilver-mens-angler-hooded-ls-long-sleeve-rashguard-surf-shirt",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source: "/product/wrangler-authentics-mens-long-sleeve-classic-woven-shirt",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source:
-      "/product/crazy-dog-t-shirts-mens-part-time-hooker-tshirt-funny-outdoor-fishing-tee-for-guys",
     destination: "/store",
     permanent: true,
   },
@@ -3024,25 +2774,7 @@ const redirects = [
   },
   {
     source:
-      "/product/sun-protection-upf-50-linafin-chiller-pullover-long-sleeve-mens-fishing-hoodie-shirt-with-face-gaiter-performance",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source:
       "/product/amazon-brand-peak-velocity-mens-vxe-long-sleeve-quick-dry-loose-fit-t-shirt",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source:
-      "/product/baleaf-mens-rain-jacket-waterproof-with-hooded-lightweight-packable-bike-pullover-running-raincoat-poncho-windbreaker/",
-    destination: "/store",
-    permanent: true,
-  },
-  {
-    source:
-      "/product/reel-life-mens-short-sleeve-woven-fishing-shirt-pacific-series-fishin-all-over-uv-protection-breathable",
     destination: "/store",
     permanent: true,
   },
@@ -3317,7 +3049,7 @@ const redirects = [
     source:
       "/gamefish-usa-upf-50-microfiber-moisture-wicking-long-sleeve-performance-bass-fishing-shirt-2",
     destination:
-      "/product/gamefish-usa-upf-50-microfiber-moisture-wicking-long-sleeve-performance-bass-fishing-shirt-2",
+      "/product/gamefish-usa-upf-50-microfiber-moisture-wicking-long-sleeve-performance-bass-fishing-shirt",
     permanent: true,
   },
   {
@@ -3801,6 +3533,44 @@ const redirects = [
   },
   {
     source: "/coolibar-upf-50-mens-andros-fishing-hoodie-sun-protective",
+    destination: "/store",
+    permanent: true,
+  },
+  {
+    source:
+      "/piscifun-performance-upf50-long-sleeve-fishing-t-shirt-with-hoodie",
+    destination:
+      "/product/piscifun-performance-upf50-long-sleeve-fishing-t-shirt-with-hoodie",
+    permanent: true,
+  },
+  {
+    source: "/product/pelagic-aquatek-game-fish-performance-fishing-shirt",
+    destination: "/product-category/fishing-shirts-pelagic",
+    permanent: true,
+  },
+  {
+    source:
+      "/product/hooked-soul-fishing-mens-upf-50-uv-sun-protection-outdoor-long-sleeve-performance-dri-fit-shirts",
+    destination: "/store",
+    permanent: true,
+  },
+  {
+    source:
+      "/product/naviskin-mens-upf-50-sun-protection-fishing-shirt-long-sleeve-quick-drying-lightweight-hiking-shirt-cooling",
+    destination:
+      "/product/naviskin-mens-upf-50-sun-protection-fishing-shirt-long-sleeve",
+    permanent: true,
+  },
+  {
+    source:
+      "/product/performance-fishing-hoodie-with-face-mask-hooded-sunblock-shirt-sun-shield-long-sleeve-upf50-tops-half-zip",
+    destination:
+      "/product/baleaf-mens-long-sleeve-upf-50-uv-sun-protection-shirt-spf-lightweight-quick-dry-hiking-fishing-shirt",
+    permanent: true,
+  },
+  {
+    source:
+      "/product/bamboo-cay-mens-bamboos-on-the-loose-casual-embroidered-short-sleeve-woven-shirt",
     destination: "/store",
     permanent: true,
   },

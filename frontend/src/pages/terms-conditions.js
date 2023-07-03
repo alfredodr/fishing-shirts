@@ -47,7 +47,7 @@ const termsAndConditions = () => {
         id="https://fishingshirtsnow.com/terms-conditions/#corporation"
         publisher="https://fishingshirtsnow.com/#organization"
       />
-      <section className={`container mx-auto my-24`}>
+      <section className={`container mx-auto my-10`}>
         <div className={`${styles.post}`}>
           <h1>Welcome to Fishingshirtsnow.com</h1>
           <p>

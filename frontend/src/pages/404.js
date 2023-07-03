@@ -1,5 +1,6 @@
 import React from "react";
 import { NextSeo, WebPageJsonLd } from "next-seo";
+import SearchBox from "@/components/common/SearchBox";
 
 const notFound = () => {
   return (
@@ -21,15 +22,16 @@ const notFound = () => {
         id="https://fishingshirtsnow.com/404/#corporation"
         publisher="https://fishingshirtsnow.com/#organization"
       />
-      <section className="flex items-center justify-center container mx-auto my-24 relative">
-        <div className="bg-white w-11/12 space-y-10 py-12 px-9">
-          <h1 className="flex items-center justify-center text-customBlack text-5xl">
+      <section className="container mx-auto my-10 px-5 bg-white">
+        <div className="w-11/12 space-y-10 py-10">
+          <h1 className="text-customBlack text-5xl px-10">
             This page doesn&apos;t seem to exist.
           </h1>
-          <p className="flex items-center justify-center text-2xl font-bold text-customBlack">
+          <p className="text-2xl font-bold text-customBlack px-10">
             It looks like the link pointing here was faulty. Maybe try
             searching?
           </p>
+          <SearchBox id="search 404" />
         </div>
       </section>
     </>

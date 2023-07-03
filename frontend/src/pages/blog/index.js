@@ -52,7 +52,7 @@ const index = ({ posts }) => {
         id="https://fishingshirtsnow.com/blog/#corporation"
         publisher="https://fishingshirtsnow.com/#organization"
       />
-      <section className="flex items-center justify-center container mx-auto my-24 relative">
+      <section className="flex items-center justify-center container mx-auto my-10 relative">
         <div className={`${styles.post}`}>
           {posts.map((post, index) => (
             <React.Fragment key={index}>

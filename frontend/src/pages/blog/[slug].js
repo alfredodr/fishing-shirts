@@ -11,9 +11,15 @@ import GetProduct from "@/components/product/GetProduct";
 import styles from "../../styles/posts.module.css";
 import Link from "next/link";
 import { NextSeo, ArticleJsonLd } from "next-seo";
+import Breadcrumb from "@/components/common/Breadcrumb";
 
 //Components used in my blog
-const components = { Top30Products, ProductsByCategory, GetProduct };
+const components = {
+  Top30Products,
+  ProductsByCategory,
+  GetProduct,
+  Breadcrumb,
+};
 
 const blog = ({
   frontmatter: { title, cover_image, excerpt, published_time, modified_time },
@@ -69,7 +75,7 @@ const blog = ({
         description={excerpt}
       />
       <section
-        className={`flex flex-col md:flex-row lg:flex-row justify-center container mx-auto my-24 relative`}
+        className={`flex flex-col md:flex-row lg:flex-row items-center md:items-start justify-center container mx-auto my-10 relative`}
       >
         <div className={`${styles.post}`}>
           <Image

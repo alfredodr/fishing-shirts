@@ -9,7 +9,7 @@ const Footer = () => {
       <hr />
       <div className="flex items-center justify-center container mx-auto">
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-5 my-10 ">
+        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-5 my-10">
           {/* Affiliate Disclosure */}
           <div>
             <div className="flex flex-col">

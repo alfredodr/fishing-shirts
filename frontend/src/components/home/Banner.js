@@ -25,7 +25,7 @@ const Banner = () => {
         <div className="container flex items-center mx-auto">
           {/* Left Item */}
           <div className="flex flex-col items-center md:items-start lg:items-start">
-            <h1 className="mb-4 sm:text-5xl text-4xl font-black text-center leading-tight text-white md:text-left xl:max-w-lg mt-14 xl:mt-0">
+            <h1 className="mb-4 sm:text-5xl text-4xl font-black text-center text-white md:text-left xl:max-w-lg leading-normal md:leading-normal">
               Fishing Shirts Deals You Do Not Want To Miss Today!
             </h1>
             <p className="hidden mb-4 text-xl text-center text-white md:text-left md:block xl:max-w-lg">

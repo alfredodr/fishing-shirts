@@ -74,7 +74,7 @@ const Paginate = ({ pages, page, keyword = "", slug = "" }) => {
                     : `${slug}?page=${x + 1}`
                 }
                 className={`h-12 border-2 border-lightGray w-12 flex items-center justify-center  ${
-                  x + 1 === page ? "bg-blogNavHoverBlue text-white" : "bg-white"
+                  x + 1 == page ? "bg-blogNavHoverBlue text-white" : "bg-white"
                 } hover:bg-blogNavHoverBlue hover:text-white`}
               >
                 {x + 1}

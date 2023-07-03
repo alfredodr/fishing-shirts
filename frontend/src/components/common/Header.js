@@ -7,7 +7,7 @@ import { RxCross1 } from "react-icons/rx";
 import SearchBox from "./SearchBox";
 
 const Header = () => {
-  const [isActive, setActive] = useState("false");
+  const [isActive, setActive] = useState();
   const router = useRouter();
 
   const toggleMobileMenu = () => {
@@ -21,23 +21,15 @@ const Header = () => {
           router.pathname === "/" ||
           router.pathname === "/about" ||
           router.pathname === "/contact-us"
-            ? "bg-lightBlack"
+            ? "bg-paleBlack bg-opacity-25"
             : "bg-white"
-        } absolute top-0 w-full h-24 z-10 flex items-center`}
+        } w-full h-24 z-50 flex items-center`}
       >
         {/* Navbar */}
         <nav className="container mx-auto flex items-center justify-between px-5">
           {/* Flex container */}
           {/* Logo */}
-          <Link
-            href="/"
-            className={`${
-              (router.pathname === "/" ||
-                router.pathname === "/about" ||
-                router.pathname === "/contact-us") &&
-              "w-40"
-            }`}
-          >
+          <Link href="/" className="relative w-[13.063rem] h-[4.375rem] ">
             <Image
               src={
                 router.pathname === "/" ||
@@ -47,9 +39,8 @@ const Header = () => {
                   : "/fsn-black-logo.webp"
               }
               alt="fishing shirts now logo"
-              width={209}
-              height={100}
-              quality={100}
+              fill
+              className="object-cover"
             />
           </Link>
           {/* Menu Items */}
@@ -62,7 +53,7 @@ const Header = () => {
                 router.pathname === "/contact-us"
                   ? "text-lightWhite"
                   : "text-black"
-              }`}
+              } hover:opacity-75`}
             >
               Home
             </Link>
@@ -74,7 +65,7 @@ const Header = () => {
                 router.pathname === "/contact-us"
                   ? "text-lightWhite"
                   : "text-black"
-              }`}
+              } hover:opacity-75`}
             >
               Store
             </Link>
@@ -86,7 +77,7 @@ const Header = () => {
                 router.pathname === "/contact-us"
                   ? "text-lightWhite"
                   : "text-black"
-              }`}
+              } hover:opacity-75`}
             >
               Blog
             </Link>
@@ -100,43 +91,55 @@ const Header = () => {
             className="flex items-center justify-center cursor-pointer hamburger relative w-8 h-8 md:hidden focus:outline-none bg-lightBlue rounded"
             onClick={toggleMobileMenu}
           >
-            {isActive === true ? <RxCross1 /> : <RxHamburgerMenu />}
+            {isActive === true ? (
+              <RxCross1 color="ffffff" />
+            ) : (
+              <RxHamburgerMenu color="ffffff" />
+            )}
           </button>
         </nav>
         {/* Mobile Menu */}
-        <div
-          className={`${
-            isActive === true ? null : "hidden"
-          } md:hidden bg-lightGray"`}
-        >
-          <div
+        <nav className={`${isActive === true ? null : "hidden"} z-40`}>
+          <ul
             id="menu"
-            className="absolute left-0 right-0 top-24 flex flex-col font-bold bg-lightGray divide-y divide-slate-300"
+            className="absolute left-0 right-0 top-24 flex flex-col font-semibold bg-gray-100 divide-y divide-slate-300 border"
           >
-            <div className="py-4">
-              <Link href="/" className="mx-10" onClick={toggleMobileMenu}>
+            <li className="py-3">
+              <Link
+                href="/"
+                className="block mx-10 px-4 py-2 hover:bg-gray-200"
+                onClick={toggleMobileMenu}
+              >
                 Home
               </Link>
-            </div>
-            <div className="py-4">
-              <Link href="/store" className="mx-10" onClick={toggleMobileMenu}>
+            </li>
+            <li className="py-3">
+              <Link
+                href="/store"
+                className="block mx-10 px-4 py-2 hover:bg-gray-200"
+                onClick={toggleMobileMenu}
+              >
                 Store
               </Link>
-            </div>
-            <div className="py-4">
-              <Link href="/blog" className="mx-10" onClick={toggleMobileMenu}>
+            </li>
+            <li className="py-3">
+              <Link
+                href="/blog"
+                className="block mx-10 px-4 py-2 hover:bg-gray-200"
+                onClick={toggleMobileMenu}
+              >
                 Blog
               </Link>
-            </div>
-            <div className="py-4">
+            </li>
+            <li className="py-3">
               <SearchBox
                 toggleMobileMenu={toggleMobileMenu}
                 isActive={isActive}
                 id="search mobile"
               />
-            </div>
-          </div>
-        </div>
+            </li>
+          </ul>
+        </nav>
       </header>
     </>
   );

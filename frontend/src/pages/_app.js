@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import Layout from "@/components/common/Layout";
 import { DefaultSeo } from "next-seo";
 import Script from "next/script";
+import ScrollToTop from "@/components/common/ScrollToTop";
 
 const App = ({ Component, pageProps }) => {
   return (
@@ -29,6 +30,7 @@ const App = ({ Component, pageProps }) => {
             cardType: "summary_large_image",
           }}
         />
+        <ScrollToTop />
         <Component {...pageProps} />
       </Layout>
     </>
