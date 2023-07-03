@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BsArrowUpCircle } from "react-icons/Bs";
+import { BsArrowUpCircle } from "react-icons/bs";
 
 const ScrollToTop = () => {
   const [showButton, setShowButton] = useState(false);
