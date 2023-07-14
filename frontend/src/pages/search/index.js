@@ -17,15 +17,15 @@ const Search = ({
       {products.length === 0 ? (
         <>
           <h1 className="text-4xl text-customBlack mb-5">
-            No results found for {keyword}
+            No results found for &quot;{keyword}&quot;
           </h1>
           <p>Please try again with some different search terms.</p>
         </>
       ) : (
         <>
           <h1 className="text-center text-4xl">
-            Showing {startRange}-{endRange} search results for "{keyword}" out
-            of {count}
+            Showing {startRange}-{endRange} out of {count} search results for
+            &quot;{keyword}&quot;
           </h1>
           <hr className="mt-10 bg-black w-1/12 border-2 border-solid mx-auto" />
           <div className="flex items-center justify-center container mx-auto">
