@@ -32,7 +32,6 @@ const blog = ({
         title={`${title}`}
         titleTemplate="%s | Fishing Shirts Now"
         description={excerpt}
-        canonical={`https://fishingshirtsnow.com/blog/${slug}`}
         additionalLinkTags={[
           {
             property: "author",
@@ -104,6 +103,11 @@ const blog = ({
             <h2>Recent Posts</h2>
             <nav aria-label="Recent Posts">
               <ul>
+                <li>
+                  <Link href="/blog/delve-deep-into-the-pleasures-of-angling-with-the-remarkable-koofin-fishing-shirts">
+                    Koofin Fishing Shirts
+                  </Link>
+                </li>
                 <li>
                   <Link href="/blog/fishing-shirts-men">
                     Fishing Shirts For Men

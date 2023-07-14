@@ -20,7 +20,7 @@ const SearchBox = ({ toggleMobileMenu, isActive, id }) => {
       <label htmlFor="search" className="sr-only">
         Search
       </label>
-      <div className=" relative w-full">
+      <div className="relative w-full">
         <input
           type="text"
           id={id}

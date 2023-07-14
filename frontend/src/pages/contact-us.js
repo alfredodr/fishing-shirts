@@ -10,7 +10,6 @@ const contactUs = () => {
         title="Contact Us"
         titleTemplate="%s | Fishing Shirts Now"
         description="Best way to contact us. Quickly enter your information and any feedback or concern and will get back to you shortly."
-        canonical="https://fishingshirtsnow.com/contact-us"
         additionalMetaTags={[
           {
             property: "article:publisher",

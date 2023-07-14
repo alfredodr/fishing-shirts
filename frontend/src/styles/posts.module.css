@@ -3,7 +3,7 @@
 }
 
 .post h1 {
-  @apply my-5 text-blogH2Black sm:text-3xl md:text-5xl;
+  @apply my-5 text-blogH2Black sm:text-3xl md:text-5xl leading-10;
 }
 
 .post p:first-of-type {
@@ -23,7 +23,7 @@
 }
 
 .post h4 {
-  @apply my-5 font-bold text-xl leading-5;
+  @apply my-5 font-bold text-xl leading-normal;
 }
 
 .post hr {

@@ -15,7 +15,6 @@ export default function Home({ products, posts }) {
         title="Fishing Shirts Now - UV Protection - High Quality - Affordable Prices"
         titleTemplate="%s | Fishing Shirts Now"
         description="Fishing shirts at affordable prices, carefully selected for you. All sizes and textures in stock right now. We stand by the quality of our products."
-        canonical="https://fishingshirtsnow.com"
         additionalMetaTags={[
           {
             property: "article:publisher",

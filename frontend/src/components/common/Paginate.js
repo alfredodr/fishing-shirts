@@ -44,7 +44,7 @@ const Paginate = ({ pages, page, keyword = "", slug = "" }) => {
   return (
     <>
       {pages > 1 && (
-        <nav className="flex flex-wrap items-center bg-lightGray rounded-lg my-10">
+        <nav className="flex flex-wrap items-center  rounded-lg my-10">
           {/* Previous button */}
           {showPreviousButton && (
             <button

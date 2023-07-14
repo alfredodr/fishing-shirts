@@ -42,7 +42,6 @@ const Product = ({ products, categoryName, slug }) => {
         title={`${categoryName}`}
         titleTemplate="%s | Fishing Shirts Now"
         description={`Carefully selected collection of ${categoryName}`}
-        canonical={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/product-category/${slug}`}
         next={`${
           process.env.NEXT_PUBLIC_FRONTEND_URL
         }/product-category/${slug}?page=${pageNumber + 1}`}
@@ -51,15 +50,6 @@ const Product = ({ products, categoryName, slug }) => {
           title: `${categoryName} | Fishing Shirts Now`,
           description: `Carefully selected collection of ${categoryName}`,
           url: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/product-category/${slug}`,
-          images: [
-            {
-              url: "https://fsn-site.s3.amazonaws.com/home/ocean-1950583_1280.jpg",
-              width: 1280,
-              height: 853,
-              alt: "fisherman with fishing rod looking at the sea",
-              type: "image/jpeg",
-            },
-          ],
         }}
         twitter={{
           title: `${categoryName} | Fishing Shirts Now`,
@@ -106,6 +96,7 @@ const Product = ({ products, categoryName, slug }) => {
           <div className="my-10">
             <label className="font-medium opacity-75 mr-2">Sort by:</label>
             <select onChange={(e) => setSortBy(e.target.value)}>
+              <option value="">Please choose an option</option>
               <option value="name_asc">A-Z</option>
               <option value="name_desc">Z-A</option>
               <option value="price_asc">Price: Low to High</option>
@@ -114,7 +105,7 @@ const Product = ({ products, categoryName, slug }) => {
           </div>
           {/* Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8">
-            {/* Product */}
+            {/* Products */}
             {data?.products
               ?.filter((product) => {
                 return product.price >= minPrice && product.price <= maxPrice;

@@ -46,7 +46,7 @@ const FilterByPrice = ({
   return (
     <>
       {/* Filter */}
-      <h2 className="mb-5">Filter by price</h2>
+      <h2 className="my-5">Filter by price</h2>
       {/* Slider */}
       <div className="mb-4">
         <div className="slider relative h-1 rounded-md bg-gray-300">
@@ -80,10 +80,8 @@ const FilterByPrice = ({
           />
         </div>
       </div>
-      <div className="flex flex-row">
-        <span className="mr-2">Price: </span>
+      <div className="flex justify-between">
         <span>${minPrice}</span>
-        <span className="px-2">{"-"}</span>
         <span>${maxPrice}</span>
       </div>
     </>

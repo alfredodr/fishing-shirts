@@ -17,10 +17,11 @@ const Store = ({ products, categories }) => {
   const [sortBy, setSortBy] = useState("");
 
   const [data, setData] = useState(products);
-  const route = useRouter();
-  const { query } = route;
+  const router = useRouter();
+  const { query } = router;
   const keyword = query?.s || "";
   const pageNumber = query?.page || 1;
+  const { asPath } = router;
 
   useEffect(() => {
     async function fetchData() {
@@ -43,7 +44,6 @@ const Store = ({ products, categories }) => {
         title="Fishing Shirts Store - Popular Brands - Sun Protection - Lightweight"
         titleTemplate="%s | Fishing Shirts Now"
         description="Check our fishing shirts store with the best for all members of the family. Short sleeve and long sleeve high perfoming choices carefully selected for you."
-        canonical="https://fishingshirtsnow.com/store"
         next={`https://fishingshirtsnow.com/store?page=${pageNumber + 1}`}
         additionalMetaTags={[
           {
@@ -114,7 +114,11 @@ const Store = ({ products, categories }) => {
           </div>
         </div>
         <div>
-          <p>
+          <p
+            className={`${
+              asPath !== "/store" && asPath !== "/store?page=1" && "hidden"
+            }`}
+          >
             Welcome to our fishing shirts store where you will find a huge
             variety of elegant high performance options. Take a look around and
             you will find different fabric and styles, vivid graphics with high
@@ -133,7 +137,11 @@ const Store = ({ products, categories }) => {
             more valuable for you.
           </p>
           {/* Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8 mt-10">
+          <div
+            className={`grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8 mt-10 ${
+              asPath !== "/store" && asPath !== "/store?page=1" && "hidden"
+            }`}
+          >
             {/* Categories */}
             {categories?.map((category, index) => (
               <Categories key={index} category={category} />
@@ -142,6 +150,7 @@ const Store = ({ products, categories }) => {
           <div className="my-10">
             <label className="font-medium opacity-75 mr-2">Sort by:</label>
             <select onChange={(e) => setSortBy(e.target.value)}>
+              <option value="">Please choose an option</option>
               <option value="name_asc">A-Z</option>
               <option value="name_desc">Z-A</option>
               <option value="price_asc">Price: Low to High</option>

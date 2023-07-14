@@ -9,7 +9,6 @@ const termsAndConditions = () => {
         title="Terms &amp; Conditions"
         titleTemplate="%s | Fishing Shirts Now"
         description="Learn more about Fishing Shirts Now Terms and Conditions."
-        canonical="https://fishingshirtsnow.com/terms-conditions"
         additionalMetaTags={[
           {
             property: "article:publisher",

@@ -65,7 +65,7 @@ const Footer = () => {
                 Contact Us
               </Link>
               <Link
-                href="/fishingshirtsnow-com-sitemap"
+                href="/sitemap"
                 className="text-lg mt-3 hover:text-blogNavHoverBlue"
               >
                 Sitemap

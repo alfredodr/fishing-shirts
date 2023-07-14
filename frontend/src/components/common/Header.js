@@ -41,6 +41,7 @@ const Header = () => {
               alt="fishing shirts now logo"
               fill
               className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </Link>
           {/* Menu Items */}

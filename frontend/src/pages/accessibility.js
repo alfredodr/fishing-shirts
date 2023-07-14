@@ -9,7 +9,6 @@ const accessibility = () => {
         title="Accessibility"
         titleTemplate="%s | Fishing Shirts Now"
         description="Fishing Shirts Now Accessibility Disclosure Document. Find all the information about how we operate and make the site accessible to our users"
-        canonical="https://fishingshirtsnow.com/accessibility"
         additionalMetaTags={[
           {
             property: "article:publisher",
