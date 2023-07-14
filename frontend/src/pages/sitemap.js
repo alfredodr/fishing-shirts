@@ -27,7 +27,6 @@ const Sitemap = ({ products, posts }) => {
         title=" FishingShirtsNow.com Sitemap - Content Drilldown Map Of Our Website"
         titleTemplate="%s | Fishing Shirts Now"
         description="To enjoy fishing you should wear the appropriate outfit. This is what our website is all about. Check us out here:FishingShirtsNow.com Sitemap."
-        canonical="https://fishingshirtsnow.com/fishingshirtsnow-com-sitemap"
         additionalMetaTags={[
           {
             property: "article:publisher",

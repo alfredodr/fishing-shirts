@@ -39,7 +39,6 @@ const ProductDetail = ({ product }) => {
             title={`${product.name} - UV Protection - High Quality - Affordable Prices`}
             titleTemplate="%s | Fishing Shirts Now"
             description={product.description.slice(0, 2)}
-            canonical={`https://fishingshirtsnow.com/product/${product.slug}`}
             additionalLinkTags={[
               {
                 rel: "icon",
@@ -251,17 +250,24 @@ const ProductDetail = ({ product }) => {
                     {product.categories.length === 1
                       ? `Category: `
                       : `Categories: `}
-                    {product.categories
-                      .map((category) =>
-                        category._id
-                          .split("-")
-                          .map(
-                            (word) =>
-                              word.charAt(0).toUpperCase() + word.slice(1)
-                          )
-                          .join(" ")
-                      )
-                      .join(", ")}
+                    {product.categories.map((category) => {
+                      const name = category._id
+                        .split("-")
+                        .map(
+                          (word) => word.charAt(0).toUpperCase() + word.slice(1)
+                        )
+                        .join(" ");
+
+                      return (
+                        <Link
+                          key={category._id}
+                          href={`/product-category/${category._id}`}
+                          className="hover:text-blogNavHoverBlue"
+                        >
+                          {name}
+                        </Link>
+                      );
+                    })}
                   </p>
                 </div>
               </>

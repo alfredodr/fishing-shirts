@@ -8,7 +8,7 @@ const getProducts = asyncHandler(async (req, res) => {
   //pagination
   const pageSize = req.query.pageSize || 10;
   const page = Number(req.query.pageNumber) || 1;
-  const sortBy = req.query.sortBy || "name_asc";
+  const sortBy = req.query.sortBy || "";
 
   //search
   const keyword = req.query.keyword
@@ -25,7 +25,9 @@ const getProducts = asyncHandler(async (req, res) => {
 
   //sort
   const sortOptions = {};
-  if (sortBy === "price_asc") {
+  if (sortBy === "") {
+    null;
+  } else if (sortBy === "price_asc") {
     sortOptions.price = 1;
   } else if (sortBy === "price_desc") {
     sortOptions.price = -1;
@@ -42,8 +44,11 @@ const getProducts = asyncHandler(async (req, res) => {
 
   const pages = Math.ceil(count / pageSize);
 
+  let startRange = (page - 1) * pageSize + 1;
+  let endRange = Math.min(page * pageSize, count);
+
   if (products) {
-    res.json({ products, page, pages });
+    res.json({ products, page, pages, startRange, endRange, count });
   } else {
     res.status(404);
     throw new Error("Product not found");

@@ -11,7 +11,6 @@ const about = () => {
         title="About"
         titleTemplate="%s | Fishing Shirts Now"
         description="Whos is Fishing Shirts Now and how do we operate? Find the answer to this and many other question about us is here."
-        canonical="https://fishingshirtsnow.com/about"
         additionalMetaTags={[
           {
             property: "article:publisher",

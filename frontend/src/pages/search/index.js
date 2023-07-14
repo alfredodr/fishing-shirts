@@ -3,21 +3,30 @@ import axios from "axios";
 import Product from "@/components/product/Product";
 import Paginate from "@/components/common/Paginate";
 
-const Search = ({ products, pageNumber, pages, keyword }) => {
+const Search = ({
+  products,
+  pageNumber,
+  pages,
+  keyword,
+  startRange,
+  endRange,
+  count,
+}) => {
   return (
-    <section className="container mx-auto my-10 bg-gray-50 py-11 px-5">
+    <section className="container mx-auto my-20 bg-gray-50 py-11 px-5">
       {products.length === 0 ? (
         <>
-          <h2 className="text-4xl text-customBlack mb-5">
+          <h1 className="text-4xl text-customBlack mb-5">
             No results found for {keyword}
-          </h2>
+          </h1>
           <p>Please try again with some different search terms.</p>
         </>
       ) : (
         <>
-          <h2 className="text-center font-bold text-4xl">
-            Showing search results for {keyword}
-          </h2>
+          <h1 className="text-center text-4xl">
+            Showing {startRange}-{endRange} search results for "{keyword}" out
+            of {count}
+          </h1>
           <hr className="mt-10 bg-black w-1/12 border-2 border-solid mx-auto" />
           <div className="flex items-center justify-center container mx-auto">
             {/* Grid */}
@@ -48,9 +57,17 @@ export async function getServerSideProps(context) {
   const { data } = await axios.get(
     `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products?keyword=${keyword}&pageNumber=${pageNumber}`
   );
-  const { products, pages } = data;
+  const { products, pages, startRange, endRange, count } = data;
 
   return {
-    props: { products, pageNumber, pages, keyword },
+    props: {
+      products,
+      pageNumber,
+      pages,
+      keyword,
+      startRange,
+      endRange,
+      count,
+    },
   };
 }

@@ -14,7 +14,6 @@ const index = ({ posts }) => {
         title="Blog"
         titleTemplate="%s | Fishing Shirts Now"
         description="Stay up to date with the latest trends, recommendations and product reviews in our Fishing Shirts Now Blog."
-        canonical="https://fishingshirtsnow.com/blog"
         additionalMetaTags={[
           {
             property: "article:publisher",
