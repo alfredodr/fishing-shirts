@@ -11,7 +11,7 @@ export default product;
 export async function getStaticPaths() {
   const pageSize = 1000;
   const { data } = await axios.get(
-    `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products?pageSize=${pageSize}`
+    `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products/all?pageSize=${pageSize}`
   );
 
   const paths = data.products.map((product) => {
@@ -26,6 +26,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const { params } = context;
+
   const { data: product } = await axios.get(
     `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products/${params.slug}`
   );

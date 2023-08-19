@@ -23,7 +23,7 @@ const getCategoryById = asyncHandler(async (req, res) => {
   }
 });
 
-// @desc Get product by category
+// @desc Get available product by category
 // @route GET /api/categories/products/:name
 // @access Public
 const getProductByCategory = asyncHandler(async (req, res) => {

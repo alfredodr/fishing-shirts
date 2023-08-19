@@ -152,7 +152,7 @@ const Sitemap = ({ products, posts }) => {
           <ul className="flex flex-col list-disc ml-5">
             {data?.map((product, index) => (
               <React.Fragment key={index}>
-                <li className={`${product.price === 1 && "hidden"}`}>
+                <li>
                   <Link
                     href={`/product/${product.slug}`}
                     passHref
@@ -200,9 +200,12 @@ const Sitemap = ({ products, posts }) => {
 export default Sitemap;
 
 export async function getStaticProps() {
+  //Get all products
   const {
     data: { products },
-  } = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products`);
+  } = await axios.get(
+    `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products/all`
+  );
 
   // Get files from the posts dir
   const files = fs.readdirSync(path.join("src", "posts"));

@@ -148,13 +148,12 @@ const Store = ({ products, categories }) => {
             ))}
           </div>
           <div className="my-10">
-            <label className="font-medium opacity-75 mr-2">Sort by:</label>
             <select onChange={(e) => setSortBy(e.target.value)}>
-              <option value="">Please choose an option</option>
-              <option value="name_asc">A-Z</option>
-              <option value="name_desc">Z-A</option>
+              <option value="">Sort by:</option>
               <option value="price_asc">Price: Low to High</option>
               <option value="price_desc">Price: High to Low</option>
+              <option value="name_asc">Title: A-Z</option>
+              <option value="name_desc">Title: Z-A</option>
             </select>
           </div>
           {/* Grid */}
