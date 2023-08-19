@@ -1,5 +1,6 @@
 import express from "express";
 import {
+  getAllProducts,
   getProducts,
   getProductById,
   getTop30Products,
@@ -8,6 +9,8 @@ import {
 const router = express.Router();
 
 router.route("/").get(getProducts);
+
+router.route("/all").get(getAllProducts);
 
 router.route("/top").get(getTop30Products);
 

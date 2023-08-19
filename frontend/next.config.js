@@ -764,6 +764,38 @@ const nextConfig = {
         destination: "/sitemap",
         permanent: true,
       },
+      {
+        source: "/product-category/fishing-shirts-funny/page/2",
+        destination: "/product-category/fishing-shirts-funny?page=2",
+        permanent: true,
+      },
+      {
+        source:
+          "/crazy-dog-t-shirts-mens-part-time-hooker-tshirt-funny-outdoor-fishing-tee-for-guy",
+        destination:
+          "/product/crazy-dog-t-shirts-mens-part-time-hooker-tshirt-funny-outdoor-fishing-tee-for-guys",
+        permanent: true,
+      },
+      {
+        source:
+          "/jason-mathias-high-performance-fishing-shirt-sea-spirit-sailfish",
+        destination:
+          "/product/jason-mathias-high-performance-fishing-shirt-sea-spirit-sailfish",
+        permanent: true,
+      },
+      {
+        source:
+          "/piscifun-performance-upf50-long-sleeve-fishing-t-shirt-with-hoodie",
+        destination:
+          "/product/piscifun-performance-upf50-long-sleeve-fishing-t-shirt-with-hoodie",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/baleaf-mens-rain-jacket-waterproof-with-hooded-lightweight-packable-bike-pullover-running-raincoat-poncho-windbreaker",
+        destination: "/store",
+        permanent: true,
+      },
     ];
   },
 };

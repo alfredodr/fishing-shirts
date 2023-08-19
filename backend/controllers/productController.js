@@ -1,6 +1,26 @@
 import asyncHandler from "express-async-handler";
 import Product from "../models/productModel.js";
 
+// @desc Fetch all products
+// @route  GET /api/products/all
+// @access Public
+const getAllProducts = asyncHandler(async (req, res) => {
+  //pagination
+  const pageSize = req.query.pageSize || 10;
+  const page = Number(req.query.pageNumber) || 1;
+
+  const products = await Product.find()
+    .limit(pageSize)
+    .skip(pageSize * (page - 1));
+
+  if (products) {
+    res.json({ products });
+  } else {
+    res.status(404);
+    throw new Error("Product not found");
+  }
+});
+
 // @desc Fetch all available products
 // @route  GET /api/products
 // @access Public
@@ -83,4 +103,4 @@ const getTop30Products = asyncHandler(async (req, res) => {
   }
 });
 
-export { getProducts, getProductById, getTop30Products };
+export { getAllProducts, getProducts, getProductById, getTop30Products };
