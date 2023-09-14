@@ -9,7 +9,7 @@ const Banner = () => {
       {/* Banner Section */}
       <section
         id="home-banner"
-        className="relative w-screen h-screen flex items-center justify-center bg-paleBlack bg-opacity-20"
+        className="relative w-screen h-[calc(100vh-6rem)] flex items-center justify-center bg-paleBlack bg-opacity-20"
       >
         <div className="fixed top-0 left-0 bottom-0 right-0 -z-50 overflow-hidden">
           <Image
@@ -31,12 +31,12 @@ const Banner = () => {
             <p className="hidden mb-4 text-xl text-center text-white md:text-left md:block xl:max-w-lg">
               We help you find the best fishing shirts at affordable prices that
               are carefully selected for you. All sizes, colors, and textures in
-              stock right now. We stand by the quality of our eproducts.
+              stock right now. We stand by the quality of our products.
             </p>
-            <Link href="/store" passHref>
+            <Link href="/store/" passHref>
               {/* Button */}
               <button
-                className="w-48 p-3 px-6 pt-2 bg-white text-lg text-black font-bold hover:text-white hover:bg-transparent hover:border-white-700 border-2 flex items-center md:text-left"
+                className="w-48 p-3 px-6 pt-2 bg-white text-lg text-black font-bold hover:text-white hover:bg-transparent hover:border-white-700 border-2 flex items-center md:text-left rounded"
                 type="button"
               >
                 <FaTshirt className="mr-3" />

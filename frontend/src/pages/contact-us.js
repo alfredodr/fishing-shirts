@@ -13,7 +13,7 @@ const contactUs = () => {
         additionalMetaTags={[
           {
             property: "article:publisher",
-            content: "https://fishingshirtsnow.com/contact-us",
+            content: "https://fishingshirtsnow.com/contact-us/",
           },
           {
             property: "article:modified_time",
@@ -25,7 +25,7 @@ const contactUs = () => {
           title: "Contact Us - Fishing Shirts Now",
           description:
             "Best way to contact us. Quickly enter your information and any feedback or concern and will get back to you shortly.",
-          url: "https://fishingshirtsnow.com/contact-us",
+          url: "https://fishingshirtsnow.com/contact-us/",
           images: [
             {
               url: "https://fsn-site.s3.amazonaws.com/contact-us/bottle-message.jpg",

@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Variants from "./Variants";
 import Image from "next/image";
-import { NextSeo, ProductJsonLd } from "next-seo";
+import { NextSeo, ProductJsonLd, BreadcrumbJsonLd } from "next-seo";
 import Breadcrumb from "../common/Breadcrumb";
+import styles from "../../styles/product.module.css";
 
 const ProductDetail = ({ product }) => {
   const [mainImage, setMainImage] = useState(0);
@@ -26,71 +27,80 @@ const ProductDetail = ({ product }) => {
 
   return (
     <>
-      {product.price === 1 ? (
-        <NextSeo
-          noindex={true}
-          title={`${product.name} - UV Protection - High Quality - Affordable Prices`}
-          titleTemplate="%s | Fishing Shirts Now"
-          description={product.description.slice(0, 2)}
-        />
-      ) : (
-        <>
-          <NextSeo
-            title={`${product.name} - UV Protection - High Quality - Affordable Prices`}
-            titleTemplate="%s | Fishing Shirts Now"
-            description={product.description.slice(0, 2)}
-            additionalLinkTags={[
-              {
-                rel: "icon",
-                href: "/favicon.ico",
-              },
-            ]}
-            openGraph={{
-              type: "article",
-              article: {
-                publishedTime: `${product.createdAt}`,
-                modifiedTime: `${product.updatedAt}`,
-              },
-              title: `${product.name} - Sun Protective - Fishing Shirts Now`,
-              description: product.description.slice(0, 2),
-              url: `https://fishingshirtsnow.com/product/${product.slug}`,
-              images: [
-                {
-                  url: product.images[0].src,
-                  width: 500,
-                  height: 500,
-                  alt: `${product.name}`,
-                  type: "image/jpeg",
-                },
-              ],
-            }}
-            twitter={{
-              title: "Fishing Shirts Now",
-              description: "Fishing Shirts Now Home Page",
-            }}
-          />
-          <ProductJsonLd
-            productName={product.name}
-            images={[product.images[0].src]}
-            description={product.description}
-            brand={product.brand}
-            offers={[
-              {
-                id: `https://fishingshirtsnow.com/product/${product.slug}/#product`,
-                price: `${product.price}`,
-                priceCurrency: "USD",
-                availability: "https://schema.org/InStock",
-                url: `https://fishingshirtsnow.com/product/${product.slug}`,
-                seller: {
-                  type: "Organization",
-                  name: "Fishing Shirts Now",
-                  url: "https://fishingshirtsnow.com/",
-                },
-              },
-            ]}
-          />
-        </>
-      )}
+      <NextSeo
+        title={`${product.name} - UV Protection - High Quality - Affordable Prices`}
+        titleTemplate="%s | Fishing Shirts Now"
+        description={product.description.slice(0, 2)}
+        additionalLinkTags={[
+          {
+            rel: "icon",
+            href: "/favicon.ico",
+          },
+        ]}
+        openGraph={{
+          type: "article",
+          article: {
+            publishedTime: `${product.createdAt}`,
+            modifiedTime: `${product.updatedAt}`,
+          },
+          title: `${product.name} - Sun Protective - Fishing Shirts Now`,
+          description: product.description.slice(0, 2),
+          url: `https://fishingshirtsnow.com/product/${product.slug}/`,
+          images: [
+            {
+              url: product.images[0].src,
+              width: 500,
+              height: 500,
+              alt: `${product.name}`,
+              type: "image/jpeg",
+            },
+          ],
+        }}
+        twitter={{
+          title: "Fishing Shirts Now",
+          description: "Fishing Shirts Now Home Page",
+        }}
+      />
+      <ProductJsonLd
+        productName={product.name}
+        images={[product.images[0].src]}
+        description={product.description}
+        brand={product.brand}
+        offers={[
+          {
+            id: `https://fishingshirtsnow.com/product/${product.slug}/#product`,
+            price: `${product.price}`,
+            priceCurrency: "USD",
+            availability: "https://schema.org/InStock",
+            url: `https://fishingshirtsnow.com/product/${product.slug}/`,
+            seller: {
+              type: "Organization",
+              name: "Fishing Shirts Now",
+              url: "https://fishingshirtsnow.com/",
+            },
+          },
+        ]}
+      />
+      <BreadcrumbJsonLd
+        itemListElements={[
+          {
+            position: 1,
+            name: "Home",
+            item: "https://fishingshirtsnow.com/",
+          },
+          {
+            position: 2,
+            name: "Store",
+            item: "https://fishingshirtsnow.com/store/",
+          },
+          {
+            position: 3,
+            name: "Product",
+            item: `https://fishingshirtsnow.com/product/${product.slug}`,
+          },
+        ]}
+      />
+
       <section className="bg-lightGray my-10 px-5">
         <div className="relative flex flex- flex-col md:flex-row lg:flex-row container mx-auto">
           <div className="md:w-1/2">
@@ -128,7 +138,7 @@ const ProductDetail = ({ product }) => {
                   </svg>
                 </button>
               )}
-
+              {/* Main Product Image */}
               <div
                 className={`relative ${
                   zoomIn
@@ -142,9 +152,9 @@ const ProductDetail = ({ product }) => {
                   fill
                   priority
                   className="w-auto h-auto object-contain object-center"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
-
               {/* Next button */}
               {length > 1 && (
                 <button
@@ -217,6 +227,7 @@ const ProductDetail = ({ product }) => {
                     key={index}
                     image={image}
                     index={index}
+                    mainImage={mainImage}
                     setMainImage={setMainImage}
                   />
                 ))}
@@ -261,8 +272,8 @@ const ProductDetail = ({ product }) => {
                       return (
                         <Link
                           key={category._id}
-                          href={`/product-category/${category._id}`}
-                          className="hover:text-blogNavHoverBlue"
+                          href={`/product-category/${category._id}/`}
+                          className={`${styles.categories}`}
                         >
                           {name}
                         </Link>

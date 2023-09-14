@@ -8,7 +8,7 @@ function generateSiteMap(categories) {
         ?.map(({ slug, updatedAt, image }) => {
           return `
           <url>
-               <loc>https://fishingshirtsnow.com/product-category/${slug}</loc>
+               <loc>https://fishingshirtsnow.com/product-category/${slug}/</loc>
                <lastmod>${updatedAt}</lastmod>
                <image:image>
                    <image:loc>${image.src}</image:loc>

@@ -23,7 +23,7 @@ const Footer = () => {
               <p>
                 Read our{" "}
                 <strong>
-                  <Link href="/privacy-cookie-policy" className="text-lg mt-3">
+                  <Link href="/privacy-cookie-policy/" className="text-lg mt-3">
                     Privacy & Cookie Policy
                   </Link>
                 </strong>
@@ -35,37 +35,37 @@ const Footer = () => {
             <h2 className="text-2xl font-medium my-3">Quick Links</h2>
             <nav aria-label="Quick Links" className="flex flex-col">
               <Link
-                href="/privacy-cookie-policy"
+                href="/privacy-cookie-policy/"
                 className="text-lg mt-3 hover:text-blogNavHoverBlue"
               >
                 Privacy & Cookie Policy
               </Link>
               <Link
-                href="/terms-conditions"
+                href="/terms-conditions/"
                 className="text-lg mt-3 hover:text-blogNavHoverBlue"
               >
                 Terms & Conditions
               </Link>
               <Link
-                href="/accessibility"
+                href="/accessibility/"
                 className="text-lg mt-3 hover:text-blogNavHoverBlue"
               >
                 Accessibility
               </Link>
               <Link
-                href="/about"
+                href="/about/"
                 className="text-lg mt-3 hover:text-blogNavHoverBlue"
               >
                 About
               </Link>
               <Link
-                href="/contact-us"
+                href="/contact-us/"
                 className="text-lg mt-3 hover:text-blogNavHoverBlue"
               >
                 Contact Us
               </Link>
               <Link
-                href="/sitemap"
+                href="/sitemap/"
                 className="text-lg mt-3 hover:text-blogNavHoverBlue"
               >
                 Sitemap
@@ -79,7 +79,15 @@ const Footer = () => {
               <ul>
                 <li>
                   <Link
-                    href="/blog/fishing-shirts-men"
+                    href="/blog/delve-deep-into-the-pleasures-of-angling-with-the-remarkable-koofin-fishing-shirts"
+                    className="text-lg mt-3 hover:text-blogNavHoverBlue"
+                  >
+                    Delve Deep into the Pleasures of Angling...
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/blog/fishing-shirts-men/"
                     className="text-lg mt-3 hover:text-blogNavHoverBlue"
                   >
                     Fishing Shirts For Men
@@ -87,7 +95,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/blog/funny-fishing-shirts-that-put-a-smile-on-your-face"
+                    href="/blog/funny-fishing-shirts-that-put-a-smile-on-your-face/"
                     className="text-lg mt-3 hover:text-blogNavHoverBlue"
                   >
                     Funny Fishing Shirts To Keep You Happy And Positive
@@ -95,7 +103,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/blog/learn-all-about-fishing-shirts-to-pick-the-right-one-for-you"
+                    href="/blog/learn-all-about-fishing-shirts-to-pick-the-right-one-for-you/"
                     className="text-lg mt-3 hover:text-blogNavHoverBlue"
                   >
                     Best Fishing Shirts Carefully Reviewed Just For You
@@ -109,7 +117,7 @@ const Footer = () => {
             <h2 className="text-2xl font-medium my-3">Connect with us</h2>
             <div className="flex flex-row gap-4 text-slate-500">
               <Link
-                href="https://www.facebook.com/fishingshirtsnow"
+                href="https://www.facebook.com/fishingshirtsnow/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="fishing shirts now facebook page"

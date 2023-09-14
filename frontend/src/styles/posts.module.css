@@ -11,7 +11,7 @@
 }
 
 .post a[href] {
-  @apply hover:text-blogNavHoverBlue;
+  @apply cursor-pointer hover:text-blogNavHoverBlue;
 }
 
 .post h2 {

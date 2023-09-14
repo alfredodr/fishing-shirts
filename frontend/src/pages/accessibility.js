@@ -12,7 +12,7 @@ const accessibility = () => {
         additionalMetaTags={[
           {
             property: "article:publisher",
-            content: "https://fishingshirtsnow.com/accessibility",
+            content: "https://fishingshirtsnow.com/accessibility/",
           },
           {
             property: "article:modified_time",
@@ -113,7 +113,7 @@ const accessibility = () => {
           <p>
             If you wish to report an accessibility issue, have any questions or
             need assistance, please{" "}
-            <a href="/contact-us" target="_blank" rel="noopener">
+            <a href="/contact-us/" target="_blank" rel="noopener">
               contact fishingshirtsnow.com Customer Support here.
             </a>
           </p>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import axios from "axios";
 import fs from "fs";
@@ -6,20 +6,39 @@ import path from "path";
 import matter from "gray-matter";
 import styles from "../styles/posts.module.css";
 import { NextSeo, WebPageJsonLd } from "next-seo";
-import product from "./product/[slug]";
 
 const Sitemap = ({ products, posts }) => {
   const [data, setData] = useState(products);
   const [pageNumber, setpageNumber] = useState(1);
+  const [loading, setLoading] = useState(false);
 
-  const handleLoadMore = async () => {
-    setpageNumber(pageNumber + 1);
-    const { data: newData } = await axios.get(
-      `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products?pageNumber=${pageNumber}`
-    );
+  useEffect(() => {
+    async function fetchProducts() {
+      setLoading(true);
+      const { data: newData } = await axios.get(
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products?pageNumber=${pageNumber}`
+      );
+      setData((data) => [...data, ...newData?.products]);
+      setLoading(false);
+    }
 
-    setData((data) => [...data, ...newData?.products]);
-  };
+    fetchProducts();
+  }, [pageNumber]);
+
+  useEffect(() => {
+    function handleScroll() {
+      if (
+        window.innerHeight + window.scrollY >=
+          document.body.offsetHeight - 500 &&
+        !loading
+      ) {
+        setpageNumber((prevPage) => prevPage + 1);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [loading]);
 
   return (
     <>
@@ -30,8 +49,7 @@ const Sitemap = ({ products, posts }) => {
         additionalMetaTags={[
           {
             property: "article:publisher",
-            content:
-              "https://fishingshirtsnow.com/fishingshirtsnow-com-sitemap",
+            content: "https://fishingshirtsnow.com/sitemap/",
           },
           {
             property: "article:modified_time",
@@ -44,7 +62,7 @@ const Sitemap = ({ products, posts }) => {
             "FishingShirtsNow.com Sitemap - Content Drilldown Map Of Our Website",
           description:
             "To enjoy fishing you should wear the appropriate outfit. This is what our website is all about. Check us out here:FishingShirtsNow.com Sitemap.",
-          url: "https://fishingshirtsnow.com/fishingshirtsnow-com-sitemap",
+          url: "https://fishingshirtsnow.com/sitemap/",
           images: [
             {
               url: "https://fsn-site.s3.amazonaws.com/home/ocean-1950583_1280.jpg",
@@ -63,7 +81,7 @@ const Sitemap = ({ products, posts }) => {
       <WebPageJsonLd
         name="FishingShirtsNow.com Sitemap - Content Drilldown Map Of Our Website"
         description="To enjoy fishing you should wear the appropriate outfit. This is what our website is all about. Check us out here:FishingShirtsNow.com Sitemap."
-        id="https://fishingshirtsnow.com/fishingshirtsnow-com-sitemap/#corporation"
+        id="https://fishingshirtsnow.com/sitemap/#corporation"
         publisher="https://fishingshirtsnow.com/#organization"
       />
       <section
@@ -86,27 +104,22 @@ const Sitemap = ({ products, posts }) => {
           <h4 className="font-medium">Pages</h4>
           <ul className="flex flex-col list-disc ml-5">
             <li>
-              <Link href={`/accessibility`} passHref className="font-medium">
+              <Link href={`/accessibility/`} passHref className="font-medium">
                 Accessibility
               </Link>
             </li>
             <li>
               <Link
-                href={`/fishingshirtsnow-com-sitemap`}
+                href={`/terms-conditions/`}
                 passHref
                 className="font-medium"
               >
-                Sitemap
-              </Link>
-            </li>
-            <li>
-              <Link href={`/terms-conditions`} passHref className="font-medium">
                 Terms & Conditions
               </Link>
             </li>
             <li>
               <Link
-                href={`/privacy-cookie-policy`}
+                href={`/privacy-cookie-policy/`}
                 passHref
                 className="font-medium"
               >
@@ -114,31 +127,27 @@ const Sitemap = ({ products, posts }) => {
               </Link>
             </li>
             <li>
-              <Link href={`/blog`} passHref className="font-medium">
+              <Link href={`/blog/`} passHref className="font-medium">
                 Blog
               </Link>
             </li>
             <li>
-              <Link href={`/contact-us`} passHref className="font-medium">
+              <Link href={`/contact-us/`} passHref className="font-medium">
                 Contact Us
               </Link>
             </li>
             <li>
-              <Link href={`/about`} passHref className="font-medium">
+              <Link href={`/about/`} passHref className="font-medium">
                 About
               </Link>
             </li>
             <li>
-              <Link
-                href={`/fishingshirtsnow-com-sitemap`}
-                passHref
-                className="font-medium"
-              >
+              <Link href={`/sitemap/`} passHref className="font-medium">
                 Sitemap
               </Link>
             </li>
             <li>
-              <Link href={`/store`} passHref className="font-medium">
+              <Link href={`/store/`} passHref className="font-medium">
                 Store
               </Link>
             </li>
@@ -154,7 +163,7 @@ const Sitemap = ({ products, posts }) => {
               <React.Fragment key={index}>
                 <li>
                   <Link
-                    href={`/product/${product.slug}`}
+                    href={`/product/${product.slug}/`}
                     passHref
                     className="font-medium"
                   >
@@ -164,7 +173,8 @@ const Sitemap = ({ products, posts }) => {
               </React.Fragment>
             ))}
           </ul>
-          <button
+          {loading && <div>Loading...</div>}
+          {/* <button
             onClick={handleLoadMore}
             aria-label="load more products"
             type="button"
@@ -174,14 +184,14 @@ const Sitemap = ({ products, posts }) => {
             px-4 rounded hover:bg-lightBlue hover:text-white my-5 font-medium focus-visible:none`}
           >
             Load more
-          </button>
+          </button> */}
           <h4 className="font-medium">Posts</h4>
           <ul className="flex flex-col list-disc ml-5">
             {posts.map((post, index) => (
               <React.Fragment key={index}>
                 <li>
                   <Link
-                    href={`/blog/${post.slug}`}
+                    href={`/blog/${post.slug}/`}
                     passHref
                     className="font-medium"
                   >

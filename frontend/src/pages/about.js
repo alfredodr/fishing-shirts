@@ -14,7 +14,7 @@ const about = () => {
         additionalMetaTags={[
           {
             property: "article:publisher",
-            content: "https://fishingshirtsnow.com/about",
+            content: "https://fishingshirtsnow.com/about/",
           },
           {
             property: "article:modified_time",
@@ -26,7 +26,7 @@ const about = () => {
           title: "About - Fishing Shirts Now",
           description:
             "Who is Fishing Shirts Now and how do we operate? Find the answer to this and many other question about us is here.",
-          url: "https://fishingshirtsnow.com/about",
+          url: "https://fishingshirtsnow.com/about/",
           images: [
             {
               url: "https://fsn-site.s3.amazonaws.com/about/fisherman-591699_1280.jpg",

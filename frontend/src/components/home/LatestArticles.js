@@ -17,6 +17,7 @@ const latestArticles = ({ posts }) => {
                 <Link href={`/blog/${post.slug}/`} passHref>
                   <div className="overflow-hidden">
                     <Image
+                      unoptimized
                       className="img-fluid"
                       src={post.frontmatter.cover_image}
                       alt={post.frontmatter.title}
@@ -36,7 +37,7 @@ const latestArticles = ({ posts }) => {
                   </p>
                   <Link
                     href={`/blog/${post.slug}/`}
-                    className="text-lg mt-3"
+                    className="text-lg mt-3 hover:text-blogNavHoverBlue"
                     passHref
                   >
                     Read More »

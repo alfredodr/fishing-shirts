@@ -1,0 +1,7 @@
+.categories {
+  @apply hover:text-blogNavHoverBlue;
+}
+
+.categories:not(:last-child)::after {
+  content: ", ";
+}

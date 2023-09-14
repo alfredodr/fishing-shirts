@@ -12,7 +12,7 @@ const termsAndConditions = () => {
         additionalMetaTags={[
           {
             property: "article:publisher",
-            content: "https://fishingshirtsnow.com/terms-conditions",
+            content: "https://fishingshirtsnow.com/terms-conditions/",
           },
           {
             property: "article:modified_time",
@@ -22,7 +22,7 @@ const termsAndConditions = () => {
         openGraph={{
           type: "article",
           title: "Terms &amp; Conditions - Fishing Shirts Now",
-          url: "https://fishingshirtsnow.com/terms-conditions",
+          url: "https://fishingshirtsnow.com/terms-conditions/",
           description:
             "Learn more about Fishing Shirts Now Terms and Conditions.",
           images: [
