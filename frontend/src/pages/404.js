@@ -41,7 +41,7 @@ const notFound = () => {
             <GiFishingPole size={40} color="fffafa" />
           </div>
           <p className="text-slate-50 mt-5">
-            The page you're trying to fish out seems to have slipped off our
+            The page you are trying to fish out seems to have slipped off our
             hook!
           </p>
           <Link href="/store/" passHref>
