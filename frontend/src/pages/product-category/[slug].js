@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useRouter } from "next/router";
-import { NextSeo, WebPageJsonLd } from "next-seo";
+import { NextSeo, WebPageJsonLd, BreadcrumbJsonLd } from "next-seo";
 import StoreProducts from "@/components/product/StoreProducts";
 import FilterByPrice from "@/components/product/FilterByPrice";
 import Paginate from "@/components/common/Paginate";
@@ -49,7 +49,7 @@ const Product = ({ products, categoryName, slug }) => {
           type: "article",
           title: `${categoryName} | Fishing Shirts Now`,
           description: `Carefully selected collection of ${categoryName}`,
-          url: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/product-category/${slug}`,
+          url: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/product-category/${slug}/`,
         }}
         twitter={{
           title: `${categoryName} | Fishing Shirts Now`,
@@ -61,6 +61,25 @@ const Product = ({ products, categoryName, slug }) => {
         description={`Carefully selected collection of ${categoryName}`}
         id={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/product-category/${slug}/#corporation`}
         publisher="https://fishingshirtsnow.com/#organization"
+      />
+      <BreadcrumbJsonLd
+        itemListElements={[
+          {
+            position: 1,
+            name: "Home",
+            item: "https://fishingshirtsnow.com/",
+          },
+          {
+            position: 2,
+            name: "Product Categories",
+            item: "https://fishingshirtsnow.com/store/",
+          },
+          {
+            position: 2,
+            name: `${categoryName}`,
+            item: `https://fishingshirtsnow.com/store/product-category/${slug}/`,
+          },
+        ]}
       />
       <section className="flex flex-col-reverse md:flex-row lg:flex-row justify-center container mx-auto relative px-5">
         <div className="absolute top-5 md:left-14">

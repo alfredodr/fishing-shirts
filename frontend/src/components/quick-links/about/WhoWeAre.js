@@ -37,6 +37,7 @@ const WhoWeAre = () => {
           {/* Image*/}
           <div className="relative min-h-[500px] overflow-hidden">
             <Image
+              unoptimized
               src="https://fsn-site.s3.amazonaws.com/about/computer-fishing-rod.png"
               alt="computer and fishing rod"
               fill

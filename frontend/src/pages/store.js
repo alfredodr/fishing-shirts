@@ -4,7 +4,7 @@ import Categories from "@/components/product/Categories";
 import StoreProducts from "@/components/product/StoreProducts";
 import FilterByPrice from "@/components/product/FilterByPrice";
 import Paginate from "@/components/common/Paginate";
-import { NextSeo, WebPageJsonLd } from "next-seo";
+import { NextSeo, WebPageJsonLd, BreadcrumbJsonLd } from "next-seo";
 import { useRouter } from "next/router";
 import Breadcrumb from "@/components/common/Breadcrumb";
 import Link from "next/link";
@@ -48,7 +48,7 @@ const Store = ({ products, categories }) => {
         additionalMetaTags={[
           {
             property: "article:publisher",
-            content: "https://fishingshirtsnow.com/store",
+            content: "https://fishingshirtsnow.com/store/",
           },
           {
             property: "article:modified_time",
@@ -61,7 +61,7 @@ const Store = ({ products, categories }) => {
             "Fishing Shirts Store - Popular Brands - Sun Protection - Lightweight",
           description:
             "Check our fishing shirts store with the best for all members of the family. Short sleeve and long sleeve high perfoming choices carefully selected for you.",
-          url: "https://fishingshirtsnow.com/store",
+          url: "https://fishingshirtsnow.com/store/",
           images: [
             {
               url: "https://fsn-site.s3.amazonaws.com/home/ocean-1950583_1280.jpg",
@@ -76,6 +76,20 @@ const Store = ({ products, categories }) => {
           title: "Fishing Shirts Now",
           description: "Fishing Shirts Now Store Page",
         }}
+      />
+      <BreadcrumbJsonLd
+        itemListElements={[
+          {
+            position: 1,
+            name: "Home",
+            item: "https://fishingshirtsnow.com/",
+          },
+          {
+            position: 2,
+            name: "Store",
+            item: "https://fishingshirtsnow.com/store/",
+          },
+        ]}
       />
       <WebPageJsonLd
         name="Fishing Shirts Store - Popular Brands - Sun Protection - Lightweight"
@@ -138,7 +152,7 @@ const Store = ({ products, categories }) => {
           </p>
           {/* Grid */}
           <div
-            className={`grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8 mt-10 ${
+            className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-10 ${
               asPath !== "/store" && asPath !== "/store?page=1" && "hidden"
             }`}
           >

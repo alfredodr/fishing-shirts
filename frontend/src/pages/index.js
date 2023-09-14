@@ -18,7 +18,7 @@ export default function Home({ products, posts }) {
         additionalMetaTags={[
           {
             property: "article:publisher",
-            content: "https://fishingshirtsnow.com",
+            content: "https://fishingshirtsnow.com/",
           },
           {
             property: "article:modified_time",
@@ -30,7 +30,7 @@ export default function Home({ products, posts }) {
           title:
             "Fishing Shirts Now - UV Protection - High Quality - Affordable Prices",
           description: "Fishing Shirts Now Home Page",
-          url: "https://fishingshirtsnow.com",
+          url: "https://fishingshirtsnow.com/",
           images: [
             {
               url: "https://fsn-site.s3.amazonaws.com/home/ocean-1950583_1280.jpg",

@@ -16,7 +16,7 @@ const Categories = ({ category }) => {
             33vw"
             className="object-cover"
           />
-          <span className="absolute left-4 right-4 bottom-4 text-center text- z-50 bg-white bg-opacity-80">
+          <span className="absolute left-4 right-4 bottom-4 text-center z-50 bg-white bg-opacity-80">
             <p>{category?.name.toUpperCase()}</p>
             <mark className="bg-transparent opacity-50 block">
               {category?.count} PRODUCTS

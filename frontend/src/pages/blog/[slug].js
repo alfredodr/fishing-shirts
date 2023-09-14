@@ -10,7 +10,7 @@ import ProductsByCategory from "@/components/product/ProductsByCategory";
 import GetProduct from "@/components/product/GetProduct";
 import styles from "../../styles/posts.module.css";
 import Link from "next/link";
-import { NextSeo, ArticleJsonLd } from "next-seo";
+import { NextSeo, ArticleJsonLd, BreadcrumbJsonLd } from "next-seo";
 import Breadcrumb from "@/components/common/Breadcrumb";
 
 //Components used in my blog
@@ -47,7 +47,7 @@ const blog = ({
           },
           title: `${title} - Fishing Shirts Now`,
           description: excerpt,
-          url: `https://fishingshirtsnow.com/blog/${slug}`,
+          url: `https://fishingshirtsnow.com/blog/${slug}/`,
           images: [
             {
               url: cover_image,
@@ -65,13 +65,32 @@ const blog = ({
       />
       <ArticleJsonLd
         type="Article"
-        url={`https://fishingshirtsnow.com/blog/${slug}`}
+        url={`https://fishingshirtsnow.com/blog/${slug}/`}
         title={`${title} - Fishing Shirts Now`}
         images={[cover_image]}
         datePublished={published_time}
         dateModified={modified_time}
         authorName="Alfredo Dominguez"
         description={excerpt}
+      />
+      <BreadcrumbJsonLd
+        itemListElements={[
+          {
+            position: 1,
+            name: "Home",
+            item: "https://fishingshirtsnow.com/",
+          },
+          {
+            position: 2,
+            name: "Blog",
+            item: "https://fishingshirtsnow.com/blog/",
+          },
+          {
+            position: 3,
+            name: `${title}`,
+            item: `https://fishingshirtsnow.com/blog/${slug}/`,
+          },
+        ]}
       />
       <section
         className={`flex flex-col md:flex-row lg:flex-row items-center md:items-start justify-center container mx-auto my-10 relative`}
@@ -104,22 +123,22 @@ const blog = ({
             <nav aria-label="Recent Posts">
               <ul>
                 <li>
-                  <Link href="/blog/delve-deep-into-the-pleasures-of-angling-with-the-remarkable-koofin-fishing-shirts">
+                  <Link href="/blog/delve-deep-into-the-pleasures-of-angling-with-the-remarkable-koofin-fishing-shirts/">
                     Koofin Fishing Shirts
                   </Link>
                 </li>
                 <li>
-                  <Link href="/blog/fishing-shirts-men">
+                  <Link href="/blog/fishing-shirts-men/">
                     Fishing Shirts For Men
                   </Link>
                 </li>
                 <li>
-                  <Link href="/blog/funny-fishing-shirts-that-put-a-smile-on-your-face">
+                  <Link href="/blog/funny-fishing-shirts-that-put-a-smile-on-your-face/">
                     Funny Fishing Shirts To Keep You Happy And Positive
                   </Link>
                 </li>
                 <li>
-                  <Link href="/blog/learn-all-about-fishing-shirts-to-pick-the-right-one-for-you">
+                  <Link href="/blog/learn-all-about-fishing-shirts-to-pick-the-right-one-for-you/">
                     Best Fishing Shirts Carefully Reviewed Just For You
                   </Link>
                 </li>

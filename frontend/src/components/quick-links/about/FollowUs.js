@@ -10,6 +10,7 @@ const FollowUs = () => {
     <section className="relative md:w-full h-[600px] flex items-center justify-center bg-paleBlack bg-opacity-20 ">
       <div className="absolute top-0 left-0 bottom-0 right-0 -z-50 overflow-hidden">
         <Image
+          unoptimized
           src="https://fsn-site.s3.amazonaws.com/about/fisherman-river.jpg"
           alt="Fisherman in the river"
           fill
@@ -26,7 +27,7 @@ const FollowUs = () => {
         {/* Connect with us */}
         <div className="flex flex-row gap-4 text-slate-500">
           <Link
-            href="https://www.facebook.com/fishingshirtsnow"
+            href="https://www.facebook.com/fishingshirtsnow/"
             target="_blank"
             rel="noopener noreferrer"
           >

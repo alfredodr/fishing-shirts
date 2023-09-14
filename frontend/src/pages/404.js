@@ -1,6 +1,8 @@
 import React from "react";
+import Image from "next/image";
 import { NextSeo, WebPageJsonLd } from "next-seo";
-import SearchBox from "@/components/common/SearchBox";
+import Link from "next/link";
+import { GiFishingPole } from "react-icons/gi";
 
 const notFound = () => {
   return (
@@ -22,16 +24,34 @@ const notFound = () => {
         id="https://fishingshirtsnow.com/404/#corporation"
         publisher="https://fishingshirtsnow.com/#organization"
       />
-      <section className="container mx-auto my-10 px-5 bg-white">
-        <div className="w-11/12 space-y-10 py-10">
-          <h1 className="text-customBlack text-5xl px-10">
-            This page doesn&apos;t seem to exist.
-          </h1>
-          <p className="text-2xl font-bold text-customBlack px-10">
-            It looks like the link pointing here was faulty. Maybe try
-            searching?
+      <section className="container mx-auto my-10 px-5 w-screen h-[calc(100vh-11rem)] flex items-center justify-center bg-opacity-20">
+        <div className="fixed top-0 left-0 bottom-0 right-0 -z-50 overflow-hidden">
+          <Image
+            unoptimized
+            src="https://fsn-site.s3.amazonaws.com/404/lake-3113868_1280.jpg"
+            alt="Fisherman holding fishing rod"
+            fill
+            priority
+            className="object-cover brightness-75"
+          />
+        </div>
+        <div className="w-11/12 px-10">
+          <div className="container flex flex-row">
+            <h1 className="text-slate-50 text-5xl mr-2">Off the Hook!</h1>
+            <GiFishingPole size={40} color="fffafa" />
+          </div>
+          <p className="text-slate-50 mt-5">
+            The page you're trying to fish out seems to have slipped off our
+            hook!
           </p>
-          <SearchBox id="search 404" />
+          <Link href="/store/" passHref>
+            <button
+              className=" mt-5 w-56 p-3 px-6 pt-2 bg-white text-black font-bold rounded hover:text-slate-50 hover:bg-transparent hover:border-white-700 hover:border-white-700 border-2"
+              type="button"
+            >
+              Continue shopping
+            </button>
+          </Link>
         </div>
       </section>
     </>

@@ -1,10 +1,15 @@
 import React from "react";
 import Image from "next/image";
 
-const Variants = ({ image, index, setMainImage }) => {
+const Variants = ({ image, index, mainImage, setMainImage }) => {
   return (
-    <div className="relative w-[120px] h-[120px] flex opacity-60 hover:opacity-100">
+    <div
+      className={`relative w-[120px] h-[120px] flex hover:opacity-100 ${
+        mainImage === index ? "opacity-100" : "opacity-60"
+      }`}
+    >
       <Image
+        unoptimized
         src={image.src}
         alt={image.alt}
         fill

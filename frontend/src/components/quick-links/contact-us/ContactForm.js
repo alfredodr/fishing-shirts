@@ -130,7 +130,7 @@ const ContactForm = () => {
               <div className="flex flex-row space-x-10">
                 <button
                   type="submit"
-                  className="flex flex-row items-center justify-center space-x-2 mt-5 bg-lightBlue px-5 py-2"
+                  className="flex flex-row items-center justify-center space-x-2 mt-5 bg-lightBlue px-5 py-2 rounded"
                 >
                   {/* <MdDoneOutline /> */}
                   <span className="text-white">Submit</span>

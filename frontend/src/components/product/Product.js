@@ -6,9 +6,10 @@ const Product = ({ product }) => {
   if (product?.price !== 1) {
     return (
       <div className={`p-2 flex flex-col`}>
-        <Link href={`/product/${product.slug}`} passHref>
+        <Link href={`/product/${product.slug}/`} passHref>
           <div className="relative w-full h-60 transform transition duration-500">
             <Image
+              unoptimized
               src={product.images[0].src}
               alt={product.name}
               fill
@@ -19,7 +20,7 @@ const Product = ({ product }) => {
             />
           </div>
         </Link>
-        <Link href={`/product/${product.slug}`} passHref className="mt-8">
+        <Link href={`/product/${product.slug}/`} passHref className="mt-8">
           <p className="text-sm font-bold">{product.name}</p>
         </Link>
 
