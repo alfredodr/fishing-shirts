@@ -8,6 +8,7 @@ import { NextSeo, WebPageJsonLd, BreadcrumbJsonLd } from "next-seo";
 import { useRouter } from "next/router";
 import Breadcrumb from "@/components/common/Breadcrumb";
 import Link from "next/link";
+import Image from "next/image";
 
 const Store = ({ products, categories }) => {
   const initialMin = 0;
@@ -22,6 +23,8 @@ const Store = ({ products, categories }) => {
   const keyword = query?.s || "";
   const pageNumber = query?.page || 1;
   const { asPath } = router;
+
+  console.log("asPath:", asPath);
 
   useEffect(() => {
     async function fetchData() {
@@ -99,10 +102,12 @@ const Store = ({ products, categories }) => {
       />
       <section
         id="features"
-        className="flex flex-col-reverse md:flex-row lg:flex-row justify-center container mx-auto my-10 relative px-4"
+        className="flex flex-col-reverse md:flex-row lg:flex-row justify-center container mx-auto relative px-5"
       >
-        <div className="md:border md:border-r-1 md:border-l-transparent md:border-t-transparent md:border-b-transparent md:border-opacity-25 md:border-textLightGray md:pr-14 md:mr-14">
+        <div className="absolute top-5 md:left-5">
           <Breadcrumb />
+        </div>
+        <div className="mt-10 md:border md:border-r-1 md:border-l-transparent md:border-t-transparent md:border-b-transparent md:border-opacity-25 md:border-textLightGray md:pr-14 md:mr-14">
           <FilterByPrice
             min={0}
             max={200}
@@ -115,24 +120,27 @@ const Store = ({ products, categories }) => {
             setMinPrice={setMinPrice}
             setMaxPrice={setMaxPrice}
           />
-          <div className="container mx-auto mt-5">
+          <div className="container mx-auto mt-5 ">
             <h2>SPONSOR:</h2>
-            <iframe
-              src="https://rcm-na.amazon-adsystem.com/e/cm?o=1&p=14&l=ez&f=ifr&linkID=10630a4648facad5e2cb15e825f69694&t=fishing-shirts-now00-20&tracking_id=fishing-shirts-now00-20"
-              width="160"
-              height="600"
-              border="0"
-              rel="nofollow"
-              title="sponsor"
-            ></iframe>
+            <Link
+              target="_blank"
+              href="https://www.amazon.com/hz/audible/mlp/membership/plus?ref_=assoc_tag_ph_1524216631897&_encoding=UTF8&camp=1789&creative=9325&linkCode=pf4&tag=fishing-shirts-now00-20&linkId=16ea12bbe62d15f91c859914e2df3dff"
+            >
+              <Image
+                src={
+                  "https://images-na.ssl-images-amazon.com/images/G/01/Audible/en_US/images/creative/Minerva-Plus-Associate-300x250-V08.png"
+                }
+                alt={"Try Audible Plus"}
+                priority
+                width={300}
+                height={250}
+                style={{ objectFit: "contain" }}
+              />
+            </Link>
           </div>
         </div>
-        <div>
-          <p
-            className={`${
-              asPath !== "/store" && asPath !== "/store?page=1" && "hidden"
-            }`}
-          >
+        <div className="md:w-3/4 mt-16">
+          <p className="mt-5">
             Welcome to our fishing shirts store where you will find a huge
             variety of elegant high performance options. Take a look around and
             you will find different fabric and styles, vivid graphics with high
@@ -151,11 +159,7 @@ const Store = ({ products, categories }) => {
             more valuable for you.
           </p>
           {/* Grid */}
-          <div
-            className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-10 ${
-              asPath !== "/store" && asPath !== "/store?page=1" && "hidden"
-            }`}
-          >
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-10">
             {/* Categories */}
             {categories?.map((category, index) => (
               <Categories key={index} category={category} />
