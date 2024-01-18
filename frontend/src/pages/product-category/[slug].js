@@ -44,6 +44,7 @@ const Product = ({ products, categoryName, slug }) => {
         title={`${categoryName}`}
         titleTemplate="%s | Fishing Shirts Now"
         description={`Carefully selected collection of ${categoryName}`}
+        canonical={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/product-category/${slug}/`}
         next={`${
           process.env.NEXT_PUBLIC_FRONTEND_URL
         }/product-category/${slug}?page=${pageNumber + 1}`}
