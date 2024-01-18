@@ -22,9 +22,6 @@ const Store = ({ products, categories }) => {
   const { query } = router;
   const keyword = query?.s || "";
   const pageNumber = query?.page || 1;
-  const { asPath } = router;
-
-  console.log("asPath:", asPath);
 
   useEffect(() => {
     async function fetchData() {
@@ -47,6 +44,7 @@ const Store = ({ products, categories }) => {
         title="Fishing Shirts Store - Popular Brands - Sun Protection - Lightweight"
         titleTemplate="%s | Fishing Shirts Now"
         description="Check our fishing shirts store with the best for all members of the family. Short sleeve and long sleeve high perfoming choices carefully selected for you."
+        canonical={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/store/`}
         next={`https://fishingshirtsnow.com/store?page=${pageNumber + 1}`}
         additionalMetaTags={[
           {

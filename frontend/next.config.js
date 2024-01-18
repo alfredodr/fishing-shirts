@@ -721,12 +721,6 @@ const nextConfig = {
       },
       {
         source:
-          "/product/baleaf-womens-upf-50-sun-protection-hooded-shirt-long-sleeve-athletic-quick-dry-tops/",
-        destination: "/store/",
-        permanent: true,
-      },
-      {
-        source:
           "/piscifun-performance-upf50-long-sleeve-fishing-t-shirt-with-hoodie",
         destination:
           "/product/piscifun-performance-upf50-long-sleeve-fishing-t-shirt-with-hoodie/",
