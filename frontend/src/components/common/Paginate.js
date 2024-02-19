@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 const Paginate = ({ pages, page, keyword = "", slug = "" }) => {
   const [startPage, setStartPage] = useState(1);
@@ -44,14 +45,22 @@ const Paginate = ({ pages, page, keyword = "", slug = "" }) => {
   return (
     <>
       {pages > 1 && (
-        <nav className="flex flex-wrap items-center  rounded-lg my-10">
+        <nav className="flex flex-wrap items-center rounded-lg my-10">
           {/* Previous button */}
-          {showPreviousButton && (
+          {
             <button
               onClick={handlePrevious}
               aria-label="previous page"
-              className="h-12 border-2 border-lightGray bg-white 
-               px-4 rounded-l-lg hover:bg-blogNavHoverBlue hover:text-white"
+              className={cn(
+                "h-12 border border-lightBlack px-4 rounded-l-lg ",
+                {
+                  "text-gray-400": !showPreviousButton,
+                  "hover:bg-blogNavHoverBlue hover:text-white":
+                    showPreviousButton,
+                }
+              )}
+              aria-disabled={showPreviousButton ? "false" : "true"}
+              disabled={showPreviousButton ? false : true}
             >
               <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20">
                 <path
@@ -61,7 +70,7 @@ const Paginate = ({ pages, page, keyword = "", slug = "" }) => {
                 ></path>
               </svg>
             </button>
-          )}
+          }
           {/* Pages */}
           {[...Array(pages).keys()]
             .slice(startPage - 1, endPage)
@@ -73,20 +82,29 @@ const Paginate = ({ pages, page, keyword = "", slug = "" }) => {
                     ? `${slug}/search?s=${keyword}&page=${x + 1}`
                     : `${slug}?page=${x + 1}`
                 }
-                className={`h-12 border-2 border-lightGray w-12 flex items-center justify-center  ${
-                  x + 1 == page ? "bg-blogNavHoverBlue text-white" : "bg-white"
+                className={`h-12 w-12 flex items-center justify-center border border-lightBlack border-l-transparent border-r-transparent ${
+                  x + 1 == page
+                    ? "bg-blogNavHoverBlue text-white"
+                    : "bg-lightGray"
                 } hover:bg-blogNavHoverBlue hover:text-white`}
               >
                 {x + 1}
               </Link>
             ))}
           {/* Next button */}
-          {showNextButton && (
+          {
             <button
               onClick={handleNext}
               aria-label="next page"
-              className="h-12 border-2 border-lightGray bg-white 
-            px-4 hover:bg-blogNavHoverBlue hover:text-white"
+              className={cn(
+                "h-12 border border-lightBlack px-4 rounded-r-lg  ",
+                {
+                  "text-gray-400": !showNextButton,
+                  "hover:bg-blogNavHoverBlue hover:text-white": showNextButton,
+                }
+              )}
+              aria-disabled={showNextButton ? "false" : "true"}
+              disabled={showNextButton ? false : true}
             >
               <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20">
                 <path
@@ -96,7 +114,7 @@ const Paginate = ({ pages, page, keyword = "", slug = "" }) => {
                 ></path>
               </svg>
             </button>
-          )}
+          }
         </nav>
       )}
     </>

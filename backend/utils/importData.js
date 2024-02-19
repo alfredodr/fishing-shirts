@@ -169,6 +169,7 @@ const cleanData = () => {
       const product = products?.find((product) => product?.asin === asin);
       return product ? product?.categories : "";
     };
+
     return {
       _id: asin,
       name: title,

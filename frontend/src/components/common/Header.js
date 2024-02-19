@@ -59,7 +59,7 @@ const Header = () => {
               Home
             </Link>
             <Link
-              href="/store/"
+              href="/store"
               className={`${
                 router.pathname === "/" ||
                 router.pathname === "/about" ||
@@ -71,7 +71,7 @@ const Header = () => {
               Store
             </Link>
             <Link
-              href="/blog/"
+              href="/blog"
               className={`${
                 router.pathname === "/" ||
                 router.pathname === "/about" ||
@@ -116,7 +116,7 @@ const Header = () => {
             </li>
             <li className="py-3">
               <Link
-                href="/store/"
+                href="/store"
                 className="block mx-10 px-4 py-2 hover:bg-gray-200"
                 onClick={toggleMobileMenu}
               >
@@ -125,7 +125,7 @@ const Header = () => {
             </li>
             <li className="py-3">
               <Link
-                href="/blog/"
+                href="/blog"
                 className="block mx-10 px-4 py-2 hover:bg-gray-200"
                 onClick={toggleMobileMenu}
               >

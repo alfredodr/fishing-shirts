@@ -56,7 +56,7 @@ const index = ({ posts }) => {
           {posts.map((post, index) => (
             <React.Fragment key={index}>
               <div>
-                <Link href={`/blog/${post.slug}/`} passHref>
+                <Link href={`/blog/${post.slug}`} passHref>
                   <div className="overflow-hidden">
                     <Image
                       className="img-fluid"
@@ -70,7 +70,7 @@ const index = ({ posts }) => {
                   </div>
                 </Link>
                 <div className="p-5 flex flex-col">
-                  <Link href={`/blog/${post.slug}/`} passHref>
+                  <Link href={`/blog/${post.slug}`} passHref>
                     <h4 className="text-2xl md:text-3xl font-medium mt-3">
                       {post.frontmatter.title}
                     </h4>
@@ -79,7 +79,7 @@ const index = ({ posts }) => {
                     {post.frontmatter.excerpt}
                   </p>
                   <Link
-                    href={`/blog/${post.slug}/`}
+                    href={`/blog/${post.slug}`}
                     className="text-lg mt-3"
                     passHref
                   >

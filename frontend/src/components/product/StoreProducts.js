@@ -4,39 +4,40 @@ import Image from "next/image";
 
 const StoreProducts = ({ product }) => {
   return (
-    <div className="flex flex-col mb-5">
-      <Link href={`/product/${product.slug}/`} passHref>
-        <div className="relative w-full h-60">
+    <Link href={`/product/${product?.slug}`}>
+      <div className="flex flex-col mb-5 text-center">
+        <div className="relative w-full h-80 bg-lightGray">
           <Image
-            unoptimized
-            src={product.images[0].src}
-            alt={product.name}
+            src={product?.images[0].src}
+            alt={product?.name}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="object-contain"
+            className="object-contain mix-blend-multiply"
           />
         </div>
-      </Link>
-      <Link
-        href={`/product/${product.slug}/`}
-        passHref
-        className="text-lg font-medium mt-8"
-      >
-        <p className="text-sm font-medium">{product.name}</p>
-      </Link>
-      <span className="mt-2 text-slate-500 text-sm">{product.category}</span>
-      <span className="mt-2 text-sm">
-        {product.categories[0]._id
-          .split("-")
-          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-          .join(" ")}
-      </span>
-      {product.price === 1 ? (
-        <p className="mt-2 font-bold text-red-700">Currently unavailable</p>
-      ) : (
-        <span className="mt-2 font-bold">${product.price}</span>
-      )}
-    </div>
+
+        <span className="text-sm  font-semibold mt-8">{product?.brand}</span>
+
+        <span className="text-sm  font-medium mt-5">{product?.name}</span>
+
+        <span className="mt-2 text-slate-500 text-sm ">
+          {product?.category}
+        </span>
+        <span className="mt-2 text-sm">
+          {product?.categories[0]._id
+            .split("-")
+            .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(" ")}
+        </span>
+        {product?.price === 1 ? (
+          <span className="mt-2 font-medium text-red-700 ">
+            Currently unavailable
+          </span>
+        ) : (
+          <span className="mt-2 font-semibold ">${product?.price}</span>
+        )}
+      </div>
+    </Link>
   );
 };
 

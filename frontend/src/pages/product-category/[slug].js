@@ -2,65 +2,80 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useRouter } from "next/router";
 import { NextSeo, WebPageJsonLd, BreadcrumbJsonLd } from "next-seo";
+import MobileProductFilter from "@/components/product/MobileProductFilter";
 import StoreProducts from "@/components/product/StoreProducts";
-import FilterByPrice from "@/components/product/FilterByPrice";
 import Paginate from "@/components/common/Paginate";
 import Breadcrumb from "@/components/common/Breadcrumb";
-import Link from "next/link";
-import Image from "next/image";
+import FilterByCategory from "@/components/product/FilterByCategory";
+import FilterByBrand from "@/components/product/FilterByBrand";
+import FilterByPrice from "@/components/product/FilterByPrice";
 
-const Product = ({ products, categoryName, slug }) => {
-  const initialMin = 0;
-  const initialMax = 200;
-  const [minPrice, setMinPrice] = useState(initialMin);
-  const [maxPrice, setMaxPrice] = useState(initialMax);
-  const [sortBy, setSortBy] = useState("");
+const Product = ({ products, categories, categoryName, slug }) => {
+  const [minPrice, setMinPrice] = useState("");
+  const [maxPrice, setMaxPrice] = useState("");
+  const [min, setMin] = useState(0);
+  const [max, setMax] = useState(1000);
+  const [sortBy, setSortBy] = useState("name_asc");
+  const [checkedBrands, setCheckedBrands] = useState([]);
 
-  const route = useRouter();
-  const { query } = route;
+  const [data, setData] = useState(products ? products : {});
+
+  const router = useRouter();
+  const { asPath, query } = router;
   const keyword = query?.s || "";
   const pageNumber = query?.page || 1;
-  const [data, setData] = useState(products);
+
+  //Unique Brands
+  const brands = data?.uniqueBrands;
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const { data } = await axios.get(
-          `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/categories/products/${slug}?pageNumber=${pageNumber}&sortBy=${sortBy}`
+        const { data: allProducts } = await axios.get(
+          `${
+            process.env.NEXT_PUBLIC_BACKEND_URL
+          }/api/categories/products/${slug}?keyword=${keyword}&pageNumber=${pageNumber}&sortBy=${sortBy}&brands=${checkedBrands.join(
+            ","
+          )}&min=${min}&max=${max}`
         );
 
-        setData(data);
+        setData(allProducts);
       } catch (error) {
         console.error(error);
       }
     }
 
     fetchData();
-  }, [slug, pageNumber, sortBy]);
+  }, [slug, keyword, pageNumber, sortBy, checkedBrands, min, max]);
 
   return (
     <>
       <NextSeo
-        title={`${categoryName}`}
+        title={`${categoryName} ${
+          data?.pages > 1 ? `- Page ${pageNumber} of ${data?.pages}` : ``
+        }`}
         titleTemplate="%s | Fishing Shirts Now"
         description={`Carefully selected collection of ${categoryName}`}
-        canonical={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/product-category/${slug}/`}
-        next={`${
-          process.env.NEXT_PUBLIC_FRONTEND_URL
-        }/product-category/${slug}?page=${pageNumber + 1}`}
+        canonical={`${process.env.NEXT_PUBLIC_FRONTEND_URL}${asPath}`}
         openGraph={{
           type: "article",
-          title: `${categoryName} | Fishing Shirts Now`,
+          title: `${categoryName} ${
+            data?.pages > 1 ? `- Page ${pageNumber} of ${data?.pages}` : ``
+          }`,
           description: `Carefully selected collection of ${categoryName}`,
-          url: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/product-category/${slug}/`,
+          url: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/product-category/${slug}`,
         }}
         twitter={{
-          title: `${categoryName} | Fishing Shirts Now`,
+          title: `${categoryName} ${
+            data?.pages > 1 ? `- Page ${pageNumber} of ${data?.pages}` : ``
+          }`,
           description: `Fishing Shirts Now products by category ${categoryName}`,
         }}
       />
       <WebPageJsonLd
-        name={`${categoryName} | Fishing Shirts Now`}
+        name={`${categoryName} ${
+          data?.pages > 1 ? `- Page ${pageNumber} of ${data?.pages}` : ``
+        }`}
         description={`Carefully selected collection of ${categoryName}`}
         id={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/product-category/${slug}/#corporation`}
         publisher="https://fishingshirtsnow.com/#organization"
@@ -80,80 +95,105 @@ const Product = ({ products, categoryName, slug }) => {
           {
             position: 2,
             name: `${categoryName}`,
-            item: `https://fishingshirtsnow.com/store/product-category/${slug}/`,
+            item: `https://fishingshirtsnow.com/store/product-category/${slug}`,
           },
         ]}
       />
-      <section className="flex flex-col-reverse md:flex-row lg:flex-row justify-center container mx-auto relative px-5">
-        <div className="absolute top-5 md:left-5">
+      <section className="px-5 md:px-0 relative container mx-auto">
+        <div className="mt-5">
           <Breadcrumb />
         </div>
-        <div className="mt-10 md:border md:border-r-1 md:border-l-transparent md:border-t-transparent md:border-b-transparent md:border-opacity-25 md:border-textLightGray md:pr-14 md:mr-14">
-          <FilterByPrice
-            min={0}
-            max={200}
-            step={1}
-            initialMin={initialMin}
-            initialMax={initialMax}
-            priceCap={10}
+        <div className="block md:hidden">
+          <MobileProductFilter
+            categories={categories}
+            brands={brands}
+            checkedBrands={checkedBrands}
+            setCheckedBrands={setCheckedBrands}
+            count={data?.count}
+            router={router}
+            asPath={asPath}
             minPrice={minPrice}
             maxPrice={maxPrice}
+            setMin={setMin}
+            setMax={setMax}
             setMinPrice={setMinPrice}
             setMaxPrice={setMaxPrice}
           />
-          <div className="container mx-auto mt-5 ">
-            <h2>SPONSOR:</h2>
-            <Link
-              target="_blank"
-              href="https://www.amazon.com/hz/audible/mlp/membership/plus?ref_=assoc_tag_ph_1524216631897&_encoding=UTF8&camp=1789&creative=9325&linkCode=pf4&tag=fishing-shirts-now00-20&linkId=16ea12bbe62d15f91c859914e2df3dff"
-            >
-              <Image
-                src={
-                  "https://images-na.ssl-images-amazon.com/images/G/01/Audible/en_US/images/creative/Minerva-Plus-Associate-300x250-V08.png"
-                }
-                alt={"Try Audible Plus"}
-                priority
-                width={300}
-                height={250}
-                style={{ objectFit: "contain" }}
-              />
-            </Link>
-          </div>
         </div>
-        <div className="md:w-3/4 mt-16">
-          <h1 className="text-5xl text-customBlack">{categoryName}</h1>
-          <div className="my-10">
-            <select onChange={(e) => setSortBy(e.target.value)}>
-              <option value="">Sort by:</option>
-              <option value="price_asc">Price: Low to High</option>
-              <option value="price_desc">Price: High to Low</option>
-              <option value="name_asc">Title: A-Z</option>
-              <option value="name_desc">Title: Z-A</option>
-            </select>
+        <div className="flex flex-col-reverse md:flex-row lg:flex-row ">
+          <aside className="mt-3 pr-5 md:border md:border-l-transparent md:border-t-transparent md:border-b-transparent md:border-opacity-25 md:border-textLightGray hidden md:block">
+            <FilterByCategory categories={categories} />
+
+            <FilterByBrand
+              brands={brands}
+              checkedBrands={checkedBrands}
+              setCheckedBrands={setCheckedBrands}
+              count={data?.count}
+              router={router}
+              asPath={asPath}
+            />
+
+            <FilterByPrice
+              minPrice={minPrice}
+              maxPrice={maxPrice}
+              setMin={setMin}
+              setMax={setMax}
+              setMinPrice={setMinPrice}
+              setMaxPrice={setMaxPrice}
+              router={router}
+              asPath={asPath}
+            />
+          </aside>
+          <div className="md:ml-5 mt-0 md:mt-16">
+            <h1 className="text-2xl md:text-5xl text-customBlack">
+              {categoryName}
+            </h1>
+
+            {data?.count !== 0 ? (
+              <div className="flex items-center justify-between">
+                <span>{data?.count} Products</span>
+                <div className="my-5 flex flex-row">
+                  <label htmlFor="sort">Sort by:</label>
+                  <select
+                    id="sort"
+                    onChange={(e) => setSortBy(e.target.value)}
+                    className="bg-lightGray cursor-pointer border rounded-md p-1 text-base"
+                  >
+                    <option value="price_asc">Price: Low to High</option>
+                    <option value="price_desc">Price: High to Low</option>
+                    <option value="name_asc">Title: A-Z</option>
+                    <option value="name_desc">Title: Z-A</option>
+                  </select>
+                </div>
+              </div>
+            ) : (
+              <div className="mt-10">No products found.</div>
+            )}
+
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8">
+              {/* Products for current cateogry*/}
+              {data?.products
+                ?.filter((product) => {
+                  return product?.price >= min && product?.price <= max;
+                })
+                .map((product, index) => {
+                  return (
+                    <StoreProducts
+                      key={index}
+                      product={product}
+                      keyword={keyword ? keyword : ""}
+                    />
+                  );
+                })}
+            </div>
+
+            <Paginate
+              page={data?.page}
+              pages={data?.pages}
+              slug={slug}
+              keyword={keyword ? keyword : ""}
+            />
           </div>
-          {/* Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8">
-            {/* Products */}
-            {data?.products
-              ?.filter((product) => {
-                return product.price >= minPrice && product.price <= maxPrice;
-              })
-              .map((product, index) => {
-                return (
-                  <StoreProducts
-                    key={index}
-                    product={product}
-                    keyword={keyword ? keyword : ""}
-                  />
-                );
-              })}
-          </div>
-          <Paginate
-            page={data?.page}
-            pages={data?.pages}
-            slug={slug}
-            keyword={keyword ? keyword : ""}
-          />
         </div>
       </section>
     </>
@@ -173,7 +213,7 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 }
 
@@ -189,7 +229,11 @@ export async function getStaticProps(context) {
     `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/categories/products/${slug}`
   );
 
+  const { data: categories } = await axios.get(
+    `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/categories`
+  );
+
   return {
-    props: { products, categoryName, slug },
+    props: { products, categories, categoryName, slug },
   };
 }

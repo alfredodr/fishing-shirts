@@ -14,13 +14,13 @@ export async function getStaticPaths() {
     `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products/all?pageSize=${pageSize}`
   );
 
-  const paths = data.products.map((product) => {
+  const paths = data?.products?.map((product) => {
     return { params: { slug: product.slug } };
   });
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 }
 
