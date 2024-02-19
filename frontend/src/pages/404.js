@@ -44,7 +44,7 @@ const notFound = () => {
             The page you are trying to fish out seems to have slipped off our
             hook!
           </p>
-          <Link href="/store/" passHref>
+          <Link href="/store" passHref>
             <button
               className=" mt-5 w-56 p-3 px-6 pt-2 bg-white text-black font-bold rounded hover:text-slate-50 hover:bg-transparent hover:border-white-700 hover:border-white-700 border-2"
               type="button"

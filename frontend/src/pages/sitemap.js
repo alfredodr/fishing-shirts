@@ -104,22 +104,18 @@ const Sitemap = ({ products, posts }) => {
           <h4 className="font-medium">Pages</h4>
           <ul className="flex flex-col list-disc ml-5">
             <li>
-              <Link href={`/accessibility/`} passHref className="font-medium">
+              <Link href={`/accessibility`} passHref className="font-medium">
                 Accessibility
               </Link>
             </li>
             <li>
-              <Link
-                href={`/terms-conditions/`}
-                passHref
-                className="font-medium"
-              >
+              <Link href={`/terms-conditions`} passHref className="font-medium">
                 Terms & Conditions
               </Link>
             </li>
             <li>
               <Link
-                href={`/privacy-cookie-policy/`}
+                href={`/privacy-cookie-policy`}
                 passHref
                 className="font-medium"
               >
@@ -127,27 +123,27 @@ const Sitemap = ({ products, posts }) => {
               </Link>
             </li>
             <li>
-              <Link href={`/blog/`} passHref className="font-medium">
+              <Link href={`/blog`} passHref className="font-medium">
                 Blog
               </Link>
             </li>
             <li>
-              <Link href={`/contact-us/`} passHref className="font-medium">
+              <Link href={`/contact-us`} passHref className="font-medium">
                 Contact Us
               </Link>
             </li>
             <li>
-              <Link href={`/about/`} passHref className="font-medium">
+              <Link href={`/about`} passHref className="font-medium">
                 About
               </Link>
             </li>
             <li>
-              <Link href={`/sitemap/`} passHref className="font-medium">
+              <Link href={`/sitemap`} passHref className="font-medium">
                 Sitemap
               </Link>
             </li>
             <li>
-              <Link href={`/store/`} passHref className="font-medium">
+              <Link href={`/store`} passHref className="font-medium">
                 Store
               </Link>
             </li>
@@ -163,7 +159,7 @@ const Sitemap = ({ products, posts }) => {
               <React.Fragment key={index}>
                 <li>
                   <Link
-                    href={`/product/${product.slug}/`}
+                    href={`/product/${product.slug}`}
                     passHref
                     className="font-medium"
                   >
@@ -191,7 +187,7 @@ const Sitemap = ({ products, posts }) => {
               <React.Fragment key={index}>
                 <li>
                   <Link
-                    href={`/blog/${post.slug}/`}
+                    href={`/blog/${post.slug}`}
                     passHref
                     className="font-medium"
                   >

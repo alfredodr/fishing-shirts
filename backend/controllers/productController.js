@@ -6,7 +6,7 @@ import Product from "../models/productModel.js";
 // @access Public
 const getAllProducts = asyncHandler(async (req, res) => {
   //pagination
-  const pageSize = req.query.pageSize || 10;
+  const pageSize = req.query.pageSize || 25;
   const page = Number(req.query.pageNumber) || 1;
 
   const products = await Product.find()
@@ -26,9 +26,9 @@ const getAllProducts = asyncHandler(async (req, res) => {
 // @access Public
 const getProducts = asyncHandler(async (req, res) => {
   //pagination
-  const pageSize = req.query.pageSize || 10;
+  const pageSize = req.query.pageSize || 25;
   const page = Number(req.query.pageNumber) || 1;
-  const sortBy = req.query.sortBy || "";
+  const sortBy = req.query.sortBy || "name_asc";
 
   //search
   const keyword = req.query.keyword
@@ -40,8 +40,32 @@ const getProducts = asyncHandler(async (req, res) => {
       }
     : {};
 
-  //count
-  const count = await Product.countDocuments({ ...keyword, price: { $ne: 1 } });
+  // Price range
+  const minPrice = req.query.min ? Number(req.query.min) : 0;
+  const maxPrice = req.query.max ? Number(req.query.max) : 1000;
+
+  //brands filter
+  const { brands } = req.query; // Expecting a comma-separated list of brands
+  let brandFilter = {};
+  if (brands) {
+    const brandArray = brands
+      .split(",")
+      .map((brand) => new RegExp(brand.trim(), "i")); // Case-insensitive regex
+    brandFilter.brand = { $in: brandArray };
+  }
+
+  // Fetch unique brand names
+  const uniqueBrands = await Product.distinct("brand", {
+    ...keyword,
+    price: { $gte: minPrice, $lte: maxPrice, $ne: 1 },
+  });
+
+  //count total products matching filters excluding pagination
+  let count = await Product.countDocuments({
+    ...keyword,
+    ...brandFilter,
+    price: { $gte: minPrice, $lte: maxPrice, $ne: 1 },
+  });
 
   //sort
   const sortOptions = {};
@@ -57,18 +81,33 @@ const getProducts = asyncHandler(async (req, res) => {
     sortOptions.name = -1;
   }
 
-  const products = await Product.find({ ...keyword, price: { $ne: 1 } })
+  // Get products with pagination
+  const products = await Product.find({
+    ...keyword,
+    ...brandFilter,
+    price: { $gte: minPrice, $lte: maxPrice, $ne: 1 },
+  })
     .limit(pageSize)
     .skip(pageSize * (page - 1))
     .sort(sortOptions);
 
+  // Calculate total pages
   const pages = Math.ceil(count / pageSize);
 
+  // Calculate start and end range for current page
   let startRange = (page - 1) * pageSize + 1;
   let endRange = Math.min(page * pageSize, count);
 
   if (products) {
-    res.json({ products, page, pages, startRange, endRange, count });
+    res.json({
+      products,
+      uniqueBrands,
+      page,
+      pages,
+      startRange,
+      endRange,
+      count,
+    });
   } else {
     res.status(404);
     throw new Error("Product not found");
@@ -89,7 +128,7 @@ const getProductById = asyncHandler(async (req, res) => {
   }
 });
 
-// @desc Get top products
+// @desc Get top 30 products
 // @route GET /api/products/top
 // @access Public
 const getTop30Products = asyncHandler(async (req, res) => {

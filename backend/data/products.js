@@ -60,16 +60,6 @@ const products = [
     ],
   },
   {
-    asin: "B07RQVMGK5",
-    slug: "performance-fishing-hoodie-with-face-mask-hooded-sunblock-shirt-sun-shield-long-sleeve-shirt-upf-50-dry-fit-quick-dry",
-    categories: [
-      { _id: "fishing-shirts-face-mask" },
-      { _id: "fishing-shirts-hoodie" },
-      { _id: "fishing-shirts-koofin" },
-      { _id: "fishing-shirts-long-sleeve" },
-    ],
-  },
-  {
     asin: "B07R4Y48V6",
     slug: "koofin-fishing-hooded-shirt",
     categories: [
@@ -154,15 +144,6 @@ const products = [
     ],
   },
   {
-    asin: "B07Q1G3486",
-    slug: "baleaf-mens-upf-50-sun-protection-hoodie-long-sleeve-performance-hiking-fishing-t-shirt",
-    categories: [
-      { _id: "fishing-shirts-for-him" },
-      { _id: "fishing-shirts-long-sleeve" },
-      { _id: "fishing-shirts-hoodie" },
-    ],
-  },
-  {
     asin: "B07CNWT88T",
     slug: "mens-cant-work-today-my-arm-is-in-a-cast-t-shirt-funny-fishing-graphic-top-guys",
     categories: [
@@ -232,6 +213,7 @@ const products = [
     slug: "pike-fishing-american-usa-flag-camouflage-musky-graphic-camo-t-shirt",
     categories: [
       { _id: "fishing-shirts-american-flag" },
+      { _id: "fishing-shirts-camo" },
       { _id: "fishing-shirts-short-sleeve" },
     ],
   },
@@ -312,6 +294,7 @@ const products = [
     asin: "B08C54LL7S",
     slug: "bassdash-womens-upf-50-performance-hoodie-long-sleeve-uv-fishing-hiking-shirt",
     categories: [
+      { _id: "fishing-shirts-bassdash" },
       { _id: "fishing-shirts-for-her" },
       { _id: "fishing-shirts-long-sleeve" },
     ],
@@ -353,24 +336,12 @@ const products = [
     ],
   },
   {
-    asin: "B00GD22JNA",
-    slug: "oneill-wetsuits",
-    categories: [{ _id: "fishing-shirts-long-sleeve" }],
-  },
-  {
     asin: "B08971X6KM",
     slug: "bassdash-mens-upf-50-Sun-protection-fishing-shirt-short-sleeve-uv-t-shirt",
     categories: [
+      { _id: "fishing-shirts-bassdash" },
       { _id: "fishing-shirts-short-sleeve" },
       { _id: "fishing-shirts-for-him" },
-    ],
-  },
-  {
-    asin: "B082CC7GSH",
-    slug: "pretchic-mens-upf-50-uv-sun-protection-performance-long-sleeve-outdoor-t-shirt",
-    categories: [
-      { _id: "fishing-shirts-for-him" },
-      { _id: "fishing-shirts-pretchic" },
     ],
   },
   {
@@ -391,12 +362,14 @@ const products = [
       { _id: "fishing-shirts-hoodie" },
       { _id: "fishing-shirts-huk" },
       { _id: "fishing-shirts-long-sleeve" },
+      { _id: "fishing-shirts-camo" },
     ],
   },
   {
     asin: "B08XTRHPBW",
     slug: "huk-mens-icon-x-camo-long-sleeve-performance-fishing-shirt-with-30-upf-sun-protection",
     categories: [
+      { _id: "fishing-shirts-camo" },
       { _id: "fishing-shirts-for-him" },
       { _id: "fishing-shirts-huk" },
       { _id: "fishing-shirts-long-sleeve" },
@@ -406,6 +379,7 @@ const products = [
     asin: "B0BVFRBHGL",
     slug: "bassdash-mens-long-sleeve-fishing-shirt-upf50",
     categories: [
+      { _id: "fishing-shirts-bassdash" },
       { _id: "fishing-shirts-long-sleeve" },
       { _id: "fishing-shirts-for-him" },
     ],
@@ -489,6 +463,7 @@ const products = [
     categories: [
       { _id: "fishing-shirts-embroidery" },
       { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
     ],
   },
   {
@@ -512,6 +487,7 @@ const products = [
     asin: "B07MHJWMLM",
     slug: "kryptek-aura-camo-shirt-quick-dry-fabric-for-fishing-swimming-upf-30-uv-sun-protection-k-ore-collection",
     categories: [
+      { _id: "fishing-shirts-camo" },
       { _id: "fishing-shirts-for-him" },
       { _id: "fishing-shirts-long-sleeve" },
     ],
@@ -527,7 +503,11 @@ const products = [
   {
     asin: "B07ZZ4BJK2",
     slug: "bassdash-womens-upf-50-sun-protection-long-sleeve-performance",
-    categories: [{ _id: "fishing-shirts-hoodie" }],
+    categories: [
+      { _id: "fishing-shirts-bassdash" },
+      { _id: "fishing-shirts-hoodie" },
+      { _id: "fishing-shirts-for-her" },
+    ],
   },
   {
     asin: "B088823NZT",
@@ -563,6 +543,7 @@ const products = [
     asin: "B07MDY4GK1",
     slug: "kryptek-zephyr-camo-lightweight-hoodie-quick-dry-fabric-for-fishing-swimming-upf-30-uv-sun-protection-k-ore-collection",
     categories: [
+      { _id: "fishing-shirts-camo" },
       { _id: "fishing-shirts-for-him" },
       { _id: "fishing-shirts-hoodie" },
       { _id: "fishing-shirts-long-sleeve" },
@@ -716,6 +697,7 @@ const products = [
     asin: "B0BKL4BNK2",
     slug: "fisheal-mens-performance-fishing-hoodie-shirt-upf-50-camo-long-sleeve-thumbholes-with-mesh-face-mask",
     categories: [
+      { _id: "fishing-shirts-camo" },
       { _id: "fishing-shirts-hoodie" },
       { _id: "fishing-shirts-long-sleeve" },
       { _id: "fishing-shirts-face-mask" },
@@ -726,6 +708,7 @@ const products = [
     asin: "B0BN4NMQ34",
     slug: "simms-mens-stone-cold-shirt-upf-30-quick-dry-long-sleeve-shirt-helps-you-stay-cool-anti-odor-technology-fishing-shirt-for-men",
     categories: [
+      { _id: "fishing-shirts-camo" },
       { _id: "fishing-shirts-for-him" },
       { _id: "fishing-shirts-long-sleeve" },
       { _id: "fishing-shirts-simms" },
@@ -735,11 +718,6 @@ const products = [
     asin: "B08CMCV2NP",
     slug: "fish-skinz-womens-performance-fishing-shirt-upf-50-protection-octopus-white",
     categories: [{ _id: "fishing-shirts-for-her" }],
-  },
-  {
-    asin: "B01MTUPFXA",
-    slug: "bigfish-skelefish-bass-upf50-long-sleeve-performance-fishing-shirt",
-    categories: [{ _id: "fishing-shirts-long-sleeve" }],
   },
   {
     asin: "B074MYLY2Q",
@@ -762,6 +740,7 @@ const products = [
       { _id: "fishing-shirts-face-mask" },
       { _id: "fishing-shirts-for-him" },
       { _id: "fishing-shirts-long-sleeve" },
+      { _id: "fishing-shirts-bassdash" },
     ],
   },
   {
@@ -818,9 +797,13 @@ const products = [
     ],
   },
   {
-    asin: "B082TY2BY2",
-    slug: "womens-upf-50-uv-sun-protection-hoodie-shirt-dry-fit-spf-long-sleeve-outdoor-performance-fishing-hiking-shirts",
-    categories: [{ _id: "fishing-shirts-for-her" }],
+    asin: "B09HXCR6C9",
+    slug: "bassdash-mens-hunting-sun-shirt-upf-50-lightweight-camo-tactical-tees",
+    categories: [
+      { _id: "fishing-shirts-bassdash" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
   },
   {
     asin: "B07NQDTCSX",
@@ -882,14 +865,16 @@ const products = [
     categories: [
       { _id: "fishing-shirts-embroidery" },
       { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
     ],
   },
   {
     asin: "B018GWQ4Y4",
-    slug: "bamboo-cay-mens-short-sleeve-peekaboo-palm-casual-embroidered-woven-shirt",
+    slug: "bamboo-cay-mens-short-sleeve-peekaboo-palm-embroidered-woven-shirt",
     categories: [
       { _id: "fishing-shirts-embroidery" },
       { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
     ],
   },
   {
@@ -1012,6 +997,7 @@ const products = [
     asin: "B07RM1CR6F",
     slug: "bassdash-upf-50-mens-uv-sun-protection-long-sleeve-performance-fishing-hoodie-hooded-shirts",
     categories: [
+      { _id: "fishing-shirts-bassdash" },
       { _id: "fishing-shirts-hoodie" },
       { _id: "fishing-shirts-for-him" },
       { _id: "fishing-shirts-long-sleeve" },
@@ -1100,6 +1086,7 @@ const products = [
     asin: "B00TIM0W7W",
     slug: "kryptek-hyperion-long-sleeve-camo-shirt-lightweight-birds-eye-mesh-for-hunting-fishing-shirt-k-ore-collection",
     categories: [
+      { _id: "fishing-shirts-camo" },
       { _id: "fishing-shirts-for-him" },
       { _id: "fishing-shirts-long-sleeve" },
     ],
@@ -1146,6 +1133,7 @@ const products = [
     categories: [
       { _id: "fishing-shirts-embroidery" },
       { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
     ],
   },
   {
@@ -1316,13 +1304,16 @@ const products = [
     categories: [
       { _id: "fishing-shirts-baleaf" },
       { _id: "fishing-shirts-for-her" },
-      { _id: "fishing-shirts-baleaf" },
     ],
   },
   {
-    asin: "B07RJM3RCQ",
+    asin: "B0B5CKBT42",
     slug: "pretchic-mens-upf-50-uv-sun-protection-quick-dry-outdoor-t-shirt",
-    categories: [{ _id: "fishing-shirts-pretchic" }],
+    categories: [
+      { _id: "fishing-shirts-pretchic" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
   },
   {
     asin: "B0B5CRCQT5",
@@ -1338,27 +1329,11 @@ const products = [
     ],
   },
   {
-    asin: "B082YHGRCQ",
-    slug: "simms-lager-script-t-shirt-for-men-short-sleeve-crewneck-slim-fit-shirt-cotton-athletic-tee-shirt",
-    categories: [
-      { _id: "fishing-shirts-simms" },
-      { _id: "fishing-shirts-for-him" },
-      { _id: "fishing-shirts-short-sleeve" },
-    ],
-  },
-  {
-    asin: "B09L8MX1XC",
-    slug: "simms-solarflex-upf-50-crewneck-shirt-long-sleeve-sun-protection-fishing-shirt-for-men-lightweight-breathable-moisture-wicking-anti-odor",
-    categories: [
-      { _id: "fishing-shirts-simms" },
-      { _id: "fishing-shirts-long-sleeve" },
-    ],
-  },
-  {
     asin: "B06XHCSZB9",
     slug: "bamboo-cay-mens-short-sleeve-catch-of-the-day-casual-embroidered-woven-shirt",
     categories: [
       { _id: "fishing-shirts-embroidery" },
+      { _id: "fishing-shirts-for-him" },
       { _id: "fishing-shirts-short-sleeve" },
     ],
   },
@@ -1371,9 +1346,14 @@ const products = [
     ],
   },
   {
-    asin: "B07BHV25YD",
-    slug: "pelagic-deluxe-premium-t-shirt",
-    categories: [{ _id: "fishing-shirts-pelagic" }],
+    asin: "B0BL42673F",
+    slug: "pelagic-deluxe-fish-camo-t-shirt",
+    categories: [
+      { _id: "fishing-shirts-camo" },
+      { _id: "fishing-shirts-pelagic" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
   },
   {
     asin: "B097R435Z2",
@@ -1582,6 +1562,7 @@ const products = [
     asin: "B09PLNM36M",
     slug: "huk-mens-mossy-oak-pursuit-long-sleeve-shirt-camo-long-sleeve-performance-fishing-shirt-with-30-upf-sun-protection",
     categories: [
+      { _id: "fishing-shirts-camo" },
       { _id: "fishing-shirts-for-him" },
       { _id: "fishing-shirts-huk" },
       { _id: "fishing-shirts-long-sleeve" },
@@ -1591,6 +1572,7 @@ const products = [
     asin: "B09FQD6CTN",
     slug: "huk-mens-icon-x-camo-fade-shirt",
     categories: [
+      { _id: "fishing-shirts-camo" },
       { _id: "fishing-shirts-for-him" },
       { _id: "fishing-shirts-huk" },
       { _id: "fishing-shirts-long-sleeve" },
@@ -1600,6 +1582,7 @@ const products = [
     asin: "B09FQD49QJ",
     slug: "huk-mens-icon-x-camo-fade-long-sleeve-shirt",
     categories: [
+      { _id: "fishing-shirts-camo" },
       { _id: "fishing-shirts-tournament" },
       { _id: "fishing-shirts-huk" },
     ],
@@ -1704,11 +1687,6 @@ const products = [
     categories: [{ _id: "fishing-shirts-funny" }],
   },
   {
-    asin: "B01MTA3FXE",
-    slug: "jaws-movie-quints-shark-fishing-t-shirt",
-    categories: [{ _id: "fishing-shirts-short-sleeve" }],
-  },
-  {
     asin: "B07M6RFD9C",
     slug: "mens-dont-be-a-dumb-bass-tshirt-funny-fishing-tee-for-guys",
     categories: [
@@ -1722,6 +1700,7 @@ const products = [
     categories: [
       { _id: "fishing-shirts-embroidery" },
       { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
     ],
   },
   {
@@ -1851,6 +1830,7 @@ const products = [
     asin: "B08SMH59GS",
     slug: "bassdash-fishing-t-shirts-for-men-uv-sun-protection-upf-50-long-sleeve-tee-t-shirt",
     categories: [
+      { _id: "fishing-shirts-bassdash" },
       { _id: "fishing-shirts-for-him" },
       { _id: "fishing-shirts-long-sleeve" },
     ],
@@ -2052,6 +2032,7 @@ const products = [
     categories: [
       { _id: "fishing-shirts-embroidery" },
       { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
     ],
   },
   {
@@ -2158,6 +2139,7 @@ const products = [
     asin: "B09FQGX3YD",
     slug: "huk-mens-pursuit-camo-vented-long-sleeve-shirt",
     categories: [
+      { _id: "fishing-shirts-camo" },
       { _id: "fishing-shirts-huk" },
       { _id: "fishing-shirts-for-him" },
       { _id: "fishing-shirts-long-sleeve" },
@@ -2203,15 +2185,6 @@ const products = [
     categories: [
       { _id: "fishing-shirts-pelagic" },
       { _id: "fishing-shirts-long-sleeve" },
-    ],
-  },
-  {
-    asin: "B08WRL6VV1",
-    slug: "habit-mens-high-water-short-sleeve-river-guide-fishing-shirt",
-    categories: [
-      { _id: "fishing-shirts-habit" },
-      { _id: "fishing-shirts-short-sleeve" },
-      { _id: "fishing-shirts-for-him" },
     ],
   },
   {
@@ -2314,16 +2287,6 @@ const products = [
     ],
   },
   {
-    asin: "B07PZF5XZV",
-    slug: "mossy-oak-traditional-logo-cotton-blend-unisex-t-shirt",
-    categories: [
-      { _id: "fishing-shirts-mossy-oak" },
-      { _id: "fishing-shirts-long-sleeve" },
-      { _id: "fishing-shirts-for-him" },
-      { _id: "fishing-shirts-for-her" },
-    ],
-  },
-  {
     asin: "B010ON3BSU",
     slug: "columbia-womens-lo-drag-short-sleeve-shirt",
     categories: [
@@ -2401,9 +2364,10 @@ const products = [
   },
   {
     asin: "B08B4RN3LC",
-    slug: "bamboo-cay-mens-short-sleeve-toucan-lounge-embroidered-hawaiian-tropical-shirt",
+    slug: "bamboo-cay-mens-embroidered-hawaiian-tropical-shirt",
     categories: [
       { _id: "fishing-shirts-embroidery" },
+      { _id: "fishing-shirts-for-him" },
       { _id: "fishing-shirts-short-sleeve" },
     ],
   },
@@ -2421,6 +2385,7 @@ const products = [
     categories: [
       { _id: "fishing-shirts-embroidery" },
       { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
     ],
   },
   {
@@ -2452,6 +2417,7 @@ const products = [
     asin: "B075NPYWVP",
     slug: "mossy-oak-long-sleeve-quarter-zip-camo-shirts-for-men-mens-hunting-shirts",
     categories: [
+      { _id: "fishing-shirts-camo" },
       { _id: "fishing-shirts-mossy-oak" },
       { _id: "fishing-shirts-long-sleeve" },
       { _id: "fishing-shirts-for-him" },
@@ -2616,17 +2582,11 @@ const products = [
     ],
   },
   {
-    asin: "B0897383RM",
-    slug: "bassdash-mens-upf-50-sun-pProtection-fishing-shirt-short-sleeve-uv-t-shirt",
-    categories: [
-      { _id: "fishing-shirts-for-him" },
-      { _id: "fishing-shirts-short-sleeve" },
-    ],
-  },
-  {
     asin: "B097L28H19",
     slug: "bassdash-mens-upf-50-performance-fishing-shirt-cooling-hoodie-camo-long-sleeve-fs17m",
     categories: [
+      { _id: "fishing-shirts-camo" },
+      { _id: "fishing-shirts-bassdash" },
       { _id: "fishing-shirts-for-him" },
       { _id: "fishing-shirts-hoodie" },
       { _id: "fishing-shirts-long-sleeve" },
@@ -2694,11 +2654,13 @@ const products = [
     ],
   },
   {
-    asin: "B086MCS46K",
-    slug: "bassdash-fishing-t-shirts-for-men-uv-sun-protection-upf-50-long-sleeve-tee-t-shirt",
+    asin: "B0B4MW9JBD",
+    slug: "bassdash-mens-upf-50-camo-fishing-shirt-quick-dry-long-sleeve-kayaking-hiking-t-shirts",
     categories: [
+      { _id: "fishing-shirts-bassdash" },
       { _id: "fishing-shirts-for-him" },
       { _id: "fishing-shirts-long-sleeve" },
+      { _id: "fishing-shirts-american-flag" },
     ],
   },
   {
@@ -2791,6 +2753,7 @@ const products = [
     asin: "B092ZY78LH",
     slug: "bassdash-womens-upf-50-uv-sun-protection-t-shirt-long-sleeve-fishing-hiking-performance-shirts",
     categories: [
+      { _id: "fishing-shirts-bassdash" },
       { _id: "fishing-shirts-for-her" },
       { _id: "fishing-shirts-long-sleeve" },
     ],
@@ -3048,17 +3011,8 @@ const products = [
     ],
   },
   {
-    asin: "B0727Q1D66",
-    slug: "baleaf-mens-long-sleeve-hiking-shirts-lightweight-quick-dry-upf-50-shirt-fishing-camping-traveling",
-    categories: [
-      { _id: "fishing-shirts-baleaf" },
-      { _id: "fishing-shirts-for-him" },
-      { _id: "fishing-shirts-long-sleeve" },
-    ],
-  },
-  {
     asin: "B01MUBQJKH",
-    slug: "jaws-movie-quints-shark-fishing-t-shirt-stickers",
+    slug: "jaws-movie-quints-shark-fishing-t-shirt",
     categories: [
       { _id: "fishing-shirts-for-him" },
       { _id: "fishing-shirts-short-sleeve" },
@@ -3185,15 +3139,6 @@ const products = [
     ],
   },
   {
-    asin: "B014C390F6",
-    slug: "hanes-mens-2-pack-long-sleeve-cool-dri-t-shirt-upf-50-1-navy-1-safety-green-xx-large",
-    categories: [
-      { _id: "fishing-shirts-hanes" },
-      { _id: "fishing-shirts-for-him" },
-      { _id: "fishing-shirts-long-sleeve" },
-    ],
-  },
-  {
     asin: "B01ES40BGQ",
     slug: "hanes-sport-mens-heathered-performance-t-shirt",
     categories: [
@@ -3257,7 +3202,7 @@ const products = [
   },
   {
     asin: "B08SJBD5BG",
-    slug: "jaws-movie-quints-shark-fishing-t-shirt-stickers-2",
+    slug: "jaws-movie-quints-shark-fishing-t-shirt-2",
     categories: [
       { _id: "fishing-shirts-for-him" },
       { _id: "fishing-shirts-short-sleeve" },
@@ -3292,6 +3237,7 @@ const products = [
     asin: "B09WCVRXFL",
     slug: "under-armour-iso-chill-shore-break-camo-fish-hoodie",
     categories: [
+      { _id: "fishing-shirts-camo" },
       { _id: "fishing-shirts-for-him" },
       { _id: "fishing-shirts-long-sleeve" },
     ],
@@ -3324,8 +3270,8 @@ const products = [
     ],
   },
   {
-    asin: "B08B1N7CFK",
-    slug: "fishing-shirts-for-men-long-sleeve-sun-protection-spf-50-uv-tshirt-hoodies",
+    asin: "",
+    slug: "",
     categories: [
       { _id: "fishing-shirts-hoodie" },
       { _id: "fishing-shirts-for-him" },
@@ -3338,12 +3284,14 @@ const products = [
     categories: [
       { _id: "fishing-shirts-embroidery" },
       { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
     ],
   },
   {
     asin: "B0B2VMS15W",
     slug: "mossy-oak-upf30-all-over-camo-with-chest-graphic-fishing-tee-with-wicking",
     categories: [
+      { _id: "fishing-shirts-camo" },
       { _id: "fishing-shirts-mossy-oak" },
       { _id: "fishing-shirts-for-him" },
       { _id: "fishing-shirts-long-sleeve" },
@@ -3431,6 +3379,7 @@ const products = [
     asin: "B00GBDB5ZE",
     slug: "mossy-oak-mens-camo-short-sleeve-performance-tech-tee-hunting-shirt",
     categories: [
+      { _id: "fishing-shirts-camo" },
       { _id: "fishing-shirts-mossy-oak" },
       { _id: "fishing-shirts-for-him" },
       { _id: "fishing-shirts-short-sleeve" },
@@ -3725,15 +3674,6 @@ const products = [
     ],
   },
   {
-    asin: "B07MWCDT4S",
-    slug: "simms-bass-logo-tech-tee-long-sleeve-fishing-shirt-sun-protection-angler-shirt-lightweight-breathable-moisture-wicking-anti-odor",
-    categories: [
-      { _id: "fishing-shirts-simms" },
-      { _id: "fishing-shirts-for-him" },
-      { _id: "fishing-shirts-long-sleeve" },
-    ],
-  },
-  {
     asin: "B07BLLJJSX",
     slug: "columbia-mens-pfg-graphic-t-shirt",
     categories: [
@@ -3851,6 +3791,7 @@ const products = [
     asin: "B07GQDSGKY",
     slug: "huk-womens-subphantis-icon-x-camo-hoodie-long-sleeve-performance-shirt-with-upf-30-sun-protection-moisture-transport",
     categories: [
+      { _id: "fishing-shirts-camo" },
       { _id: "fishing-shirts-huk" },
       { _id: "fishing-shirts-for-her" },
       { _id: "fishing-shirts-long-sleeve" },
@@ -4384,6 +4325,1128 @@ const products = [
     categories: [
       { _id: "fishing-shirts-for-him" },
       { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B00A2LNPV8",
+    slug: "columbia-womens-bonehead-sleeve-extended",
+    categories: [
+      { _id: "fishing-shirts-for-her" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B072B9W6TS",
+    slug: "baleaf-sleeve-hiking-fishing-lightweight",
+    categories: [
+      { _id: "fishing-shirts-baleaf" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B07TKMZ18P",
+    slug: "mocoly-womens-upf-50-sun-protection-hoodie-long-sleeve-spf-outdoor-running-workout-t-shirt-with-thumbholes",
+    categories: [
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B08WQ1S4RF",
+    slug: "habit-ts1161-short-sleeve-mens-river-guide-fishing-shirt",
+    categories: [
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B07WVRN297",
+    slug: "mens-upf-50-sun-protection-hoodie-outdoor-long-sleeve-t-shirt-for-running-fishing-hiking",
+    categories: [
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B0CP4D9RVR",
+    slug: "simms-big-sky-plaid-vented-fishing-shirt-mens-long-sleeve-50-upf-shirt-lightweight-breathable-moisture-wicking",
+    categories: [
+      { _id: "fishing-shirts-simms" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B07KFRX4F9",
+    slug: "yizzam-luckyrod-american-flag-mens-long-sleeve-upf-50-performance-fishing-shirt",
+    categories: [
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B096SRG7XW",
+    slug: "columbia-womens-tidal-tee-hoodie",
+    categories: [
+      { _id: "fishing-shirts-columbia" },
+      { _id: "fishing-shirts-for-her" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B076KVZW2K",
+    slug: "hooked-soul-fishing-mens-upf-50-uv-sun-protection-outdoor-long-sleeve-performance-dri-fit-shirts",
+    categories: [
+      { _id: "fishing-shirts-american-flag" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B07PZF5XZV",
+    slug: "mossy-oak-long-sleeve-logo-tee-with-3-graphic-prints",
+    categories: [
+      { _id: "fishing-shirts-mossy-oak" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-for-her" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B01KN3AHSS",
+    slug: "hanes-comfort-ecosmart-pullover-hooded-sweatshirt",
+    categories: [
+      { _id: "fishing-shirts-hanes" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B00KBZSQ4Q",
+    slug: "multi-pack-hanes-mens-cool-dri-long-sleeve-performance-t-shirt",
+    categories: [
+      { _id: "fishing-shirts-hanes" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B0BN4KFXN7",
+    slug: "simms-solarflex-upf-50-shirt-long-sleeve-sun-protection-fishing-hoodie-lightweight-breathable-moisture-wicking-anti-odor",
+    categories: [
+      { _id: "fishing-shirts-simms" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B07CHG8GRV",
+    slug: "fishing-is-like-boobs-cute-fishing-shirts-funny-quote-gifts",
+    categories: [
+      { _id: "fishing-shirts-funny" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B0058YSN3Y",
+    slug: "columbia-mens-pfg-super-tamiami-short-sleeve-shirt-upf-40-sun-protection-wicking-fabric",
+    categories: [
+      { _id: "fishing-shirts-columbia" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B08KV3KCSB",
+    slug: "funny-fishing-saying-shirt-docking-a-boat-tshirt-marriage-t-shirt",
+    categories: [
+      { _id: "fishing-shirts-funny" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-for-her" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B07DNG3P83",
+    slug: "mossy-oak-mens-ls-performance-moisture-wicking-1-4-zip-fishing-shirt",
+    categories: [
+      { _id: "fishing-shirts-mossy-oak" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B096MVJZHF",
+    slug: "columbia-mens-super-slack-tide-camp-shirt",
+    categories: [
+      { _id: "fishing-shirts-columbia" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B0C2C61MK9",
+    slug: "pelagic-ultratek-hooded-fishing-shirt",
+    categories: [
+      { _id: "fishing-shirts-pelagic" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+      { _id: "fishing-shirts-hoodie" },
+    ],
+  },
+  {
+    asin: "B09XQMBKDZ",
+    slug: "pelagic-game-fish-premium-long-sleeve-t-shirt",
+    categories: [
+      { _id: "fishing-shirts-pelagic" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+      { _id: "fishing-shirts-hoodie" },
+    ],
+  },
+  {
+    asin: "B07RJM3RCQ",
+    slug: "pretchic-mens-upf-50-uv-sun-protection-performance-long-sleeve-outdoor-t-shirt",
+    categories: [
+      { _id: "fishing-shirts-pretchic" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B01M20WB7R",
+    slug: "hanes-sport-womens-cool-dri-performance-long-sleeve-tee",
+    categories: [
+      { _id: "fishing-shirts-hanes" },
+      { _id: "fishing-shirts-for-her" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B0CP4BYZ1B",
+    slug: "simms-mens-morada-fishing-shirt-upf-30-long-sleeve-shirt-water-resistant-angler-shirt-wrinkle-resistant-button-down-fishing-shirt-for-men",
+    categories: [
+      { _id: "fishing-shirts-simms" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B075F9CRBW",
+    slug: "hook-tackle-mens-crossing-rods-short-sleeve-embroidered-uv-sun-protection-fishing-shirt",
+    categories: [
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B07ZBHD8ZP",
+    slug: "i-was-thinking-about-fishing-funny-fishing-gift-t-shirt",
+    categories: [
+      { _id: "fishing-shirts-funny" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B00HKFWODE",
+    slug: "la-leela-mens-big-and-tall-casual-short-sleeve-aloha-hawaiian-shirt-a",
+    categories: [
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B07QXTSNSP",
+    slug: "mossy-oak-fishing-shirts-for-men-quick-dry-with-upf-sun-protection",
+    categories: [
+      { _id: "fishing-shirts-mossy-oak" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B095TNWVS1",
+    slug: "performance-fishing-shirt-long-sleeve-sun-protection-upf50-lightweight-outdoor-quick-dry",
+    categories: [
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B071DLRKW6",
+    slug: "gamefish-usa-womens-upf-50-lightweight-microfiber-moisture-wicking-performance-fishing-shirt-redfish",
+    categories: [
+      { _id: "fishing-shirts-for-her" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B07DNHBRLH",
+    slug: "mossy-oak-mens-elements-ls-performance-moisture-wicking-1-4-zip",
+    categories: [
+      { _id: "fishing-shirts-mossy-oak" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B07K4642ST",
+    slug: "amazon-brand-peak-velocity-mens-vxe-long-sleeve-quick-dry-loose-fit-t-shirt",
+    categories: [
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B09Z8THLY7",
+    slug: "under-armour-womens-locker-long-sleeve-t-shirt",
+    categories: [
+      { _id: "fishing-shirts-for-her" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B096STTQ9V",
+    slug: "columbia-kids-baby-terminal-tackle-hoodie",
+    categories: [
+      { _id: "fishing-shirts-for-kids" },
+      { _id: "fishing-shirts-columbia" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B07VWSWLWW",
+    slug: "plan-for-the-day-coffee-fish-beer-funny-adult-mens-fishing-t-shirt",
+    categories: [
+      { _id: "fishing-shirts-funny" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-for-her" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B087T2JB48",
+    slug: "skull-mask-hooded-short-sleeve-shirt-men-solid-color-casual-fashion-top",
+    categories: [
+      { _id: "fishing-shirts-hoodie" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B07NPLF6H7",
+    slug: "habit-mens-bohannon-creek-performance-fishing-long-sleeve-tee",
+    categories: [
+      { _id: "fishing-shirts-habit" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B01HG8I9DI",
+    slug: "mossy-oak-mens-front-logo-short-sleeve-shirt",
+    categories: [
+      { _id: "fishing-shirts-mossy-oak" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B096N22WS7",
+    slug: "columbia-womens-pfg-tidal-tee-ii-long-sleeve-shirt",
+    categories: [
+      { _id: "fishing-shirts-columbia" },
+      { _id: "fishing-shirts-for-her" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B07CQDCZSY",
+    slug: "mossy-oak-long-sleeve-work-shirts-for-men-construction-shirts-for-men",
+    categories: [
+      { _id: "fishing-shirts-mossy-oak" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B07BPBF9R6",
+    slug: "jason-mathias-sea-spirit-mahi-womens-ls-high-performance-shirt",
+    categories: [
+      { _id: "fishing-shirts-for-her" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B07857116Y",
+    slug: "refire-gear-mens-army-special-ops-military-tactical-jacket-softshell-fleece-hooded-outdoor-coat",
+    categories: [
+      { _id: "fishing-shirts-for-cold-weather" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B087W6524D",
+    slug: "mossy-oak-fishing-hoodie-hooded-fishing-shirts-for-men-cooling-hoodie",
+    categories: [
+      { _id: "fishing-shirts-mossy-oak" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B088RQS4T9",
+    slug: "mossy-oak-fishing-shirts-for-men-swim-shirts-beach-shirt-short-sleeve",
+    categories: [
+      { _id: "fishing-shirts-mossy-oak" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B01KN4MRF8",
+    slug: "aw-fashions-hooker-on-the-weekend-funny-fisherman-gifts-fathers-day-mens-fishing-t-shirt",
+    categories: [
+      { _id: "fishing-shirts-funny" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B01L9H8E8C",
+    slug: "hanes-sport-x-temp-mens-performance-long-sleeve-training-t-shirt",
+    categories: [
+      { _id: "fishing-shirts-hanes" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B00KBZSQ64",
+    slug: "hanes-mens-long-sleeve-cool-dri-t-shirt-upf-50-x-small-2-pack-safety-green",
+    categories: [
+      { _id: "fishing-shirts-hanes" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B07XGN8H2W",
+    slug: "g-h-bass-co-mens-explorer-short-sleeve-fishing-shirt-solid-button-pocket",
+    categories: [
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B002616YYC",
+    slug: "columbia-mens-tamiami-ii-long-sleeve-shirt-2",
+    categories: [
+      { _id: "fishing-shirts-columbia" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B08WRDXLZC",
+    slug: "habit-mens-short-sleeve-river-shirt",
+    categories: [
+      { _id: "fishing-shirts-habit" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B088P8H78D",
+    slug: "habit-womens-kachemak-hooded-performance-layer",
+    categories: [
+      { _id: "fishing-shirts-habit" },
+      { _id: "fishing-shirts-for-her" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B08KSFNB3X",
+    slug: "hook-tackle-mens-anglers-delight-short-sleeve-embroidered-uv-sun-protection-fishing-shirt",
+    categories: [
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B08675VPMS",
+    slug: "o2tee-mens-american-flag-soft-slim-long-sleeve-compression-gym-trainning-casual-top",
+    categories: [
+      { _id: "fishing-shirts-american-flag" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B015EQG5K8",
+    slug: "columbia-mens-pfg-bahama-ii-short-sleeve-shirt-sail-large",
+    categories: [
+      { _id: "fishing-shirts-columbia" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B09L8MMYT3",
+    slug: "simms-bass-pine-camo-t-shirt-100-cotton-tee-with-breathable-fabric-quality-fishing-apparel-for-men",
+    categories: [
+      { _id: "fishing-shirts-camo" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B09TM4LWDH",
+    slug: "womens-upf-50-sun-protection-long-sleeve-t-shirt-outdoor-rashguard-hiking-hoodies-athletic-top-spf-shirt-all-season",
+    categories: [
+      { _id: "fishing-shirts-for-her" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B09VS3YBJS",
+    slug: "womens-upf-50-uv-sun-protection-shirt-rash-guard-dry-fit-spf-long-sleeve-swim-fishing-hiking-shirts-outdoor",
+    categories: [
+      { _id: "fishing-shirts-for-her" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B082WW2LNL",
+    slug: "bass-fishing-irish-american-flag-st-patricks-day-fisherman-t-shirt",
+    categories: [
+      { _id: "fishing-shirts-american-flag" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-for-her" },
+      { _id: "fishing-shirts-for-kids" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B09FS4C1BY",
+    slug: "huk-youth-performance-fishing-shirt",
+    categories: [
+      { _id: "fishing-shirts-for-kids" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B0C12FJS4Z",
+    slug: "under-armour-womens-heatgear-armour-long-sleeve-t-shirt",
+    categories: [
+      { _id: "fishing-shirts-for-her" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B0CG4D3X7C",
+    slug: "columbia-mens-terminal-tackle-hoodie",
+    categories: [
+      { _id: "fishing-shirts-columbia" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B0819JVHQJ",
+    slug: "sportides-mens-upf-50-uv-sun-protection-outdoor-sport-t-shirt-tee-la245",
+    categories: [
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B09C2HTL42",
+    slug: "mossy-oak-mens-the-series-keep-calm-hunt-on-tee-short-sleeve-t-shirt-size-xl",
+    categories: [
+      { _id: "fishing-shirts-mossy-oak" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B08841ZNJK",
+    slug: "mossy-oak-elements-fishing-brand-tee",
+    categories: [
+      { _id: "fishing-shirts-mossy-oak" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B014C39MRM",
+    slug: "hanes-mens-long-sleeve-cool-dri-t-shirt-upf-50-medium-2-pack-1-graphite-1-navy",
+    categories: [
+      { _id: "fishing-shirts-hanes" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B00L3LB4QO",
+    slug: "columbia-sportswear-womens-bonehead-ii-short-sleeve-shirt",
+    categories: [
+      { _id: "fishing-shirts-columbia" },
+      { _id: "fishing-shirts-for-her" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B08KRV4Q8L",
+    slug: "charmleaks-womens-long-sleeve-rashguard-upf-50-sun-protection-swimsuit-top-striped-swim-shirts",
+    categories: [
+      { _id: "fishing-shirts-for-her" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B071D3XCQ2",
+    slug: "hanes-cool-dri-performance-mens-long-sleeve-t-shirt_deep-royal_l",
+    categories: [
+      { _id: "fishing-shirts-hanes" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B071XPJQT1",
+    slug: "hanes-cool-dri-performance-mens-long-sleeve-t-shirt_deep-red_s",
+    categories: [
+      { _id: "fishing-shirts-hanes" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B06ZZLTT45",
+    slug: "hanes-mens-tagless-t-shirt",
+    categories: [
+      { _id: "fishing-shirts-hanes" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B006L89DOE",
+    slug: "mossy-oak-mens-chamois-camouflage-hunting-shirt",
+    categories: [
+      { _id: "fishing-shirts-camo" },
+      { _id: "fishing-shirts-mossy-oak" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B07B3VXVX7",
+    slug: "amazon-brand-daily-ritual-womens-jersey-long-sleeve-scoop-neck-t-shirt",
+    categories: [
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B0009MKNCO",
+    slug: "hanes-tagless-t-shirt_deep-red_l",
+    categories: [
+      { _id: "fishing-shirts-hanes" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B081VY13NG",
+    slug: "priessei-mens-long-sleeve-upf-50-uv-sun-protection-hoodie-for-fishing-running-hiking",
+    categories: [
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B001BZDMF8",
+    slug: "hanes-tagless-long-sleeve-t-shirt",
+    categories: [
+      { _id: "fishing-shirts-hanes" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B0BTVLLTQF",
+    slug: "pelagic-aquatek-marlin-dot-hoodie-fishing-shirt",
+    categories: [
+      { _id: "fishing-shirts-pelagic" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B079THTM6Y",
+    slug: "costa-del-mar-mens-top-water-t-shirt",
+    categories: [
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B00JUM2VAQ",
+    slug: "hanes-mens-full-zip-eco-smart-fleece-hoodie",
+    categories: [
+      { _id: "fishing-shirts-hanes" },
+      { _id: "fishing-shirts-for-cold-weather" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B08SR1VYR7",
+    slug: "salty-crew-mens-mariner-short-sleeve-tee",
+    categories: [
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B09WTZT9V8",
+    slug: "pelagic-aquatek-game-fish-performance-fishing-shirt",
+    categories: [
+      { _id: "fishing-shirts-pelagic" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B0B82YJSTX",
+    slug: "huk-mens-pursuit-crew-long-sleeve-sun-protecting-fishing-shirt",
+    categories: [
+      { _id: "fishing-shirts-huk" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B01NAUT1NZ",
+    slug: "bamboo-cay-mens-embroidered-sailfish-freedom-button-up-shirt",
+    categories: [
+      { _id: "fishing-shirts-embroidery" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B01N7QWJJD",
+    slug: "bamboo-cay-mens-short-sleeve-toucan-lounge-embroidered-hawaiian-tropical-shirt",
+    categories: [
+      { _id: "fishing-shirts-embroidery" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B084FT27DT",
+    slug: "bamboo-cay-mens-short-sleeve-par-and-bar-casual-embroidered-woven-shirt",
+    categories: [
+      { _id: "fishing-shirts-embroidery" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B09RGP1JPT",
+    slug: "bamboo-cay-menss-flying-turtles-embroidered-camp-shirt",
+    categories: [
+      { _id: "fishing-shirts-embroidery" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B06XHMTV9X",
+    slug: "bamboo-cay-mens-short-sleeve-catch-of-the-day-embroidered-woven-shirt",
+    categories: [
+      { _id: "fishing-shirts-embroidery" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B018GWQ516",
+    slug: "bamboo-cay-mens-short-sleeve-peekaboo-palm-casual-embroidered-woven-shirt",
+    categories: [
+      { _id: "fishing-shirts-embroidery" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B0854GMM9W",
+    slug: "bamboo-cay-mens-key-west-tropical-style-embroidered-camp-shirt",
+    categories: [
+      { _id: "fishing-shirts-embroidery" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B095JDNYS3",
+    slug: "bamboo-cay-mens-vertical-salamanca-embroidered-shirt",
+    categories: [
+      { _id: "fishing-shirts-embroidery" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B072592NTP",
+    slug: "bamboo-cay-mens-short-sleeve-pacific-paneled-palms-casual-embroidered-woven-shirt",
+    categories: [
+      { _id: "fishing-shirts-embroidery" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B0BGZWGB23",
+    slug: "bamboo-cay-mens-short-sleeve-island-leaf-nation-casual-embroidered-woven-shirt",
+    categories: [
+      { _id: "fishing-shirts-embroidery" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B0B9VKKRT5",
+    slug: "bamboo-cay-merry-christmas-shirt-men-short-sleeve-embroidered-button-down-shirts",
+    categories: [
+      { _id: "fishing-shirts-embroidery" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B07N8H3SKF",
+    slug: "bamboo-cay-mens-short-sleeve-flying-palms-casual-embroidered-hawaiian-shirt",
+    categories: [
+      { _id: "fishing-shirts-embroidery" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B07NSP2113",
+    slug: "bamboo-cay-mens-all-star-bird-of-paradise-casual-embroidered-hawaiian-button-down-shirt",
+    categories: [
+      { _id: "fishing-shirts-embroidery" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B0BJVQQ37M",
+    slug: "kastKing-upf50-fishing-shirts-for-men",
+    categories: [
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B09PTTNR2Q",
+    slug: "coorun-mens-outdoor-hooded-shirts-with-mask",
+    categories: [
+      { _id: "fishing-shirts-hoodie" },
+      { _id: "fishing-shirts-face-mask" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B0953W9BNW",
+    slug: "kastKing-upf-50-fishing-hoodie-shirt-for-men-and-women",
+    categories: [
+      { _id: "fishing-shirts-hoodie" },
+      { _id: "fishing-shirts-face-mask" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B09GRHM2GC",
+    slug: "riverruns-upf-50-fishing-hoodie",
+    categories: [
+      { _id: "fishing-shirts-hoodie" },
+      { _id: "fishing-shirts-face-mask" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B096B5GB4K",
+    slug: "bassdash-upf-50-mens-camo-fishing-hoodie",
+    categories: [
+      { _id: "fishing-shirts-camo" },
+      { _id: "fishing-shirts-bassdash" },
+      { _id: "fishing-shirts-hoodie" },
+      { _id: "fishing-shirts-face-mask" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B0B9KQPDM5",
+    slug: "bassdash-mens-upf-50-fishing-hiking-camo-hoodie-shirt-with-face-mask",
+    categories: [
+      { _id: "fishing-shirts-bassdash" },
+      { _id: "fishing-shirts-hoodie" },
+      { _id: "fishing-shirts-face-mask" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B095SNPVPH",
+    slug: "bassdash-womens-fishing-hoodie-shirt-with-face-mask-thumb-holes-upf-50-fs23w",
+    categories: [
+      { _id: "fishing-shirts-bassdash" },
+      { _id: "fishing-shirts-hoodie" },
+      { _id: "fishing-shirts-face-mask" },
+      { _id: "fishing-shirts-for-her" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B0BWXGYB4B",
+    slug: "piqidig-mens-sun-protection-hoodie-shirts-upf-50-song-sleeve-rash-guard-performance-athletic-running-hiking-t-shirt",
+    categories: [
+      { _id: "fishing-shirts-hoodie" },
+      { _id: "fishing-shirts-face-mask" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B09H5MSXNX",
+    slug: "bassdash-youth-upf50-performance-t-shirt-with-hood",
+    categories: [
+      { _id: "fishing-shirts-bassdash" },
+      { _id: "fishing-shirts-hoodie" },
+      { _id: "fishing-shirts-for-kids" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B0B833QQPN",
+    slug: "huk-mens-pursuit-hoodie-sun-protecting-fishing-shirt-with-hood",
+    categories: [
+      { _id: "fishing-shirts-huk" },
+      { _id: "fishing-shirts-hoodie" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B07RDRZDX3",
+    slug: "columbia-mens-terminal-tackle-long-sleeve-shirt-wicking-material",
+    categories: [
+      { _id: "fishing-shirts-columbia" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B087W3KLVL",
+    slug: "mossy-oak-fishing-hoodie-fishing-sweatshirts-for-men",
+    categories: [
+      { _id: "fishing-shirts-mossy-oak" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B07NWZ6PBF",
+    slug: "real-essentials-4-pack-mens-dry-fit-uv-moisture-wicking-upf-50-spf-sun-protective-fishing-hiking-swim-long-sleeve-shirt",
+    categories: [
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B07FVTG3YW",
+    slug: "maviskin-mens-rash-guard-swim-shirts",
+    categories: [
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B084YH8MMF",
+    slug: "bamboo-cay-mens-short-sleeve-florida-embroidered-camp-shirt",
+    categories: [
+      { _id: "fishing-shirts-embroidery" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B0BGGR782W",
+    slug: "funny-bass-fishing-quote-shirt-fishing-adult-humor-quote-t-shirt",
+    categories: [
+      { _id: "fishing-shirts-funny" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B09VPDLWQ3",
+    slug: "cadmus-mens-workout-long-sleeve-fishing-shirts",
+    categories: [
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B09BLL1DWP",
+    slug: "baitium-performance-fishing-gear",
+    categories: [
+      { _id: "fishing-shirts-hoodie" },
+      { _id: "fishing-shirts-face-mask" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B08NJM8SLT",
+    slug: "bassdash-upf-50-mens-long-sleeve-fishing-shirt-with-mask-neck-gaiter-hoodie",
+    categories: [
+      { _id: "fishing-shirts-bassdash" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+      { _id: "fishing-shirts-hoodie" },
+      { _id: "fishing-shirts-face-mask" },
+    ],
+  },
+  {
+    asin: "B086DFYH3G",
+    slug: "tortuga-moon-fishing-shirt-men-womens-performance-shirt",
+    categories: [
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-for-her" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B0919W4ZLH",
+    slug: "bassdash-mens-upf-50-sun-protection-uv-t-shirt",
+    categories: [
+      { _id: "fishing-shirts-bassdash" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B0B832K1C9",
+    slug: "huk-mens-pursuit-crew-fishing-shirt",
+    categories: [
+      { _id: "fishing-shirts-huk" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B085H6Z8ZC",
+    slug: "palmyth-fishing-shirt-for-men-long-sleeve-sun-protection-uv-upf-50-t-shirts-with-pocket",
+    categories: [
+      { _id: "fishing-shirts-fish" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B0C32VTGCT",
+    slug: "rodeel-mens-fishing-shirts-for-men-long-sleeve-wicking-fabric-upf-50-sun-protection-performance-shirt",
+    categories: [
+      { _id: "fishing-shirts-fish" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B0BF3G4GJP",
+    slug: "baitium-fishing-shirts-long-sleeve-hooded",
+    categories: [
+      { _id: "fishing-shirts-fish" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+      { _id: "fishing-shirts-hoodie" },
+      { _id: "fishing-shirts-face-mask" },
+    ],
+  },
+  {
+    asin: "B0BKTBSRP6",
+    slug: "guy-harvey-mens-offshore-fish-collection-short-sleeve-t-shirt",
+    categories: [
+      { _id: "fishing-shirts-fish" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B0B831Y1F8",
+    slug: "huk-mens-kc-pursuit-long-sleeve-sun-protecting-fishing-shirt",
+    categories: [
+      { _id: "fishing-shirts-fish" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B0979NL42R",
+    slug: "lrd-fishing-shirts-for-men-long-sleeve-upf-50-sun-protection-performance-shirt",
+    categories: [
+      { _id: "fishing-shirts-fish" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B09NS3BSVJ",
+    slug: "salt-life-mens-incognito-long-sleeve-performance-shirt",
+    categories: [
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-long-sleeve" },
+    ],
+  },
+  {
+    asin: "B00ZQ2H51E",
+    slug: "bamboo-cay-mens-bamboos-on-the-loose-casual-embroidered-short-sleeve-woven-shirt",
+    categories: [
+      { _id: "fishing-shirts-embroidery" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B082YKBVP9",
+    slug: "bamboo-cay-mens-crescent-flower-tropical-hawaiian-embroidered-camp-shirt",
+    categories: [
+      { _id: "fishing-shirts-embroidery" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
+    ],
+  },
+  {
+    asin: "B085LSRGZH",
+    slug: "bamboo-cay-mens-hawaiian-pineapple-tropical-style-embroidered-camp-shirt",
+    categories: [
+      { _id: "fishing-shirts-embroidery" },
+      { _id: "fishing-shirts-for-him" },
+      { _id: "fishing-shirts-short-sleeve" },
     ],
   },
 ];

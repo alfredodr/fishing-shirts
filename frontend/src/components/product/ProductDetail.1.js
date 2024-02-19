@@ -1,20 +1,14 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import Spinner from "../common/Spinner";
 import Variants from "./Variants";
 import Image from "next/image";
 import { NextSeo, ProductJsonLd, BreadcrumbJsonLd } from "next-seo";
 import styles from "../../styles/product.module.css";
 import { cn } from "@/lib/utils";
-import Slider from "./Slider";
 
-const ProductDetail = ({ product }) => {
-  const router = useRouter();
+export const ProductDetail = ({ product }) => {
   const [mainImage, setMainImage] = useState(0);
-  const images = product?.images;
-
-  const length = product?.images?.length;
+  const length = product.images.length;
   const [zoomIn, setZoomIn] = useState(false);
 
   const handlePrevious = () => {
@@ -31,16 +25,12 @@ const ProductDetail = ({ product }) => {
     setZoomIn(!zoomIn);
   };
 
-  if (router.isFallback) {
-    return <Spinner />;
-  }
-
   return (
     <>
       <NextSeo
-        title={`${product?.name} - UV Protection - High Quality - Affordable Prices`}
+        title={`${product.name} - UV Protection - High Quality - Affordable Prices`}
         titleTemplate="%s | Fishing Shirts Now"
-        description={product?.description.slice(0, 2)}
+        description={product.description.slice(0, 2)}
         additionalLinkTags={[
           {
             rel: "icon",
@@ -50,18 +40,18 @@ const ProductDetail = ({ product }) => {
         openGraph={{
           type: "article",
           article: {
-            publishedTime: `${product?.createdAt}`,
-            modifiedTime: `${product?.updatedAt}`,
+            publishedTime: `${product.createdAt}`,
+            modifiedTime: `${product.updatedAt}`,
           },
-          title: `${product?.name} - Sun Protective - Fishing Shirts Now`,
-          description: product?.description.slice(0, 2),
-          url: `https://fishingshirtsnow.com/product/${product?.slug}/`,
+          title: `${product.name} - Sun Protective - Fishing Shirts Now`,
+          description: product.description.slice(0, 2),
+          url: `https://fishingshirtsnow.com/product/${product.slug}/`,
           images: [
             {
-              url: product?.images[0]?.src,
+              url: product.images[0].src,
               width: 500,
               height: 500,
-              alt: `${product?.name}`,
+              alt: `${product.name}`,
               type: "image/jpeg",
             },
           ],
@@ -72,17 +62,17 @@ const ProductDetail = ({ product }) => {
         }}
       />
       <ProductJsonLd
-        productName={product?.name}
-        images={[product?.images[0]?.src]}
-        description={product?.description}
-        brand={product?.brand}
+        productName={product.name}
+        images={[product.images[0].src]}
+        description={product.description}
+        brand={product.brand}
         offers={[
           {
-            id: `https://fishingshirtsnow.com/product/${product?.slug}/#product`,
-            price: `${product?.price}`,
+            id: `https://fishingshirtsnow.com/product/${product.slug}/#product`,
+            price: `${product.price}`,
             priceCurrency: "USD",
             availability: "https://schema.org/InStock",
-            url: `https://fishingshirtsnow.com/product/${product?.slug}/`,
+            url: `https://fishingshirtsnow.com/product/${product.slug}/`,
             seller: {
               type: "Organization",
               name: "Fishing Shirts Now",
@@ -106,59 +96,32 @@ const ProductDetail = ({ product }) => {
           {
             position: 3,
             name: "Product",
-            item: `https://fishingshirtsnow.com/product/${product?.slug}`,
+            item: `https://fishingshirtsnow.com/product/${product.slug}`,
           },
         ]}
       />
 
-      <section className="bg-lightGray my-5 md:my-10 px-5">
-        {/* Desktop Breadcrumb */}
-        <div className="block md:hidden">
-          <ol
-            className="flex items-center align-middle space-x-2"
-            aria-label="Breadcrumb"
-          >
-            <li className="hover:text-blogNavHoverBlue text-xs font-medium opacity-75">
-              <Link href={"/"}>Home</Link>
-            </li>
-            <li className=" text-xs font-medium text-gray-500">&gt;</li>
-            <li className="hover:text-blogNavHoverBlue text-xs font-medium opacity-75">
-              <Link href={"/store"}>Store</Link>
-            </li>
-            <li className=" text-xs font-medium text-gray-500">&gt;</li>
-            <li className=" text-xs font-medium opacity-75 block md:hidden">
-              {product?.name?.substring(0, 34) + "..."}
-            </li>
-            <li className=" text-xs font-medium opacity-75 hidden md:block">
-              {product?.name}
-            </li>
-          </ol>
-        </div>
-        <h1 className="leading-normal my-2 font-semibold text-xl md:text-3xl md:font-normal block md:hidden">
-          {product?.name}
-        </h1>
-        <Slider images={images} />
+      <section className="bg-lightGray my-10 px-5">
         <div className="relative flex flex- flex-col md:flex-row lg:flex-row container mx-auto">
-          {/* Desktop Images */}
+          {/* Desktop */}
           <div className="md:w-1/2 hidden md:block">
             <div
-              className={`${
-                zoomIn
-                  ? "fixed top-0 left-0 right-0 bottom-0 z-40 bg-black bg-opacity-75 items-center"
-                  : "bg-lightGray"
-              } flex align-middle justify-center`}
+              className={cn("flex align-middle justify-center", {
+                "fixed top-0 left-0 right-0 bottom-0 z-40 bg-black bg-opacity-75 items-center":
+                  zoomIn,
+                "bg-lightGray": !zoomIn,
+              })}
             >
               {/* Previous button */}
               {length > 1 && (
                 <button
-                  aria-label="previous"
+                  aria-label="previous image"
                   onClick={handlePrevious}
-                  className={cn(
-                    "my-auto h-16 text-textLightGray hover:text-black",
-                    {
-                      "text-white": zoomIn,
-                    }
-                  )}
+                  className={`my-auto h-16 ${
+                    zoomIn
+                      ? "text-white"
+                      : "text-textLightGray hover:text-black "
+                  }`}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -178,15 +141,15 @@ const ProductDetail = ({ product }) => {
               )}
               {/* Main Product Image */}
               <div
-                className={`relative bg-lightGray ${
+                className={`relative ${
                   zoomIn
                     ? "w-4/5 md:w-2/5 h-4/5"
-                    : "w-full h-[28.125rem] md:h-[31.25rem] "
+                    : "w-full h-[28.125rem] md:h-[31.25rem] bg-lightGray"
                 } `}
               >
                 <Image
-                  src={product?.images[mainImage]?.src}
-                  alt={product?.images[mainImage]?.alt}
+                  src={product.images[mainImage].src}
+                  alt={product.images[mainImage].alt}
                   fill
                   priority
                   className="w-auto h-auto object-contain object-center mix-blend-multiply"
@@ -196,14 +159,12 @@ const ProductDetail = ({ product }) => {
               {/* Next button */}
               {length > 1 && (
                 <button
-                  aria-label="next"
+                  aria-label="next-image"
                   onClick={handleNext}
-                  className={cn(
-                    "my-auto h-16 text-textLightGray hover:text-black",
-                    {
-                      "text-white": zoomIn,
-                    }
-                  )}
+                  className={cn("my-auto h-16", {
+                    "text-white": zoomIn,
+                    "text-textLightGray hover:text-black": !zoomIn,
+                  })}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -259,9 +220,9 @@ const ProductDetail = ({ product }) => {
             </div>
             {/* Grid */}
             {/* Variants*/}
-            {product?.images?.length > 1 && (
+            {product.images.length > 1 && (
               <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-3  my-5 bg-lightGray overflow-hidden">
-                {product?.images?.map((image, index) => (
+                {product.images.map((image, index) => (
                   <Variants
                     key={index}
                     image={image}
@@ -273,76 +234,62 @@ const ProductDetail = ({ product }) => {
               </div>
             )}
           </div>
-
+          {/* Mobile */}
+          <h1 className="leading-normal my-2 text-base font-semibold block md:hidden">
+            {product.name}
+          </h1>
           <div className="md:ml-20 lg:md-20 mx-auto md:w-1/2">
-            {/* Desktop Breadcrumb */}
-            <div className="hidden md:block">
-              <ol
-                className="flex items-center align-middle space-x-2"
-                aria-label="Breadcrumb"
-              >
-                <li className="hover:text-blogNavHoverBlue text-xs font-medium opacity-75">
-                  <Link href={"/"}>Home</Link>
-                </li>
-                <li className=" text-xs font-medium text-gray-500">&gt;</li>
-                <li className="hover:text-blogNavHoverBlue text-xs font-medium opacity-75">
-                  <Link href={"/store"}>Store</Link>
-                </li>
-                <li className=" text-xs font-medium text-gray-500">&gt;</li>
-                <li className=" text-xs font-medium opacity-75 block md:hidden">
-                  {product?.name?.substring(0, 34) + "..."}
-                </li>
-                <li className=" text-xs font-medium opacity-75 hidden md:block">
-                  {product?.name}
-                </li>
-              </ol>
-            </div>
+            BreadCrumb
+            <ol
+              className="flex items-center align-middle space-x-2"
+              aria-label="Breadcrumb"
+            >
+              <li className="hover:text-blogNavHoverBlue text-xs font-medium opacity-75">
+                <Link href={"/"}>Home</Link>
+              </li>
 
+              <li className=" text-xs font-medium text-gray-500">&gt;</li>
+              <li className=" text-xs font-medium opacity-75">test</li>
+            </ol>
             <h1 className="leading-normal my-2 hidden md:block">
-              {product?.name}
+              {product.name}
             </h1>
-
-            {product?.price === 1 ? (
+            {product.price === 1 ? (
               <p className="mt-2 font-bold text-red-700">
                 Currently unavailable
               </p>
             ) : (
               <>
-                <span className="text-lg md:text-2xl opacity-90">
-                  Amazon.com Price:{" "}
-                  <em className="font-semibold md:font-normal">
-                    ${product?.price}
-                  </em>{" "}
-                  (as of{" "}
-                  {new Date(product?.updatedAt).toLocaleDateString() + ""}){" "}
-                </span>
-                <Link href={`${product?.externalUrl}`} rel="nofollow" passHref>
+                <em className="text-2xl opacity-90">
+                  Amazon.com Price: ${product.price} (as of{" "}
+                  {new Date(product.updatedAt).toLocaleDateString() + ""}){" "}
+                </em>
+                <Link href={`${product.externalUrl}`} rel="nofollow" passHref>
                   {/* Button */}
                   <button
                     className="w-48 my-5 px-3 py-2 bg-lightBlue hover:bg-blogNavHoverBlue text-white font-semibold border-2 flex items-center md:text-left"
                     type="button"
-                    aria-label="Buy now on amazon"
                   >
                     Buy Now On Amazon
                   </button>
                 </Link>
                 <div className="border border-l-transparent border-r-transparent border-b-transparent border-textLightGray border-opacity-25">
                   <p className="mt-2 opacity-75 text-base">
-                    {product?.categories?.length === 1
+                    {product.categories.length === 1
                       ? `Category: `
                       : `Categories: `}
-                    {product?.categories?.map((category) => {
-                      const name = category?._id
-                        ?.split("-")
-                        ?.map(
+                    {product.categories.map((category) => {
+                      const name = category._id
+                        .split("-")
+                        .map(
                           (word) => word.charAt(0).toUpperCase() + word.slice(1)
                         )
-                        ?.join(" ");
+                        .join(" ");
 
                       return (
                         <Link
-                          key={category?._id}
-                          href={`/product-category/${category?._id}/`}
+                          key={category._id}
+                          href={`/product-category/${category._id}`}
                           className={`${styles.categories}`}
                         >
                           {name}
@@ -357,13 +304,13 @@ const ProductDetail = ({ product }) => {
         </div>
         <div
           className={`container mx-auto ${
-            product?.description[0] === "" && "hidden"
+            product.description[0] === "" && "hidden"
           }`}
         >
           <p className="text-lg font-medium mt-8 underline underline-offset-8 border border-b-1 border-l-transparent border-r-transparent border-t-transparent border-opacity-25 border-textLightGray">
             Description
           </p>
-          {product?.description?.map((desc, index) => (
+          {product.description.map((desc, index) => (
             <ul key={index}>
               <li className="text-lg my-5">{desc}</li>
             </ul>
@@ -373,5 +320,3 @@ const ProductDetail = ({ product }) => {
     </>
   );
 };
-
-export default ProductDetail;

@@ -1,33 +1,42 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Categories from "@/components/product/Categories";
 import StoreProducts from "@/components/product/StoreProducts";
+import MobileProductFilter from "@/components/product/MobileProductFilter";
 import FilterByPrice from "@/components/product/FilterByPrice";
+import FilterByCategory from "@/components/product/FilterByCategory";
+import FilterByBrand from "@/components/product/FilterByBrand";
 import Paginate from "@/components/common/Paginate";
 import { NextSeo, WebPageJsonLd, BreadcrumbJsonLd } from "next-seo";
 import { useRouter } from "next/router";
 import Breadcrumb from "@/components/common/Breadcrumb";
-import Link from "next/link";
-import Image from "next/image";
 
 const Store = ({ products, categories }) => {
-  const initialMin = 0;
-  const initialMax = 200;
-  const [minPrice, setMinPrice] = useState(initialMin);
-  const [maxPrice, setMaxPrice] = useState(initialMax);
-  const [sortBy, setSortBy] = useState("");
+  const [minPrice, setMinPrice] = useState("");
+  const [maxPrice, setMaxPrice] = useState("");
+  const [min, setMin] = useState(0);
+  const [max, setMax] = useState(1000);
+  const [sortBy, setSortBy] = useState("name_asc");
+  const [checkedBrands, setCheckedBrands] = useState([]);
 
-  const [data, setData] = useState(products);
+  const [data, setData] = useState(products ? products : {});
+
   const router = useRouter();
-  const { query } = router;
+  const { asPath, query } = router;
   const keyword = query?.s || "";
   const pageNumber = query?.page || 1;
+
+  //Unique Brands
+  const brands = data?.uniqueBrands;
 
   useEffect(() => {
     async function fetchData() {
       try {
         const { data: allProducts } = await axios.get(
-          `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/products?keyword=${keyword}&pageNumber=${pageNumber}&sortBy=${sortBy}`
+          `${
+            process.env.NEXT_PUBLIC_BACKEND_URL
+          }/api/products?keyword=${keyword}&pageNumber=${pageNumber}&sortBy=${sortBy}&brands=${checkedBrands.join(
+            ","
+          )}&min=${min}&max=${max}`
         );
 
         setData(allProducts);
@@ -36,20 +45,21 @@ const Store = ({ products, categories }) => {
       }
     }
     fetchData();
-  }, [keyword, pageNumber, sortBy]);
+  }, [keyword, keyword, pageNumber, sortBy, checkedBrands, min, max]);
 
   return (
     <>
       <NextSeo
-        title="Fishing Shirts Store - Popular Brands - Sun Protection - Lightweight"
+        title={`Fishing Shirts Store - Popular Brands - Sun Protection - Lightweight ${
+          data?.pages > 1 ? `- Page ${pageNumber} of ${data?.pages}` : ``
+        }`}
         titleTemplate="%s | Fishing Shirts Now"
         description="Check our fishing shirts store with the best for all members of the family. Short sleeve and long sleeve high perfoming choices carefully selected for you."
-        canonical={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/store/`}
-        next={`https://fishingshirtsnow.com/store?page=${pageNumber + 1}`}
+        canonical={`${process.env.NEXT_PUBLIC_FRONTEND_URL}${asPath}`}
         additionalMetaTags={[
           {
             property: "article:publisher",
-            content: "https://fishingshirtsnow.com/store/",
+            content: "https://fishingshirtsnow.com/store",
           },
           {
             property: "article:modified_time",
@@ -58,11 +68,12 @@ const Store = ({ products, categories }) => {
         ]}
         openGraph={{
           type: "article",
-          title:
-            "Fishing Shirts Store - Popular Brands - Sun Protection - Lightweight",
+          title: `Fishing Shirts Store - Popular Brands - Sun Protection - Lightweight ${
+            data?.pages > 1 ? `- Page ${pageNumber} of ${data?.pages}` : ``
+          }`,
           description:
             "Check our fishing shirts store with the best for all members of the family. Short sleeve and long sleeve high perfoming choices carefully selected for you.",
-          url: "https://fishingshirtsnow.com/store/",
+          url: "https://fishingshirtsnow.com/store",
           images: [
             {
               url: "https://fsn-site.s3.amazonaws.com/home/ocean-1950583_1280.jpg",
@@ -74,7 +85,9 @@ const Store = ({ products, categories }) => {
           ],
         }}
         twitter={{
-          title: "Fishing Shirts Now",
+          title: `Fishing Shirts Store - Popular Brands - Sun Protection - Lightweight ${
+            data?.pages > 1 ? `- Page ${pageNumber} of ${data?.pages}` : ``
+          }`,
           description: "Fishing Shirts Now Store Page",
         }}
       />
@@ -83,117 +96,117 @@ const Store = ({ products, categories }) => {
           {
             position: 1,
             name: "Home",
-            item: "https://fishingshirtsnow.com/",
+            item: "https://fishingshirtsnow.com",
           },
           {
             position: 2,
             name: "Store",
-            item: "https://fishingshirtsnow.com/store/",
+            item: "https://fishingshirtsnow.com/store",
           },
         ]}
       />
       <WebPageJsonLd
-        name="Fishing Shirts Store - Popular Brands - Sun Protection - Lightweight"
+        name={`Fishing Shirts Store - Popular Brands - Sun Protection - Lightweight ${
+          data?.pages > 1 ? `- Page ${pageNumber} of ${data?.pages}` : ``
+        }`}
         description="Check our fishing shirts store with the best for all members of the family. Short sleeve and long sleeve high perfoming choices carefully selected for you."
         id="https://fishingshirtsnow.com/store/#corporation"
         publisher="https://fishingshirtsnow.com/#organization"
       />
       <section
         id="features"
-        className="flex flex-col-reverse md:flex-row lg:flex-row justify-center container mx-auto relative px-5"
+        className="px-5 md:px-0 relative container mx-auto"
       >
-        <div className="absolute top-5 md:left-5">
+        <div className="mt-5">
           <Breadcrumb />
         </div>
-        <div className="mt-10 md:border md:border-r-1 md:border-l-transparent md:border-t-transparent md:border-b-transparent md:border-opacity-25 md:border-textLightGray md:pr-14 md:mr-14">
-          <FilterByPrice
-            min={0}
-            max={200}
-            step={1}
-            initialMin={initialMin}
-            initialMax={initialMax}
-            priceCap={10}
+        <div className="block md:hidden">
+          <MobileProductFilter
+            categories={categories}
+            brands={brands}
+            checkedBrands={checkedBrands}
+            setCheckedBrands={setCheckedBrands}
+            count={data?.count}
+            router={router}
+            asPath={asPath}
             minPrice={minPrice}
             maxPrice={maxPrice}
+            setMin={setMin}
+            setMax={setMax}
             setMinPrice={setMinPrice}
             setMaxPrice={setMaxPrice}
           />
-          <div className="container mx-auto mt-5 ">
-            <h2>SPONSOR:</h2>
-            <Link
-              target="_blank"
-              href="https://www.amazon.com/hz/audible/mlp/membership/plus?ref_=assoc_tag_ph_1524216631897&_encoding=UTF8&camp=1789&creative=9325&linkCode=pf4&tag=fishing-shirts-now00-20&linkId=16ea12bbe62d15f91c859914e2df3dff"
-            >
-              <Image
-                src={
-                  "https://images-na.ssl-images-amazon.com/images/G/01/Audible/en_US/images/creative/Minerva-Plus-Associate-300x250-V08.png"
-                }
-                alt={"Try Audible Plus"}
-                priority
-                width={300}
-                height={250}
-                style={{ objectFit: "contain" }}
-              />
-            </Link>
-          </div>
         </div>
-        <div className="md:w-3/4 mt-16">
-          <p className="mt-5">
-            Welcome to our fishing shirts store where you will find a huge
-            variety of elegant high performance options. Take a look around and
-            you will find different fabric and styles, vivid graphics with high
-            visibility, which is important out there in the sea. Looking for sun
-            protective clothing? We have you covered, our long sleeve collection
-            has the highest rated picks chosen by our clients. We are constantly
-            updating our catalog following your{" "}
-            <Link href="/contact-us" className="hover:text-blogNavHoverBlue">
-              feedback
-            </Link>
-            , to keep only the best shirts in the market right now. Navigate our
-            store to find the best sellers or browse by categories: men, women,
-            kids, fun collection, and even shop by brand: Hanes, Columbia,
-            Koofin and more. Finally don’t forget to leave your feedback, we are
-            always open to any suggestions to improve our content to make it
-            more valuable for you.
-          </p>
-          {/* Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-10">
-            {/* Categories */}
-            {categories?.map((category, index) => (
-              <Categories key={index} category={category} />
-            ))}
+        <div className="flex flex-col-reverse md:flex-row lg:flex-row">
+          <aside className="mt-3 pr-5 md:border md:border-l-transparent md:border-t-transparent md:border-b-transparent md:border-opacity-25 md:border-textLightGray hidden md:block">
+            <FilterByCategory categories={categories} />
+
+            <FilterByBrand
+              brands={brands}
+              checkedBrands={checkedBrands}
+              setCheckedBrands={setCheckedBrands}
+              count={data?.count}
+              router={router}
+              asPath={asPath}
+            />
+
+            <FilterByPrice
+              minPrice={minPrice}
+              maxPrice={maxPrice}
+              setMin={setMin}
+              setMax={setMax}
+              setMinPrice={setMinPrice}
+              setMaxPrice={setMaxPrice}
+              router={router}
+              asPath={asPath}
+            />
+          </aside>
+          <div className="md:ml-5">
+            {data?.count !== 0 ? (
+              <div className="flex items-center justify-between">
+                <span>{data?.count} Products</span>
+
+                <div className="my-5 flex flex-row">
+                  <label htmlFor="sort">Sort by:</label>
+                  <select
+                    id="sort"
+                    onChange={(e) => setSortBy(e.target.value)}
+                    className="bg-lightGray cursor-pointer border rounded-md p-1 text-base"
+                  >
+                    <option value="name_asc">Title: A-Z</option>
+                    <option value="name_desc">Title: Z-A</option>
+                    <option value="price_asc">Price: Low to High</option>
+                    <option value="price_desc">Price: High to Low</option>
+                  </select>
+                </div>
+              </div>
+            ) : (
+              <div className="mt-10">No products found.</div>
+            )}
+
+            {/* Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+              {/* Product */}
+              {data?.products
+                ?.filter((product) => {
+                  return product.price >= min && product.price <= max;
+                })
+                .map((product, index) => {
+                  return (
+                    <StoreProducts
+                      key={index}
+                      product={product}
+                      keyword={keyword ? keyword : ""}
+                    />
+                  );
+                })}
+            </div>
+            <Paginate
+              page={data?.page}
+              pages={data?.pages}
+              keyword={keyword ? keyword : ""}
+            />
           </div>
-          <div className="my-10">
-            <select onChange={(e) => setSortBy(e.target.value)}>
-              <option value="">Sort by:</option>
-              <option value="price_asc">Price: Low to High</option>
-              <option value="price_desc">Price: High to Low</option>
-              <option value="name_asc">Title: A-Z</option>
-              <option value="name_desc">Title: Z-A</option>
-            </select>
-          </div>
-          {/* Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8">
-            {/* Product */}
-            {data?.products
-              .filter((product) => {
-                return product.price >= minPrice && product.price <= maxPrice;
-              })
-              .map((product, index) => {
-                return (
-                  <StoreProducts
-                    key={index}
-                    product={product}
-                    keyword={keyword ? keyword : ""}
-                  />
-                );
-              })}
-          </div>
-          <Paginate
-            page={data?.page}
-            pages={data?.pages}
-            keyword={keyword ? keyword : ""}
-          />
         </div>
       </section>
     </>

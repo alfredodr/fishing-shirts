@@ -18,12 +18,12 @@ const setCategoryCounts = async () => {
     products.forEach((product) => {
       const categories = product.categories;
       categories.forEach((category) => {
-        const categoryId = category._id;
+        const categoryId = category._id.toString();
         categoryCounts[categoryId] = (categoryCounts[categoryId] || 0) + 1; //count the number of available products in each category
       });
     });
 
-    for (const categoryId in categoryCounts) {
+    for (const categoryId of Object.keys(categoryCounts)) {
       const category = await Category.findOne({ _id: categoryId });
       if (category) {
         category.count = categoryCounts[categoryId];

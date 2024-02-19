@@ -16,23 +16,31 @@ const Search = ({
   return (
     <>
       <NextSeo
-        title={`Search results for ${keyword}`}
+        title={`Search results for ${keyword} ${
+          pages > 1 ? `- Page ${pageNumber} of ${pages}` : ``
+        }`}
         titleTemplate="%s | Fishing Shirts Now"
         description={`Search results for ${keyword} | Fishing Shirts Now`}
         canonical={`${process.env.NEXT_PUBLIC_FRONTEND_URL}`}
         openGraph={{
           type: "article",
-          title: `Search results for ${keyword} | Fishing Shirts Now`,
+          title: `Search results for ${keyword} ${
+            pages > 1 ? `- Page ${pageNumber} of ${pages}` : ``
+          }`,
           description: `Search results for  ${keyword}`,
           url: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/search/?s=${keyword}`,
         }}
         twitter={{
-          title: `${keyword} | Fishing Shirts Now`,
+          title: `Search results for ${keyword} ${
+            pages > 1 ? `- Page ${pageNumber} of ${pages}` : ``
+          }`,
           description: `Search results for ${keyword} | Fishing Shirts Now`,
         }}
       />
       <WebPageJsonLd
-        name={`${keyword} | Fishing Shirts Now`}
+        name={`Search results for ${keyword} ${
+          pages > 1 ? `- Page ${pageNumber} of ${pages}` : ``
+        }`}
         description={`Search results for ${keyword} | Fishing Shirts Now`}
         id={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/search/?s=${keyword}`}
         publisher="https://fishingshirtsnow.com/#organization"
@@ -47,9 +55,9 @@ const Search = ({
           </>
         ) : (
           <>
-            <h1 className="text-center text-4xl">
-              Showing {startRange}-{endRange} out of {count} search results for
-              &quot;{keyword}&quot;
+            <h1 className="text-center text-xl text-textLightGray">
+              Showing {startRange}-{endRange} out of {count} results for &quot;
+              {keyword}&quot;
             </h1>
             <hr className="mt-10 bg-black w-1/12 border-2 border-solid mx-auto" />
             <div className="flex items-center justify-center container mx-auto">

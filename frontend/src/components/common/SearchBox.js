@@ -46,6 +46,7 @@ const SearchBox = ({ toggleMobileMenu, isActive, id }) => {
           router.pathname === "/" && "hover:text-white"
         }  focus:ring-4 focus:outline-none focus:ring-white dark:bg-white dark:hover:dark:focus:ring-white"`}
         onSubmit={submitHandler}
+        aria-label="search"
       >
         <svg
           aria-hidden="true"

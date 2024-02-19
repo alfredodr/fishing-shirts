@@ -131,22 +131,22 @@ const blog = ({
             <nav aria-label="Recent Posts">
               <ul>
                 <li>
-                  <Link href="/blog/delve-deep-into-the-pleasures-of-angling-with-the-remarkable-koofin-fishing-shirts/">
+                  <Link href="/blog/delve-deep-into-the-pleasures-of-angling-with-the-remarkable-koofin-fishing-shirts">
                     Koofin Fishing Shirts
                   </Link>
                 </li>
                 <li>
-                  <Link href="/blog/fishing-shirts-men/">
+                  <Link href="/blog/fishing-shirts-men">
                     Fishing Shirts For Men
                   </Link>
                 </li>
                 <li>
-                  <Link href="/blog/funny-fishing-shirts-that-put-a-smile-on-your-face/">
+                  <Link href="/blog/funny-fishing-shirts-that-put-a-smile-on-your-face">
                     Funny Fishing Shirts To Keep You Happy And Positive
                   </Link>
                 </li>
                 <li>
-                  <Link href="/blog/learn-all-about-fishing-shirts-to-pick-the-right-one-for-you/">
+                  <Link href="/blog/learn-all-about-fishing-shirts-to-pick-the-right-one-for-you">
                     Best Fishing Shirts Carefully Reviewed Just For You
                   </Link>
                 </li>
