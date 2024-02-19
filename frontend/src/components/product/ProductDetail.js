@@ -111,7 +111,7 @@ const ProductDetail = ({ product }) => {
         ]}
       />
 
-      <section className="bg-lightGray my-10 px-5">
+      <section className="bg-lightGray my-5 md:my-10 px-5">
         {/* Desktop Breadcrumb */}
         <div className="block md:hidden">
           <ol

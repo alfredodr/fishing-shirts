@@ -144,15 +144,6 @@ const products = [
     ],
   },
   {
-    asin: "B07Q1G3486",
-    slug: "baleaf-mens-upf-50-sun-protection-hoodie-long-sleeve-performance-hiking-fishing-t-shirt",
-    categories: [
-      { _id: "fishing-shirts-for-him" },
-      { _id: "fishing-shirts-long-sleeve" },
-      { _id: "fishing-shirts-hoodie" },
-    ],
-  },
-  {
     asin: "B07CNWT88T",
     slug: "mens-cant-work-today-my-arm-is-in-a-cast-t-shirt-funny-fishing-graphic-top-guys",
     categories: [
@@ -343,11 +334,6 @@ const products = [
       { _id: "fishing-shirts-koofin" },
       { _id: "fishing-shirts-long-sleeve" },
     ],
-  },
-  {
-    asin: "B00GD22JNA",
-    slug: "oneill-wetsuits",
-    categories: [{ _id: "fishing-shirts-long-sleeve" }],
   },
   {
     asin: "B08971X6KM",
@@ -732,11 +718,6 @@ const products = [
     asin: "B08CMCV2NP",
     slug: "fish-skinz-womens-performance-fishing-shirt-upf-50-protection-octopus-white",
     categories: [{ _id: "fishing-shirts-for-her" }],
-  },
-  {
-    asin: "B01MTUPFXA",
-    slug: "bigfish-skelefish-bass-upf50-long-sleeve-performance-fishing-shirt",
-    categories: [{ _id: "fishing-shirts-long-sleeve" }],
   },
   {
     asin: "B074MYLY2Q",
@@ -1348,23 +1329,6 @@ const products = [
     ],
   },
   {
-    asin: "B082YHGRCQ",
-    slug: "simms-lager-script-t-shirt-for-men-short-sleeve-crewneck-slim-fit-shirt-cotton-athletic-tee-shirt",
-    categories: [
-      { _id: "fishing-shirts-simms" },
-      { _id: "fishing-shirts-for-him" },
-      { _id: "fishing-shirts-short-sleeve" },
-    ],
-  },
-  {
-    asin: "B09L8MX1XC",
-    slug: "simms-solarflex-upf-50-crewneck-shirt-long-sleeve-sun-protection-fishing-shirt-for-men-lightweight-breathable-moisture-wicking-anti-odor",
-    categories: [
-      { _id: "fishing-shirts-simms" },
-      { _id: "fishing-shirts-long-sleeve" },
-    ],
-  },
-  {
     asin: "B06XHCSZB9",
     slug: "bamboo-cay-mens-short-sleeve-catch-of-the-day-casual-embroidered-woven-shirt",
     categories: [
@@ -1721,11 +1685,6 @@ const products = [
     asin: "B01LZJAYBZ",
     slug: "amdesco-mens-master-baiter-awesome-funny-fishing-t-shirt",
     categories: [{ _id: "fishing-shirts-funny" }],
-  },
-  {
-    asin: "B01MTA3FXE",
-    slug: "jaws-movie-quints-shark-fishing-t-shirt",
-    categories: [{ _id: "fishing-shirts-short-sleeve" }],
   },
   {
     asin: "B07M6RFD9C",
@@ -2226,15 +2185,6 @@ const products = [
     categories: [
       { _id: "fishing-shirts-pelagic" },
       { _id: "fishing-shirts-long-sleeve" },
-    ],
-  },
-  {
-    asin: "B08WRL6VV1",
-    slug: "habit-mens-high-water-short-sleeve-river-guide-fishing-shirt",
-    categories: [
-      { _id: "fishing-shirts-habit" },
-      { _id: "fishing-shirts-short-sleeve" },
-      { _id: "fishing-shirts-for-him" },
     ],
   },
   {
@@ -3062,7 +3012,7 @@ const products = [
   },
   {
     asin: "B01MUBQJKH",
-    slug: "jaws-movie-quints-shark-fishing-t-shirt-stickers",
+    slug: "jaws-movie-quints-shark-fishing-t-shirt",
     categories: [
       { _id: "fishing-shirts-for-him" },
       { _id: "fishing-shirts-short-sleeve" },
@@ -3252,7 +3202,7 @@ const products = [
   },
   {
     asin: "B08SJBD5BG",
-    slug: "jaws-movie-quints-shark-fishing-t-shirt-stickers-2",
+    slug: "jaws-movie-quints-shark-fishing-t-shirt-2",
     categories: [
       { _id: "fishing-shirts-for-him" },
       { _id: "fishing-shirts-short-sleeve" },
@@ -4554,15 +4504,6 @@ const products = [
       { _id: "fishing-shirts-for-him" },
       { _id: "fishing-shirts-long-sleeve" },
       { _id: "fishing-shirts-hoodie" },
-    ],
-  },
-  {
-    asin: "B09QJR1775",
-    slug: "baleaf-womens-upf-50-sun-protection-hoodies-long-sleeve-yoga-athletic-workout-running-shirt",
-    categories: [
-      { _id: "fishing-shirts-baleaf" },
-      { _id: "fishing-shirts-for-her" },
-      { _id: "fishing-shirts-long-sleeve" },
     ],
   },
   {

@@ -5,7 +5,7 @@ import Image from "next/image";
 const StoreProducts = ({ product }) => {
   return (
     <Link href={`/product/${product?.slug}`}>
-      <div className="flex flex-col mb-5 text-center">
+      <div className="flex flex-col mb-0 md:mb-10 text-center">
         <div className="relative w-full h-80 bg-lightGray">
           <Image
             src={product?.images[0].src}
@@ -16,7 +16,9 @@ const StoreProducts = ({ product }) => {
           />
         </div>
 
-        <span className="text-sm  font-semibold mt-8">{product?.brand}</span>
+        <span className="text-sm  font-semibold mt-0 md:mt-8">
+          {product?.brand}
+        </span>
 
         <span className="text-sm  font-medium mt-5">{product?.name}</span>
 

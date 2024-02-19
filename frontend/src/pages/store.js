@@ -173,10 +173,10 @@ const Store = ({ products, categories }) => {
                     onChange={(e) => setSortBy(e.target.value)}
                     className="bg-lightGray cursor-pointer border rounded-md p-1 text-base"
                   >
-                    <option value="price_asc">Price: Low to High</option>
-                    <option value="price_desc">Price: High to Low</option>
                     <option value="name_asc">Title: A-Z</option>
                     <option value="name_desc">Title: Z-A</option>
+                    <option value="price_asc">Price: Low to High</option>
+                    <option value="price_desc">Price: High to Low</option>
                   </select>
                 </div>
               </div>

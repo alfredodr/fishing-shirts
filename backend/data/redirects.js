@@ -121,7 +121,7 @@ const redirects = [
     source:
       "/simms-lager-script-t-shirt-for-men-short-sleeve-crewneck-slim-fit-shirt-cotton-athletic-tee-shirt",
     destination:
-      "/product/simms-lager-script-t-shirt-for-men-short-sleeve-crewneck-slim-fit-shirt-cotton-athletic-tee-shirt",
+      "/product/simms-logo-t-shirt-for-men-short-sleeve-crewneck-shirt-preshrunk-cotton-athletic-tee-shirt",
     permanent: true,
   },
   {
@@ -338,7 +338,8 @@ const redirects = [
   },
   {
     source: "/oneill-wetsuits",
-    destination: "/product/oneill-wetsuits",
+    destination:
+      "/product/oneill-mens-basic-skins-upf-50-long-sleeve-sun-shirt",
     permanent: true,
   },
   {
@@ -931,7 +932,7 @@ const redirects = [
     source:
       "/products/simms-solarflex-upf-50-crewneck-shirt-long-sleeve-sun-protection-fishing-shirt-for-men-lightweight-breathable-moisture-wicking-anti-odor",
     destination:
-      "/product/simms-solarflex-upf-50-crewneck-shirt-long-sleeve-sun-protection-fishing-shirt-for-men-lightweight-breathable-moisture-wicking-anti-odor",
+      "/product/simms-bass-pine-camo-t-shirt-100-cotton-tee-with-breathable-fabric-quality-fishing-apparel-for-men",
     permanent: true,
   },
   {
@@ -1658,7 +1659,7 @@ const redirects = [
     source:
       "/baleaf-mens-upf-50-sun-protection-hoodie-long-sleeve-performance-hiking-fishing-t-shirt",
     destination:
-      "/product/baleaf-mens-upf-50-sun-protection-hoodie-long-sleeve-performance-hiking-fishing-t-shirt",
+      "/product/baleaf-mens-workout-sleeveless-tank-top-hooded-muscle-shirts-upf50-lightweight-running-gym-quick-dry",
     permanent: true,
   },
   {
@@ -2106,7 +2107,7 @@ const redirects = [
     source:
       "/bigfish-skelefish-bass-upf50-long-sleeve-performance-fishing-shirt",
     destination:
-      "/product/bigfish-skelefish-bass-upf50-long-sleeve-performance-fishing-shirt",
+      "/product/bigfish-skelefish-muskie-upf50-long-sleeve-performance-fishing-shirt",
     permanent: true,
   },
   {
@@ -2441,7 +2442,7 @@ const redirects = [
     source:
       "/simms-solarflex-upf-50-crewneck-shirt-long-sleeve-sun-protection-fishing-shirt-for-men-lightweight-breathable-moisture-wicking-anti-odor",
     destination:
-      "/product/simms-solarflex-upf-50-crewneck-shirt-long-sleeve-sun-protection-fishing-shirt-for-men-lightweight-breathable-moisture-wicking-anti-odor",
+      "/product/simms-bass-pine-camo-t-shirt-100-cotton-tee-with-breathable-fabric-quality-fishing-apparel-for-men",
     permanent: true,
   },
   {
@@ -2514,11 +2515,6 @@ const redirects = [
   {
     source: "/fishing-shirts-embroidery",
     destination: "/product/fishing-shirts-embroidery",
-    permanent: true,
-  },
-  {
-    source: "/oneill-wetsuits",
-    destination: "/product/oneill-wetsuits",
     permanent: true,
   },
   {
@@ -3155,6 +3151,56 @@ const redirects = [
       "/product/fishing-shirts-for-men-long-sleeve-sun-protection-spf-50-uv-tshirt-hoodies",
     destination:
       "/product/mens-upf-50-long-sleeve-sun-protection-shirts-outdoor-lightweight-quick-dry-uv-shirt",
+    permanent: true,
+  },
+  {
+    source:
+      "/product/habit-mens-high-water-short-sleeve-river-guide-fishing-shirt",
+    destination: "/product/habit-mens-fourche-river-guide-shirt",
+    permanent: true,
+  },
+  {
+    source:
+      "/product/bigfish-skelefish-bass-upf50-long-sleeve-performance-fishing-shirt",
+    destination:
+      "/product/bigfish-skelefish-muskie-upf50-long-sleeve-performance-fishing-shirt",
+    permanent: true,
+  },
+  {
+    source:
+      "/product/baleaf-mens-upf-50-sun-protection-hoodie-long-sleeve-performance-hiking-fishing-t-shirt",
+    destination:
+      "/product/baleaf-mens-workout-sleeveless-tank-top-hooded-muscle-shirts-upf50-lightweight-running-gym-quick-dry",
+    permanent: true,
+  },
+  {
+    source:
+      "/product/baleaf-womens-upf-50-sun-protection-hoodies-long-sleeve-yoga-athletic-workout-running-shirt",
+    destination:
+      "/product/baleaf-womens-upf-50-sun-protection-hooded-shirt-long-sleeve-athletic-quick-dry-tops",
+    permanent: true,
+  },
+  {
+    source: "/product/jaws-movie-quints-shark-fishing-t-shirt-stickers",
+    destination: "/product/jaws-movie-quints-shark-fishing-t-shirt",
+    permanent: true,
+  },
+  {
+    source: "/product/jaws-movie-quints-shark-fishing-t-shirt-stickers-2",
+    destination: "/product/jaws-movie-quints-shark-fishing-t-shirt-2",
+    permanent: true,
+  },
+  {
+    source: "/product/oneill-wetsuits",
+    destination:
+      "/product/oneill-mens-basic-skins-upf-50-long-sleeve-sun-shirt",
+    permanent: true,
+  },
+  {
+    source:
+      "/product/simms-lager-script-t-shirt-for-men-short-sleeve-crewneck-slim-fit-shirt-cotton-athletic-tee-shirt",
+    destination:
+      "/product/simms-logo-t-shirt-for-men-short-sleeve-crewneck-shirt-preshrunk-cotton-athletic-tee-shirt",
     permanent: true,
   },
 ];
