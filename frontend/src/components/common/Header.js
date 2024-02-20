@@ -100,7 +100,11 @@ const Header = () => {
           </button>
         </nav>
         {/* Mobile Menu */}
-        <nav className={`${isActive === true ? null : "hidden"} z-40`}>
+        <nav
+          className={`${
+            isActive === true ? null : "hidden"
+          } z-40 transition-transform ease-in-out delay-150 duration-500`}
+        >
           <ul
             id="menu"
             className="absolute left-0 right-0 top-24 flex flex-col font-semibold bg-gray-100 divide-y divide-slate-300 border"

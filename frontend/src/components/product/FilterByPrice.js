@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { MdClear } from "react-icons/md";
 
 const FilterByPrice = ({
@@ -11,10 +11,9 @@ const FilterByPrice = ({
   router,
   asPath,
 }) => {
-  const [toggle, setToggle] = useState(false);
+  const showClearButton = minPrice !== "" || maxPrice !== "";
 
   const handleButtonClick = () => {
-    setToggle(!toggle);
     setMin(Number(minPrice) || 0);
     setMax(Number(maxPrice) || 999);
     if (asPath?.includes("?page=")) {
@@ -28,14 +27,13 @@ const FilterByPrice = ({
     setMaxPrice("");
     setMin(0);
     setMax(999);
-    setToggle(!toggle);
   };
 
   return (
     <div className="my-5">
       <span className="text-lg">Price</span>
 
-      {toggle ? (
+      {showClearButton ? (
         <button
           className="p-1 mb-3 flex items-center border border-solid border-gray-400 rounded-md bg-slate-300"
           onClick={handleClear}
