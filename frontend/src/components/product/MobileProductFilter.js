@@ -44,7 +44,7 @@ const MobileProductFilter = ({
   return (
     <div className="block md:hidden">
       <button
-        className=" my-5 py-2 px-3 text-blue-800 font-medium border border-solid border-gray-400 rounded-md shadow-md"
+        className=" my-5 py-1 px-3 text-blue-800 font-medium border border-solid border-gray-400 rounded-md shadow-md"
         onClick={toggleMenu}
       >
         Filters
@@ -53,9 +53,9 @@ const MobileProductFilter = ({
       {isOpen && (
         <div
           className={cn(
-            "fixed top-0 left-0 w-full h-0 bg-white transform ease-out duration-300 -translate-y-full z-40 overflow-hidden  transition-height",
+            "fixed top-0 left-0 w-full h-0 bg-white z-40 transition-all ease-in-out delay-150 duration-500 -translate-y-0",
             {
-              "h-screen translate-y-0": isOpen,
+              "h-full": isOpen,
             }
           )}
         >
@@ -68,7 +68,7 @@ const MobileProductFilter = ({
             </div>
           </div>
 
-          <div className="pt-20 px-5 w-full h-full overflow-y-auto">
+          <div className="py-20 px-5 w-full h-full overflow-y-auto">
             <FilterByCategory categories={categories} />
 
             <FilterByBrand

@@ -166,7 +166,7 @@ const Store = ({ products, categories }) => {
               <div className="flex items-center justify-between">
                 <span>{data?.count} Products</span>
 
-                <div className="my-5 flex flex-row">
+                <div className="flex flex-row">
                   <label htmlFor="sort">Sort by:</label>
                   <select
                     id="sort"
@@ -181,7 +181,7 @@ const Store = ({ products, categories }) => {
                 </div>
               </div>
             ) : (
-              <div className="mt-10">No products found.</div>
+              <div className="my-10">No products found.</div>
             )}
 
             {/* Grid */}
