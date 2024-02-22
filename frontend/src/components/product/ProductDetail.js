@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import Spinner from "../common/Spinner";
 import Variants from "./Variants";
 import Image from "next/image";
 import { NextSeo, ProductJsonLd, BreadcrumbJsonLd } from "next-seo";
@@ -10,7 +8,6 @@ import { cn } from "@/lib/utils";
 import Slider from "./Slider";
 
 const ProductDetail = ({ product }) => {
-  const router = useRouter();
   const [mainImage, setMainImage] = useState(0);
   const images = product?.images;
 
@@ -30,10 +27,6 @@ const ProductDetail = ({ product }) => {
   const handleZoom = () => {
     setZoomIn(!zoomIn);
   };
-
-  if (router.isFallback) {
-    return <Spinner />;
-  }
 
   return (
     <>

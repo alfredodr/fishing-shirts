@@ -15,12 +15,16 @@ export async function getStaticPaths() {
   );
 
   const paths = data?.products?.map((product) => {
-    return { params: { slug: product.slug } };
+    return {
+      params: {
+        slug: product.slug,
+      },
+    };
   });
 
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 }
 

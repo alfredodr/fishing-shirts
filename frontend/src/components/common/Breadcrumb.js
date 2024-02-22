@@ -35,14 +35,14 @@ const Breadcrumb = () => {
       aria-label="Breadcrumb"
     >
       <span className="hover:text-blogNavHoverBlue text-xs font-medium opacity-75">
-        <Link href={"/"}>home</Link>
+        <Link href={"/"}>Home</Link>
       </span>
 
       {breadcrumbs && breadcrumbs[0]?.breadCrumb === "product-category" ? (
         <div className="hover:text-blogNavHoverBlue text-xs font-medium opacity-75">
           <span className="mr-2">&gt;</span>
           <Link href={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/store`}>
-            store
+            Store
           </Link>
         </div>
       ) : null}
