@@ -15,7 +15,7 @@ const Slider = ({ images }) => {
         modules={[Pagination]}
         className="mySwiper"
       >
-        {images.map((image) => (
+        {images?.map((image) => (
           <SwiperSlide
             key={image._id}
             className="flex justify-center items-center"
